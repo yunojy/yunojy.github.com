@@ -1,0 +1,40 @@
+#+BEGIN_HTML
+---
+layout: post
+title: "org-test"
+date: 2013-02-11 11:05
+comments: true
+categories: 
+#+END_HTML
+
+* test desu
+  | a | b | c | d | e |
+  |---+---+---+---+---|
+  | f | g | h | i | j |
+  |   | l |   | m |   |
+  
+* head1
+
+** head2
+
+*** head3
+
+**** head4
+
+***** head5
+
+****** head6
+
+******* head7
+
+
+* Task
+** TODO todoha?                                                    :org:mode:
+   SCHEDULED: <2013-02-11 Mon>
+  
+** WAITING waiting?
+   DEADLINE: <2013-02-11 Mon>
+   - Note taken on [2013-02-11 Mon 11:09] \\
+     aaa
+
+
