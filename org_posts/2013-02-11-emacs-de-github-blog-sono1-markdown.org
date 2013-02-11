@@ -4,7 +4,7 @@ layout: post
 title: "emacs@がんばらない。なまけもの必見！今度こそ継続できるBlogを10分でGithubに開設する。もちろん無料 - markdown編"
 date: 2013-02-11 11:50
 comments: true
-categories: emacs org-mode
+categories: emacs org-mode octopress
 ---
 #+END_HTML
 
@@ -96,7 +96,7 @@ categories: emacs org-mode
     title: "first-post"
     date: 2013-02-11 9:45
     comments: true
-    categories:
+    categories: スペース区切り。""不要
     ---
     本文
     #+END_SRC
@@ -107,8 +107,8 @@ categories: emacs org-mode
     % rake gen_deploy
     #+END_SRC
 
-*** いじょ
-    http://[username].github.com/
+*** 投稿した記事を閲覧する
+    http://[username].github.com
 
 *** 編集、削除する場合
     そのまま =source/_posts/= 以下の =.markdown= を編集して =% rake gen_deploy=
@@ -136,7 +136,7 @@ categories: emacs org-mode
    #+BEGIN_SRC shell
    % rake gen_deploy
    #+END_SRC
-   で、大好きなmarkdownでgithub(http://[username].github.com/)に投稿ができるようになります。
+   で、大好きなmarkdownでgithubに投稿ができるようになります。
 
    あれ？めんどくさいぞ・・
    

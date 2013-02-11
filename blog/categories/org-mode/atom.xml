@@ -4,7 +4,7 @@
   <title><![CDATA[Category: org-mode | develog.me]]></title>
   <link href="http://yunojy.github.com/blog/categories/org-mode/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-02-11T15:35:53+09:00</updated>
+  <updated>2013-02-11T15:41:56+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -213,7 +213,7 @@ layout: post
 title: "first-post"
 date: 2013-02-11 9:45
 comments: true
-categories:
+categories: スペース区切り。""不要
 ---
 本文
 </pre>
@@ -240,10 +240,10 @@ categories:
 </div>
 
 <div id="outline-container-5-2-3" class="outline-4">
-<h4 id="sec-5-2-3">いじょ</h4>
+<h4 id="sec-5-2-3">投稿した記事を閲覧する</h4>
 <div class="outline-text-4" id="text-5-2-3">
 
-<p>    [[http://[username].github.com/][http://[username].github.com/]]
+<p>    [[http://[username].github.com][http://[username].github.com]]
 </p>
 </div>
 
@@ -298,7 +298,7 @@ categories:
 </pre>
 
 <p>
-   で、大好きなmarkdownでgithub([[http://[username].github.com/][http://[username].github.com/]])に投稿ができるようになります。
+   で、大好きなmarkdownでgithubに投稿ができるようになります。
 </p>
 <p>
    あれ？めんどくさいぞ・・
