@@ -1,0 +1,171 @@
+#+BEGIN_HTML
+---
+layout: post
+title: "emacs@がんばらない。なまけもの必見！今度こそ継続できるBlogを10分でGithubに開設する。もちろん無料 - org-mode編"
+date: 2013-02-11 15:53
+comments: true
+categories: emacs github octopress org-mode
+---
+#+END_HTML
+
+* 概要
+  markdown編の続き
+  今回は、 =markdown= ではなく =org= で投稿する方法を説明します。
+
+  仕組みとしては、
+  octopressは、 =% rake gen_deploy= で =octopress/source/_posts/*.markdown= ファイルを投稿していますが、
+  その仕組みはかえずに、emacsのorg-mode側で =C-c C-e F= =org-publish-current-file= で、 =octopress/source/org_posts/*.org= のファイルを =markdown= へ変換して、 =octopress/source/_posts/*.markdown= へ出力させます。
+  また、記事作成時の =% rake new_post= コマンドで =org= 形式で生成してくれるように =octopress/Rakefile= に手を加えます。
+
+* 前提条件
+  - markdown編の設定が完了していること
+
+* 参考
+  [[http://jaderholm.com/blog/blogging-with-org-mode-and-octopress][Blogging With Org-mode and Octopress]]
+
+-----
+
+* 目次
+  1. 記事新規作成コマンドの対応。Rakefile書き換え
+  2. 記事変換の対応。emacs設定にorg-modeの出力についての設定追加
+  3. 早速投稿とかしてみる
+
+** 記事新規作成コマンドの対応。Rakefile書き換え
+   =% rake new_post= で作成する投稿ファイルを、 =source/_posts/*.markdown= から、 =source/org_posts/*.org= に変更します。
+   - 参考元では、 =-pust.puts "---"= としていましたが、それを消すと投稿した記事にcssがあたらなかったり、いろいろ悲惨な目に遭います。
+
+   #+BEGIN_SRC diff
+   @@ -21,9 +22,10 @@ blog_index_dir  = 'source'    # directory for your blog's index page (if you put
+    deploy_dir      = "_deploy"   # deploy directory (for Github pages deployment)
+    stash_dir       = "_stash"    # directory to stash posts for speedy generation
+    posts_dir       = "_posts"    # directory for blog files
+   +org_posts_dir   = "org_posts"
+    themes_dir      = ".themes"   # directory for blog files
+   -new_post_ext    = "markdown"  # default new post file extension when using the new_post task
+   -new_page_ext    = "markdown"  # default new page file extension when using the new_page task
+   +new_post_ext    = "org"  # default new post file extension when using the new_post task
+   +new_page_ext    = "org"  # default new page file extension when using the new_page task
+    server_port     = "4000"      # port for preview server eg. localhost:4000
+
+   @@ -91,16 +93,20 @@ end
+   -  mkdir_p "#{source_dir}/#{posts_dir}"
+   +  mkdir_p "#{source_dir}/#{org_posts_dir}"
+   -  filename = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
+   +  filename = "#{source_dir}/#{org_posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
+      if File.exist?(filename)
+        abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+      end
+      puts "Creating new post: #{filename}"
+      open(filename, 'w') do |post|
+   +    post.puts "#+BEGIN_HTML"
+        post.puts "---"
+        post.puts "layout: post"
+        post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
+   @@ -108,6 +114,7 @@ task :new_post, :title do |t, args|
+        post.puts "comments: true"
+        post.puts "categories: "
+        post.puts "---"
+   +    post.puts "#+END_HTML"
+      end
+    end
+   #+END_SRC
+
+      
+** 記事変換の対応。emacs設定にorg-modeの出力についての設定追加
+   "develog.me"とか、各ディレクトリ位置は各環境で読み替え
+   #+BEGIN_SRC lisp
+   ;; ------------------------------------------------------------------------
+   ;; @ org2blog (2013/02/11)
+   (setq org-publish-project-alist
+      '(("develog.me" .  (:base-directory "~/repo/octopress/source/org_posts/"
+                          :base-extension "org"
+                          :publishing-directory "~/repo/octopress/source/_posts/"
+                          :sub-superscript ""
+                          :recursive t
+                          :publishing-function org-publish-org-to-html
+                          :headline-levels 4
+                          :html-extension "markdown"
+                          :body-only t))))
+   #+END_SRC
+
+
+** 早速投稿とかしてみる
+   
+*** 記事を書く
+    #+BEGIN_SRC shell
+    % cd ~/repo/octopress
+    # 生成コマンド
+    % rake new_post
+    Enter a title for your post: emacs-de-github-blog-sono2-org-mode
+    mkdir -p source/org_posts
+    Creating new post: source/org_posts/2013-02-11-emacs-de-github-blog-sono2-org-mode.org
+
+    # 記事の中身を編集
+    % emacs source/org_posts/2013-02-11-emacs-de-github-blog-sono2-org-mode.org
+    #+BEGIN_HTML
+    ---
+    layout: post
+    title: "emacs@がんばらない。なまけもの必見！今度こそ継続できるBlogを10分でGithubに開設する。もちろん無料 - org-mode編"
+    date: 2013-02-11 15:53
+    comments: true
+    categories: emacs github octopress org-mode
+    ---
+    #+END_HTML
+    本文~
+    #+END_SRC
+
+**** =C-c C-e F= で投稿元ネタ生成
+
+
+*** 記事をBlogに反映
+    #+BEGIN_SRC shell
+    % rake gen_deploy
+    #+END_SRC
+
+*** 投稿した記事を閲覧する
+    http://yunojy.github.com
+
+*** 編集、削除する場合
+    =source/org_posts/= 以下の =.org= を編集して =C-c C-e F= で投稿元ネタ上書き再生成。 =% rake gen_deploy= でUP
+
+-----
+
+** まとめ
+   以後、気が向いたときにコンソールから
+   #+BEGIN_SRC shell
+   % cd ~/repo/octopress
+   % rake new_post
+   #+END_SRC
+   で、記事ファイル置き場に投稿ファイル作って、
+   #+BEGIN_SRC shell
+   % emacs source/org_posts/2013-02-11-first-post.org
+   #+BEGIN_HTML
+   ---
+   layout: post
+   title: "emacs@がんばらない。なまけもの必見！今度こそ継続できるBlogを10分でGithubに開設する。もちろん無料 - org-mode編"
+   date: 2013-02-11 15:53
+   comments: true
+   categories: emacs github octopress org-mode
+   ---
+   #+END_HTML
+   ほんぶんここから
+   #+END_SRC
+   で、投稿ネタ書いて、
+   =C-c C-e F= で =org= を =markdown= に変換して
+   #+BEGIN_SRC shell
+   % rake gen_deploy
+   #+END_SRC
+   で、大好きなorg-modeでgithubに投稿ができるようになります。
+
+   あれ？さらにめんどくさくなってるぞ・・
+   
+
+-----
+
+
+* おまけ
+  org-modeの書式
+    [[http://d.hatena.ne.jp/tamura70/20100216/org][Emacs org-modeを使ってみる: (13) HTMLにエクスポート]]
+      http://bach.istc.kobe-u.ac.jp/hatena/htmlexport.org
+      http://bach.istc.kobe-u.ac.jp/hatena/htmlexport.html
+

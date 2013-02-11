@@ -4,7 +4,7 @@ layout: post
 title: "emacs@がんばらない。なまけもの必見！今度こそ継続できるBlogを10分でGithubに開設する。もちろん無料 - markdown編"
 date: 2013-02-11 11:50
 comments: true
-categories: emacs org-mode octopress
+categories: emacs github octopress markdown
 ---
 #+END_HTML
 
@@ -13,10 +13,6 @@ categories: emacs org-mode octopress
 
 * 概要
   GithubをBlogにしちゃうOctopressを使って、1.ローカルで =.markdown= を書く。2.コンソールから一発コマンドを打つ。だけで投稿を可能にする環境を構築します。
-
-* もくじ
-  1. Octopress導入
-  2. 早速投稿とかしてみる
 
 * 前提条件
   - Githubにアカウント作成済み
@@ -33,6 +29,10 @@ categories: emacs org-mode octopress
   [[http://www.hisasann.com/blog/2012/10/06/first-post/][Githubを使って独自ブログをはじめる方法メモ]]
 
 -----
+
+* 目次
+  1. Octopress導入
+  2. 早速投稿とかしてみる
 
 ** Octopress導入
 *** レポジトリを作る

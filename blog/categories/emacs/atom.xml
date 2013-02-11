@@ -4,7 +4,7 @@
   <title><![CDATA[Category: emacs | develog.me]]></title>
   <link href="http://yunojy.github.com/blog/categories/emacs/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-02-11T15:51:43+09:00</updated>
+  <updated>2013-02-11T16:47:52+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -12,6 +12,325 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[emacs@がんばらない。なまけもの必見！今度こそ継続できるBlogを10分でGithubに開設する。もちろん無料 - org-mode編]]></title>
+    <link href="http://yunojy.github.com/blog/2013/02/11/emacs-de-github-blog-sono2-org-mode/"/>
+    <updated>2013-02-11T15:53:00+09:00</updated>
+    <id>http://yunojy.github.com/blog/2013/02/11/emacs-de-github-blog-sono2-org-mode</id>
+    <content type="html"><![CDATA[<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">概要</h2>
+<div class="outline-text-2" id="text-1">
+
+<p>  markdown編の続き
+  今回は、 <code>markdown</code> ではなく <code>org</code> で投稿する方法を説明します。
+</p>
+<p>
+  仕組みとしては、
+  octopressは、 <code>% rake gen_deploy</code> で <code>octopress/source/_posts/*.markdown</code> ファイルを投稿していますが、
+  その仕組みはかえずに、emacsのorg-mode側で <code>C-c C-e F</code> <code>org-publish-current-file</code> で、 <code>octopress/source/org_posts/*.org</code> のファイルを <code>markdown</code> へ変換して、 <code>octopress/source/_posts/*.markdown</code> へ出力させます。
+  また、記事作成時の <code>% rake new_post</code> コマンドで <code>org</code> 形式で生成してくれるように <code>octopress/Rakefile</code> に手を加えます。
+</p>
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">前提条件</h2>
+<div class="outline-text-2" id="text-2">
+
+<ul>
+<li>markdown編の設定が完了していること
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">参考</h2>
+<div class="outline-text-2" id="text-3">
+
+<p>  <a href="http://jaderholm.com/blog/blogging-with-org-mode-and-octopress">Blogging With Org-mode and Octopress</a>
+</p>
+
+<hr/>
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">目次</h2>
+<div class="outline-text-2" id="text-4">
+
+<ol>
+<li>記事新規作成コマンドの対応。Rakefile書き換え
+</li>
+<li>記事変換の対応。emacs設定にorg-modeの出力についての設定追加
+</li>
+<li>早速投稿とかしてみる
+</li>
+</ol>
+
+
+
+</div>
+
+<div id="outline-container-4-1" class="outline-3">
+<h3 id="sec-4-1">記事新規作成コマンドの対応。Rakefile書き換え</h3>
+<div class="outline-text-3" id="text-4-1">
+
+<p>   <code>% rake new_post</code> で作成する投稿ファイルを、 <code>source/_posts/*.markdown</code> から、 <code>source/org_posts/*.org</code> に変更します。
+</p><ul>
+<li>参考元では、 =-pust.puts "&mdash;"= としていましたが、それを消すと投稿した記事にcssがあたらなかったり、いろいろ悲惨な目に遭います。
+</li>
+</ul>
+
+
+
+
+
+<pre class="example">@@ -21,9 +22,10 @@ blog_index_dir  = 'source'    # directory for your blog's index page (if you put
+ deploy_dir      = "_deploy"   # deploy directory (for Github pages deployment)
+ stash_dir       = "_stash"    # directory to stash posts for speedy generation
+ posts_dir       = "_posts"    # directory for blog files
++org_posts_dir   = "org_posts"
+ themes_dir      = ".themes"   # directory for blog files
+-new_post_ext    = "markdown"  # default new post file extension when using the new_post task
+-new_page_ext    = "markdown"  # default new page file extension when using the new_page task
++new_post_ext    = "org"  # default new post file extension when using the new_post task
++new_page_ext    = "org"  # default new page file extension when using the new_page task
+ server_port     = "4000"      # port for preview server eg. localhost:4000
+
+@@ -91,16 +93,20 @@ end
+-  mkdir_p "#{source_dir}/#{posts_dir}"
++  mkdir_p "#{source_dir}/#{org_posts_dir}"
+-  filename = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
++  filename = "#{source_dir}/#{org_posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
+   if File.exist?(filename)
+     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+   end
+   puts "Creating new post: #{filename}"
+   open(filename, 'w') do |post|
++    post.puts "#+BEGIN_HTML"
+     post.puts "---"
+     post.puts "layout: post"
+     post.puts "title: \"#{title.gsub(/&amp;/,'&amp;amp;')}\""
+@@ -108,6 +114,7 @@ task :new_post, :title do |t, args|
+     post.puts "comments: true"
+     post.puts "categories: "
+     post.puts "---"
++    post.puts "#+END_HTML"
+   end
+ end
+</pre>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-2" class="outline-3">
+<h3 id="sec-4-2">記事変換の対応。emacs設定にorg-modeの出力についての設定追加</h3>
+<div class="outline-text-3" id="text-4-2">
+
+<p>   "develog.me"とか、各ディレクトリ位置は各環境で読み替え
+</p>
+
+
+<pre class="example">;; ------------------------------------------------------------------------
+;; @ org2blog (2013/02/11)
+(setq org-publish-project-alist
+   '(("develog.me" .  (:base-directory "~/repo/octopress/source/org_posts/"
+                       :base-extension "org"
+                       :publishing-directory "~/repo/octopress/source/_posts/"
+                       :sub-superscript ""
+                       :recursive t
+                       :publishing-function org-publish-org-to-html
+                       :headline-levels 4
+                       :html-extension "markdown"
+                       :body-only t))))
+</pre>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-3" class="outline-3">
+<h3 id="sec-4-3">早速投稿とかしてみる</h3>
+<div class="outline-text-3" id="text-4-3">
+
+
+
+</div>
+
+<div id="outline-container-4-3-1" class="outline-4">
+<h4 id="sec-4-3-1">記事を書く</h4>
+<div class="outline-text-4" id="text-4-3-1">
+
+
+
+
+<pre class="example">% cd ~/repo/octopress
+# 生成コマンド
+% rake new_post
+Enter a title for your post: emacs-de-github-blog-sono2-org-mode
+mkdir -p source/org_posts
+Creating new post: source/org_posts/2013-02-11-emacs-de-github-blog-sono2-org-mode.org
+
+# 記事の中身を編集
+% emacs source/org_posts/2013-02-11-emacs-de-github-blog-sono2-org-mode.org
+#+BEGIN_HTML
+---
+layout: post
+title: "emacs@がんばらない。なまけもの必見！今度こそ継続できるBlogを10分でGithubに開設する。もちろん無料 - org-mode編"
+date: 2013-02-11 15:53
+comments: true
+categories: emacs github octopress org-mode
+---
+本文~
+</pre>
+
+
+
+</div>
+
+<div id="outline-container-4-3-1-1" class="outline-5">
+<h5 id="sec-4-3-1-1"><code>C-c C-e F</code> で投稿元ネタ生成</h5>
+<div class="outline-text-5" id="text-4-3-1-1">
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4-3-2" class="outline-4">
+<h4 id="sec-4-3-2">記事をBlogに反映</h4>
+<div class="outline-text-4" id="text-4-3-2">
+
+
+
+
+<pre class="example">% rake gen_deploy
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-3-3" class="outline-4">
+<h4 id="sec-4-3-3">投稿した記事を閲覧する</h4>
+<div class="outline-text-4" id="text-4-3-3">
+
+<p>    <a href="http://yunojy.github.com">http://yunojy.github.com</a>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4-3-4" class="outline-4">
+<h4 id="sec-4-3-4">編集、削除する場合</h4>
+<div class="outline-text-4" id="text-4-3-4">
+
+<p>    <code>source/org_posts/</code> 以下の <code>.org</code> を編集して <code>C-c C-e F</code> で投稿元ネタ上書き再生成。 <code>% rake gen_deploy</code> でUP
+</p>
+
+<hr/>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4-4" class="outline-3">
+<h3 id="sec-4-4">まとめ</h3>
+<div class="outline-text-3" id="text-4-4">
+
+<p>   以後、気が向いたときにコンソールから
+</p>
+
+
+<pre class="example">% cd ~/repo/octopress
+% rake new_post
+</pre>
+
+<p>
+   で、記事ファイル置き場に投稿ファイル作って、
+</p>
+
+
+<pre class="example">% emacs source/org_posts/2013-02-11-first-post.org
+#+BEGIN_HTML
+---
+layout: post
+title: "emacs@がんばらない。なまけもの必見！今度こそ継続できるBlogを10分でGithubに開設する。もちろん無料 - org-mode編"
+date: 2013-02-11 15:53
+comments: true
+categories: emacs github octopress org-mode
+---
+ほんぶんここから
+</pre>
+
+<p>
+   で、投稿ネタ書いて、
+   <code>C-c C-e F</code> で <code>org</code> を <code>markdown</code> に変換して
+</p>
+
+
+<pre class="example">% rake gen_deploy
+</pre>
+
+<p>
+   で、大好きなorg-modeでgithubに投稿ができるようになります。
+</p>
+<p>
+   あれ？さらにめんどくさくなってるぞ・・
+</p>
+
+
+<hr/>
+
+
+</div>
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5">おまけ</h2>
+<div class="outline-text-2" id="text-5">
+
+<p>  org-modeの書式
+    <a href="http://d.hatena.ne.jp/tamura70/20100216/org">Emacs org-modeを使ってみる: (13) HTMLにエクスポート</a>
+      <a href="http://bach.istc.kobe-u.ac.jp/hatena/htmlexport.org">http://bach.istc.kobe-u.ac.jp/hatena/htmlexport.org</a>
+      <a href="http://bach.istc.kobe-u.ac.jp/hatena/htmlexport.html">http://bach.istc.kobe-u.ac.jp/hatena/htmlexport.html</a>
+</p>
+</div>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[emacs@がんばらない。なまけもの必見！今度こそ継続できるBlogを10分でGithubに開設する。もちろん無料 - markdown編]]></title>
