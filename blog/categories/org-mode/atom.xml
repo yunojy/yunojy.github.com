@@ -4,7 +4,7 @@
   <title><![CDATA[Category: org-mode | develog.me]]></title>
   <link href="http://yunojy.github.com/blog/categories/org-mode/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-02-11T15:50:18+09:00</updated>
+  <updated>2013-02-11T15:51:43+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -100,6 +100,7 @@
 </p>
 
 <hr/>
+
 
 </div>
 
@@ -256,6 +257,8 @@ categories: スペース区切り。""不要
 <p>    そのまま <code>source/_posts/</code> 以下の <code>.markdown</code> を編集して <code>% rake gen_deploy</code>
 </p>
 
+<hr/>
+
 </div>
 </div>
 
@@ -304,6 +307,8 @@ categories:
    あれ？めんどくさいぞ・・
 </p>
 
+
+<hr/>
 
 </div>
 </div>

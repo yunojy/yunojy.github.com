@@ -33,6 +33,7 @@ categories: emacs org-mode octopress
   [[http://www.hisasann.com/blog/2012/10/06/first-post/][Githubを使って独自ブログをはじめる方法メモ]]
 
 -----
+
 ** Octopress導入
 *** レポジトリを作る
     [[https://github.com/new][Create a New Repository]]
@@ -113,6 +114,7 @@ categories: emacs org-mode octopress
 *** 編集、削除する場合
     そのまま =source/_posts/= 以下の =.markdown= を編集して =% rake gen_deploy=
     
+-----
 
 ** まとめ
    以後、気が向いたときにコンソールから
@@ -141,7 +143,8 @@ categories: emacs org-mode octopress
    あれ？めんどくさいぞ・・
    
 
-   
+-----
+
 * おまけ
 
 ** GithubにSSH Key登録
