@@ -4,7 +4,7 @@
   <title><![CDATA[Category: emacs | develog.me]]></title>
   <link href="http://yunojy.github.com/blog/categories/emacs/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-02-11T16:51:01+09:00</updated>
+  <updated>2013-02-11T16:56:03+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -27,12 +27,16 @@
 <p>  
   今回は、 <code>markdown</code> ではなく <code>org</code> で投稿する方法を説明します。
 </p>
-<p>
-  仕組みとしては、
-  octopressは、 <code>% rake gen_deploy</code> で <code>octopress/source/_posts/*.markdown</code> ファイルを投稿していますが、
-  その仕組みはかえずに、emacsのorg-mode側で <code>C-c C-e F</code> <code>org-publish-current-file</code> で、 <code>octopress/source/org_posts/*.org</code> のファイルを <code>markdown</code> へ変換して、 <code>octopress/source/_posts/*.markdown</code> へ出力させます。
-  また、記事作成時の <code>% rake new_post</code> コマンドで <code>org</code> 形式で生成してくれるように <code>octopress/Rakefile</code> に手を加えます。
-</p>
+<ul>
+<li>仕組み
+    octopressは <code>% rake gen_deploy</code> で <code>octopress/source/_posts/*.markdown</code> ファイルを投稿しています。
+    今回その仕組みは変えずにemacsのorg-mode側で <code>org</code> → <code>markdown</code> 変換を行います。
+    具体的には <code>C-c C-e F org-publish-current-file</code> で <code>octopress/source/org_posts/*.org</code> → <code>octopress/source/_posts/*.markdown</code> へ変換・出力させます。
+    また、記事作成時の <code>% rake new_post</code> コマンドで <code>org</code> 形式で生成してくれるように <code>octopress/Rakefile</code> に手を加えます。
+</li>
+</ul>
+
+
 </div>
 
 </div>

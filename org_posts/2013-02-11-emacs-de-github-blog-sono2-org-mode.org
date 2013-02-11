@@ -13,10 +13,11 @@ categories: emacs github octopress org-mode
   
   今回は、 =markdown= ではなく =org= で投稿する方法を説明します。
 
-  仕組みとしては、
-  octopressは、 =% rake gen_deploy= で =octopress/source/_posts/*.markdown= ファイルを投稿していますが、
-  その仕組みはかえずに、emacsのorg-mode側で =C-c C-e F= =org-publish-current-file= で、 =octopress/source/org_posts/*.org= のファイルを =markdown= へ変換して、 =octopress/source/_posts/*.markdown= へ出力させます。
-  また、記事作成時の =% rake new_post= コマンドで =org= 形式で生成してくれるように =octopress/Rakefile= に手を加えます。
+  - 仕組み
+    octopressは =% rake gen_deploy= で =octopress/source/_posts/*.markdown= ファイルを投稿しています。
+    今回その仕組みは変えずにemacsのorg-mode側で =org= → =markdown= 変換を行います。
+    具体的には =C-c C-e F org-publish-current-file= で =octopress/source/org_posts/*.org= → =octopress/source/_posts/*.markdown= へ変換・出力させます。
+    また、記事作成時の =% rake new_post= コマンドで =org= 形式で生成してくれるように =octopress/Rakefile= に手を加えます。
 
 * 前提条件
   - markdown編の設定が完了していること
