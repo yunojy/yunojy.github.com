@@ -24,7 +24,7 @@ categories: emacs github octopress org-mode
     また、記事作成時の =% rake new_post= コマンドで =org= 形式で生成してくれるように =octopress/Rakefile= に手を加えます。
 
 * 前提条件
-  - markdown編の設定が完了していること
+  - [[http://yunojy.github.com/blog/2013/02/11/emacs-de-github-blog-sono1-markdown/][markdown編]]の設定が完了していること
 
 * 参考
   [[http://jaderholm.com/blog/blogging-with-org-mode-and-octopress][Blogging With Org-mode and Octopress]]
@@ -38,7 +38,7 @@ categories: emacs github octopress org-mode
 
 ** 記事新規作成コマンドの対応。Rakefile書き換え
    =% rake new_post= で作成する投稿ファイルを、 =source/_posts/*.markdown= から、 =source/org_posts/*.org= に変更します。
-   - 参考元では、 =-pust.puts "---"= としていましたが、それを消すと投稿した記事にcssがあたらなかったり、いろいろ悲惨な目に遭います。
+   ※ [[http://jaderholm.com/blog/blogging-with-org-mode-and-octopress][参考元]] では、 =-  pust.puts "---"= としていますが、それを消すと投稿した記事にcssがあたらなかったり、いろいろ悲惨な目に遭います。
 
    #+BEGIN_SRC diff
    @@ -21,9 +22,10 @@ blog_index_dir  = 'source'    # directory for your blog's index page (if you put

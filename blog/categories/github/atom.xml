@@ -4,7 +4,7 @@
   <title><![CDATA[Category: github | develog.me]]></title>
   <link href="http://yunojy.github.com/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-02-11T16:56:39+09:00</updated>
+  <updated>2013-02-11T17:01:05+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -57,7 +57,7 @@
 <div class="outline-text-2" id="text-2">
 
 <ul>
-<li>markdown編の設定が完了していること
+<li><a href="http://yunojy.github.com/blog/2013/02/11/emacs-de-github-blog-sono1-markdown/">markdown編</a>の設定が完了していること
 </li>
 </ul>
 
@@ -107,12 +107,8 @@
 <div class="outline-text-3" id="text-4-1">
 
 <p>   <code>% rake new_post</code> で作成する投稿ファイルを、 <code>source/_posts/*.markdown</code> から、 <code>source/org_posts/*.org</code> に変更します。
-</p><ul>
-<li>参考元では、 =-pust.puts "&mdash;"= としていましたが、それを消すと投稿した記事にcssがあたらなかったり、いろいろ悲惨な目に遭います。
-</li>
-</ul>
-
-
+   ※ <a href="http://jaderholm.com/blog/blogging-with-org-mode-and-octopress">参考元</a> では、 =-  pust.puts "&mdash;"= としていますが、それを消すと投稿した記事にcssがあたらなかったり、いろいろ悲惨な目に遭います。
+</p>
 
 
 
