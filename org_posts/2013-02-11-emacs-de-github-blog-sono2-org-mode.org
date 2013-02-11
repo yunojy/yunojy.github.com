@@ -117,7 +117,7 @@ categories: emacs github octopress org-mode
     comments: true
     categories: emacs github octopress org-mode
     ---
-    #+END_HTML
+    \#+END_HTML
     本文~
     #+END_SRC
 
