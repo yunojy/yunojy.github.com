@@ -4,7 +4,7 @@
   <title><![CDATA[develog.me]]></title>
   <link href="http://yunojy.github.com/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-02-11T11:14:26+09:00</updated>
+  <updated>2013-02-11T11:29:09+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -33,7 +33,7 @@
 title: &#8220;org-test&#8221;
 date: 2013-02-11 11:05
 comments: true
-categories:</p>
+categories: aaaa,iiii</p>
 
 <div id="outline-container-1" class="outline-2">
 <h2 id="sec-1">test desu</h2>
@@ -146,6 +146,34 @@ categories:</p>
 
 
 </div>
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">コード</h2>
+<div class="outline-text-2" id="text-4">
+
+
+
+
+<pre class="example"># 投稿
+% rake new_post
+Enter a title for your post: org-test
+mkdir -p source/org_posts
+Creating new post: source/org_posts/2013-02-11-org-test.org
+
+% emacs source/org_posts/2013-02-11-org-test.org
+# C-c C-e F で 中身がHTMLの*.markdownに出力(source/_posts/2013-02-11-org-test.markdown)
+
+# up
+% rake gen_deploy
+</pre>
+
+
 </div>
 </div>
 

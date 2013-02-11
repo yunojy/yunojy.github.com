@@ -4,7 +4,7 @@ layout: post
 title: "org-test"
 date: 2013-02-11 11:05
 comments: true
-categories: 
+categories: aaaa,iiii
 #+END_HTML
 
 * test desu
@@ -38,3 +38,18 @@ categories:
      aaa
 
 
+* コード
+  #+BEGIN_SRC shell
+  # 投稿
+  % rake new_post
+  Enter a title for your post: org-test
+  mkdir -p source/org_posts
+  Creating new post: source/org_posts/2013-02-11-org-test.org
+
+  % emacs source/org_posts/2013-02-11-org-test.org
+  # C-c C-e F で 中身がHTMLの*.markdownに出力(source/_posts/2013-02-11-org-test.markdown)
+
+  # up
+  % rake gen_deploy
+  #+END_SRC
+  
