@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: aaaa,iiii | develog.me]]></title>
+  <link href="http://yunojy.github.com/blog/categories/aaaa-iiii/atom.xml" rel="self"/>
+  <link href="http://yunojy.github.com/"/>
+  <updated>2013-02-11T11:30:37+09:00</updated>
+  <id>http://yunojy.github.com/</id>
+  <author>
+    <name><![CDATA[yunojy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[これはテスト記事です]]></title>
+    <link href="http://yunojy.github.com/blog/2013/02/11/first-post/"/>
+    <updated>2013-02-11T09:45:00+09:00</updated>
+    <id>http://yunojy.github.com/blog/2013/02/11/first-post</id>
+    <content type="html"><![CDATA[<p>テスト</p>
+]]></content>
+  </entry>
+  
+</feed>
