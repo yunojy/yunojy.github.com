@@ -9,7 +9,8 @@ categories: emacs github octopress org-mode
 #+END_HTML
 
 * 概要
-  markdown編の続き
+  [[http://yunojy.github.com/blog/2013/02/11/emacs-de-github-blog-sono2-org-mode/][markdown編]]の続き
+  
   今回は、 =markdown= ではなく =org= で投稿する方法を説明します。
 
   仕組みとしては、
