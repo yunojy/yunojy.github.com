@@ -154,7 +154,7 @@ categories: emacs github octopress org-mode
    comments: true
    categories: emacs github octopress org-mode
    ---
-   ##+END_HTML
+   #+END_HTML
    ほんぶんここから
    #+END_SRC
    で、投稿ネタ書いて、
