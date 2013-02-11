@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[develog.me]]></title>
-  <link href="http://yunojy.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: emacs | develog.me]]></title>
+  <link href="http://yunojy.github.com/blog/categories/emacs/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
   <updated>2013-02-11T15:27:31+09:00</updated>
   <id>http://yunojy.github.com/</id>
@@ -356,9 +356,9 @@ categories:
       <a href="https://github.com/settings/ssh">https://github.com/settings/ssh</a>
 
 <p>      
-      &#8220;Add SSH Key&#8221;をクリック
-      &#8220;Title&#8221;は適当に
-      &#8220;Key&#8221;にはりつけ
+      "Add SSH Key"をクリック
+      "Title"は適当に
+      "Key"にはりつけ
 </p>
 </li>
 <li>ローカルからSSH接続確認
@@ -379,188 +379,6 @@ Hi username! You've successfully authenticated, but GitHub does not provide shel
 </div>
 </div>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[test2-org]]></title>
-    <link href="http://yunojy.github.com/blog/2013/02/11/test2-org/"/>
-    <updated>2013-02-11T11:40:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/02/11/test2-org</id>
-    <content type="html"><![CDATA[<div id="outline-container-1" class="outline-2">
-<h2 id="sec-1">てすとですよ</h2>
-<div class="outline-text-2" id="text-1">
-
-
-<p>
-  <code>code</code>
-</p>
-<p>
-  <span style="text-decoration:underline;">下線</span>
-</p>
-
-</div>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[org-test]]></title>
-    <link href="http://yunojy.github.com/blog/2013/02/11/org-test/"/>
-    <updated>2013-02-11T11:05:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/02/11/org-test</id>
-    <content type="html"><![CDATA[<div id="outline-container-1" class="outline-2">
-<h2 id="sec-1">test desu</h2>
-<div class="outline-text-2" id="text-1">
-
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-<caption></caption>
-<colgroup><col class="left" /><col class="left" /><col class="left" /><col class="left" /><col class="left" />
-</colgroup>
-<thead>
-<tr><th scope="col" class="left">a</th><th scope="col" class="left">b</th><th scope="col" class="left">c</th><th scope="col" class="left">d</th><th scope="col" class="left">e</th></tr>
-</thead>
-<tbody>
-<tr><td class="left">f</td><td class="left">g</td><td class="left">h</td><td class="left">i</td><td class="left">j</td></tr>
-<tr><td class="left"></td><td class="left">l</td><td class="left"></td><td class="left">m</td><td class="left"></td></tr>
-</tbody>
-</table>
-
-
-</div>
-
-</div>
-
-
-
-
-<div id="outline-container-2" class="outline-2">
-<h2 id="sec-2">head1</h2>
-<div class="outline-text-2" id="text-2">
-
-
-
-</div>
-
-<div id="outline-container-2-1" class="outline-3">
-<h3 id="sec-2-1">head2</h3>
-<div class="outline-text-3" id="text-2-1">
-
-
-
-</div>
-
-<div id="outline-container-2-1-1" class="outline-4">
-<h4 id="sec-2-1-1">head3</h4>
-<div class="outline-text-4" id="text-2-1-1">
-
-
-
-</div>
-
-<div id="outline-container-2-1-1-1" class="outline-5">
-<h5 id="sec-2-1-1-1">head4</h5>
-<div class="outline-text-5" id="text-2-1-1-1">
-
-
-<ul>
-<li id="sec-2-1-1-1-1">head5<br/>
-
-<ul>
-<li id="sec-2-1-1-1-1-1">head6<br/>
-
-<ul>
-<li id="sec-2-1-1-1-1-1-1">head7<br/>
-
-
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-
-
-
-
-<div id="outline-container-3" class="outline-2">
-<h2 id="sec-3">Task</h2>
-<div class="outline-text-2" id="text-3">
-
-
-</div>
-
-<div id="outline-container-3-1" class="outline-3">
-<h3 id="sec-3-1"><span class="todo TODO">TODO</span> todoha? &nbsp;&nbsp;&nbsp;<span class="tag"><span class="org">org</span>&nbsp;<span class="mode">mode</span></span></h3>
-<div class="outline-text-3" id="text-3-1">
-
-<p>    <span class="timestamp-wrapper"><span class="timestamp-kwd">SCHEDULED: </span> <span class="timestamp">2013-02-11 Mon</span></span><br/>
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-3-2" class="outline-3">
-<h3 id="sec-3-2"><span class="todo WAITING">WAITING</span> waiting?</h3>
-<div class="outline-text-3" id="text-3-2">
-
-<p>    <span class="timestamp-wrapper"><span class="timestamp-kwd">DEADLINE: </span> <span class="timestamp">2013-02-11 Mon</span></span><br/>
-</p><ul>
-<li>Note taken on <span class="timestamp-wrapper"> <span class="timestamp">2013-02-11 Mon 11:09</span></span> <br/>
-     aaa
-</li>
-</ul>
-
-
-
-</div>
-</div>
-
-</div>
-
-
-
-
-<div id="outline-container-4" class="outline-2">
-<h2 id="sec-4">コード</h2>
-<div class="outline-text-2" id="text-4">
-
-
-
-
-<pre class="example"># 投稿
-% rake new_post
-Enter a title for your post: org-test
-mkdir -p source/org_posts
-Creating new post: source/org_posts/2013-02-11-org-test.org
-
-% emacs source/org_posts/2013-02-11-org-test.org
-# C-c C-e F で 中身がHTMLの*.markdownに出力(source/_posts/2013-02-11-org-test.markdown)
-
-# up
-% rake gen_deploy
-</pre>
-
-
-</div>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[これはテスト記事です]]></title>
-    <link href="http://yunojy.github.com/blog/2013/02/11/first-post/"/>
-    <updated>2013-02-11T09:45:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/02/11/first-post</id>
-    <content type="html"><![CDATA[<p>テスト</p>
 ]]></content>
   </entry>
   

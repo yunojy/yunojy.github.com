@@ -1,0 +1,176 @@
+#+BEGIN_HTML
+---
+layout: post
+title: "emacs@がんばらない。なまけもの必見！今度こそ継続できるBlogを10分でGithubに開設する。もちろん無料 - markdown編"
+date: 2013-02-11 11:50
+comments: true
+categories: emacs org-mode
+---
+#+END_HTML
+
+* Blog投稿めんどくさ
+  そもそも書くのがめんどくさい、開設めんどくさい、管理めんどくさい、投稿するのにログインするのめんどくさい、金かかるのありえない、別に情報公開してほめられたい訳でない、アフィリエイト？めんどくさい、なんとなくどこからでも読める備忘録がほしい、でもその程度の欲求なら大してがんばれない。それにemacsから出たくないし。そんな自分のための備忘録。
+
+* 概要
+  GithubをBlogにしちゃうOctopressを使って、1.ローカルで =.markdown= を書く。2.コンソールから一発コマンドを打つ。だけで投稿を可能にする環境を構築します。
+
+* もくじ
+  
+** Octopress導入
+
+** 早速投稿とかしてみる
+
+* 前提条件
+  - Githubにアカウント作成済み
+  - GithubにSSH Key登録済み（手順はおまけに）
+  - Mac（必須でもないが、WindowsだといろいろめんどくさいからMac買えばいい）
+  - Ruby 1.9.3-p194 管理にrbenv利用（途中、説明のコマンドはrbenv用、バージョン切替だけだからrvmでもかまわない）
+  - octopress ・・バージョン？ =.rbenv-version= に =1.9.3-p194= って書いてあったバージョン。
+
+* 参考
+  [[http://www.hisasann.com/blog/2012/10/06/first-post/][Githubを使って独自ブログをはじめる方法メモ]]
+
+** Octopress導入
+*** Repository作る
+    [[https://github.com/new][Create a New Repository]]
+    =[username].github.com=
+    
+*** OctopressをローカルPCへインストール
+    #+BEGIN_SRC shell
+    # githubからclone
+    % cd ~/repo
+    % git clone git://github.com/imathis/octopress.git octopress
+    % cd octopress
+
+    # 利用するrubyの設定(octopress)
+    % rbenv install 1.9.3-p194
+    % rbenv local 1.9.3-p194
+    % rbenv rehash
+
+    # bundleのインストール
+    % sudo gem install bundler
+    % bundle install
+
+    # octopressインストール
+    % rake install
+    % rake setup_github_pages
+    # 途中gitリポジトリのURLを入力
+
+    % rake generate
+    % rake deploy
+    #+END_SRC
+
+*** ブログの設定
+    #+BEGIN_SRC shell
+    % ~/repo/octopress
+    % emacs _config
+    #+END_SRC
+    #+BEGIN_SRC yaml
+    url: http://yunojy.github.com
+    title: develog.me
+    subtitle: 開発＠がんばらない
+    author: yunojy
+    #+END_SRC
+
+** 早速投稿とかしてみる
+
+*** 記事を書く
+    #+BEGIN_SRC shell
+    % cd ~/repo/octopress
+    # 生成コマンド
+    % rake new_post
+    Enter a title for your post: first-post
+    mkdir -p source/_posts
+    Creating new post: source/_posts/2013-02-11-first-post.markdown
+
+    # 記事の中身を編集
+    % emacs source/_posts/2013-02-11-first-post.markdown
+    ---
+    layout: post
+    title: "first-post"
+    date: 2013-02-11 9:45
+    comments: true
+    categories:
+    ---
+    本文
+    #+END_SRC
+
+*** 記事をBlogに反映
+    開設したばかりの初回は10分くらいかかる。以後すぐ
+    #+BEGIN_SRC shell
+    % rake gen_deploy
+    #+END_SRC
+
+*** いじょ
+    http://[username].github.com/
+
+*** 編集、削除する場合
+    そのまま =source/_posts/= 以下の =.markdown= を編集して =% rake gen_deploy=
+    
+
+** まとめ
+   以後、気が向いたときにコンソールから
+   #+BEGIN_SRC shell
+   % cd ~/repo/octopress
+   % rake new_post
+   #+END_SRC
+   で、投稿ファイル作って、
+   #+BEGIN_SRC shell
+   % emacs source/_posts/2013-02-11-first-post.markdown
+   ---
+   layout: post
+   title: "first-post"
+   date: 2013-02-11 9:45
+   comments: true
+   categories:
+   ---
+   ほんぶんここから
+   #+END_SRC
+   で、投稿ネタ書いて、
+   #+BEGIN_SRC shell
+   % rake gen_deploy
+   #+END_SRC
+   で、大好きなmarkdownでgithub(http://[username].github.com/)に投稿ができるようになります。
+
+   あれ？めんどくさいぞ・・
+   
+
+   
+* おまけ
+
+** GithubにSSH Key登録
+   ※PC買い替えしたばかりなどで未登録の人だけ。
+   
+   ※英語読めちゃう人は公式のこちら参照
+   [[https://help.github.com/articles/generating-ssh-keys][Generating SSH Keys@github:help]]
+   
+
+   1. ローカルでSSHキーの生成
+      #+BEGIN_SRC shell
+      # 既存バックアップ
+      % cd ~/.ssh
+      % ls -a
+      % mv -p id_rsa* backup
+      
+      # 新しいKeyを生成
+      % ssh-keygen -t rsa -C "your_email@youremail.com"
+      
+      # 生成キーをクリップボードへ
+      % pbcopy < ~/.ssh/id_rsa.pub
+      #+END_SRC
+
+   2. GitHubに公開鍵を登録
+      https://github.com/settings/ssh
+      
+      "Add SSH Key"をクリック
+      "Title"は適当に
+      "Key"にはりつけ
+
+   3. ローカルからSSH接続確認
+      #+BEGIN_SRC shell
+      # git@github.comはそのまま
+      % ssh -T git@github.com
+      # 成功すれば、usernameが自分の名前で次のメッセージが表示される
+      Hi username! You've successfully authenticated, but GitHub does not provide shell access.
+      #+END_SRC
+
