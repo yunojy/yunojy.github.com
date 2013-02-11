@@ -32,6 +32,7 @@ categories: emacs org-mode octopress
 * 参考
   [[http://www.hisasann.com/blog/2012/10/06/first-post/][Githubを使って独自ブログをはじめる方法メモ]]
 
+#-
 ** Octopress導入
 *** レポジトリを作る
     [[https://github.com/new][Create a New Repository]]
