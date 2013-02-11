@@ -4,7 +4,7 @@
   <title><![CDATA[Category: github | develog.me]]></title>
   <link href="http://yunojy.github.com/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-02-11T16:56:03+09:00</updated>
+  <updated>2013-02-11T16:56:39+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -29,11 +29,19 @@
 </p>
 <ul>
 <li>仕組み
+
+<p>    
     octopressは <code>% rake gen_deploy</code> で <code>octopress/source/_posts/*.markdown</code> ファイルを投稿しています。
+</p>
+<p>    
     今回その仕組みは変えずにemacsのorg-mode側で <code>org</code> → <code>markdown</code> 変換を行います。
+</p>
+<p>    
     具体的には <code>C-c C-e F org-publish-current-file</code> で <code>octopress/source/org_posts/*.org</code> → <code>octopress/source/_posts/*.markdown</code> へ変換・出力させます。
+</p>
+<p>    
     また、記事作成時の <code>% rake new_post</code> コマンドで <code>org</code> 形式で生成してくれるように <code>octopress/Rakefile</code> に手を加えます。
-</li>
+</p></li>
 </ul>
 
 
