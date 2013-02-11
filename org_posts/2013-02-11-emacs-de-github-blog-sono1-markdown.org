@@ -16,13 +16,13 @@ categories: emacs github octopress markdown
 
 * 前提条件
   - Githubにアカウント作成済み
-  - GithubにSSH Key登録済み 
+  - GithubにSSH Key登録済み
     手順はおまけに
-  - Mac 
+  - Mac
     必須でもないが、Windowsだといろいろめんどくさい
-  - =Ruby 1.9.3-p194= 
+  - =Ruby 1.9.3-p194=
     管理にrbenv利用。途中、説明のコマンドはrbenv用、バージョン切替だけだからrvmでもかまわない
-  - =octopress= 
+  - =octopress=
     ・・バージョン？ =.rbenv-version= に =1.9.3-p194= って書いてあったバージョン
 
 * 参考

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: emacs | develog.me]]></title>
   <link href="http://yunojy.github.com/blog/categories/emacs/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-02-11T17:09:29+09:00</updated>
+  <updated>2013-02-11T17:11:45+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -376,41 +376,22 @@ categories: emacs github octopress org-mode
 
 
 <div id="outline-container-3" class="outline-2">
-<h2 id="sec-3">もくじ</h2>
+<h2 id="sec-3">前提条件</h2>
 <div class="outline-text-2" id="text-3">
-
-<ol>
-<li>Octopress導入
-</li>
-<li>早速投稿とかしてみる
-</li>
-</ol>
-
-
-</div>
-
-</div>
-
-
-
-
-<div id="outline-container-4" class="outline-2">
-<h2 id="sec-4">前提条件</h2>
-<div class="outline-text-2" id="text-4">
 
 <ul>
 <li>Githubにアカウント作成済み
 </li>
-<li>GithubにSSH Key登録済み 
+<li>GithubにSSH Key登録済み
     手順はおまけに
 </li>
-<li>Mac 
+<li>Mac
     必須でもないが、Windowsだといろいろめんどくさい
 </li>
-<li><code>Ruby 1.9.3-p194</code> 
+<li><code>Ruby 1.9.3-p194</code>
     管理にrbenv利用。途中、説明のコマンドはrbenv用、バージョン切替だけだからrvmでもかまわない
 </li>
-<li><code>octopress</code> 
+<li><code>octopress</code>
     ・・バージョン？ <code>.rbenv-version</code> に <code>1.9.3-p194</code> って書いてあったバージョン
 </li>
 </ul>
@@ -423,14 +404,33 @@ categories: emacs github octopress org-mode
 
 
 
-<div id="outline-container-5" class="outline-2">
-<h2 id="sec-5">参考</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">参考</h2>
+<div class="outline-text-2" id="text-4">
 
 <p>  <a href="http://www.hisasann.com/blog/2012/10/06/first-post/">Githubを使って独自ブログをはじめる方法メモ</a>
 </p>
 
 <hr/>
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5">目次</h2>
+<div class="outline-text-2" id="text-5">
+
+<ol>
+<li>Octopress導入
+</li>
+<li>早速投稿とかしてみる
+</li>
+</ol>
+
 
 
 </div>
