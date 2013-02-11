@@ -15,10 +15,8 @@ categories: emacs org-mode
   GithubをBlogにしちゃうOctopressを使って、1.ローカルで =.markdown= を書く。2.コンソールから一発コマンドを打つ。だけで投稿を可能にする環境を構築します。
 
 * もくじ
-  
-** Octopress導入
-
-** 早速投稿とかしてみる
+  1. Octopress導入
+  2. 早速投稿とかしてみる
 
 * 前提条件
   - Githubにアカウント作成済み
