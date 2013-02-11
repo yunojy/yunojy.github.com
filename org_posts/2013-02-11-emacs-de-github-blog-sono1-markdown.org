@@ -20,20 +20,28 @@ categories: emacs org-mode
 
 * 前提条件
   - Githubにアカウント作成済み
-  - GithubにSSH Key登録済み（手順はおまけに）
-  - Mac（必須でもないが、WindowsだといろいろめんどくさいからMac買えばいい）
-  - Ruby 1.9.3-p194 管理にrbenv利用（途中、説明のコマンドはrbenv用、バージョン切替だけだからrvmでもかまわない）
-  - octopress ・・バージョン？ =.rbenv-version= に =1.9.3-p194= って書いてあったバージョン。
+  - GithubにSSH Key登録済み
+    手順はおまけに
+  - Mac
+    必須でもないが、Windowsだといろいろめんどくさい
+  - Ruby 1.9.3-p194 管理にrbenv利用
+    途中、説明のコマンドはrbenv用、バージョン切替だけだからrvmでもかまわない
+  - octopress
+    ・・バージョン？ =.rbenv-version= に =1.9.3-p194= って書いてあったバージョン
 
 * 参考
   [[http://www.hisasann.com/blog/2012/10/06/first-post/][Githubを使って独自ブログをはじめる方法メモ]]
 
 ** Octopress導入
-*** Repository作る
+*** レポジトリを作る
     [[https://github.com/new][Create a New Repository]]
+
+    次の名前のレポジトリを作る。
+    [username]は自分の名前 =yunojy.github.com= みたいに
+    
     =[username].github.com=
     
-*** OctopressをローカルPCへインストール
+*** OctopressをローカルPCへインストール（場所は任意）
     #+BEGIN_SRC shell
     # githubからclone
     % cd ~/repo
@@ -112,7 +120,7 @@ categories: emacs org-mode
    % cd ~/repo/octopress
    % rake new_post
    #+END_SRC
-   で、投稿ファイル作って、
+   で、記事ファイル置き場に投稿ファイル作って、
    #+BEGIN_SRC shell
    % emacs source/_posts/2013-02-11-first-post.markdown
    ---
