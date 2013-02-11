@@ -4,7 +4,7 @@
   <title><![CDATA[develog.me]]></title>
   <link href="http://yunojy.github.com/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-02-11T17:01:05+09:00</updated>
+  <updated>2013-02-11T17:03:38+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -107,7 +107,9 @@
 <div class="outline-text-3" id="text-4-1">
 
 <p>   <code>% rake new_post</code> で作成する投稿ファイルを、 <code>source/_posts/*.markdown</code> から、 <code>source/org_posts/*.org</code> に変更します。
-   ※ <a href="http://jaderholm.com/blog/blogging-with-org-mode-and-octopress">参考元</a> では、 =-  pust.puts &#8220;&mdash;&#8221;= としていますが、それを消すと投稿した記事にcssがあたらなかったり、いろいろ悲惨な目に遭います。
+</p>
+<p>   
+   ※ <a href="http://jaderholm.com/blog/blogging-with-org-mode-and-octopress">参考元</a> では、 -  pust.puts &#8220;&mdash;&#8221; としていますが、それを消すと投稿した記事にcssがあたらなかったり、いろいろ悲惨な目に遭います。
 </p>
 
 
@@ -157,7 +159,7 @@
 <h3 id="sec-4-2">記事変換の対応。emacs設定にorg-modeの出力についての設定追加</h3>
 <div class="outline-text-3" id="text-4-2">
 
-<p>   &#8220;develog.me&#8221;とか、各ディレクトリ位置は各環境で読み替え
+<p>   &#8220;develog.me&#8221; とか、各ディレクトリ位置は各環境で読み替え
 </p>
 
 
