@@ -4,7 +4,7 @@
   <title><![CDATA[develog.me]]></title>
   <link href="http://yunojy.github.com/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-02-11T11:30:37+09:00</updated>
+  <updated>2013-02-11T11:38:52+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -14,28 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[これはテスト記事です]]></title>
-    <link href="http://yunojy.github.com/blog/2013/02/11/first-post/"/>
-    <updated>2013-02-11T09:45:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/02/11/first-post</id>
-    <content type="html"><![CDATA[<p>テスト</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Org Test]]></title>
+    <title type="html"><![CDATA[org-test]]></title>
     <link href="http://yunojy.github.com/blog/2013/02/11/org-test/"/>
-    <updated>2013-02-11T00:00:00+09:00</updated>
+    <updated>2013-02-11T11:05:00+09:00</updated>
     <id>http://yunojy.github.com/blog/2013/02/11/org-test</id>
-    <content type="html"><![CDATA[<hr />
-
-<p>layout: post
-title: &#8220;org-test&#8221;
-date: 2013-02-11 11:05
-comments: true
-categories: aaaa,iiii</p>
-
-<div id="outline-container-1" class="outline-2">
+    <content type="html"><![CDATA[<div id="outline-container-1" class="outline-2">
 <h2 id="sec-1">test desu</h2>
 <div class="outline-text-2" id="text-1">
 
@@ -177,6 +160,15 @@ Creating new post: source/org_posts/2013-02-11-org-test.org
 </div>
 </div>
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[これはテスト記事です]]></title>
+    <link href="http://yunojy.github.com/blog/2013/02/11/first-post/"/>
+    <updated>2013-02-11T09:45:00+09:00</updated>
+    <id>http://yunojy.github.com/blog/2013/02/11/first-post</id>
+    <content type="html"><![CDATA[<p>テスト</p>
 ]]></content>
   </entry>
   
