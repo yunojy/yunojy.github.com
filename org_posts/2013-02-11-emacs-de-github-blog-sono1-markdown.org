@@ -20,13 +20,13 @@ categories: emacs org-mode octopress
 
 * 前提条件
   - Githubにアカウント作成済み
-  - GithubにSSH Key登録済み
+  - GithubにSSH Key登録済み 
     手順はおまけに
-  - Mac
+  - Mac 
     必須でもないが、Windowsだといろいろめんどくさい
-  - Ruby 1.9.3-p194 管理にrbenv利用
-    途中、説明のコマンドはrbenv用、バージョン切替だけだからrvmでもかまわない
-  - octopress
+  - =Ruby 1.9.3-p194= 
+    管理にrbenv利用。途中、説明のコマンドはrbenv用、バージョン切替だけだからrvmでもかまわない
+  - =octopress= 
     ・・バージョン？ =.rbenv-version= に =1.9.3-p194= って書いてあったバージョン
 
 * 参考
@@ -36,9 +36,8 @@ categories: emacs org-mode octopress
 *** レポジトリを作る
     [[https://github.com/new][Create a New Repository]]
 
-    次の名前のレポジトリを作る。
-    [username]は自分の名前 =yunojy.github.com= みたいに
-    
+    次の名前でレポジトリを作る。
+    [username]は自分の名前 =yunojy.github.com=
     =[username].github.com=
     
 *** OctopressをローカルPCへインストール（場所は任意）
@@ -108,7 +107,7 @@ categories: emacs org-mode octopress
     #+END_SRC
 
 *** 投稿した記事を閲覧する
-    http://[username].github.com
+    http://yunojy.github.com
 
 *** 編集、削除する場合
     そのまま =source/_posts/= 以下の =.markdown= を編集して =% rake gen_deploy=

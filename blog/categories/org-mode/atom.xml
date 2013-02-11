@@ -4,7 +4,7 @@
   <title><![CDATA[Category: org-mode | develog.me]]></title>
   <link href="http://yunojy.github.com/blog/categories/org-mode/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-02-11T15:41:56+09:00</updated>
+  <updated>2013-02-11T15:46:13+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -70,16 +70,16 @@
 <ul>
 <li>Githubにアカウント作成済み
 </li>
-<li>GithubにSSH Key登録済み
+<li>GithubにSSH Key登録済み 
     手順はおまけに
 </li>
-<li>Mac
+<li>Mac 
     必須でもないが、Windowsだといろいろめんどくさい
 </li>
-<li>Ruby 1.9.3-p194 管理にrbenv利用
-    途中、説明のコマンドはrbenv用、バージョン切替だけだからrvmでもかまわない
+<li><code>Ruby 1.9.3-p194</code> 
+    管理にrbenv利用。途中、説明のコマンドはrbenv用、バージョン切替だけだからrvmでもかまわない
 </li>
-<li>octopress
+<li><code>octopress</code> 
     ・・バージョン？ <code>.rbenv-version</code> に <code>1.9.3-p194</code> って書いてあったバージョン
 </li>
 </ul>
@@ -115,10 +115,8 @@
 <p>    <a href="https://github.com/new">Create a New Repository</a>
 </p>
 <p>
-    次の名前のレポジトリを作る。
-    [username]は自分の名前 <code>yunojy.github.com</code> みたいに
-</p>
-<p>    
+    次の名前でレポジトリを作る。
+    [username]は自分の名前 <code>yunojy.github.com</code>
     <code>[username].github.com</code>
 </p>
 </div>
@@ -243,7 +241,7 @@ categories: スペース区切り。""不要
 <h4 id="sec-5-2-3">投稿した記事を閲覧する</h4>
 <div class="outline-text-4" id="text-5-2-3">
 
-<p>    [[http://[username].github.com][http://[username].github.com]]
+<p>    <a href="http://yunojy.github.com">http://yunojy.github.com</a>
 </p>
 </div>
 
