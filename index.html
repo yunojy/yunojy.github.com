@@ -9,7 +9,7 @@
   <meta name="author" content="yunojy">
 
   
-  <meta name="description" content="よく使うコマンドなのにキーボードショートカットが割り当てられていない。。 毎回メニューバーからちまちま選んで操作なんてしてられるかー！ 今回はMacのアウトラインプロセッサで人気のTreeで、Labelのカラー設定をショートカットに割り当てます。 Macの標準の機能を利用 &hellip;">
+  <meta name="description" content="emacsだいぶ偏った基本操作 カーソル移動 熟練者は C-f C-b C-p C-n を使いません。 C-s =C-r=で移動したい所の文字を入力します。 そのためmigemoは必須。 繰り返し操作 ログとかテスト用データなどなど、整形するのには、マクロ機能が便利。 F3 で記録開始 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +64,128 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/02/13/cheatsheet-emacs-basic/">だいぶ偏ったチートシート Emacs - 基本操作</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-13T22:06:00+09:00" pubdate data-updated="true">Feb 13<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">emacsだいぶ偏った基本操作</h2>
+<div class="outline-text-2" id="text-1">
+
+
+
+</div>
+
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1">カーソル移動</h3>
+<div class="outline-text-3" id="text-1-1">
+
+
+<p>
+   熟練者は <code>C-f</code> <code>C-b</code> <code>C-p</code> <code>C-n</code> を使いません。
+   <code>C-s</code> =C-r=で移動したい所の文字を入力します。
+</p>
+<p>
+   そのためmigemoは必須。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2">繰り返し操作</h3>
+<div class="outline-text-3" id="text-1-2">
+
+
+<p>
+   ログとかテスト用データなどなど、整形するのには、マクロ機能が便利。
+</p>
+<p>
+   <code>F3</code> で記録開始
+   その間繰り返したい操作を行う。
+   <code>F4</code> で記録終了
+</p>
+<p>
+   <code>C-x e</code> で再生。もちろん前に <code>C-u</code> を押せばその分繰り返される
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-3" class="outline-3">
+<h3 id="sec-1-3">矩形編集</h3>
+<div class="outline-text-3" id="text-1-3">
+
+
+<p>
+   対象の文を選択して
+   <code>C-c r d</code> 削除
+   <code>C-c r t</code> 続けて入力した文字を挿入
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-4" class="outline-3">
+<h3 id="sec-1-4">読み取りモードの解除</h3>
+<div class="outline-text-3" id="text-1-4">
+
+
+<p>
+   <code>C-x C-q</code>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-5" class="outline-3">
+<h3 id="sec-1-5">文字化け解消のためとかでエンコード変更</h3>
+<div class="outline-text-3" id="text-1-5">
+
+
+<p>
+   カレントバッファのファイルのエンコード変更する。
+   <code>M-x set-buffer-file-coding-system</code> 続けて指定
+</p>
+<p>
+   ほかに文字化けの原因としては、tarminal、例えばteratermなんかで
+   受信送信のエンコード変えてみるとか。
+</p>
+</div>
+</div>
+</div>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -934,6 +1056,10 @@ Hi username! You've successfully authenticated, but GitHub does not provide shel
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/02/13/cheatsheet-emacs-basic/">だいぶ偏ったチートシート emacs - 基本操作</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/02/12/mac-app-he-jiyuuni-keybind-set/">毎回メニューバーから＠がんばらない。よく使うのにキーボードショートカットが割り当てられていないアプリに自由に割り当てる方法（Treeでラベルカラー設定を割り当てる）</a>

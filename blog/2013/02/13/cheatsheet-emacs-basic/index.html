@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>毎回メニューバーから＠がんばらない。よく使うのにキーボードショートカットが割り当てられていないアプリに自由に割り当てる方法（Treeでラベルカラー設定を割り当てる） - develog.me</title>
+  <title>だいぶ偏ったチートシート emacs - 基本操作 - develog.me</title>
   <meta name="author" content="yunojy">
 
   
-  <meta name="description" content="よく使うコマンドなのにキーボードショートカットが割り当てられていない。。 毎回メニューバーからちまちま選んで操作なんてしてられるかー！ 今回はMacのアウトラインプロセッサで人気のTreeで、Labelのカラー設定をショートカットに割り当てます。 Macの標準の機能を利用 &hellip;">
+  <meta name="description" content="emacsだいぶ偏った基本操作 カーソル移動 熟練者は C-f C-b C-p C-n を使いません。 C-s =C-r=で移動したい所の文字を入力します。 そのためmigemoは必須。 繰り返し操作 ログとかテスト用データなどなど、整形するのには、マクロ機能が便利。 F3 で記録開始 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://yunojy.github.com/blog/2013/02/12/mac-app-he-jiyuuni-keybind-set/">
+  <link rel="canonical" href="http://yunojy.github.com/blog/2013/02/13/cheatsheet-emacs-basic/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -67,7 +67,7 @@
   
   <header>
     
-      <h1 class="entry-title">毎回メニューバーから＠がんばらない。よく使うのにキーボードショートカットが割り当てられていないアプリに自由に割り当てる方法（Treeでラベルカラー設定を割り当てる）</h1>
+      <h1 class="entry-title">だいぶ偏ったチートシート Emacs - 基本操作</h1>
     
     
       <p class="meta">
@@ -83,7 +83,7 @@
   
 
 
-<time datetime="2013-02-12T19:28:00+09:00" pubdate data-updated="true">Feb 12<span>th</span>, 2013</time>
+<time datetime="2013-02-13T22:06:00+09:00" pubdate data-updated="true">Feb 13<span>th</span>, 2013</time>
         
       </p>
     
@@ -91,66 +91,90 @@
 
 
 <div class="entry-content"><div id="outline-container-1" class="outline-2">
-<h2 id="sec-1">よく使うコマンドなのにキーボードショートカットが割り当てられていない。。</h2>
+<h2 id="sec-1">emacsだいぶ偏った基本操作</h2>
 <div class="outline-text-2" id="text-1">
 
-<p>  毎回メニューバーからちまちま選んで操作なんてしてられるかー！
-  今回はMacのアウトラインプロセッサで人気のTreeで、Labelのカラー設定をショートカットに割り当てます。
-</p>
-</div>
+
 
 </div>
 
-
-
-
-<div id="outline-container-2" class="outline-2">
-<h2 id="sec-2">Macの標準の機能を利用</h2>
-<div class="outline-text-2" id="text-2">
-
-<ol>
-<li><code>システム環境設定</code>
-</li>
-<li><code>キーボード</code>
-</li>
-<li><code>キーボードショートカット</code> タブ
-</li>
-<li>左の一覧の <code>アプリケーション</code>
-</li>
-<li>右の <code>すべてのアプリケーション</code> などがあるエリアの下にある、 <code>+</code> <code>-</code> の <code>+</code> をクリック
-</li>
-<li>次の入力エリアに下記のように設定
-
-<p>     
-     <code>アプリケーション</code> : <code>Tree.app</code>
-</p>
-<p>     
-     <code>メニュータイトル</code> : <code>赤</code>
-</p>
-<p>     
-     <code>キーボードショートカット</code> : <code>⌘R</code>
-</p></li>
-</ol>
-
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1">カーソル移動</h3>
+<div class="outline-text-3" id="text-1-1">
 
 
 <p>
-  これで設定完了。
-  Treeでノードを選択して <code>⌘R</code> で、Labelを赤くすることができるようになります。
+   熟練者は <code>C-f</code> <code>C-b</code> <code>C-p</code> <code>C-n</code> を使いません。
+   <code>C-s</code> =C-r=で移動したい所の文字を入力します。
+</p>
+<p>
+   そのためmigemoは必須。
 </p>
 </div>
 
 </div>
 
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2">繰り返し操作</h3>
+<div class="outline-text-3" id="text-1-2">
 
 
+<p>
+   ログとかテスト用データなどなど、整形するのには、マクロ機能が便利。
+</p>
+<p>
+   <code>F3</code> で記録開始
+   その間繰り返したい操作を行う。
+   <code>F4</code> で記録終了
+</p>
+<p>
+   <code>C-x e</code> で再生。もちろん前に <code>C-u</code> を押せばその分繰り返される
+</p>
+</div>
 
-<div id="outline-container-3" class="outline-2">
-<h2 id="sec-3">まとめ</h2>
-<div class="outline-text-2" id="text-3">
+</div>
 
-<p>  メニュータイトルとはそのままの意味で、メニューバーに表示されている文言をそのまま階層関係なく入力で。
-</p></div>
+<div id="outline-container-1-3" class="outline-3">
+<h3 id="sec-1-3">矩形編集</h3>
+<div class="outline-text-3" id="text-1-3">
+
+
+<p>
+   対象の文を選択して
+   <code>C-c r d</code> 削除
+   <code>C-c r t</code> 続けて入力した文字を挿入
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-4" class="outline-3">
+<h3 id="sec-1-4">読み取りモードの解除</h3>
+<div class="outline-text-3" id="text-1-4">
+
+
+<p>
+   <code>C-x C-q</code>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-5" class="outline-3">
+<h3 id="sec-1-5">文字化け解消のためとかでエンコード変更</h3>
+<div class="outline-text-3" id="text-1-5">
+
+
+<p>
+   カレントバッファのファイルのエンコード変更する。
+   <code>M-x set-buffer-file-coding-system</code> 続けて指定
+</p>
+<p>
+   ほかに文字化けの原因としては、tarminal、例えばteratermなんかで
+   受信送信のエンコード変えてみるとか。
+</p>
+</div>
+</div>
 </div>
 
 </div>
@@ -175,12 +199,12 @@
   
 
 
-<time datetime="2013-02-12T19:28:00+09:00" pubdate data-updated="true">Feb 12<span>th</span>, 2013</time>
+<time datetime="2013-02-13T22:06:00+09:00" pubdate data-updated="true">Feb 13<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/lifehack/'>lifehack</a>
+    <a class='category' href='/blog/categories/cheatsheet/'>cheatsheet</a>, <a class='category' href='/blog/categories/emacs/'>emacs</a>
   
 </span>
 
@@ -189,7 +213,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yunojy.github.com/blog/2013/02/12/mac-app-he-jiyuuni-keybind-set/" data-via="" data-counturl="http://yunojy.github.com/blog/2013/02/12/mac-app-he-jiyuuni-keybind-set/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yunojy.github.com/blog/2013/02/13/cheatsheet-emacs-basic/" data-via="" data-counturl="http://yunojy.github.com/blog/2013/02/13/cheatsheet-emacs-basic/" >Tweet</a>
   
   
   
@@ -198,10 +222,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/02/11/emacs-de-github-blog-sono2-org-mode/" title="Previous Post: emacs@がんばらない。なまけもの必見！今度こそ継続できるBlogを10分でGithubに開設する。もちろん無料 - org-mode編">&laquo; emacs@がんばらない。なまけもの必見！今度こそ継続できるBlogを10分でGithubに開設する。もちろん無料 - org-mode編</a>
+        <a class="basic-alignment left" href="/blog/2013/02/12/mac-app-he-jiyuuni-keybind-set/" title="Previous Post: 毎回メニューバーから＠がんばらない。よく使うのにキーボードショートカットが割り当てられていないアプリに自由に割り当てる方法（Treeでラベルカラー設定を割り当てる）">&laquo; 毎回メニューバーから＠がんばらない。よく使うのにキーボードショートカットが割り当てられていないアプリに自由に割り当てる方法（Treeでラベルカラー設定を割り当てる）</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/02/13/cheatsheet-emacs-basic/" title="Next Post: だいぶ偏ったチートシート emacs - 基本操作">だいぶ偏ったチートシート emacs - 基本操作 &raquo;</a>
       
     </p>
   </footer>
