@@ -4,7 +4,7 @@
   <title><![CDATA[Category: emacs | develog.me]]></title>
   <link href="http://yunojy.github.com/blog/categories/emacs/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-02-13T22:35:13+09:00</updated>
+  <updated>2013-02-13T22:35:46+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -33,7 +33,7 @@
 
 <p>
    熟練者は <code>C-f</code> <code>C-b</code> <code>C-p</code> <code>C-n</code> を使いません。
-   <code>C-s</code> =C-r=で移動したい所の文字を入力します。
+   <code>C-s</code> <code>C-r</code> で移動したい所の文字を入力します。
 </p>
 <p>
    そのためmigemoは必須。

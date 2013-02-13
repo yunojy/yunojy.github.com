@@ -14,7 +14,7 @@ categories: emacs cheatsheet
 ** カーソル移動
 
    熟練者は =C-f= =C-b= =C-p= =C-n= を使いません。
-   =C-s= =C-r=で移動したい所の文字を入力します。
+   =C-s= =C-r= で移動したい所の文字を入力します。
 
    そのためmigemoは必須。
    
