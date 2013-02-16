@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>---</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="---"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2013-02-16 09:14:34 JST"/>
+<meta name="author" content="Shimada Yuji"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">---</h1>
+
+
+---
+layout: post
+title: だいぶ偏ったチートシート emacs - 基本操作
+date: 2013-02-13 22:06
+comments: true
+categories: emacs cheatsheet
+---
+
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 emacsだいぶ偏った基本操作</a>
+<ul>
+<li><a href="#sec-1-1">1.1 カーソル移動</a></li>
+<li><a href="#sec-1-2">1.2 繰り返し操作</a></li>
+<li><a href="#sec-1-3">1.3 矩形編集</a></li>
+<li><a href="#sec-1-4">1.4 読み取りモードの解除</a></li>
+<li><a href="#sec-1-5">1.5 文字化け解消のためとかでエンコード変更</a></li>
+<li><a href="#sec-1-6">1.6 インデントを整形</a></li>
+<li><a href="#sec-1-7">1.7 設定済みのキーバインドを調べる</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> emacsだいぶ偏った基本操作</h2>
+<div class="outline-text-2" id="text-1">
+
+
+
+</div>
+
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> カーソル移動</h3>
+<div class="outline-text-3" id="text-1-1">
+
+
+<p>
+   熟練者は <code>C-f</code> <code>C-b</code> <code>C-p</code> <code>C-n</code> を使いません。
+   <code>C-s</code> <code>C-r</code> で移動したい所の文字を入力します。
+</p>
+<p>
+   そのためmigemoは必須。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> 繰り返し操作</h3>
+<div class="outline-text-3" id="text-1-2">
+
+
+<p>
+   ログとかテスト用データなどなど、整形するのには、マクロ機能が便利。
+</p>
+<p>
+   <code>F3</code> で記録開始
+   その間繰り返したい操作を行う。
+   <code>F4</code> で記録終了
+</p>
+<p>
+   <code>C-x e</code> で再生。もちろん前に <code>C-u</code> を押せばその分繰り返される
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> 矩形編集</h3>
+<div class="outline-text-3" id="text-1-3">
+
+
+<p>
+   対象の文を選択して
+   <code>C-c r d</code> 削除
+   <code>C-c r t</code> 続けて入力した文字を挿入
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> 読み取りモードの解除</h3>
+<div class="outline-text-3" id="text-1-4">
+
+
+<p>
+   <code>C-x C-q</code>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-5" class="outline-3">
+<h3 id="sec-1-5"><span class="section-number-3">1.5</span> 文字化け解消のためとかでエンコード変更</h3>
+<div class="outline-text-3" id="text-1-5">
+
+
+<p>
+   カレントバッファのファイルのエンコード変更する。
+   <code>M-x set-buffer-file-coding-system</code> 続けて指定
+</p>
+<p>
+   ほかに文字化けの原因としては、tarminal、例えばteratermなんかで
+   受信送信のエンコード変えてみるとか。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-6" class="outline-3">
+<h3 id="sec-1-6"><span class="section-number-3">1.6</span> インデントを整形</h3>
+<div class="outline-text-3" id="text-1-6">
+
+<ul>
+<li><code>M-x indent-region</code> リュージョン選択を整形
+</li>
+<li><code>M-x align-regex</code> 各列のインデントを指定文字で縦にそろえる
+
+
+
+<pre class="example">(keyboard-translate ?\C-h ?\C-?) ; C-h -&gt; BS
+(delete-selection-mode t) ; C-dでリージョン削除
+</pre>
+
+<p>
+     <code>C-SPC</code> でリュージョン選択
+     <code>M-x align-regex</code> <code>Align Regex:</code> <code>;</code> を入力
+</p>
+
+
+<pre class="example">(keyboard-translate ?\C-h ?\C-?) ; C-h -&gt; BS
+(delete-selection-mode t)        ; C-dでリージョン削除
+</pre>
+
+<p>
+     各列の終端コメントのインデントが <code>;</code> でそろえられる。
+</p></li>
+</ul>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-7" class="outline-3">
+<h3 id="sec-1-7"><span class="section-number-3">1.7</span> 設定済みのキーバインドを調べる</h3>
+<div class="outline-text-3" id="text-1-7">
+
+<ul>
+<li><code>M-x describe-key</code> 続けて確認したいキーバインドを入力
+</li>
+<li><code>M-x describe-bindings‎</code> すべての設定を確認
+</li>
+</ul>
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2013-02-16 09:14:34 JST</p>
+<p class="author">Author: Shimada Yuji</p>
+<p class="creator">Org version 7.8.11 with Emacs version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cheatsheet | develog.me]]></title>
   <link href="http://yunojy.github.com/blog/categories/cheatsheet/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-02-13T22:35:46+09:00</updated>
+  <updated>2013-02-16T09:16:14+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -50,14 +50,18 @@
 <p>
    ログとかテスト用データなどなど、整形するのには、マクロ機能が便利。
 </p>
-<p>
-   <code>F3</code> で記録開始
-   その間繰り返したい操作を行う。
-   <code>F4</code> で記録終了
-</p>
-<p>
-   <code>C-x e</code> で再生。もちろん前に <code>C-u</code> を押せばその分繰り返される
-</p>
+<ol>
+<li><code>F3</code> で記録開始
+</li>
+<li>その間繰り返したい操作を行う。
+</li>
+<li><code>F4</code> で記録終了
+</li>
+<li><code>C-x e</code> で再生。もちろん前に <code>C-u</code> を押せばその分繰り返される
+</li>
+</ol>
+
+
 </div>
 
 </div>
@@ -69,9 +73,14 @@
 
 <p>
    対象の文を選択して
-   <code>C-c r d</code> 削除
-   <code>C-c r t</code> 続けて入力した文字を挿入
-</p>
+</p><ul>
+<li><code>C-c r d</code> 削除
+</li>
+<li><code>C-c r t</code> 続けて入力した文字を挿入
+</li>
+</ul>
+
+
 </div>
 
 </div>
@@ -95,12 +104,74 @@
 
 <p>
    カレントバッファのファイルのエンコード変更する。
-   <code>M-x set-buffer-file-coding-system</code> 続けて指定
 </p>
+<ul>
+<li><code>M-x set-buffer-file-coding-system</code> 続けて指定
+</li>
+</ul>
+
+
 <p>
    ほかに文字化けの原因としては、tarminal、例えばteratermなんかで
    受信送信のエンコード変えてみるとか。
 </p>
+</div>
+
+</div>
+
+<div id="outline-container-1-6" class="outline-3">
+<h3 id="sec-1-6">インデントを整形</h3>
+<div class="outline-text-3" id="text-1-6">
+
+<ul>
+<li><code>M-x indent-region</code> リュージョン選択を整形
+</li>
+<li><code>M-x align-regex</code> 各列のインデントを指定文字で縦にそろえる
+
+
+
+<pre class="example">(keyboard-translate ?\C-h ?\C-?) ; C-h -&gt; BS
+(delete-selection-mode t) ; C-dでリージョン削除
+</pre>
+
+<p>
+     <code>C-SPC</code> でリュージョン選択
+     <code>M-x align-regex</code> <code>Align Regex:</code> <code>;</code> を入力
+</p>
+
+
+<pre class="example">(keyboard-translate ?\C-h ?\C-?) ; C-h -&gt; BS
+(delete-selection-mode t)        ; C-dでリージョン削除
+</pre>
+
+<p>
+     各列の終端コメントのインデントが <code>;</code> でそろえられる。
+</p></li>
+</ul>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-7" class="outline-3">
+<h3 id="sec-1-7">設定済みのキーバインドを調べる</h3>
+<div class="outline-text-3" id="text-1-7">
+
+<ul>
+<li><code>M-x describe-key</code> 続けて確認したいキーバインドを入力
+</li>
+<li><code>M-x describe-bindings‎</code> すべての設定を確認
+</li>
+</ul>
+
+
+
+
+
+
+
 </div>
 </div>
 </div>

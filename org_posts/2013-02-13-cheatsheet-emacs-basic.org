@@ -22,17 +22,16 @@ categories: emacs cheatsheet
 
    ログとかテスト用データなどなど、整形するのには、マクロ機能が便利。
 
-   =F3= で記録開始
-   その間繰り返したい操作を行う。
-   =F4= で記録終了
-
-   =C-x e= で再生。もちろん前に =C-u= を押せばその分繰り返される
+   1. =F3= で記録開始
+   2. その間繰り返したい操作を行う。
+   3. =F4= で記録終了
+   4. =C-x e= で再生。もちろん前に =C-u= を押せばその分繰り返される
 
 ** 矩形編集
 
    対象の文を選択して
-   =C-c r d= 削除
-   =C-c r t= 続けて入力した文字を挿入
+   - =C-c r d= 削除
+   - =C-c r t= 続けて入力した文字を挿入
 
 ** 読み取りモードの解除
 
@@ -41,8 +40,34 @@ categories: emacs cheatsheet
 ** 文字化け解消のためとかでエンコード変更
 
    カレントバッファのファイルのエンコード変更する。
-   =M-x set-buffer-file-coding-system= 続けて指定
+  
+   - =M-x set-buffer-file-coding-system= 続けて指定
 
    ほかに文字化けの原因としては、tarminal、例えばteratermなんかで
    受信送信のエンコード変えてみるとか。
+
+** インデントを整形
+   - =M-x indent-region= リュージョン選択を整形
+   - =M-x align-regex= 各列のインデントを指定文字で縦にそろえる
+     #+BEGIN_SRC lisp
+     (keyboard-translate ?\C-h ?\C-?) ; C-h -> BS
+     (delete-selection-mode t) ; C-dでリージョン削除
+     #+END_SRC
+     =C-SPC= でリュージョン選択
+     =M-x align-regex= =Align Regex:= =;= を入力
+     #+BEGIN_SRC lisp
+     (keyboard-translate ?\C-h ?\C-?) ; C-h -> BS
+     (delete-selection-mode t)        ; C-dでリージョン削除
+     #+END_SRC
+     各列の終端コメントのインデントが =;= でそろえられる。
+     
+
+** 設定済みのキーバインドを調べる
+   - =M-x describe-key= 続けて確認したいキーバインドを入力
+   - =M-x describe-bindings‎= すべての設定を確認
+
+
+   
+   
+   
 
