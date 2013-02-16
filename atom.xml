@@ -4,7 +4,7 @@
   <title><![CDATA[develog.me]]></title>
   <link href="http://yunojy.github.com/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-02-16T09:16:14+09:00</updated>
+  <updated>2013-02-16T09:18:34+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -77,6 +77,7 @@
 <li><code>C-c r d</code> 削除
 </li>
 <li><code>C-c r t</code> 続けて入力した文字を挿入
+     各列の頭にスペースを入れたりするのに便利
 </li>
 </ul>
 
