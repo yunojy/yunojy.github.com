@@ -4,7 +4,7 @@ layout: post
 title: "octopressでプレビュー作業の決定版。ブラウザでプレビューを自動リロード表示！(octopress+guard-livereload)"
 date: 2013-02-17 10:15
 comments: true
-categories: emacs octopress pow guard
+categories: emacs octopress guard
 ---
 #+END_HTML
 
