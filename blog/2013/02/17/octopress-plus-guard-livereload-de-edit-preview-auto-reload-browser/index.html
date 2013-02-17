@@ -1,0 +1,555 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>octopressでプレビュー作業の決定版。ブラウザでプレビューを自動リロード表示！(octopress+guard-livereload) - develog.me</title>
+  <meta name="author" content="yunojy">
+
+  
+  <meta name="description" content="Blogへ記事を投稿。ローカルの確認作業をがんばらない 編集している記事の内容を、即座にブラウザでプレビュー表示できるようにします。 またemacs引きこもりなので、ブラウザを自動的にリロードさせて最新のプレビューを表示するようにもします。 検証環境 Mac &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://yunojy.github.com/blog/2013/02/17/octopress-plus-guard-livereload-de-edit-preview-auto-reload-browser/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="develog.me" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-38545314-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">develog.me</a></h1>
+  
+    <h2>開発＠がんばらない</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:yunojy.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Octopressでプレビュー作業の決定版。ブラウザでプレビューを自動リロード表示！(octopress+guard-livereload)</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-17T10:15:00+09:00" pubdate data-updated="true">Feb 17<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Blogへ記事を投稿。ローカルの確認作業をがんばらない</h2>
+<div class="outline-text-2" id="text-1">
+
+<p>  編集している記事の内容を、即座にブラウザでプレビュー表示できるようにします。<br/>
+  またemacs引きこもりなので、ブラウザを自動的にリロードさせて最新のプレビューを表示するようにもします。
+</p>
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">検証環境</h2>
+<div class="outline-text-2" id="text-2">
+
+<ul>
+<li>Mac
+</li>
+<li>chrome
+</li>
+</ul>
+
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">作業フロー比較</h2>
+<div class="outline-text-2" id="text-3">
+
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1">Before</h3>
+<div class="outline-text-3" id="text-3-1">
+
+
+<ol>
+<li>プレビュー用にWEBrick起動
+<ol>
+<li><span style="text-decoration:underline;">console</span> に移って <code>% rake preview</code>
+</li>
+<li><span style="text-decoration:underline;">browser</span> に移って <a href="http://localhost:4000">http://localhost:4000</a> にアクセスして確認
+
+</li>
+</ol>
+
+</li>
+<li><span style="text-decoration:underline;">console</span> で記事を作る <code>% rake new_post</code>
+
+</li>
+<li>以下 <b>めんどくさい</b> ループ
+<ol>
+<li><span style="text-decoration:underline;">emacs</span> で記事を編集
+</li>
+<li><span style="text-decoration:underline;">console</span> に移って <code>% rake preview</code> 再起動で変更内容を反映
+</li>
+<li><span style="text-decoration:underline;">browser</span> に移って <a href="http://localhost:4000">http://localhost:4000</a> にアクセスして確認
+
+</li>
+</ol>
+
+</li>
+<li>okならば <span style="text-decoration:underline;">console</span> から <code>% rake gen_deploy</code> で投稿
+</li>
+</ol>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2">After</h3>
+<div class="outline-text-3" id="text-3-2">
+
+
+<ol>
+<li>変更内容を自動的に読み込ませる。毎回の <code>% rake preview</code> が不要になる。
+<ol>
+<li><span style="text-decoration:underline;">console</span> に移って <code>% rake watch</code>
+</li>
+</ol>
+
+</li>
+<li>プレビュー用にWEBrick起動
+<ol>
+<li><span style="text-decoration:underline;">console</span> に移って <code>% rake preview</code>
+</li>
+<li><span style="text-decoration:underline;">browser</span> に移って <a href="http://localhost:4000">http://localhost:4000</a> にアクセスして確認
+
+</li>
+</ol>
+
+</li>
+<li><span style="text-decoration:underline;">console</span> で記事を作る <code>% rake new_post</code>
+
+</li>
+<li>以下 <b>めんどくさくない</b> <span style="text-decoration:underline;">emacs</span> ひきこもりループ
+<ol>
+<li><span style="text-decoration:underline;">emacs</span> で記事を編集・編集・編集！
+         <span style="text-decoration:underline;">emacs</span> で保存の度に <span style="text-decoration:underline;">browser</span> が勝手にリロード。最新の内容をプレビュー表示
+
+</li>
+</ol>
+
+</li>
+<li>okならば <span style="text-decoration:underline;">console</span> から <code>% rake gen_deploy</code> で投稿
+</li>
+</ol>
+
+
+
+
+</div>
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">導入手順</h2>
+<div class="outline-text-2" id="text-4">
+
+<p>  まずは、 <code>/octopress</code> に移動して、 <code>% rake watch</code> で、 <code>_posts</code> ディレクトリに変更があったら自動的に静的ページを <code>public</code> 以下へ生成するようにします。<br/>
+  次に、 <code>gem gurad</code> (指定ディレクトリの変更を監視。変更があったら任意のコマンドを実行） の、任意コマンド→ <span style="text-decoration:underline;">browser</span> の自動リロードを行う、
+  <code>gem gurad-livereload</code> を使います。
+</p>
+
+</div>
+
+<div id="outline-container-4-1" class="outline-3">
+<h3 id="sec-4-1"><code>gem gurad</code> の導入</h3>
+<div class="outline-text-3" id="text-4-1">
+
+
+
+
+
+<pre class="example">% cd octopress
+</pre>
+
+
+<p>
+   gem追加
+</p>
+
+
+<pre class="example">% emacs Gemfile
+ group :development do
+   ...
++  gem 'guard'
++  gem 'guard-livereload'
+ end
+</pre>
+
+
+<pre class="example">% bundle
+</pre>
+
+<p>
+   <span style="text-decoration:underline;">console</span> を新規に開く
+</p>
+<p>
+   Guardの設定。監視ディレクトリ指定
+</p>
+
+
+<pre class="example">% guard init livereload
+% emacs Guardfile
+</pre>
+
+
+<pre class="example">guard 'livereload' do
+  watch(%r{public/.+\.(css|js|html)})
+end
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-2" class="outline-3">
+<h3 id="sec-4-2"><span style="text-decoration:underline;">browser</span> にプラグイン導入</h3>
+<div class="outline-text-3" id="text-4-2">
+
+
+<p>
+   <a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei">Chrome extension on the Chrome Web Store</a>
+   今回の検証環境。おすすめ
+</p>
+<p>
+   <a href="http://download.livereload.com/2.0.9/LiveReload-2.0.9.safariextz">Safari extension 2.0.9</a>
+</p>
+<p>
+   <a href="http://download.livereload.com/2.0.8/LiveReload-2.0.8.xpi">Firefox extension 2.0.8</a>
+</p>
+<p>
+   最新情報はこちらで <a href="http://feedback.livereload.com/">LiveReload Help &amp; Support</a> <a href="http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-">How do I install and use the browser extensions?</a>
+</p>
+
+</div>
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5">早速使ってみる</h2>
+<div class="outline-text-2" id="text-5">
+
+
+<ol>
+<li><span style="text-decoration:underline;">console</span>
+<ul>
+<li>記事の変更で静的コンテンツ自動生成仕込む
+
+
+
+<pre class="example">% cd octopress
+% rake watch
+</pre>
+
+</li>
+<li>記事の静的コンテンツ自動生成監視でブラウザ自動リロード仕込む
+
+
+
+<pre class="example">% cd octopress
+% guard
+</pre>
+
+</li>
+</ul>
+
+</li>
+<li><span style="text-decoration:underline;">browser</span>
+<ul>
+<li>chromeの場合は <code>livereload</code> の設定については特に不要。
+       右上のアイコンがconnectedのようになって、 <code>% guard</code> で、
+       <code>INFO - Browser connected.</code>
+       といったメッセージが表示されていればOK
+</li>
+</ul>
+
+</li>
+<li><span style="text-decoration:underline;">emacs</span>
+<ul>
+<li>以降は、 <code>.markdown</code> を保存すれば、フォーカスを移してブラウザのリロードボタンを押さずとも、
+       裏で自動的にブラウザがリロードされて、最新のプレビューが表示されます。
+</li>
+</ul>
+
+</li>
+</ol>
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6">参考</h2>
+<div class="outline-text-2" id="text-6">
+
+<p>  <a href="http://www.erikzaadi.com/2012/09/16/using-live-reload-with-octopress/">Using Live Reload with Octopress - Erik Zaadi</a>
+</p>
+<p>
+  <a href="http://creative-tweet.net/blog/2013/02/guard-livereload-installation.html">LiveReload Windows版が落ちまくるので、guard-livereloadでなんとかしてみた話。 | creative tweet.</a>
+</p></div>
+</div>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">yunojy</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-17T10:15:00+09:00" pubdate data-updated="true">Feb 17<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/emacs/'>emacs</a>, <a class='category' href='/blog/categories/guard/'>guard</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>, <a class='category' href='/blog/categories/pow/'>pow</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yunojy.github.com/blog/2013/02/17/octopress-plus-guard-livereload-de-edit-preview-auto-reload-browser/" data-via="yuujii" data-counturl="http://yunojy.github.com/blog/2013/02/17/octopress-plus-guard-livereload-de-edit-preview-auto-reload-browser/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/02/13/cheatsheet-emacs-basic/" title="Previous Post: だいぶ偏ったチートシート emacs - 基本操作">&laquo; だいぶ偏ったチートシート emacs - 基本操作</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/02/17/octopress-plus-guard-livereload-de-edit-preview-auto-reload-browser/">octopressでプレビュー作業の決定版。ブラウザでプレビューを自動リロード表示！(octopress+guard-livereload)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/13/cheatsheet-emacs-basic/">だいぶ偏ったチートシート emacs - 基本操作</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/12/mac-app-he-jiyuuni-keybind-set/">毎回メニューバーから＠がんばらない。よく使うのにキーボードショートカットが割り当てられていないアプリに自由に割り当てる方法（Treeでラベルカラー設定を割り当てる）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/11/emacs-de-github-blog-sono2-org-mode/">emacs@がんばらない。なまけもの必見！今度こそ継続できるBlogを10分でGithubに開設する。もちろん無料 - org-mode編</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/11/emacs-de-github-blog-sono1-markdown/">emacs@がんばらない。なまけもの必見！今度こそ継続できるBlogを10分でGithubに開設する。もちろん無料 - markdown編</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("yuujii", 0, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/yuujii" class="twitter-follow-button" data-show-count="true">Follow @yuujii</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - yunojy -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

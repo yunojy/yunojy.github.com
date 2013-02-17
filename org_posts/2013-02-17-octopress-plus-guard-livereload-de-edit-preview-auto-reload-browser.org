@@ -1,0 +1,128 @@
+#+BEGIN_HTML
+---
+layout: post
+title: "octopressでプレビュー作業の決定版。ブラウザでプレビューを自動リロード表示！(octopress+guard-livereload)"
+date: 2013-02-17 10:15
+comments: true
+categories: emacs octopress pow guard
+---
+#+END_HTML
+
+* Blogへ記事を投稿。ローカルの確認作業をがんばらない
+  編集している記事の内容を、即座にブラウザでプレビュー表示できるようにします。\\
+  またemacs引きこもりなので、ブラウザを自動的にリロードさせて最新のプレビューを表示するようにもします。
+
+* 検証環境
+  - Mac
+  - chrome
+  
+
+* 作業フロー比較
+
+** Before
+   
+   1. プレビュー用にWEBrick起動
+      1. _console_ に移って =% rake preview=
+      2. _browser_ に移って http://localhost:4000 にアクセスして確認
+
+   2. _console_ で記事を作る =% rake new_post=
+
+   3. 以下 *めんどくさい* ループ
+      1. _emacs_ で記事を編集
+      2. _console_ に移って =% rake preview= 再起動で変更内容を反映
+      3. _browser_ に移って http://localhost:4000 にアクセスして確認
+
+   4. okならば _console_ から =% rake gen_deploy= で投稿
+
+** After
+
+   1. 変更内容を自動的に読み込ませる。毎回の =% rake preview= が不要になる。
+      1. _console_ に移って =% rake watch=
+   2. プレビュー用にWEBrick起動
+      1. _console_ に移って =% rake preview=
+      2. _browser_ に移って http://localhost:4000 にアクセスして確認
+
+   3. _console_ で記事を作る =% rake new_post=
+
+   4. 以下 *めんどくさくない* _emacs_ ひきこもりループ
+      1. _emacs_ で記事を編集・編集・編集！
+         _emacs_ で保存の度に _browser_ が勝手にリロード。最新の内容をプレビュー表示
+
+   5. okならば _console_ から =% rake gen_deploy= で投稿
+
+
+
+* 導入手順
+  まずは、 =/octopress= に移動して、 =% rake watch= で、 =_posts= ディレクトリに変更があったら自動的に静的ページを =public= 以下へ生成するようにします。\\
+  次に、 =gem gurad= (指定ディレクトリの変更を監視。変更があったら任意のコマンドを実行） の、任意コマンド→ _browser_ の自動リロードを行う、
+  =gem gurad-livereload= を使います。
+  
+** =gem gurad= の導入
+
+   #+BEGIN_SRC shell
+   % cd octopress
+   #+END_SRC
+
+   gem追加
+   #+BEGIN_SRC diff
+   % emacs Gemfile
+    group :development do
+      ...
+   +  gem 'guard'
+   +  gem 'guard-livereload'
+    end
+   #+END_SRC
+   #+BEGIN_SRC shell
+   % bundle
+   #+END_SRC
+   _console_ を新規に開く
+
+   Guardの設定。監視ディレクトリ指定
+   #+BEGIN_SRC shell
+   % guard init livereload
+   % emacs Guardfile
+   #+END_SRC
+   #+BEGIN_SRC ruby
+   guard 'livereload' do
+     watch(%r{public/.+\.(css|js|html)})
+   end
+   #+END_SRC
+
+** _browser_ にプラグイン導入
+
+   [[https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei][Chrome extension on the Chrome Web Store]]
+   今回の検証環境。おすすめ
+
+   [[http://download.livereload.com/2.0.9/LiveReload-2.0.9.safariextz][Safari extension 2.0.9]]
+
+   [[http://download.livereload.com/2.0.8/LiveReload-2.0.8.xpi][Firefox extension 2.0.8]]
+
+   最新情報はこちらで [[http://feedback.livereload.com/][LiveReload Help & Support]] [[http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-][How do I install and use the browser extensions?]]
+
+   
+* 早速使ってみる
+
+  1. _console_
+     - 記事の変更で静的コンテンツ自動生成仕込む
+       #+BEGIN_SRC shell
+       % cd octopress
+       % rake watch
+       #+END_SRC
+     - 記事の静的コンテンツ自動生成監視でブラウザ自動リロード仕込む
+       #+BEGIN_SRC shell
+       % cd octopress
+       % guard
+       #+END_SRC
+  2. _browser_
+     - chromeの場合は =livereload= の設定については特に不要。
+       右上のアイコンがconnectedのようになって、 =% guard= で、
+       =INFO - Browser connected.=
+       といったメッセージが表示されていればOK
+  3. _emacs_
+     - 以降は、 =.markdown= を保存すれば、フォーカスを移してブラウザのリロードボタンを押さずとも、
+       裏で自動的にブラウザがリロードされて、最新のプレビューが表示されます。
+
+* 参考
+  [[http://www.erikzaadi.com/2012/09/16/using-live-reload-with-octopress/][Using Live Reload with Octopress - Erik Zaadi]]
+
+  [[http://creative-tweet.net/blog/2013/02/guard-livereload-installation.html][LiveReload Windows版が落ちまくるので、guard-livereloadでなんとかしてみた話。 | creative tweet.]]

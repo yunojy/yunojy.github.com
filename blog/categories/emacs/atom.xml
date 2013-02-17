@@ -4,7 +4,7 @@
   <title><![CDATA[Category: emacs | develog.me]]></title>
   <link href="http://yunojy.github.com/blog/categories/emacs/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-02-16T09:45:04+09:00</updated>
+  <updated>2013-02-17T12:59:18+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -12,6 +12,304 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[octopressでプレビュー作業の決定版。ブラウザでプレビューを自動リロード表示！(octopress+guard-livereload)]]></title>
+    <link href="http://yunojy.github.com/blog/2013/02/17/octopress-plus-guard-livereload-de-edit-preview-auto-reload-browser/"/>
+    <updated>2013-02-17T10:15:00+09:00</updated>
+    <id>http://yunojy.github.com/blog/2013/02/17/octopress-plus-guard-livereload-de-edit-preview-auto-reload-browser</id>
+    <content type="html"><![CDATA[<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Blogへ記事を投稿。ローカルの確認作業をがんばらない</h2>
+<div class="outline-text-2" id="text-1">
+
+<p>  編集している記事の内容を、即座にブラウザでプレビュー表示できるようにします。<br/>
+  またemacs引きこもりなので、ブラウザを自動的にリロードさせて最新のプレビューを表示するようにもします。
+</p>
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">検証環境</h2>
+<div class="outline-text-2" id="text-2">
+
+<ul>
+<li>Mac
+</li>
+<li>chrome
+</li>
+</ul>
+
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">作業フロー比較</h2>
+<div class="outline-text-2" id="text-3">
+
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1">Before</h3>
+<div class="outline-text-3" id="text-3-1">
+
+
+<ol>
+<li>プレビュー用にWEBrick起動
+<ol>
+<li><span style="text-decoration:underline;">console</span> に移って <code>% rake preview</code>
+</li>
+<li><span style="text-decoration:underline;">browser</span> に移って <a href="http://localhost:4000">http://localhost:4000</a> にアクセスして確認
+
+</li>
+</ol>
+
+</li>
+<li><span style="text-decoration:underline;">console</span> で記事を作る <code>% rake new_post</code>
+
+</li>
+<li>以下 <b>めんどくさい</b> ループ
+<ol>
+<li><span style="text-decoration:underline;">emacs</span> で記事を編集
+</li>
+<li><span style="text-decoration:underline;">console</span> に移って <code>% rake preview</code> 再起動で変更内容を反映
+</li>
+<li><span style="text-decoration:underline;">browser</span> に移って <a href="http://localhost:4000">http://localhost:4000</a> にアクセスして確認
+
+</li>
+</ol>
+
+</li>
+<li>okならば <span style="text-decoration:underline;">console</span> から <code>% rake gen_deploy</code> で投稿
+</li>
+</ol>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2">After</h3>
+<div class="outline-text-3" id="text-3-2">
+
+
+<ol>
+<li>変更内容を自動的に読み込ませる。毎回の <code>% rake preview</code> が不要になる。
+<ol>
+<li><span style="text-decoration:underline;">console</span> に移って <code>% rake watch</code>
+</li>
+</ol>
+
+</li>
+<li>プレビュー用にWEBrick起動
+<ol>
+<li><span style="text-decoration:underline;">console</span> に移って <code>% rake preview</code>
+</li>
+<li><span style="text-decoration:underline;">browser</span> に移って <a href="http://localhost:4000">http://localhost:4000</a> にアクセスして確認
+
+</li>
+</ol>
+
+</li>
+<li><span style="text-decoration:underline;">console</span> で記事を作る <code>% rake new_post</code>
+
+</li>
+<li>以下 <b>めんどくさくない</b> <span style="text-decoration:underline;">emacs</span> ひきこもりループ
+<ol>
+<li><span style="text-decoration:underline;">emacs</span> で記事を編集・編集・編集！
+         <span style="text-decoration:underline;">emacs</span> で保存の度に <span style="text-decoration:underline;">browser</span> が勝手にリロード。最新の内容をプレビュー表示
+
+</li>
+</ol>
+
+</li>
+<li>okならば <span style="text-decoration:underline;">console</span> から <code>% rake gen_deploy</code> で投稿
+</li>
+</ol>
+
+
+
+
+</div>
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">導入手順</h2>
+<div class="outline-text-2" id="text-4">
+
+<p>  まずは、 <code>/octopress</code> に移動して、 <code>% rake watch</code> で、 <code>_posts</code> ディレクトリに変更があったら自動的に静的ページを <code>public</code> 以下へ生成するようにします。<br/>
+  次に、 <code>gem gurad</code> (指定ディレクトリの変更を監視。変更があったら任意のコマンドを実行） の、任意コマンド→ <span style="text-decoration:underline;">browser</span> の自動リロードを行う、
+  <code>gem gurad-livereload</code> を使います。
+</p>
+
+</div>
+
+<div id="outline-container-4-1" class="outline-3">
+<h3 id="sec-4-1"><code>gem gurad</code> の導入</h3>
+<div class="outline-text-3" id="text-4-1">
+
+
+
+
+
+<pre class="example">% cd octopress
+</pre>
+
+
+<p>
+   gem追加
+</p>
+
+
+<pre class="example">% emacs Gemfile
+ group :development do
+   ...
++  gem 'guard'
++  gem 'guard-livereload'
+ end
+</pre>
+
+
+<pre class="example">% bundle
+</pre>
+
+<p>
+   <span style="text-decoration:underline;">console</span> を新規に開く
+</p>
+<p>
+   Guardの設定。監視ディレクトリ指定
+</p>
+
+
+<pre class="example">% guard init livereload
+% emacs Guardfile
+</pre>
+
+
+<pre class="example">guard 'livereload' do
+  watch(%r{public/.+\.(css|js|html)})
+end
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-2" class="outline-3">
+<h3 id="sec-4-2"><span style="text-decoration:underline;">browser</span> にプラグイン導入</h3>
+<div class="outline-text-3" id="text-4-2">
+
+
+<p>
+   <a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei">Chrome extension on the Chrome Web Store</a>
+   今回の検証環境。おすすめ
+</p>
+<p>
+   <a href="http://download.livereload.com/2.0.9/LiveReload-2.0.9.safariextz">Safari extension 2.0.9</a>
+</p>
+<p>
+   <a href="http://download.livereload.com/2.0.8/LiveReload-2.0.8.xpi">Firefox extension 2.0.8</a>
+</p>
+<p>
+   最新情報はこちらで <a href="http://feedback.livereload.com/">LiveReload Help &amp; Support</a> <a href="http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-">How do I install and use the browser extensions?</a>
+</p>
+
+</div>
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5">早速使ってみる</h2>
+<div class="outline-text-2" id="text-5">
+
+
+<ol>
+<li><span style="text-decoration:underline;">console</span>
+<ul>
+<li>記事の変更で静的コンテンツ自動生成仕込む
+
+
+
+<pre class="example">% cd octopress
+% rake watch
+</pre>
+
+</li>
+<li>記事の静的コンテンツ自動生成監視でブラウザ自動リロード仕込む
+
+
+
+<pre class="example">% cd octopress
+% guard
+</pre>
+
+</li>
+</ul>
+
+</li>
+<li><span style="text-decoration:underline;">browser</span>
+<ul>
+<li>chromeの場合は <code>livereload</code> の設定については特に不要。
+       右上のアイコンがconnectedのようになって、 <code>% guard</code> で、
+       <code>INFO - Browser connected.</code>
+       といったメッセージが表示されていればOK
+</li>
+</ul>
+
+</li>
+<li><span style="text-decoration:underline;">emacs</span>
+<ul>
+<li>以降は、 <code>.markdown</code> を保存すれば、フォーカスを移してブラウザのリロードボタンを押さずとも、
+       裏で自動的にブラウザがリロードされて、最新のプレビューが表示されます。
+</li>
+</ul>
+
+</li>
+</ol>
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6">参考</h2>
+<div class="outline-text-2" id="text-6">
+
+<p>  <a href="http://www.erikzaadi.com/2012/09/16/using-live-reload-with-octopress/">Using Live Reload with Octopress - Erik Zaadi</a>
+</p>
+<p>
+  <a href="http://creative-tweet.net/blog/2013/02/guard-livereload-installation.html">LiveReload Windows版が落ちまくるので、guard-livereloadでなんとかしてみた話。 | creative tweet.</a>
+</p></div>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[だいぶ偏ったチートシート emacs - 基本操作]]></title>
