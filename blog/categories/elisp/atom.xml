@@ -4,7 +4,7 @@
   <title><![CDATA[Category: elisp | develog.me]]></title>
   <link href="http://yunojy.github.com/blog/categories/elisp/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-03-17T17:13:57+09:00</updated>
+  <updated>2013-03-17T17:15:23+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -35,7 +35,7 @@
 
 <p>
   <code>quickrun.el</code> とは、ソースコード上でプログラムの実行を行うことができるelispです。<br/>
-  <code>M-x</code> <code>quickrun</code> で実行。 <code>M-x</code> <code>quickrun-region</code> で選択範囲のみの実行実行ができるのですが、
+  <code>M-x</code> <code>quickrun</code> で実行。 <code>M-x</code> <code>quickrun-region</code> で選択範囲のみの実行ができるのですが、
   わざわざ選ぶのはめんどくさいので、region選択の有無で自動化します。
 </p>
 

@@ -16,7 +16,7 @@ categories: emacs quickrun elisp
 
 
   =quickrun.el= とは、ソースコード上でプログラムの実行を行うことができるelispです。\\
-  =M-x= =quickrun= で実行。 =M-x= =quickrun-region= で選択範囲のみの実行実行ができるのですが、
+  =M-x= =quickrun= で実行。 =M-x= =quickrun-region= で選択範囲のみの実行ができるのですが、
   わざわざ選ぶのはめんどくさいので、region選択の有無で自動化します。
   
 
