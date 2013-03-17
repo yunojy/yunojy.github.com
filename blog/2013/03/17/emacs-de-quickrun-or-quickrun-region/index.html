@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: guard - develog.me</title>
+  <title>超便利。すぐに実行結果を表示できる「quickrun.el」をさらに便利にしてみる - develog.me</title>
   <meta name="author" content="yunojy">
 
   
-  <meta name="description" content="Category: guard">
+  <meta name="description" content="これがなければemacs使ってない。 syohex / emacs-quickrun - github quickrun.elを書きました - Life is very short quickrun.elで開発効率アップ - Life is very short quickrun.el &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://yunojy.github.comblog/categories/guard/">
+  <link rel="canonical" href="http://yunojy.github.com/blog/2013/03/17/emacs-de-quickrun-or-quickrun-region/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -75,35 +75,174 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Guard</h1>
+    
+      <h1 class="entry-title">超便利。すぐに実行結果を表示できる「quickrun.el」をさらに便利にしてみる</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-17T16:38:00+09:00" pubdate data-updated="true">Mar 17<span>th</span>, 2013</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
+
+
+<div class="entry-content"><div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">これがなければemacs使ってない。</h2>
+<div class="outline-text-2" id="text-1">
+
+<ul>
+<li><a href="https://github.com/syohex/emacs-quickrun">syohex / emacs-quickrun - github</a>
+</li>
+<li><a href="http://d.hatena.ne.jp/syohex/20111126/1322291515">quickrun.elを書きました - Life is very short</a>
+</li>
+<li><a href="http://d.hatena.ne.jp/syohex/20111201/1322665378">quickrun.elで開発効率アップ - Life is very short</a>
+</li>
+</ul>
 
 
 
-  
-  <h2>2013</h2>
+<p>
+  <code>quickrun.el</code> とは、ソースコード上でプログラムの実行を行うことができるelispです。<br/>
+  <code>M-x</code> <code>quickrun</code> で実行。 <code>M-x</code> <code>quickrun-region</code> で選択範囲のみの実行実行ができるのですが、
+  わざわざ選ぶのはめんどくさいので、region選択の有無で自動化します。
+</p>
 
-<article>
-  
-<h1><a href="/blog/2013/02/17/octopress-plus-guard-livereload-de-edit-preview-auto-reload-browser/">octopressでプレビュー作業の決定版。ブラウザでプレビューを自動リロード表示！(octopress+guard-livereload)</a></h1>
-<time datetime="2013-02-17T10:15:00+09:00" pubdate><span class='month'>Feb</span> <span class='day'>17</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/emacs/'>emacs</a>, <a class='category' href='/blog/categories/guard/'>guard</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a></span>
-</footer>
-
-
-</article>
 
 </div>
 
+</div>
+
+
+
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">対象</h2>
+<div class="outline-text-2" id="text-2">
+
+
+<ul>
+<li>emacs 24
+</li>
+<li>quickrun 1.8.2
+</li>
+</ul>
+
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">region選択されていたら <code>quickrun-region</code> されていなかったら <code>quickrun</code> を実行する。</h2>
+<div class="outline-text-2" id="text-3">
+
+
+
+
+
+<pre class="example">(defun quickrun-sc (start end)
+(interactive "r")
+(if mark-active
+    (quickrun :start start :end end)
+  (quickrun)))
+</pre>
+
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">使い方</h2>
+<div class="outline-text-2" id="text-4">
+
+
+
+
+<pre class="example">(global-set-key (kbd "&lt;f5&gt;") 'quickrun-sc)
+</pre>
+
+</div>
+</div>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">yunojy</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-17T16:38:00+09:00" pubdate data-updated="true">Mar 17<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/elisp/'>elisp</a>, <a class='category' href='/blog/categories/emacs/'>emacs</a>, <a class='category' href='/blog/categories/quickrun/'>quickrun</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yunojy.github.com/blog/2013/03/17/emacs-de-quickrun-or-quickrun-region/" data-via="yuujii" data-counturl="http://yunojy.github.com/blog/2013/03/17/emacs-de-quickrun-or-quickrun-region/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/02/17/octopress-plus-guard-livereload-de-edit-preview-auto-reload-browser/" title="Previous Post: octopressでプレビュー作業の決定版。ブラウザでプレビューを自動リロード表示！(octopress+guard-livereload)">&laquo; octopressでプレビュー作業の決定版。ブラウザでプレビューを自動リロード表示！(octopress+guard-livereload)</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>

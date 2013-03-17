@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: quickrun | develog.me]]></title>
+  <link href="http://yunojy.github.com/blog/categories/quickrun/atom.xml" rel="self"/>
+  <link href="http://yunojy.github.com/"/>
+  <updated>2013-03-17T17:13:57+09:00</updated>
+  <id>http://yunojy.github.com/</id>
+  <author>
+    <name><![CDATA[yunojy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[超便利。すぐに実行結果を表示できる「quickrun.el」をさらに便利にしてみる]]></title>
+    <link href="http://yunojy.github.com/blog/2013/03/17/emacs-de-quickrun-or-quickrun-region/"/>
+    <updated>2013-03-17T16:38:00+09:00</updated>
+    <id>http://yunojy.github.com/blog/2013/03/17/emacs-de-quickrun-or-quickrun-region</id>
+    <content type="html"><![CDATA[<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">これがなければemacs使ってない。</h2>
+<div class="outline-text-2" id="text-1">
+
+<ul>
+<li><a href="https://github.com/syohex/emacs-quickrun">syohex / emacs-quickrun - github</a>
+</li>
+<li><a href="http://d.hatena.ne.jp/syohex/20111126/1322291515">quickrun.elを書きました - Life is very short</a>
+</li>
+<li><a href="http://d.hatena.ne.jp/syohex/20111201/1322665378">quickrun.elで開発効率アップ - Life is very short</a>
+</li>
+</ul>
+
+
+
+<p>
+  <code>quickrun.el</code> とは、ソースコード上でプログラムの実行を行うことができるelispです。<br/>
+  <code>M-x</code> <code>quickrun</code> で実行。 <code>M-x</code> <code>quickrun-region</code> で選択範囲のみの実行実行ができるのですが、
+  わざわざ選ぶのはめんどくさいので、region選択の有無で自動化します。
+</p>
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">対象</h2>
+<div class="outline-text-2" id="text-2">
+
+
+<ul>
+<li>emacs 24
+</li>
+<li>quickrun 1.8.2
+</li>
+</ul>
+
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">region選択されていたら <code>quickrun-region</code> されていなかったら <code>quickrun</code> を実行する。</h2>
+<div class="outline-text-2" id="text-3">
+
+
+
+
+
+<pre class="example">(defun quickrun-sc (start end)
+(interactive "r")
+(if mark-active
+    (quickrun :start start :end end)
+  (quickrun)))
+</pre>
+
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">使い方</h2>
+<div class="outline-text-2" id="text-4">
+
+
+
+
+<pre class="example">(global-set-key (kbd "&lt;f5&gt;") 'quickrun-sc)
+</pre>
+
+</div>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>

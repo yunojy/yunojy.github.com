@@ -9,7 +9,7 @@
   <meta name="author" content="yunojy">
 
   
-  <meta name="description" content="Blogへ記事を投稿。ローカルの確認作業をがんばらない 編集している記事の内容を、即座にブラウザでプレビュー表示できるようにします。 またemacs引きこもりなので、ブラウザを自動的にリロードさせて最新のプレビューを表示するようにもします。 検証環境 Mac &hellip;">
+  <meta name="description" content="これがなければemacs使ってない。 syohex / emacs-quickrun - github quickrun.elを書きました - Life is very short quickrun.elで開発効率アップ - Life is very short quickrun.el &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,128 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/03/17/emacs-de-quickrun-or-quickrun-region/">超便利。すぐに実行結果を表示できる「quickrun.el」をさらに便利にしてみる</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-17T16:38:00+09:00" pubdate data-updated="true">Mar 17<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">これがなければemacs使ってない。</h2>
+<div class="outline-text-2" id="text-1">
+
+<ul>
+<li><a href="https://github.com/syohex/emacs-quickrun">syohex / emacs-quickrun - github</a>
+</li>
+<li><a href="http://d.hatena.ne.jp/syohex/20111126/1322291515">quickrun.elを書きました - Life is very short</a>
+</li>
+<li><a href="http://d.hatena.ne.jp/syohex/20111201/1322665378">quickrun.elで開発効率アップ - Life is very short</a>
+</li>
+</ul>
+
+
+
+<p>
+  <code>quickrun.el</code> とは、ソースコード上でプログラムの実行を行うことができるelispです。<br/>
+  <code>M-x</code> <code>quickrun</code> で実行。 <code>M-x</code> <code>quickrun-region</code> で選択範囲のみの実行実行ができるのですが、
+  わざわざ選ぶのはめんどくさいので、region選択の有無で自動化します。
+</p>
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">対象</h2>
+<div class="outline-text-2" id="text-2">
+
+
+<ul>
+<li>emacs 24
+</li>
+<li>quickrun 1.8.2
+</li>
+</ul>
+
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">region選択されていたら <code>quickrun-region</code> されていなかったら <code>quickrun</code> を実行する。</h2>
+<div class="outline-text-2" id="text-3">
+
+
+
+
+
+<pre class="example">(defun quickrun-sc (start end)
+(interactive "r")
+(if mark-active
+    (quickrun :start start :end end)
+  (quickrun)))
+</pre>
+
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">使い方</h2>
+<div class="outline-text-2" id="text-4">
+
+
+
+
+<pre class="example">(global-set-key (kbd "&lt;f5&gt;") 'quickrun-sc)
+</pre>
+
+</div>
+</div>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1467,6 +1589,10 @@ Hi username! You've successfully authenticated, but GitHub does not provide shel
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/03/17/emacs-de-quickrun-or-quickrun-region/">超便利。すぐに実行結果を表示できる「quickrun.el」をさらに便利にしてみる</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/02/17/octopress-plus-guard-livereload-de-edit-preview-auto-reload-browser/">octopressでプレビュー作業の決定版。ブラウザでプレビューを自動リロード表示！(octopress+guard-livereload)</a>
       </li>
     
@@ -1480,10 +1606,6 @@ Hi username! You've successfully authenticated, but GitHub does not provide shel
     
       <li class="post">
         <a href="/blog/2013/02/11/emacs-de-github-blog-sono2-org-mode/">emacs@がんばらない。なまけもの必見！今度こそ継続できるBlogを10分でGithubに開設する。もちろん無料 - org-mode編</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/02/11/emacs-de-github-blog-sono1-markdown/">emacs@がんばらない。なまけもの必見！今度こそ継続できるBlogを10分でGithubに開設する。もちろん無料 - markdown編</a>
       </li>
     
   </ul>

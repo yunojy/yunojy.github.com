@@ -1,0 +1,44 @@
+#+BEGIN_HTML
+---
+layout: post
+title: "超便利。すぐに実行結果を表示できる「quickrun.el」をさらに便利にしてみる"
+date: 2013-03-17 16:38
+comments: true
+categories: emacs quickrun elisp
+---
+#+END_HTML
+
+
+* これがなければemacs使ってない。
+  - [[https://github.com/syohex/emacs-quickrun][syohex / emacs-quickrun - github]]
+  - [[http://d.hatena.ne.jp/syohex/20111126/1322291515][quickrun.elを書きました - Life is very short]]
+  - [[http://d.hatena.ne.jp/syohex/20111201/1322665378][quickrun.elで開発効率アップ - Life is very short]]
+
+
+  =quickrun.el= とは、ソースコード上でプログラムの実行を行うことができるelispです。\\
+  =M-x= =quickrun= で実行。 =M-x= =quickrun-region= で選択範囲のみの実行実行ができるのですが、
+  わざわざ選ぶのはめんどくさいので、region選択の有無で自動化します。
+  
+
+
+* 対象
+
+  - emacs 24
+  - quickrun 1.8.2
+
+
+* region選択されていたら =quickrun-region= されていなかったら =quickrun= を実行する。
+
+  #+begin_src emacs-lisp
+  (defun quickrun-sc (start end)
+  (interactive "r")
+  (if mark-active
+      (quickrun :start start :end end)
+    (quickrun)))
+  #+end_src
+
+  
+* 使い方
+  #+begin_src emacs-lisp
+  (global-set-key (kbd "<f5>") 'quickrun-sc)
+  #+end_src
