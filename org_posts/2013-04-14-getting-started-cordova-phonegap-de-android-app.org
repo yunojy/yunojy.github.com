@@ -1,0 +1,112 @@
+#+BEGIN_HTML
+---
+layout: post
+title: "Cordova(PhoneGap)でAndroidApp作る その1 環境構築編"
+date: 2013-04-14 09:29
+comments: true
+categories: Android Cordova PhoneGap GettingStarted
+---
+#+END_HTML
+
+* =注意！2013/04/14現在の情報です。=
+
+* Cordova(PhoneGap)を使ってAndroidアプリ開発環境をMac上に構築
+
+  - JDKは入っているけどEclipseもSDKも無い状態から、Cordovaの空のプロジェクトを作成するまでを書く。
+  
+  - 設定が済んでいて、空のCordovaプロジェクトだけ作りたいのであれば
+    Getting Started with Androidの、3.プロジェクトを作る を参照
+
+
+* 前書きと概要
+  
+  初Android端末購入に浮かれて、早速SIMアダプタぶっ壊して鬱状態です。こんにちは！^0^
+  みなさんはSIMのゲタだけ入れて、引っこ抜くときにピンが引っかかって欠けさせることが無いようご注意くださいまし。
+  (修理はDOCOMO契約あれば5,000円くらい。なければ20,000円くらい。死にたい)
+
+  それでははりきってまいりましょうρ(・ω・、)
+
+  + [[https://www.google.co.jp/search?q=Cordova%E3%81%A8%E3%81%AF][Cordovaとは]]
+    iPhoneでもAndroidでも動くアプリをHTML+Javascriptで作れるFrameworkです。
+    CordovaとPhoneGapと呼び名が2つあるのは、（以下私見）Adobeが買収してアホな判断を下したから。
+    この記事では、呼び名を統一せず、contextで適当に呼び名を変えます。
+
+    - [[http://phonegap.com/about/license/][ライセンス]] は商用OKのApache License v2
+  
+  
+  ちなみに日本語のコミュニティの情報でさえも古いので、
+  [[http://phonegap.com/developer/][英語の公式]] の *Getting Started Guides* をチェックするのが良いです。
+
+  完
+
+  じゃつまらないので、以下の構成としてとりあえず書く(゜△゜;)
+
+  + Mac Mountain Lion 10.8.3
+  + PhoneGap 2.6.0 [ [[http://phonegap.com/download/][DL page]] ]
+    適当なディレクトリに展開
+  + Android SDK [ [[http://developer.android.com/sdk/index.html][DL page]] ]
+    - eclipse入りの adt-bundle-mac-x86_64-20130219
+      適当なディレクトリに展開
+      
+
+* [[http://docs.phonegap.com/en/2.6.0/guide_getting-started_android_index.md.html#Getting%20Started%20with%20Android][Getting Started with Android]]
+  大まかにはこれの手順に則って行う。
+
+  1. SDKとかPhoneGapをローカルの適当なディレクトリに配置
+
+  2. PATH通す
+     [[http://docs.phonegap.com/en/2.6.0/guide_getting-started_android_index.md.html#Getting%20Started%20with%20Android][Document]]ではこうなってるけど、SDKを解凍するとadt-bundle-mac-x86_64-20130219なので適当に読替える。
+     #+begin_src shell
+     export PATH=${PATH}:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools
+     ↓
+     export PATH=${PATH}:/Development/Android/Toolkit/adt-bundle-mac-x86_64-20130219/sdk/platform-tools:/Development/Android/Toolkit/adt-bundle-mac-x86_64-20130219/sdk/tools
+     #+end_src
+     Path通さないと、プロジェクト作る際に
+     #+begin_src shell
+     An unexpected error occurred: ANDROID_BIN="${ANDROID_BIN:=$( which android )}" exited with 1
+     #+end_src
+     とおこられる
+     
+  3. プロジェクト作る
+     #+begin_src shell
+     ./create <projectルートPATH> <package_name> <project_name>
+     #+end_src
+     #+begin_src shell
+     <project_folder_path> is the path to your new Cordova Android project
+     <package_name> is the package name, e.g. com.YourCompany.YourAppName
+     <project_name> is the project name, e.g. YourApp (Must not contain spaces)
+     #+end_src
+     
+     + =Nya= プロジェクトを作成
+       フルパスは説明のためなんだからね(//)
+       #+begin_src shell
+       % /Development/Android/Toolkit/phonegap-2.6.0/lib/android/bin/create /Development/Android/Cordova/Nya me.develog.Nya Nya 
+       #+end_src
+  
+  4. eclipse起動
+     [[http://docs.phonegap.com/en/2.6.0/guide_getting-started_android_index.md.html#Getting%20Started%20with%20Android][Document]]ではeclipse classicを入れてプラグイン入れてと、七面倒な手順なので、
+     最初からeclipse入りのSDKを使いましょう。
+     
+     - 作ったプロジェクトを開く
+       New Projectから、 =Android= の中にある =Android Project from Existing Code= 選択
+
+  5. Emulatorで動かす
+     [[http://docs.phonegap.com/en/2.6.0/guide_getting-started_android_index.md.html#Getting%20Started%20with%20Android][Document]]では =5A. Deploy to Emulator= あたり。
+     なにやらエミュレータ用のなんかを入れないといけない。
+     ドロイド↓矢印のアイコンから適当に入れる。
+
+  6. 実行設定
+     1. =Run Configurations= から、 =Android Application= 選んで追加。
+     2. =Android= タブ の =Project:= に プロジェクト名 Nyaを選択
+     3. =Target= タブの ところで追加したEmulatorを指定してあぷらい
+        右下の =Run= で実行。初回は ANDROID とイカしたロゴが出てエラい時間待たされる。
+        その後 APACHE CORDOVAとかわいらしいアイコンの画面が出たらOK
+     
+  
+
+* Further Reading
+  + [[http://developer.android.com/develop/index.html][Android Developers]](英)
+    - 最新のAPI Guidesや、Reference、Trainingが受けられる。
+  + [[http://phonegap-fan.com/][PhoneGap Fan]](日)
+    - 日本のコミュ。情報は古い。
+

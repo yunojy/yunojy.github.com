@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Kinect | develog.me]]></title>
+  <link href="http://yunojy.github.com/blog/categories/kinect/atom.xml" rel="self"/>
+  <link href="http://yunojy.github.com/"/>
+  <updated>2013-04-14T12:22:47+09:00</updated>
+  <id>http://yunojy.github.com/</id>
+  <author>
+    <name><![CDATA[yunojy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mac10.8.2でKinect開発環境を1から構築]]></title>
+    <link href="http://yunojy.github.com/blog/2013/03/23/mac10-dot-8-2-de-kinect1-dot-7/"/>
+    <updated>2013-03-23T08:38:00+09:00</updated>
+    <id>http://yunojy.github.com/blog/2013/03/23/mac10-dot-8-2-de-kinect1-dot-7</id>
+    <content type="html"><![CDATA[<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">使うもの</h2>
+<div class="outline-text-2" id="text-1">
+
+<ul>
+<li>MacBook Pro Retina 15 Mid 2012 (Mac10.8.2)
+<ul>
+<li>Homebrow
+<ul>
+<li>OpenNI
+</li>
+<li>SensorKinect
+</li>
+<li>NITE
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+<li>KINECT for Windows
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">Kinect開封〜Macで動作確認</h2>
+<div class="outline-text-2" id="text-2">
+
+
+<ol>
+<li>Macにドライバ類を入れる
+     接続前に入れる。
+</li>
+<li>
+</li>
+</ol>
+
+</div>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>

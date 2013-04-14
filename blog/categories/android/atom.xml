@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Android | develog.me]]></title>
+  <link href="http://yunojy.github.com/blog/categories/android/atom.xml" rel="self"/>
+  <link href="http://yunojy.github.com/"/>
+  <updated>2013-04-14T12:22:47+09:00</updated>
+  <id>http://yunojy.github.com/</id>
+  <author>
+    <name><![CDATA[yunojy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Cordova(PhoneGap)でAndroidApp作る その1 環境構築編]]></title>
+    <link href="http://yunojy.github.com/blog/2013/04/14/getting-started-cordova-phonegap-de-android-app/"/>
+    <updated>2013-04-14T09:29:00+09:00</updated>
+    <id>http://yunojy.github.com/blog/2013/04/14/getting-started-cordova-phonegap-de-android-app</id>
+    <content type="html"><![CDATA[<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><code>注意！2013/04/14現在の情報です。</code></h2>
+<div class="outline-text-2" id="text-1">
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">Cordova(PhoneGap)を使ってAndroidアプリ開発環境をMac上に構築</h2>
+<div class="outline-text-2" id="text-2">
+
+
+<ul>
+<li>JDKは入っているけどEclipseもSDKも無い状態から、Cordovaの空のプロジェクトを作成するまでを書く。
+
+</li>
+<li>設定が済んでいて、空のCordovaプロジェクトだけ作りたいのであれば
+    Getting Started with Androidの、3.プロジェクトを作る を参照
+</li>
+</ul>
+
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">前書きと概要</h2>
+<div class="outline-text-2" id="text-3">
+
+
+<p>  
+  初Android端末購入に浮かれて、早速SIMアダプタぶっ壊して鬱状態です。こんにちは！<sup>0</sup>^
+  みなさんはSIMのゲタだけ入れて、引っこ抜くときにピンが引っかかって欠けさせることが無いようご注意くださいまし。
+  (修理はDOCOMO契約あれば5,000円くらい。なければ20,000円くらい。死にたい)
+</p>
+<p>
+  それでははりきってまいりましょうρ(・ω・、)
+</p>
+<ul>
+<li><a href="https://www.google.co.jp/search?q=Cordovaとは">Cordovaとは</a>
+    iPhoneでもAndroidでも動くアプリをHTML+Javascriptで作れるFrameworkです。
+    CordovaとPhoneGapと呼び名が2つあるのは、（以下私見）Adobeが買収してアホな判断を下したから。
+    この記事では、呼び名を統一せず、contextで適当に呼び名を変えます。
+
+<ul>
+<li><a href="http://phonegap.com/about/license/">ライセンス</a> は商用OKのApache License v2
+</li>
+</ul>
+
+</li>
+</ul>
+
+
+
+<p>  
+  ちなみに日本語のコミュニティの情報でさえも古いので、
+  <a href="http://phonegap.com/developer/">英語の公式</a> の <b>Getting Started Guides</b> をチェックするのが良いです。
+</p>
+<p>
+  完
+</p>
+<p>
+  じゃつまらないので、以下の構成としてとりあえず書く(゜△゜;)
+</p>
+<ul>
+<li>Mac Mountain Lion 10.8.3
+</li>
+<li>PhoneGap 2.6.0 [ <a href="http://phonegap.com/download/">DL page</a> ]
+    適当なディレクトリに展開
+</li>
+<li>Android SDK [ <a href="http://developer.android.com/sdk/index.html">DL page</a> ]
+<ul>
+<li>eclipse入りの adt-bundle-mac-x86<sub>64</sub>-20130219
+      適当なディレクトリに展開
+</li>
+</ul>
+
+</li>
+</ul>
+
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><a href="http://docs.phonegap.com/en/2.6.0/guide_getting-started_android_index.md.html#Getting Started with Android">Getting Started with Android</a></h2>
+<div class="outline-text-2" id="text-4">
+
+<p>  大まかにはこれの手順に則って行う。
+</p>
+<ol>
+<li>SDKとかPhoneGapをローカルの適当なディレクトリに配置
+
+</li>
+<li>PATH通す
+     <a href="http://docs.phonegap.com/en/2.6.0/guide_getting-started_android_index.md.html#Getting Started with Android">Document</a>ではこうなってるけど、SDKを解凍するとadt-bundle-mac-x86<sub>64</sub>-20130219なので適当に読替える。
+
+
+
+<pre class="example">export PATH=${PATH}:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools
+↓
+export PATH=${PATH}:/Development/Android/Toolkit/adt-bundle-mac-x86_64-20130219/sdk/platform-tools:/Development/Android/Toolkit/adt-bundle-mac-x86_64-20130219/sdk/tools
+</pre>
+
+<p>
+     Path通さないと、プロジェクト作る際に
+</p>
+
+
+<pre class="example">An unexpected error occurred: ANDROID_BIN="${ANDROID_BIN:=$( which android )}" exited with 1
+</pre>
+
+<p>
+     とおこられる
+</p>
+</li>
+<li>プロジェクト作る
+
+
+
+<pre class="example">./create &lt;projectルートPATH&gt; &lt;package_name&gt; &lt;project_name&gt;
+</pre>
+
+
+<pre class="example">&lt;project_folder_path&gt; is the path to your new Cordova Android project
+&lt;package_name&gt; is the package name, e.g. com.YourCompany.YourAppName
+&lt;project_name&gt; is the project name, e.g. YourApp (Must not contain spaces)
+</pre>
+
+
+<ul>
+<li><code>Nya</code> プロジェクトを作成
+       フルパスは説明のためなんだからね(//)
+
+
+
+<pre class="example">% /Development/Android/Toolkit/phonegap-2.6.0/lib/android/bin/create /Development/Android/Cordova/Nya me.develog.Nya Nya 
+</pre>
+
+
+</li>
+</ul>
+
+</li>
+<li>eclipse起動
+     <a href="http://docs.phonegap.com/en/2.6.0/guide_getting-started_android_index.md.html#Getting Started with Android">Document</a>ではeclipse classicを入れてプラグイン入れてと、七面倒な手順なので、
+     最初からeclipse入りのSDKを使いましょう。
+
+<ul>
+<li>作ったプロジェクトを開く
+       New Projectから、 <code>Android</code> の中にある <code>Android Project from Existing Code</code> 選択
+
+</li>
+</ul>
+
+</li>
+<li>Emulatorで動かす
+     <a href="http://docs.phonegap.com/en/2.6.0/guide_getting-started_android_index.md.html#Getting Started with Android">Document</a>では <code>5A. Deploy to Emulator</code> あたり。
+     なにやらエミュレータ用のなんかを入れないといけない。
+     ドロイド↓矢印のアイコンから適当に入れる。
+
+</li>
+<li>実行設定
+<ol>
+<li><code>Run Configurations</code> から、 <code>Android Application</code> 選んで追加。
+</li>
+<li><code>Android</code> タブ の <code>Project:</code> に プロジェクト名 Nyaを選択
+</li>
+<li><code>Target</code> タブの ところで追加したEmulatorを指定してあぷらい
+        右下の <code>Run</code> で実行。初回は ANDROID とイカしたロゴが出てエラい時間待たされる。
+        その後 APACHE CORDOVAとかわいらしいアイコンの画面が出たらOK
+</li>
+</ol>
+
+</li>
+</ol>
+
+
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5">Further Reading</h2>
+<div class="outline-text-2" id="text-5">
+
+<ul>
+<li><a href="http://developer.android.com/develop/index.html">Android Developers</a>(英)
+<ul>
+<li>最新のAPI Guidesや、Reference、Trainingが受けられる。
+</li>
+</ul>
+
+</li>
+<li><a href="http://phonegap-fan.com/">PhoneGap Fan</a>(日)
+<ul>
+<li>日本のコミュ。情報は古い。
+</li>
+</ul>
+
+</li>
+</ul>
+
+
+</div>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>

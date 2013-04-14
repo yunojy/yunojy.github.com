@@ -1,0 +1,23 @@
+#+BEGIN_HTML
+---
+layout: post
+title: "Mac10.8.2でKinect開発環境を1から構築"
+date: 2013-03-23 08:38
+comments: true
+categories: Kinect Mac
+---
+#+END_HTML
+
+* 使うもの
+  - MacBook Pro Retina 15 Mid 2012 (Mac10.8.2)
+    - Homebrow
+      - OpenNI
+      - SensorKinect
+      - NITE
+  - KINECT for Windows
+
+* Kinect開封〜Macで動作確認
+
+  1. Macにドライバ類を入れる
+     接続前に入れる。
+  2. 
