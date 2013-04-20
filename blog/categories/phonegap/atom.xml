@@ -4,7 +4,7 @@
   <title><![CDATA[Category: PhoneGap | develog.me]]></title>
   <link href="http://yunojy.github.com/blog/categories/phonegap/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-04-14T12:22:47+09:00</updated>
+  <updated>2013-04-20T11:31:53+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -231,6 +231,8 @@ export PATH=${PATH}:/Development/Android/Toolkit/adt-bundle-mac-x86_64-20130219/
 </li>
 </ul>
 
+</li>
+<li>PhoneGap API Documentation (<a href="http://docs.phonegap.com/jp/2.2.0/index.html">日 2.2.0</a>) (<a href="http://docs.phonegap.com/en/2.6.0/index.html">英 2.6.0</a>)
 </li>
 <li><a href="http://phonegap-fan.com/">PhoneGap Fan</a>(日)
 <ul>

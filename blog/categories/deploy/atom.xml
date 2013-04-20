@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: mac | develog.me]]></title>
-  <link href="http://yunojy.github.com/blog/categories/mac/atom.xml" rel="self"/>
+  <title><![CDATA[Category: deploy | develog.me]]></title>
+  <link href="http://yunojy.github.com/blog/categories/deploy/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
   <updated>2013-04-20T11:31:53+09:00</updated>
   <id>http://yunojy.github.com/</id>

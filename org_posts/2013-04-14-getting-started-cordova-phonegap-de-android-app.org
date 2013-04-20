@@ -107,6 +107,7 @@ categories: Android Cordova PhoneGap GettingStarted
 * Further Reading
   + [[http://developer.android.com/develop/index.html][Android Developers]](英)
     - 最新のAPI Guidesや、Reference、Trainingが受けられる。
+  + PhoneGap API Documentation ([[http://docs.phonegap.com/jp/2.2.0/index.html][日 2.2.0]]) ([[http://docs.phonegap.com/en/2.6.0/index.html][英 2.6.0]])
   + [[http://phonegap-fan.com/][PhoneGap Fan]](日)
     - 日本のコミュ。情報は古い。
 
