@@ -10,7 +10,7 @@ categories: bookmarklet OrgMode
 
 * 今みているページへのLink Textを生成するブックマーク
   #+begin_example
-  javascript:prompt("", '[['+ document.URL +']['+ document.title +'] ]');void(0);
+  javascript:prompt("", '[['+ document.URL +']['+ document.title +']]');void(0);
   #+end_example
   + orglinkなり適当な名前でBookmarkを作成して貼付けて作成してください。
 
