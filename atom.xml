@@ -4,7 +4,7 @@
   <title><![CDATA[develog.me]]></title>
   <link href="http://yunojy.github.com/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-04-28T10:04:42+09:00</updated>
+  <updated>2013-04-28T10:06:05+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -25,7 +25,7 @@
 
 
 
-<pre class="example">javascript:prompt("", '[['+ document.URL +']['+ document.title +'] ]');void(0);
+<pre class="example">javascript:prompt("", '[['+ document.URL +']['+ document.title +']]');void(0);
 </pre>
 
 <ul>
