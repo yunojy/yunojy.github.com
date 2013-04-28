@@ -1,0 +1,16 @@
+#+BEGIN_HTML
+---
+layout: post
+title: "[Bookmarklet] 表示中のページタイトルとURLからOrgModeリンクを生成"
+date: 2013-04-28 09:53
+comments: true
+categories: bookmarklet OrgMode
+---
+#+END_HTML
+
+* 今みているページへのLink Textを生成するブックマーク
+  #+begin_example
+  javascript:prompt("", '[['+ document.URL +']['+ document.title +'] ]');void(0);
+  #+end_example
+  + orglinkなり適当な名前でBookmarkを作成して貼付けて作成してください。
+

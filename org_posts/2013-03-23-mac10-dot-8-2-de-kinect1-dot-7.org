@@ -5,6 +5,7 @@ title: "Mac10.8.2でKinect開発環境を1から構築"
 date: 2013-03-23 08:38
 comments: true
 categories: Kinect Mac
+published: false
 ---
 #+END_HTML
 

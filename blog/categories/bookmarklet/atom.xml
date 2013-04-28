@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: bookmarklet | develog.me]]></title>
+  <link href="http://yunojy.github.com/blog/categories/bookmarklet/atom.xml" rel="self"/>
+  <link href="http://yunojy.github.com/"/>
+  <updated>2013-04-28T10:03:42+09:00</updated>
+  <id>http://yunojy.github.com/</id>
+  <author>
+    <name><![CDATA[yunojy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[[Bookmarklet] 表示中のページタイトルとURLからOrgModeリンクを生成]]></title>
+    <link href="http://yunojy.github.com/blog/2013/04/28/bookmarklet-orgmode-link/"/>
+    <updated>2013-04-28T09:53:00+09:00</updated>
+    <id>http://yunojy.github.com/blog/2013/04/28/bookmarklet-orgmode-link</id>
+    <content type="html"><![CDATA[<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">今みているページへのLink Textを生成するブックマーク</h2>
+<div class="outline-text-2" id="text-1">
+
+
+
+
+<pre class="example">javascript:prompt("", '[['+ document.URL +']['+ document.title +'] ]');void(0);
+</pre>
+
+<ul>
+<li>orglinkなり適当な名前でBookmarkを作成して貼付けて作成してください。
+</li>
+</ul>
+
+
+</div>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>
