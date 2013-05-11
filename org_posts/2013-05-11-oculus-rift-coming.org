@@ -1,0 +1,49 @@
+#+BEGIN_HTML
+---
+layout: post
+title: "Oculus Rift届きました！（フォトレビュー）"
+date: 2013-05-11 10:10
+comments: true
+categories: oculus
+---
+#+END_HTML
+
+* KickStarterで出資していたOculus Riftが届きました！
+  - 2012/08/15に出資をして、2013/05/11に到着。その間270日、8ヶ月と26日
+    - 半年以上。SonyのHMZ-T1より待たされた。
+  - 出資額は$300+送料$30
+  - 当初は12年末、13年の2,3月と言われハラハラしたのはいい思い出。
+  - Order IDは0070xx ちょっと出遅れた感じ。
+  - Order Statusの変化
+    - 13/05/11 オーダーステータスに変更はなく到着。不意打ち
+    - 13/05/05 PROCESSING:Your order has been checked out for shipping and will be shipped in the next batch. We'll send you a notification once it's shipped.
+    - 13/05/04 Processing - Your order is being processed for shipping.
+    - 13/05/03以前、失念。 Ready - Your order is ready! We'll notify you as soon as it's shipped.
+
+* 付属品
+  - 基本別途ケーブル類を揃える必要はない。
+    - 付属の電源アダプタも日本で使える。
+    - PCとの接続についても外部出力にDIVかHDMIの端子がある最近のPCならOK。（D-subはコネクタ別途必要）
+    - PCとは映像出力のためのDIVorHDMI接続と、データ連携でUSB接続が必要。
+  - Headset
+  - Control Box
+  - 3 Pairs of Lenses
+  - Over-the-head Strap
+  - 3ft DIV Cable
+  - 6ft HDMI Cable
+  - 3ft HDMI Cable
+  - Power Card with Adapter
+  - DIV/HDMI Adapter
+  
+* Oculus界隈
+  + [[http://www.nicovideo.jp/watch/sm20743587][話題のOculus Riftが届いたのでMMD再生してみた ‐ ニコニコ動画:Q]]
+  + [[http://www.tumblr.com/tagged/oculus%20vr?language=ja_JP][oculus vr | Tumblr]]
+  + [[http://www.4gamer.net/games/195/G019528/20130330009/][4Gamer.net ― ［GDC 2013］期待のゲーム用HMD「Oculus Rift」を体験＆直撮り。「眼前に広がるゲーム世界が，首の動きに追従する」のは革命か]]
+  + 購入はこちら
+    - [[http://www.redstar.co.jp/oculus.htm][GEKKO&CO. ゲッコー・アンド・カンパニー　ゲーム最適化ヘッドマウントディスプレイ Oculus RIFT 製品情報]]
+      出荷開始：2013年6月27日（５月末までの予約であれば37,800円←54,800円）
+
+* 画像はこちら
+  [[https://plus.google.com/photos/109142205996412906055/albums/5876589273398602081][Google+]]
+  [[file:https://lh6.googleusercontent.com/-7DwzXke8pco/UY3XQ_Mwx7I/AAAAAAAAAPI/xoQQoF41BeM/w768-h1024-no/IMG_2748.JPG]]
+
