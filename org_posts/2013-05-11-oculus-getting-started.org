@@ -9,7 +9,7 @@ categories: oculus unity mikumikudance
 #+END_HTML
 
 
-[[file:https://lh4.googleusercontent.com/-WJUZhTSAE4A/UY3W6UEc8PI/AAAAAAAAALg/a6BiVZjMqwk/s600/IMG_2795.jpg]]F
+[[file:https://lh4.googleusercontent.com/-WJUZhTSAE4A/UY3W6UEc8PI/AAAAAAAAALg/a6BiVZjMqwk/s600/IMG_2795.jpg]]
 
 早速！。。って何からやったものか
      
@@ -19,7 +19,7 @@ categories: oculus unity mikumikudance
 ** その前に色々準備
 *** PCと接続
     - 本体は実際に頭に装着するHeadsetと、電源ON/OFF・ブライトネス・コントラスト操作のControl Boxがケーブルで接続されている。
-    - 準備としては、Control Boxに電源通して、PCとUSB、映像のためのHDMIかDIV挿せばOK。
+    - Control Boxに電源通してPCとUSB接続。あと映像のためのHDMIかDIV挿せばOK。
       
 * その１ Team Fortress 2 で遊んでみる
   - ユーザー登録とSteamクライアントインストール。
