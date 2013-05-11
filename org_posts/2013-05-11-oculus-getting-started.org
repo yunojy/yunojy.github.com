@@ -27,7 +27,13 @@ categories: oculus unity mikumikudance
   - Oculus VRのHatCodeを使ってゲームをインストール
     1. クライアントインストール後に「ライブラリ」の左下、「ゲームを追加...」から「Steamでアイテムを有効化する...」を選ぶ。
     2. HatCodeを使ってゲームを有効化する。
-    3. あとはよしなにプレイ
+    3. ダウンロード、インストールが終わったら、「ライブラリ」から「Team Fortress2」を選んで右クリック。「プロパティ」を開く。
+    4. 「一般」の「起動設定...」に =-vr= を入力。
+    5. 現在は関係ないが、ちょっと前に画面分割されなくなる不具合があったみたいで、念のため「ベータ」で「prerelease」選ぶ。
+    6. ゲーム開始。「プレイ」かダブルクリックで。最初のメニュー画面は左右分割されない。ゲームプレイ時の画面でようやく分割表示される。（ロード画面も分割されない。）
+    7. 文字は荒い。ゲーム中のInfoは左だけ表示で右にボタンあったりすると押せない。
+       1. vr_calibrationコマンドやら手はあるかとは思うがそこまで詳しく見てない。
+       2. 詳しくはこちらで [[http://wiki.teamfortress.com/wiki/Oculus_Rift_User_Guide][Oculus Rift User Guide - Official TF2 Wiki | Official Team Fortress Wiki]]
     
 * その２ Unityで自分の理想をふひひ
   - UnityでOculusを使うにはProライセンスが必要（133,875円。あれ桁おかしくね？）
@@ -40,3 +46,4 @@ categories: oculus unity mikumikudance
     
   - Oculus VR Developer登録してSDKを入手する
     - Internal Server Error 多発して先に進めず。復旧次第追記(5/11 16:30)
+      

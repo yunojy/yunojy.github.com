@@ -4,7 +4,7 @@
   <title><![CDATA[develog.me]]></title>
   <link href="http://yunojy.github.com/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-05-11T16:53:58+09:00</updated>
+  <updated>2013-05-11T22:37:43+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -85,7 +85,22 @@
 </li>
 <li>HatCodeを使ってゲームを有効化する。
 </li>
-<li>あとはよしなにプレイ
+<li>ダウンロード、インストールが終わったら、「ライブラリ」から「Team Fortress2」を選んで右クリック。「プロパティ」を開く。
+</li>
+<li>「一般」の「起動設定&hellip;」に <code>-vr</code> を入力。
+</li>
+<li>現在は関係ないが、ちょっと前に画面分割されなくなる不具合があったみたいで、念のため「ベータ」で「prerelease」選ぶ。
+</li>
+<li>ゲーム開始。「プレイ」かダブルクリックで。最初のメニュー画面は左右分割されない。ゲームプレイ時の画面でようやく分割表示される。（ロード画面も分割されない。）
+</li>
+<li>文字は荒い。ゲーム中のInfoは左だけ表示で右にボタンあったりすると押せない。
+<ol>
+<li>vr<sub>calibrationコマンドやら手はあるかとは思うがそこまで詳しく見てない。</sub>
+</li>
+<li>詳しくはこちらで <a href="http://wiki.teamfortress.com/wiki/Oculus_Rift_User_Guide">Oculus Rift User Guide - Official TF2 Wiki | Official Team Fortress Wiki</a>
+</li>
+</ol>
+
 </li>
 </ol>
 
@@ -136,6 +151,7 @@
 
 </li>
 </ul>
+
 
 </div>
 </div>
