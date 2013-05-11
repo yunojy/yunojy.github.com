@@ -4,7 +4,7 @@
   <title><![CDATA[Category: oculus | develog.me]]></title>
   <link href="http://yunojy.github.com/blog/categories/oculus/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-05-11T16:52:14+09:00</updated>
+  <updated>2013-05-11T16:53:58+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -73,7 +73,11 @@
 
 <ul>
 <li>ユーザー登録とSteamクライアントインストール。
-    <a href="http://store.steampowered.com/?l=japanese">Steamへようこそ</a>
+<ul>
+<li><a href="http://store.steampowered.com/?l=japanese">Steamへようこそ</a>
+</li>
+</ul>
+
 </li>
 <li>Oculus VRのHatCodeを使ってゲームをインストール
 <ol>
@@ -112,12 +116,24 @@
 
 </li>
 <li>MikuMikuDanceを手に入れる
-    <a href="http://sourceforge.jp/projects/mmd-for-unity/">UnityでMMDを動かす会 プロジェクト日本語トップページ - SourceForge.JP</a>
-    mmd-for-unity1.2a-r122.zip (日付: 2013-01-31, サイズ: 131.2 KB)
+<ul>
+<li><a href="http://sourceforge.jp/projects/mmd-for-unity/">UnityでMMDを動かす会 プロジェクト日本語トップページ - SourceForge.JP</a>
+<ul>
+<li>mmd-for-unity1.2a-r122.zip (日付: 2013-01-31, サイズ: 131.2 KB)
+
+</li>
+</ul>
+
+</li>
+</ul>
 
 </li>
 <li>Oculus VR Developer登録してSDKを入手する
-    Internal Server Error 多発して先に進めず。復旧次第追記(5/11 16:30)
+<ul>
+<li>Internal Server Error 多発して先に進めず。復旧次第追記(5/11 16:30)
+</li>
+</ul>
+
 </li>
 </ul>
 

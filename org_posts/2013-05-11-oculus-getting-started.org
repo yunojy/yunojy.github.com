@@ -23,7 +23,7 @@ categories: oculus unity mikumikudance
       
 * その１ Team Fortress 2 で遊んでみる
   - ユーザー登録とSteamクライアントインストール。
-    [[http://store.steampowered.com/?l=japanese][Steamへようこそ]]
+    - [[http://store.steampowered.com/?l=japanese][Steamへようこそ]]
   - Oculus VRのHatCodeを使ってゲームをインストール
     1. クライアントインストール後に「ライブラリ」の左下、「ゲームを追加...」から「Steamでアイテムを有効化する...」を選ぶ。
     2. HatCodeを使ってゲームを有効化する。
@@ -35,8 +35,8 @@ categories: oculus unity mikumikudance
     - すでにインストール済みで普通のLICENSEの人は、「Manage License」から適当にライセンスリセットで途中からUnityのライセンス切り替えができる。
 
   - MikuMikuDanceを手に入れる
-    [[http://sourceforge.jp/projects/mmd-for-unity/][UnityでMMDを動かす会 プロジェクト日本語トップページ - SourceForge.JP]]
-    mmd-for-unity1.2a-r122.zip (日付: 2013-01-31, サイズ: 131.2 KB)
+    - [[http://sourceforge.jp/projects/mmd-for-unity/][UnityでMMDを動かす会 プロジェクト日本語トップページ - SourceForge.JP]]
+      - mmd-for-unity1.2a-r122.zip (日付: 2013-01-31, サイズ: 131.2 KB)
     
   - Oculus VR Developer登録してSDKを入手する
-    Internal Server Error 多発して先に進めず。復旧次第追記(5/11 16:30)
+    - Internal Server Error 多発して先に進めず。復旧次第追記(5/11 16:30)
