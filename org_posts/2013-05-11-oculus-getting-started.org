@@ -25,7 +25,7 @@ categories: oculus unity mikumikudance
   - ユーザー登録とSteamクライアントインストール。
     [[http://store.steampowered.com/?l=japanese][Steamへようこそ]]
   - Oculus VRのHatCodeを使ってゲームをインストール
-    1. クライアントインストール後に「ライブラリ」の右下、「ゲームを追加...」から「Steamでアイテムを有効化する...」を選ぶ。
+    1. クライアントインストール後に「ライブラリ」の左下、「ゲームを追加...」から「Steamでアイテムを有効化する...」を選ぶ。
     2. HatCodeを使ってゲームを有効化する。
     3. あとはよしなにプレイ
     

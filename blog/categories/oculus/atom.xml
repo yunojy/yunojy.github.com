@@ -4,7 +4,7 @@
   <title><![CDATA[Category: oculus | develog.me]]></title>
   <link href="http://yunojy.github.com/blog/categories/oculus/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-05-11T16:50:06+09:00</updated>
+  <updated>2013-05-11T16:52:14+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -77,7 +77,7 @@
 </li>
 <li>Oculus VRのHatCodeを使ってゲームをインストール
 <ol>
-<li>クライアントインストール後に「ライブラリ」の右下、「ゲームを追加&hellip;」から「Steamでアイテムを有効化する&hellip;」を選ぶ。
+<li>クライアントインストール後に「ライブラリ」の左下、「ゲームを追加&hellip;」から「Steamでアイテムを有効化する&hellip;」を選ぶ。
 </li>
 <li>HatCodeを使ってゲームを有効化する。
 </li>
