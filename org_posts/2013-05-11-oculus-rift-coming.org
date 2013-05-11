@@ -8,6 +8,9 @@ categories: oculus
 ---
 #+END_HTML
 
+[[file:https://lh6.googleusercontent.com/-7DwzXke8pco/UY3XQ_Mwx7I/AAAAAAAAAPI/xoQQoF41BeM/s900/IMG_2748.JPG]]
+
+
 * KickStarterで出資していたOculus Riftが届きました！
   - 2012/08/15に出資をして、2013/05/11に到着。その間270日、8ヶ月と26日
     - 半年以上。SonyのHMZ-T1より待たされた。
@@ -45,5 +48,5 @@ categories: oculus
 
 * 画像はこちら
   [[https://plus.google.com/photos/109142205996412906055/albums/5876589273398602081][Google+]]
-  [[file:https://lh6.googleusercontent.com/-7DwzXke8pco/UY3XQ_Mwx7I/AAAAAAAAAPI/xoQQoF41BeM/w768-h1024-no/IMG_2748.JPG]]
+
 
