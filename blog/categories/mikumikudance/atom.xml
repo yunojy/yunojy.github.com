@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mikumikudance | develog.me]]></title>
   <link href="http://yunojy.github.com/blog/categories/mikumikudance/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-05-11T22:37:43+09:00</updated>
+  <updated>2013-05-12T22:42:53+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -116,15 +116,30 @@
 
 
 <div id="outline-container-3" class="outline-2">
-<h2 id="sec-3">その２ Unityで自分の理想をふひひ</h2>
+<h2 id="sec-3">その２ UnityでParaisoを作る</h2>
 <div class="outline-text-2" id="text-3">
 
+<ul>
+<li>注意
+<ul>
+<li>Unityの正しい知識が欠如しています。教えてください。
+</li>
+<li><b>MMD for Unity</b> はMacではモデルデータ読み込み時にPrefabの生成がうまくいかないっぽい。と思ったけどどうなんだ。
+
+</li>
+</ul>
+
+</li>
+<li>Unity導入
 <ul>
 <li>UnityでOculusを使うにはProライセンスが必要（133,875円。あれ桁おかしくね？）
 <ul>
 <li>トライアルで30日間使えるのでとりあえずコレで。
 </li>
 <li>すでにインストール済みで普通のLICENSEの人は、「Manage License」から適当にライセンスリセットで途中からUnityのライセンス切り替えができる。
+
+</li>
+</ul>
 
 </li>
 </ul>
@@ -145,7 +160,206 @@
 </li>
 <li>Oculus VR Developer登録してSDKを入手する
 <ul>
+<li><a href="https://developer.oculusvr.com/">Oculus VR Developer Center</a>
+<ul>
 <li>Internal Server Error 多発して先に進めず。復旧次第追記(5/11 16:30)
+</li>
+<li>再開(5/12 10:00)
+</li>
+<li>Download - <a href="https://developer.oculusvr.com/?action=eula&amp;v=8">Oculus Rift SDK, Docs, Integrations, Wiki &amp; Forums | Oculus Developer Center</a>
+<ul>
+<li>Oculus SDK v0.2.1
+<ul>
+<li>Unity 4 Integration - 286.1M
+<ul>
+<li>Unity + Oculus
+</li>
+</ul>
+
+</li>
+<li>Oculus SDK - 142.3M
+</li>
+<li>Oculus Unity Tuscany Demo - 145.4M
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+<li>OculusUnityIntegrationに入ってるサンプル、ハコモノのセカイをそのまま使って、その中にMMDのモデルを配置する<br/>
+    OculusUnityIntegrationGuide.pdfを参考に、元となるプロジェクトをUnityで準備する
+<ol>
+<li>Unityで新規プロジェクトる
+</li>
+<li>Unity + Oculusのカナメ設定
+       OculusUnityIntegrationに入っているハコモノのセカイで同棲するので、Unityを起動させてAssetsの下に <code>OculusUnityIntegration</code> フォルダごと突っ込む
+</li>
+<li>プロジェクトにハコモノのサンプル読み込ませる
+<ul>
+<li>メニューの <code>Assets</code> -&gt; <code>Inport Package</code> -&gt; <code>Custom Package</code> で <code>OculusUnityIntegrationTuscanyDemo.unitypackage</code> を選ぶ
+</li>
+<li><code>Project</code> ビュー の <code>Tuscany</code> <code>Scenes</code> <code>SRDemo_Tuscany.unity</code> をダブルクリック 出てきた ダイアログは <b>Don't Save</b> を選ぶ
+</li>
+</ul>
+
+</li>
+<li><code>Scene</code> に表示されるはず。上の <code>▶</code> 押して試してみる。
+<ul>
+<li>操作はFPS風のWASD（詳しくはOculusUnityIntegrationGuide.pdfのp5, 2.2）
+</li>
+</ul>
+
+</li>
+</ol>
+
+</li>
+</ul>
+
+
+
+<ul>
+<li><del>ミクに裸Yシャツになってもらう</del> UnityでMMDモデルを追加する(MMD for Unity)
+<ul>
+<li>全面的にこちらの記事を参考に作る<br/>
+      <a href="http://noa1105.seesaa.net/article/246104572.html">【MMDforUnity】UnityでMMDモデルを動かす: 名も無き製作室</a>
+
+<ol>
+<li>Unityで作ったプロジェクトでMMDが動くようにPluginとか追加
+<ul>
+<li><code>mmd-for-unity1.2a-r122.zip</code> を解凍して、 <code>mmd-for-unity1.2a-r122</code> フォルダごとUityの <code>Project</code> ビューにどらっぐえんどろっぷ
+<ul>
+<li>メニューバーの <code>Plugins</code> に <code>MMD Loader</code> が追加されたら成功
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+<li>嫁を手に入れる
+<ul>
+<li><a href="http://www6.atwiki.jp/vpvpwiki/pages/65.html">VPVP wiki - モデルデータ</a>
+<ul>
+<li><a href="http://www6.atwiki.jp/vpvpwiki/pages/141.html">VPVP wiki - モデルデータ/MMD付属モデル</a> から同棲したいミクを選択する
+<ul>
+<li>+ここでは <a href="http://bowlroll.net/up/dl1475">ワイシャツを着た初音ミク（生足バージョン）</a> に毎朝味噌汁作ってもらうことにしました。+<br/>
+               が、後述の方法では <code>PMDLoader</code> で読み込めないっぽい。<br/>
+               いろいろ試した結果、こちら(<a href="http://bowlroll.net/up/dl1420">MMDaccs<sub>0150</sub></a>)なら ShaderType: MMDShader、他すべてONで取り込めてきちんと表示できた。<br/>
+</li>
+<li>だたモーションの設定ができない！おしえてけろ
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+<li>ちなみに、 <code>.pmm</code> <code>pmd</code> の拡張子ファイルの種類については次のサイトが詳しい
+<ul>
+<li><a href="http://mikudan.blog120.fc2.com/blog-entry-262.html">みくだん MMD・MME・PMD Editorなどで使用される主な拡張子一覧</a> より抜粋
+<ul>
+<li><code>.pmm</code> - Polygon Movie Maker File<br/>
+               MMD本体で使用するプロジェクトファイル
+</li>
+<li><code>.pmd</code> - Polygon Model File<br/>
+               MMDモデルファイル
+</li>
+<li><code>.pmx</code> - Polygon Model File eXtend Version<br/>
+               <code>.pmd</code> の仕様拡張版
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+<li>MMDモデルファイル <code>.pmd</code> を変換してUnityプロジェクトに読み込ませる
+<ol>
+<li>Unityの <code>Project</code> ビューに <code>MMDModel</code> フォルダを追加して、 <code>MMDDaccs_0150</code> フォルダごとどらっぐどろっぷ
+<ul>
+<li>ものによって依存とかあるみたいで、単品で最低限コピーするとめんどくさそう。
+</li>
+<li>これがいいのか悪いのか知らないけどあとからばかすか入れるつもりで管理が用意だからこうする。
+
+</li>
+</ul>
+
+</li>
+<li><code>PMD Loader</code> を使って <code>.pmd</code> ファイルをConvert、変換する
+<ul>
+<li><code>PMD Loader</code> 起動
+<ul>
+<li>メニューバー <code>Plugins</code> から、 <code>MMD Loader</code> -&gt; <code>PMD Loader</code> で起動
+</li>
+</ul>
+
+</li>
+<li>Convert対象の <code>.pmd=ファイルを選択してConvert               - =Project</code> ビュー の <code>Miku wDummy.pmd</code> を、 <code>PMD file</code> : <code>None(Object)</code> の上にD&amp;D
+<ul>
+<li>（それか <code>None(Object)</code> の右にある丸アイコンをクリックして出るとこから選ぶ）
+
+</li>
+</ul>
+
+</li>
+<li><code>Convert</code> クリック
+<ul>
+<li>TroubleShooting
+<ul>
+<li><code>NullReferenceException: Object reference not set to an instance of an object</code> 
+<ul>
+<li>メッセージ押せばエラー発生箇所がでる。コード嫁
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+<li>晴れて配置が終わったら、巨人ミクさんのサイズを変える
+<ul>
+<li>Convert直後に配置されるミクは駆逐対象サイズなので、左上の４つのアイコンのいちばん右を選んで <code>Scene</code> で自分の性癖のサイズに変更
+
+</li>
+</ul>
+
+</li>
+</ol>
+
+</li>
+<li>配置したモデルにMotionを割り当てる
+<ul>
+<li>VMDLoderのPrefabの選択肢で、PMDLoaderでConvertしたモデルが選べにゃい。続く(5/12)
+</li>
+</ul>
+
+</li>
+</ol>
+
 </li>
 </ul>
 

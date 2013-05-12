@@ -35,15 +35,88 @@ categories: oculus unity mikumikudance
        1. vr_calibrationコマンドやら手はあるかとは思うがそこまで詳しく見てない。
        2. 詳しくはこちらで [[http://wiki.teamfortress.com/wiki/Oculus_Rift_User_Guide][Oculus Rift User Guide - Official TF2 Wiki | Official Team Fortress Wiki]]
     
-* その２ Unityで自分の理想をふひひ
-  - UnityでOculusを使うにはProライセンスが必要（133,875円。あれ桁おかしくね？）
-    - トライアルで30日間使えるのでとりあえずコレで。
-    - すでにインストール済みで普通のLICENSEの人は、「Manage License」から適当にライセンスリセットで途中からUnityのライセンス切り替えができる。
+* その２ UnityでParaisoを作る
+  - 注意
+    - Unityの正しい知識が欠如しています。教えてください。
+    - *MMD for Unity* はMacではモデルデータ読み込み時にPrefabの生成がうまくいかないっぽい。と思ったけどどうなんだ。
+    
+  - Unity導入
+    - UnityでOculusを使うにはProライセンスが必要（133,875円。あれ桁おかしくね？）
+      - トライアルで30日間使えるのでとりあえずコレで。
+      - すでにインストール済みで普通のLICENSEの人は、「Manage License」から適当にライセンスリセットで途中からUnityのライセンス切り替えができる。
 
   - MikuMikuDanceを手に入れる
     - [[http://sourceforge.jp/projects/mmd-for-unity/][UnityでMMDを動かす会 プロジェクト日本語トップページ - SourceForge.JP]]
       - mmd-for-unity1.2a-r122.zip (日付: 2013-01-31, サイズ: 131.2 KB)
     
   - Oculus VR Developer登録してSDKを入手する
-    - Internal Server Error 多発して先に進めず。復旧次第追記(5/11 16:30)
-      
+    - [[https://developer.oculusvr.com/][Oculus VR Developer Center]]
+      - Internal Server Error 多発して先に進めず。復旧次第追記(5/11 16:30)
+      - 再開(5/12 10:00)
+      - Download - [[https://developer.oculusvr.com/?action=eula&v=8][Oculus Rift SDK, Docs, Integrations, Wiki & Forums | Oculus Developer Center]]
+        + Oculus SDK v0.2.1
+          + Unity 4 Integration - 286.1M
+            - Unity + Oculus
+          + Oculus SDK - 142.3M
+          + Oculus Unity Tuscany Demo - 145.4M
+
+  - OculusUnityIntegrationに入ってるサンプル、ハコモノのセカイをそのまま使って、その中にMMDのモデルを配置する\\
+    OculusUnityIntegrationGuide.pdfを参考に、元となるプロジェクトをUnityで準備する
+    1. Unityで新規プロジェクトる
+    2. Unity + Oculusのカナメ設定
+       OculusUnityIntegrationに入っているハコモノのセカイで同棲するので、Unityを起動させてAssetsの下に =OculusUnityIntegration= フォルダごと突っ込む
+    3. プロジェクトにハコモノのサンプル読み込ませる
+       - メニューの =Assets= -> =Inport Package= -> =Custom Package= で =OculusUnityIntegrationTuscanyDemo.unitypackage= を選ぶ
+       - =Project= ビュー の =Tuscany= =Scenes= =SRDemo_Tuscany.unity= をダブルクリック 出てきた ダイアログは *Don't Save* を選ぶ
+    4. =Scene= に表示されるはず。上の =▶= 押して試してみる。
+       - 操作はFPS風のWASD（詳しくはOculusUnityIntegrationGuide.pdfのp5, 2.2）
+
+
+  - +ミクに裸Yシャツになってもらう+ UnityでMMDモデルを追加する(MMD for Unity)
+    - 全面的にこちらの記事を参考に作る\\
+      [[http://noa1105.seesaa.net/article/246104572.html][【MMDforUnity】UnityでMMDモデルを動かす: 名も無き製作室]]
+
+      1. Unityで作ったプロジェクトでMMDが動くようにPluginとか追加
+         - =mmd-for-unity1.2a-r122.zip= を解凍して、 =mmd-for-unity1.2a-r122= フォルダごとUityの =Project= ビューにどらっぐえんどろっぷ
+           - メニューバーの =Plugins= に =MMD Loader= が追加されたら成功
+
+      2. 嫁を手に入れる
+         - [[http://www6.atwiki.jp/vpvpwiki/pages/65.html][VPVP wiki - モデルデータ]]
+           - [[http://www6.atwiki.jp/vpvpwiki/pages/141.html][VPVP wiki - モデルデータ/MMD付属モデル]] から同棲したいミクを選択する
+             - +ここでは [[http://bowlroll.net/up/dl1475][ワイシャツを着た初音ミク（生足バージョン）]] に毎朝味噌汁作ってもらうことにしました。+\\
+               が、後述の方法では =PMDLoader= で読み込めないっぽい。\\
+               いろいろ試した結果、こちら([[http://bowlroll.net/up/dl1420][MMDaccs_0150]])なら ShaderType: MMDShader、他すべてONで取り込めてきちんと表示できた。\\
+             - だたモーションの設定ができない！おしえてけろ
+
+         - ちなみに、 =.pmm= =pmd= の拡張子ファイルの種類については次のサイトが詳しい
+           - [[http://mikudan.blog120.fc2.com/blog-entry-262.html][みくだん MMD・MME・PMD Editorなどで使用される主な拡張子一覧]] より抜粋
+             - =.pmm= - Polygon Movie Maker File\\
+               MMD本体で使用するプロジェクトファイル
+             - =.pmd= - Polygon Model File\\
+               MMDモデルファイル
+             - =.pmx= - Polygon Model File eXtend Version\\
+               =.pmd= の仕様拡張版
+
+      3. MMDモデルファイル =.pmd= を変換してUnityプロジェクトに読み込ませる
+         1. Unityの =Project= ビューに =MMDModel= フォルダを追加して、 =MMDDaccs_0150= フォルダごとどらっぐどろっぷ
+            - ものによって依存とかあるみたいで、単品で最低限コピーするとめんどくさそう。
+            - これがいいのか悪いのか知らないけどあとからばかすか入れるつもりで管理が用意だからこうする。
+            
+         2. =PMD Loader= を使って =.pmd= ファイルをConvert、変換する
+            - =PMD Loader= 起動
+              - メニューバー =Plugins= から、 =MMD Loader= -> =PMD Loader= で起動
+            - Convert対象の =.pmd=ファイルを選択してConvert
+              - =Project= ビュー の =Miku wDummy.pmd= を、 =PMD file= : =None(Object)= の上にD&D
+                - （それか =None(Object)= の右にある丸アイコンをクリックして出るとこから選ぶ）
+
+              - =Convert= クリック
+                - TroubleShooting
+                  - =NullReferenceException: Object reference not set to an instance of an object= 
+                    - メッセージ押せばエラー発生箇所がでる。コード嫁
+
+         3. 晴れて配置が終わったら、巨人ミクさんのサイズを変える
+            - Convert直後に配置されるミクは駆逐対象サイズなので、左上の４つのアイコンのいちばん右を選んで =Scene= で自分の性癖のサイズに変更
+
+      4. 配置したモデルにMotionを割り当てる
+         - VMDLoderのPrefabの選択肢で、PMDLoaderでConvertしたモデルが選べにゃい。続く(5/12)
+
