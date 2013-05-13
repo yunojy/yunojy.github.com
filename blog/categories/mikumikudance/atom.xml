@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mikumikudance | develog.me]]></title>
   <link href="http://yunojy.github.com/blog/categories/mikumikudance/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-05-12T22:42:53+09:00</updated>
+  <updated>2013-05-13T20:40:59+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -95,7 +95,7 @@
 </li>
 <li>文字は荒い。ゲーム中のInfoは左だけ表示で右にボタンあったりすると押せない。
 <ol>
-<li>vr<sub>calibrationコマンドやら手はあるかとは思うがそこまで詳しく見てない。</sub>
+<li><code>vr_calibration</code> コマンドやら手はあるかとは思うがそこまで詳しく見てない。
 </li>
 <li>詳しくはこちらで <a href="http://wiki.teamfortress.com/wiki/Oculus_Rift_User_Guide">Oculus Rift User Guide - Official TF2 Wiki | Official Team Fortress Wiki</a>
 </li>
@@ -253,9 +253,9 @@
 <ul>
 <li>+ここでは <a href="http://bowlroll.net/up/dl1475">ワイシャツを着た初音ミク（生足バージョン）</a> に毎朝味噌汁作ってもらうことにしました。+<br/>
                が、後述の方法では <code>PMDLoader</code> で読み込めないっぽい。<br/>
-               いろいろ試した結果、こちら(<a href="http://bowlroll.net/up/dl1420">MMDaccs<sub>0150</sub></a>)なら ShaderType: MMDShader、他すべてONで取り込めてきちんと表示できた。<br/>
+               いろいろ試した結果、こちら =(<a href="http://bowlroll.net/up/dl1420">MMDaccs_0150</a>)= なら ShaderType: MMDShader、他すべてONで取り込めてきちんと表示できた。<br/>
 </li>
-<li>だたモーションの設定ができない！おしえてけろ
+<li>ただモーションの設定ができない！おしえてけろ
 
 </li>
 </ul>

@@ -32,7 +32,7 @@ categories: oculus unity mikumikudance
     5. 現在は関係ないが、ちょっと前に画面分割されなくなる不具合があったみたいで、念のため「ベータ」で「prerelease」選ぶ。
     6. ゲーム開始。「プレイ」かダブルクリックで。最初のメニュー画面は左右分割されない。ゲームプレイ時の画面でようやく分割表示される。（ロード画面も分割されない。）
     7. 文字は荒い。ゲーム中のInfoは左だけ表示で右にボタンあったりすると押せない。
-       1. vr_calibrationコマンドやら手はあるかとは思うがそこまで詳しく見てない。
+       1. =vr_calibration= コマンドやら手はあるかとは思うがそこまで詳しく見てない。
        2. 詳しくはこちらで [[http://wiki.teamfortress.com/wiki/Oculus_Rift_User_Guide][Oculus Rift User Guide - Official TF2 Wiki | Official Team Fortress Wiki]]
     
 * その２ UnityでParaisoを作る
@@ -85,8 +85,8 @@ categories: oculus unity mikumikudance
            - [[http://www6.atwiki.jp/vpvpwiki/pages/141.html][VPVP wiki - モデルデータ/MMD付属モデル]] から同棲したいミクを選択する
              - +ここでは [[http://bowlroll.net/up/dl1475][ワイシャツを着た初音ミク（生足バージョン）]] に毎朝味噌汁作ってもらうことにしました。+\\
                が、後述の方法では =PMDLoader= で読み込めないっぽい。\\
-               いろいろ試した結果、こちら([[http://bowlroll.net/up/dl1420][MMDaccs_0150]])なら ShaderType: MMDShader、他すべてONで取り込めてきちんと表示できた。\\
-             - だたモーションの設定ができない！おしえてけろ
+               いろいろ試した結果、こちら =([[http://bowlroll.net/up/dl1420][MMDaccs_0150]])= なら ShaderType: MMDShader、他すべてONで取り込めてきちんと表示できた。\\
+             - ただモーションの設定ができない！おしえてけろ
 
          - ちなみに、 =.pmm= =pmd= の拡張子ファイルの種類については次のサイトが詳しい
            - [[http://mikudan.blog120.fc2.com/blog-entry-262.html][みくだん MMD・MME・PMD Editorなどで使用される主な拡張子一覧]] より抜粋
