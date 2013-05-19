@@ -100,9 +100,10 @@ categories: oculus unity mikumikudance
          2. 嫁を手に入れる
             - [[http://www6.atwiki.jp/vpvpwiki/pages/65.html][VPVP wiki - モデルデータ]]
               - [[http://www6.atwiki.jp/vpvpwiki/pages/141.html][VPVP wiki - モデルデータ/MMD付属モデル]] から同棲したいミクを選択する
-                - +ここでは [[http://bowlroll.net/up/dl1475][ワイシャツを着た初音ミク（生足バージョン）]] に毎朝味噌汁作ってもらうことにしました。+\\
+                - ここでは [[http://bowlroll.net/up/dl1475][ワイシャツを着た初音ミク（生足バージョン）]] に毎朝味噌汁作ってもらうことにしました。\\
                   が、後述の方法で =PMDLoader= で読み込めないっぽい。\\
                   いろいろ試した結果、 =ki式初音ミクAct4= さんなら ShaderType: MMDShader、他すべてONで取り込めてきちんと表示できた。
+                  - [[http://bowlroll.net/up/dl14327][Ki式初音ミクAct4 - Bowl Roll]]
 
             - ちなみに、 =.pmm= =pmd= の拡張子ファイルの種類については次のサイトが詳しい
               - [[http://www6.atwiki.jp/vpvpwiki/pages/316.html][VPVP wiki - MMM/拡張子]]
@@ -114,7 +115,7 @@ categories: oculus unity mikumikudance
                 - =.pmm= - Polygon Movie Maker File\\
                   MMD本体で使用するプロジェクトファイル。直接使えない
                 - =.pmx= - Polygon Model File eXtend Version\\
-                  =.pmd= の仕様拡張版。直接使えない
+                  =.pmd= の仕様拡張版。たぶん直接使えない
 
          3. MMDモデルファイル =.pmd= を変換してUnityプロジェクトに読み込ませる
             1. Unityの =Project View= に =MMDModel= フォルダを追加して、 =MMDDaccs_0150= フォルダごとどらっぐどろっぷ

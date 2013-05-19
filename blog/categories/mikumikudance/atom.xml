@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mikumikudance | develog.me]]></title>
   <link href="http://yunojy.github.com/blog/categories/mikumikudance/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-05-19T16:55:34+09:00</updated>
+  <updated>2013-05-19T17:01:05+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -328,9 +328,14 @@
 <ul>
 <li><a href="http://www6.atwiki.jp/vpvpwiki/pages/141.html">VPVP wiki - モデルデータ/MMD付属モデル</a> から同棲したいミクを選択する
 <ul>
-<li>+ここでは <a href="http://bowlroll.net/up/dl1475">ワイシャツを着た初音ミク（生足バージョン）</a> に毎朝味噌汁作ってもらうことにしました。+<br/>
+<li>ここでは <a href="http://bowlroll.net/up/dl1475">ワイシャツを着た初音ミク（生足バージョン）</a> に毎朝味噌汁作ってもらうことにしました。<br/>
                   が、後述の方法で <code>PMDLoader</code> で読み込めないっぽい。<br/>
                   いろいろ試した結果、 <code>ki式初音ミクAct4</code> さんなら ShaderType: MMDShader、他すべてONで取り込めてきちんと表示できた。
+<ul>
+<li><a href="http://bowlroll.net/up/dl14327">Ki式初音ミクAct4 - Bowl Roll</a>
+
+</li>
+</ul>
 
 </li>
 </ul>
@@ -355,7 +360,7 @@
                   MMD本体で使用するプロジェクトファイル。直接使えない
 </li>
 <li><code>.pmx</code> - Polygon Model File eXtend Version<br/>
-                  <code>.pmd</code> の仕様拡張版。直接使えない
+                  <code>.pmd</code> の仕様拡張版。たぶん直接使えない
 
 </li>
 </ul>
