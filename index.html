@@ -226,7 +226,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/05/11/oculus-getting-started/">Oculus Riftが到着してからやったこと</a></h1>
+      <h1 class="entry-title"><a href="/blog/2013/05/11/oculus-getting-started/">Oculus Riftが到着してからやったこと（随時更新）</a></h1>
     
     
       <p class="meta">
@@ -254,6 +254,21 @@
 </p>
 
 
+
+
+<ul>
+<li>まだ到着していない方はこちらへ。
+<ul>
+<li><a href="http://yunojy.github.io/blog/2013/05/13/get-ready-oculus/">Oculus Riftを注文したら届くまでに急いでやるべきこと - develog.me</a>
+</li>
+</ul>
+
+</li>
+</ul>
+
+
+
+
 <p>
 早速！。。って何からやったものか
 </p>
@@ -262,24 +277,45 @@
 
 
 <div id="outline-container-1" class="outline-2">
-<h2 id="sec-1">とりあえず初体験してみる</h2>
+<h2 id="sec-1">changelog</h2>
 <div class="outline-text-2" id="text-1">
+
+<ul>
+<li>up  2013-05-19 VMD Loaderまで
+</li>
+<li>up  2013-05-12 PMD Loaderまで
+</li>
+<li>new 2013-05-11 開発環境構築途中まで
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">とりあえず初体験してみる</h2>
+<div class="outline-text-2" id="text-2">
 
 <p>  すごいガジェットが手に入った!! けど、何からしていいものか、とりあえずOculusの実力を体験してみる。
 </p>
 
 </div>
 
-<div id="outline-container-1-1" class="outline-3">
-<h3 id="sec-1-1">その前に色々準備</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1">その前に色々準備</h3>
+<div class="outline-text-3" id="text-2-1">
 
 
 </div>
 
-<div id="outline-container-1-1-1" class="outline-4">
-<h4 id="sec-1-1-1">PCと接続</h4>
-<div class="outline-text-4" id="text-1-1-1">
+<div id="outline-container-2-1-1" class="outline-4">
+<h4 id="sec-2-1-1">PCと接続</h4>
+<div class="outline-text-4" id="text-2-1-1">
 
 <ul>
 <li>本体は実際に頭に装着するHeadsetと、電源ON/OFF・ブライトネス・コントラスト操作のControl Boxがケーブルで接続されている。
@@ -298,9 +334,9 @@
 
 
 
-<div id="outline-container-2" class="outline-2">
-<h2 id="sec-2">その１ Team Fortress 2 で遊んでみる</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">その１ Team Fortress 2 で遊んでみる</h2>
+<div class="outline-text-2" id="text-3">
 
 <ul>
 <li>ユーザー登録とSteamクライアントインストール。
@@ -346,16 +382,53 @@
 
 
 
-<div id="outline-container-3" class="outline-2">
-<h2 id="sec-3">その２ UnityでParaisoを作る</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">その２ @warapuriさん作、巨人立体機動ゲームで遊んでみる</h2>
+<div class="outline-text-2" id="text-4">
 
+<ul>
+<li><a href="http://www.unitygames.jp/game/ug7000490">Titan - UnityGames</a>
+<ul>
+<li>進撃の巨人風ゲーム。
+</li>
+<li>v0.0.2の時点では人類に巨人を倒すすべはありません。
+</li>
+<li>立体機動で空を縦横無尽に飛び回る爽快感は凄い。
+</li>
+<li>Macでは無理っぽい？VMでやっても真っ黒
+</li>
+</ul>
+
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5">その３ UnityでParaisoを作る</h2>
+<div class="outline-text-2" id="text-5">
+
+<ul>
+<li>導入
 <ul>
 <li>注意
 <ul>
-<li>Unityの正しい知識が欠如しています。教えてください。
+<li>Unityの正しい知識が欠如しています。間違いは <del>Pull Request</del> Twitterからご指摘ください。
 </li>
-<li><b>MMD for Unity</b> はMacではモデルデータ読み込み時にPrefabの生成がうまくいかないっぽい。と思ったけどどうなんだ。
+<li><b>MMD for Unity</b> SVNから直接Checkoupしてきた <code>r129</code> 使用
+<ul>
+<li><code>Mac</code> の <code>Unity</code> では、 <code>PMD Loader</code> でモデルデータをConvertすると、生成される <code>Materials</code> <code>Physics</code> ファイルが文字化けして、参照に失敗するみたいなので <b>Windows必須</b>
+</li>
+</ul>
+
+</li>
+<li>ただし、 <code>Windows 32bit</code> では <code>Oculus Unity</code> でdll参照時に64bitのdllをみてエラーっぽい（未確認）ので、実行は <code>Mac</code> の <code>Unity</code> でやっている。
 
 </li>
 </ul>
@@ -363,9 +436,9 @@
 </li>
 <li>Unity導入
 <ul>
-<li>UnityでOculusを使うにはProライセンスが必要（133,875円。あれ桁おかしくね？）
+<li>UnityでOculusを使うにはProライセンスが必要（133,875円）
 <ul>
-<li>トライアルで30日間使えるのでとりあえずコレで。
+<li>Oculusユーザーは４ヶ月Trialできるらしいけど？
 </li>
 <li>すでにインストール済みで普通のLICENSEの人は、「Manage License」から適当にライセンスリセットで途中からUnityのライセンス切り替えができる。
 
@@ -380,7 +453,7 @@
 <ul>
 <li><a href="http://sourceforge.jp/projects/mmd-for-unity/">UnityでMMDを動かす会 プロジェクト日本語トップページ - SourceForge.JP</a>
 <ul>
-<li>mmd-for-unity1.2a-r122.zip (日付: 2013-01-31, サイズ: 131.2 KB)
+<li>SVNから直接チェックアウト <code>r129</code>
 
 </li>
 </ul>
@@ -393,47 +466,52 @@
 <ul>
 <li><a href="https://developer.oculusvr.com/">Oculus VR Developer Center</a>
 <ul>
-<li>Internal Server Error 多発して先に進めず。復旧次第追記(5/11 16:30)
-</li>
-<li>再開(5/12 10:00)
-</li>
 <li>Download - <a href="https://developer.oculusvr.com/?action=eula&amp;v=8">Oculus Rift SDK, Docs, Integrations, Wiki &amp; Forums | Oculus Developer Center</a>
 <ul>
-<li>Oculus SDK v0.2.1
+<li>Oculus SDK v0.2.2
 <ul>
-<li>Unity 4 Integration - 286.1M
+<li>Unity 4 Integration
 <ul>
-<li>Unity + Oculus
+<li>Unity + OculusのためのPluginとか
 </li>
 </ul>
 
 </li>
-<li>Oculus SDK - 142.3M
-</li>
-<li>Oculus Unity Tuscany Demo - 145.4M
-
-</li>
-</ul>
-
+<li>Oculus Unity Tuscany Demo
+<ul>
+<li>Unity + OculusのDemo、 <b>Unityプロジェクト付き</b>
 </li>
 </ul>
 
 </li>
-</ul>
+<li>Oculus SDK
 
 </li>
 </ul>
 
 </li>
-<li>OculusUnityIntegrationに入ってるサンプル、ハコモノのセカイをそのまま使って、その中にMMDのモデルを配置する<br/>
-    OculusUnityIntegrationGuide.pdfを参考に、元となるプロジェクトをUnityで準備する
+</ul>
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+<li>手順
+<ol>
+<li>Unity新規プロジェクト作成〜Oculus・フィールド下準備
+<ol>
+<li>OculusUnityIntegrationに入ってるサンプル「が僕達の新居にふさわしいので、この中で同居します。フヒヒ」『内にMMDのモデルを配置する』<br/>
+          OculusUnityIntegrationGuide.pdfを参考に、元となるプロジェクトをUnityで準備する
 <ol>
 <li>Unityで新規プロジェクトる
 </li>
-<li>Unity + Oculusのカナメ設定
-       OculusUnityIntegrationに入っているハコモノのセカイで同棲するので、Unityを起動させてAssetsの下に <code>OculusUnityIntegration</code> フォルダごと突っ込む
-</li>
-<li>プロジェクトにハコモノのサンプル読み込ませる
+<li>プロジェクトにサンプル読み込ませる（Windowsだと強制終了食らったのでMacで作業 Oculus Unity v0.22）
 <ul>
 <li>メニューの <code>Assets</code> -&gt; <code>Inport Package</code> -&gt; <code>Custom Package</code> で <code>OculusUnityIntegrationTuscanyDemo.unitypackage</code> を選ぶ
 </li>
@@ -445,6 +523,7 @@
 <li><code>Scene</code> に表示されるはず。上の <code>▶</code> 押して試してみる。
 <ul>
 <li>操作はFPS風のWASD（詳しくはOculusUnityIntegrationGuide.pdfのp5, 2.2）
+
 </li>
 </ul>
 
@@ -452,20 +531,18 @@
 </ol>
 
 </li>
-</ul>
+</ol>
 
-
-
-<ul>
-<li><del>ミクに裸Yシャツになってもらう</del> UnityでMMDモデルを追加する(MMD for Unity)
+</li>
+<li><del>ミクに裸Yシャツになってもらう</del> UnityでMMDモデルを追加する(MMD for Unity、MFU r129)
 <ul>
 <li>全面的にこちらの記事を参考に作る<br/>
-      <a href="http://noa1105.seesaa.net/article/246104572.html">【MMDforUnity】UnityでMMDモデルを動かす: 名も無き製作室</a>
+         <a href="http://noa1105.seesaa.net/article/246104572.html">【MMDforUnity】UnityでMMDモデルを動かす: 名も無き製作室</a>
 
 <ol>
 <li>Unityで作ったプロジェクトでMMDが動くようにPluginとか追加
 <ul>
-<li><code>mmd-for-unity1.2a-r122.zip</code> を解凍して、 <code>mmd-for-unity1.2a-r122</code> フォルダごとUityの <code>Project</code> ビューにどらっぐえんどろっぷ
+<li>SVNからチェックアウトしてきた <code>mmd-for-unity/trunk</code> 下の <code>MikuMikuDance for Unity</code> フォルダごと <code>Project View</code> に D&amp;D
 <ul>
 <li>メニューバーの <code>Plugins</code> に <code>MMD Loader</code> が追加されたら成功
 
@@ -483,10 +560,8 @@
 <li><a href="http://www6.atwiki.jp/vpvpwiki/pages/141.html">VPVP wiki - モデルデータ/MMD付属モデル</a> から同棲したいミクを選択する
 <ul>
 <li>+ここでは <a href="http://bowlroll.net/up/dl1475">ワイシャツを着た初音ミク（生足バージョン）</a> に毎朝味噌汁作ってもらうことにしました。+<br/>
-               が、後述の方法では <code>PMDLoader</code> で読み込めないっぽい。<br/>
-               いろいろ試した結果、こちら =(<a href="http://bowlroll.net/up/dl1420">MMDaccs_0150</a>)= なら ShaderType: MMDShader、他すべてONで取り込めてきちんと表示できた。<br/>
-</li>
-<li>ただモーションの設定ができない！おしえてけろ
+                  が、後述の方法で <code>PMDLoader</code> で読み込めないっぽい。<br/>
+                  いろいろ試した結果、 <code>ki式初音ミクAct4</code> さんなら ShaderType: MMDShader、他すべてONで取り込めてきちんと表示できた。
 
 </li>
 </ul>
@@ -497,16 +572,21 @@
 </li>
 <li>ちなみに、 <code>.pmm</code> <code>pmd</code> の拡張子ファイルの種類については次のサイトが詳しい
 <ul>
+<li><a href="http://www6.atwiki.jp/vpvpwiki/pages/316.html">VPVP wiki - MMM/拡張子</a>
+</li>
 <li><a href="http://mikudan.blog120.fc2.com/blog-entry-262.html">みくだん MMD・MME・PMD Editorなどで使用される主な拡張子一覧</a> より抜粋
 <ul>
-<li><code>.pmm</code> - Polygon Movie Maker File<br/>
-               MMD本体で使用するプロジェクトファイル
-</li>
 <li><code>.pmd</code> - Polygon Model File<br/>
-               MMDモデルファイル
+                  MMDモデルファイル
+</li>
+<li><code>.vmd</code> - Vocaloid Motion Data File<br/>
+                  MMDモーションファイル
+</li>
+<li><code>.pmm</code> - Polygon Movie Maker File<br/>
+                  MMD本体で使用するプロジェクトファイル。直接使えない
 </li>
 <li><code>.pmx</code> - Polygon Model File eXtend Version<br/>
-               <code>.pmd</code> の仕様拡張版
+                  <code>.pmd</code> の仕様拡張版。直接使えない
 
 </li>
 </ul>
@@ -520,35 +600,47 @@
 </li>
 <li>MMDモデルファイル <code>.pmd</code> を変換してUnityプロジェクトに読み込ませる
 <ol>
-<li>Unityの <code>Project</code> ビューに <code>MMDModel</code> フォルダを追加して、 <code>MMDDaccs_0150</code> フォルダごとどらっぐどろっぷ
+<li>Unityの <code>Project View</code> に <code>MMDModel</code> フォルダを追加して、 <code>MMDDaccs_0150</code> フォルダごとどらっぐどろっぷ
 <ul>
 <li>ものによって依存とかあるみたいで、単品で最低限コピーするとめんどくさそう。
 </li>
-<li>これがいいのか悪いのか知らないけどあとからばかすか入れるつもりで管理が用意だからこうする。
+<li>これがいいのか悪いのか知らないけど <del>ハーレム</del> 後からばかすか入れるつもりで管理が用意だからこうする。
 
 </li>
 </ul>
 
 </li>
-<li><code>PMD Loader</code> を使って <code>.pmd</code> ファイルをConvert、変換する
+<li><code>PMD Loader</code> を使って <code>.pmd</code> ファイルを <code>Convert</code>
 <ul>
 <li><code>PMD Loader</code> 起動
 <ul>
-<li>メニューバー <code>Plugins</code> から、 <code>MMD Loader</code> -&gt; <code>PMD Loader</code> で起動
+<li>メニューバー <code>Plugins</code> から、 <code>MMD Loader</code> &gt; <code>PMD Loader</code>
 </li>
 </ul>
 
 </li>
-<li>Convert対象の <code>.pmd=ファイルを選択してConvert               - =Project</code> ビュー の <code>Miku wDummy.pmd</code> を、 <code>PMD file</code> : <code>None(Object)</code> の上にD&amp;D
+<li>Convert対象の <code>.pmd</code> ファイルを選択して <code>Convert</code>
+<ul>
+<li><code>Project View</code> の <code>Miku wDummy.pmd</code> を、 <code>PMD file</code> : <code>None(Object)</code> の上にD&amp;D
 <ul>
 <li>（それか <code>None(Object)</code> の右にある丸アイコンをクリックして出るとこから選ぶ）
-
 </li>
 </ul>
 
 </li>
 <li><code>Convert</code> クリック
+</li>
+<li>正常に取り込めたら、 <code>Hierarchy View</code> に生成されたモデルを <code>Project View</code> の同じく生成された <code>Asset</code> （白い四角アイコン）に <code>D&amp;D</code>
 <ul>
+<li>これをやらないと <code>VMD Loader</code> の <code>Prefab</code> の選択肢に出てこない。
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
 <li>TroubleShooting
 <ul>
 <li><code>NullReferenceException: Object reference not set to an instance of an object</code> 
@@ -557,6 +649,52 @@
 
 </li>
 </ul>
+
+</li>
+<li>取り込んだモデルのテクスチャがかけている、真っ白、真っ黒
+<ul>
+<li><code>.pmd</code> が参照するテクスチャ画像ファイルを <code>Project View</code> に持ってき漏れている。<br/>
+                     そもそもモデルのディレクトリまるごとコピーしていれば問題ない
+
+</li>
+</ul>
+
+</li>
+<li>ただでさえ天使で眩しいミクさんが眩しすぎて辛い
+<ul>
+<li>取り込んだ <code>Materials</code> の設定で光の当たり方を変える必要がある。
+</li>
+<li><code>Project View</code> の生成した <code>Prefab</code> (青い四角アイコン)と同じ階層にある <code>Materials</code> フォルダ以下のファイルを全選択
+</li>
+<li><code>Inspector View</code> の <code>Shader</code> で <code>Diffuse</code> を選ぶ
+
+</li>
+</ul>
+
+</li>
+<li>浮気したわけでもないのに天使のはずのミクさんの顔の影が怖い
+<ul>
+<li>他の物体から影を計算する <code>Receive Shadows</code> が効いている。
+</li>
+<li>本来は正しくモデルを直すべきだが、一生を共にするつもりはないので OFF にする。
+</li>
+<li><code>Project View</code> の生成した <code>Prefab</code> (青い四角アイコン) ファイルを選択
+</li>
+<li><code>Inspector View</code> の <code>Skinned Mesh Renderer</code> <code>Receive Shadows</code> を <code>OFF</code>
+
+</li>
+</ul>
+
+</li>
+<li>ネクタイ・スカートがめり込む
+<ul>
+<li>いろいろ方法があるみたい。
+</li>
+<li><code>Ki式初音ミクAct4</code> さんの場合は、
+<ul>
+<li><code>MFU</code> を <code>r122</code> から <code>r129</code> に変えて取り込み直したら、スカートめり込まないようになった。
+</li>
+<li>ネクタイは <code>ネクタイ１</code> の <code>Configurable Joint</code> の <code>Angular XMotion</code> を <code>Limited</code> → <code>Locked</code> で(Limitedのまましきい値設定でも良さそう)
 
 </li>
 </ul>
@@ -573,18 +711,97 @@
 </li>
 <li>晴れて配置が終わったら、巨人ミクさんのサイズを変える
 <ul>
-<li>Convert直後に配置されるミクは駆逐対象サイズなので、左上の４つのアイコンのいちばん右を選んで <code>Scene</code> で自分の性癖のサイズに変更
+<li>Convert直後に配置されるミクは駆逐対象サイズなので、自分の性癖の身長に変更
+<ol>
+<li><code>Project View</code> の生成した <code>Prefab</code> (青い四角アイコン) ファイルを選択
+</li>
+<li><code>Scale</code> の <code>X</code> <code>Y</code> <code>Z</code> を次の値で統一する。<br/>
+                    目安としては、ペドは <code>0.1以下</code> 、ロリは <code>0.1</code> 、普通は <code>0.15</code> あたりで。モデルによって変わるかもしれない
+
+</li>
+</ol>
 
 </li>
 </ul>
 
 </li>
 </ol>
+
+</li>
+</ol>
+
+</li>
+</ul>
 
 </li>
 <li>配置したモデルにMotionを割り当てる
+
+<ol>
+<li>MMDのモーションデータ <code>.vmd</code> を変換する
+<ol>
+<li>モーションデータを拾ってくる
+             <a href="http://www6.atwiki.jp/vpvpwiki/pages/389.html">VPVP wiki - モーションデータ/日常系・その他</a>
 <ul>
-<li>VMDLoderのPrefabの選択肢で、PMDLoaderでConvertしたモデルが選べにゃい。続く(5/12)
+<li>今回は <a href="http://www.nicovideo.jp/watch/sm9554606">【MikuMikuDance】歩き＆走りモーション【公開】 - ニコニコ動画:Q</a> の  <a href="http://bowlroll.net/up/dl829">歩き＆走りモーション -  Bowl Roll</a> を使用
+</li>
+<li>DLしたら解凍して、 <code>Project View</code> に <code>MMDMotion</code> フォルダを追加してその中に <code>歩きと走り</code> フォルダごと突っ込む
+
+</li>
+</ul>
+
+</li>
+<li><code>VMD Loader</code> を使って <code>.vmd</code> ファイルを <code>Convert</code>
+<ul>
+<li><code>VMDLoder</code> 起動
+</li>
+<li>メニューバー <code>Plugins</code> から、 <code>MMD Loader</code> &gt; <code>VMD Loader</code>
+
+</li>
+</ul>
+
+</li>
+<li><code>PMD Prefab</code> には先程生成してこちょこちょした <code>Prefab</code> ファイル
+<ul>
+<li><code>PMD Loader</code> 取込、 <code>Convert</code> 直後に次の操作が必要（上から読んでいたら実行済）
+</li>
+<li><code>Hierarchy View</code> に生成されたモデルを <code>Project View</code> の同じく生成された <code>Asset</code> （白い四角アイコン）に <code>D&amp;D</code> 青い四角アイコンに変わればOK
+</li>
+<li>しないと <code>VMDLoder</code> の選択肢で、 <code>PMDLoader</code> でConvertしたモデルが選べない。
+
+</li>
+</ul>
+
+</li>
+<li><code>VMD file</code> に <code>歩く10.vmd</code>
+</li>
+<li>よく知らないけど <code>Create Asset</code> にチェック
+</li>
+<li>よく知らないけど <code>Interpolation Quality</code> はそのまま <code>1</code> 問題があったら調べればいいしね。
+</li>
+<li><code>Convert</code>
+</li>
+<li><code>Prefab</code> と同じ階層に <code>Animation</code> フォルダが生成され、その中に 再生ボタンっぽいアイコンのファイルができる。
+
+</li>
+</ol>
+
+</li>
+<li>モデルに変換したモーションデータをバインドする
+<ol>
+<li>このままじゃモデルにバインドされてないので、再生ボタンっぽいアイコンのファイルを選んで青い四角アイコンの <code>Prefab</code> に D&amp;D
+</li>
+<li>一回しかモーションしてくれないので <code>Loop</code> させる
+<ul>
+<li>再生ボタンっぽいアイコンのファイルを選んで <code>Inspector View</code> の <code>Wrap Mode</code> から <code>Loop</code> を選ぶ
+</li>
+</ul>
+
+</li>
+<li>ここまでを確認
+<ul>
+<li><code>▶</code> 押して試してみる。
+</li>
+<li>操作はFPS風のWASD（詳しくはOculusUnityIntegrationGuide.pdfのp5, 2.2）
 </li>
 </ul>
 
@@ -592,10 +809,41 @@
 </ol>
 
 </li>
-</ul>
+</ol>
+
+</li>
+</ol>
 
 </li>
 </ul>
+
+
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6">続く（予定）</h2>
+<div class="outline-text-2" id="text-6">
+
+<ul>
+<li>ミクさんと追いかけっこ
+</li>
+<li>現実世界でしゃがんで画面の中のカメラの位置を下に下げる
+</li>
+<li>3D connexionを使ってミクさんと空を飛ぶ
+</li>
+<li>読みづらい・キモい文章を清書
+</li>
+<li>操作画像を追加
+</li>
+</ul>
+
 
 
 </div>
@@ -2049,7 +2297,7 @@ end
       </li>
     
       <li class="post">
-        <a href="/blog/2013/05/11/oculus-getting-started/">Oculus Riftが到着してからやったこと</a>
+        <a href="/blog/2013/05/11/oculus-getting-started/">Oculus Riftが到着してからやったこと（随時更新）</a>
       </li>
     
       <li class="post">
