@@ -18,6 +18,7 @@ categories: oculus unity mikumikudance
 早速！。。って何からやったものか
 
 * changelog
+  - up  2013-06-08 いろいろ追加
   - up  2013-05-19 VMD Loaderまで
   - up  2013-05-12 PMD Loaderまで
   - new 2013-05-11 開発環境構築途中まで
@@ -30,28 +31,125 @@ categories: oculus unity mikumikudance
     - 本体は実際に頭に装着するHeadsetと、電源ON/OFF・ブライトネス・コントラスト操作のControl Boxがケーブルで接続されている。
     - Control Boxに電源通してPCとUSB接続。あと映像のためのHDMIかDIV挿せばOK。
       
-* その１ Team Fortress 2 で遊んでみる
-  - ユーザー登録とSteamクライアントインストール。
-    - [[http://store.steampowered.com/?l=japanese][Steamへようこそ]]
-  - Oculus VRのHatCodeを使ってゲームをインストール
-    1. クライアントインストール後に「ライブラリ」の左下、「ゲームを追加...」から「Steamでアイテムを有効化する...」を選ぶ。
-    2. HatCodeを使ってゲームを有効化する。
-    3. ダウンロード、インストールが終わったら、「ライブラリ」から「Team Fortress2」を選んで右クリック。「プロパティ」を開く。
-    4. 「一般」の「起動設定...」に =-vr= を入力。
-    5. 現在は関係ないが、ちょっと前に画面分割されなくなる不具合があったみたいで、念のため「ベータ」で「prerelease」選ぶ。
-    6. ゲーム開始。「プレイ」かダブルクリックで。最初のメニュー画面は左右分割されない。ゲームプレイ時の画面でようやく分割表示される。（ロード画面も分割されない。）
-    7. 文字は荒い。ゲーム中のInfoは左だけ表示で右にボタンあったりすると押せない。
-       1. =vr_calibration= コマンドやら手はあるかとは思うがそこまで詳しく見てない。
-       2. 詳しくはこちらで [[http://wiki.teamfortress.com/wiki/Oculus_Rift_User_Guide][Oculus Rift User Guide - Official TF2 Wiki | Official Team Fortress Wiki]]
-    
-* その２ @warapuriさん作、巨人立体機動ゲームで遊んでみる
-  - [[http://www.unitygames.jp/game/ug7000490][Titan - UnityGames]]
-    - 進撃の巨人風ゲーム。
-    - v0.0.2の時点では人類に巨人を倒すすべはありません。
-    - 立体機動で空を縦横無尽に飛び回る爽快感は凄い。
-    - Macでは無理っぽい？VMでやっても真っ黒
+* その１ Steamゲームで遊ぶ
 
-* その３ UnityでParaisoを作る
+** Team Fortress 2 で遊んでみる - 無料
+   - ユーザー登録とSteamクライアントインストール。
+     - [[http://store.steampowered.com/?l=japanese][Steamへようこそ]]
+   - Oculus VRのHatCodeを使ってゲームをインストール
+     1. クライアントインストール後に「ライブラリ」の左下、「ゲームを追加...」から「Steamでアイテムを有効化する...」を選ぶ。
+     2. HatCodeを使ってゲームを有効化する。
+     3. ダウンロード、インストールが終わったら、「ライブラリ」から「Team Fortress2」を選んで右クリック。「プロパティ」を開く。
+     4. 「一般」の「起動設定...」に =-vr= を入力。
+     5. 現在は関係ないが、ちょっと前に画面分割されなくなる不具合があったみたいで、念のため「ベータ」で「prerelease」選ぶ。
+     6. ゲーム開始。「プレイ」かダブルクリックで。最初のメニュー画面は左右分割されない。ゲームプレイ時の画面でようやく分割表示される。（ロード画面も分割されない。）
+     7. 文字は荒い。ゲーム中のInfoは左だけ表示で右にボタンあったりすると押せない。
+        1. =vr_calibration= コマンドやら手はあるかとは思うがそこまで詳しく見てない。
+        2. 詳しくはこちらで [[http://wiki.teamfortress.com/wiki/Oculus_Rift_User_Guide][Oculus Rift User Guide - Official TF2 Wiki | Official Team Fortress Wiki]]
+
+** Half-Life 2 で遊んでみる - 有料
+   - MOD対応
+   - こちらのフォーラムで配布中
+     - [[http://www.mtbs3d.com/phpbb/viewtopic.php?f=138&t=16174][Meant to be Seen - View topic - Half-Life 2 VR mod with head tracking (download now)]]
+
+
+* その２ ユーザー作成ゲームで遊ぶ
+
+** @warapuriさん作、巨人立体機動ゲーム
+   - [[http://www.unitygames.jp/game/ug7000490][Titan - UnityGames]]
+     - 進撃の巨人風ゲーム。
+     - v0.0.5の時点では人類に巨人を倒すすべはありません。捕食対象です
+     - 立体機動で空を縦横無尽に飛び回る爽快感は凄い。
+     - Macでは無理っぽい？VMでやっても真っ黒
+       
+     - Ver. 0.0.5
+       - 巨人がプレイヤーを食べるようになりました
+     - Ver. 0.0.4
+       - 巨人が自分を追いかけて捕まえるようにしました
+     - Ver. 0.0.3
+       - 巨人がこっちを見るようになりました
+     - Ver. 0.0.2
+       - 鎖で引っ張られている最中は↑方向（頭方向）に力が加わるようにしました
+     - Ver. 0.0.1
+       - 敵は倒せません
+       - 見る以外何もできませんので絶望感を味わって下さい
+
+** ギロチン体験
+   - [[http://www.unicorn7.org/games/game/147/][Unicorn7 - Disunion]]
+
+** Oculus Developer Forums - Oculus Showcase
+   + [[https://developer.oculusvr.com/forums/viewforum.php?f=28][Oculus Showcase | Oculus Rift Developer Forums]]
+     - Oculusを使った作品
+     
+   + [[https://developer.oculusvr.com/forums/viewtopic.php?f=28&t=1158][Blue Marble for Oculus Rift | Oculus Showcase | Oculus Rift Developer Forums]]
+     - 宇宙旅行
+   + [[https://developer.oculusvr.com/forums/viewtopic.php?f=28&t=1292][City Quest - The silliest Rift experience around. | Oculus Showcase | Oculus Rift Developer Forums]]
+     - Oculusデモゲーム
+       - プレイ動画 [[http://www.youtube.com/watch?v=vDqQBvtu0NU][City Quest on the Oculus Rift - Gameplay Footage]]
+   + [[https://developer.oculusvr.com/forums/viewtopic.php?f=28&t=1459][Search & Rescue Mission - Real Visual | Oculus Showcase | Oculus Rift Developer Forums]]
+     - Oculusデモゲーム
+       - プレイ動画 [[http://www.youtube.com/watch?v=V0_d7TbCejk][Unity and Oculus Rift Epic Trailer - Demo Coming Soon From Real Visual - YouTube]]
+   + [[https://developer.oculusvr.com/forums/viewtopic.php?f=29&t=1234][Ocucam - piping dual webcams to an Oculus Rift | Works in Progress | Oculus Rift Developer Forums]]
+     - OculusにWebカメラを２つ取り付けて以下略
+   + [[https://developer.oculusvr.com/forums/viewtopic.php?f=28&t=1363][Project Aedra (TES3:Morrowind Remake) with Rift Integration | Oculus Showcase | Oculus Rift Developer Forums]]
+     - [[http://sourceforge.net/projects/aedra/][Project Aedra | Free software downloads at SourceForge.net]]
+       - このゲームをOculusで遊ぶ
+   + [[https://developer.oculusvr.com/forums/viewtopic.php?f=28&t=197][Museum of the Microstar - Now with Oculus Rift Support! | Oculus Showcase | Oculus Rift Developer Forums]]
+     - [[http://www.nicovideo.jp/watch/sm20751823][Museum of the Microstar - Technical Flythrough - ニコニコ動画:Q]]
+       - *Unityエンジンを使ってDX11レベルの表現を試すことが目的* だそうな、 Museum of the MicrostarをOculusで体験できる
+   + [[https://developer.oculusvr.com/forums/viewtopic.php?f=28&t=275][VBjin-OVR, Virtual Boy Emulator with Rift support | Oculus Showcase | Oculus Rift Developer Forums]]
+     - [[http://gs.inside-games.jp/news/404/40452.html][VRヘッドセットOculus Riftを対応させた任天堂バーチャルボーイのエミュレーターVBjin-OVRが登場 - Game*Spark]]
+       - Oculusで任天堂のバーチャルボーイ体験
+   + [[https://developer.oculusvr.com/forums/viewtopic.php?f=28&t=320][Stereoscopic Player (2D/3D image/video player) | Oculus Showcase | Oculus Rift Developer Forums]]
+     - [[http://z800.blog.shinobi.jp/3-d%EF%BC%9A%E7%A5%9E%E3%82%BD%E3%83%95%E3%83%88/stereoscopic%20player][PCで立体視してみるぶろぐ Stereoscopic Player]] (link先職場での閲覧注意
+   + [[https://developer.oculusvr.com/forums/viewtopic.php?f=28&t=1228][Space Cadet | Oculus Showcase | Oculus Rift Developer Forums]]
+     - ３Dシューティングゲーム
+
+** Oculus Developer Forums - Works in Progress
+   + [[https://developer.oculusvr.com/forums/viewforum.php?f=29][Works in Progress | Oculus Rift Developer Forums]]
+     - 製作中の作品
+       
+   + [[https://developer.oculusvr.com/forums/viewtopic.php?f=29&t=849][Making Viewer VR (360° Video) | Works in Progress | Oculus Rift Developer Forums]]
+     - [[http://makingview.no/makingview.com/?page_id=1691][Making Viewer VR Edition]]
+    
+   + [[https://developer.oculusvr.com/forums/viewtopic.php?f=29&t=1505][Deskope - Work in Windows with the Rift | Works in Progress | Oculus Rift Developer Forums]]
+     - Oculusのセンサーの数値、感度設定ができるものっぽい。
+   + [[https://developer.oculusvr.com/forums/viewtopic.php?f=29&t=1537][Adding native Rift support to NASA WorldWind | Works in Progress | Oculus Rift Developer Forums]]
+     - [[http://worldwind.arc.nasa.gov/index.html][NASA World Wind]]
+     - [[http://homepage2.nifty.com/woodyone/subpage5.html][World Wind：ＮＡＳＡ開発の３Ｄ地球儀ソフト]]
+       - NASAの３D地球儀ソフトをOculusで。Google Earthと比べると？
+     - NASA World Wind自体は３Dマウスにも対応している。[[http://www.3dconnexion.jp/index.php?id=117][3Dconnexion : NASA WorldWind]]
+   + [[https://developer.oculusvr.com/forums/viewtopic.php?f=29&t=1154][Outerra engine | Works in Progress | Oculus Rift Developer Forums]]
+     - [[http://www.tumblr.com/tagged/outerra?language=ja_JP][outerra | Tumblr]]
+       - きれいな風景、景色の場所へ旅行体験
+   + [[https://developer.oculusvr.com/forums/viewtopic.php?f=29&t=100][AMVR: Anxiety Management VR Platform - New Screenshots | Works in Progress | Oculus Rift Developer Forums]]
+     - 仮想現実プラットフォーム
+   + [[https://developer.oculusvr.com/forums/viewtopic.php?f=29&t=1374][Ocean Rift (featuring sharks) | Works in Progress | Oculus Rift Developer Forums]]
+     − スキューバ体験
+   + [[https://developer.oculusvr.com/forums/viewtopic.php?f=29&t=409][Undercurrent - Deep Sea Exploration Indie Game | Works in Progress | Oculus Rift Developer Forums]]
+     - 深海調査ゲームデモ
+      
+* その３ YouTube
+  - [[http://www.youtube.com/watch?v=8nLavCZlseM][Oculus Rift Movie test 2 - More fisheye]]
+    - ３次元
+      
+  - [[http://www.youtube.com/watch?v=9pPfaHriPX0][Oculus Rift Car Driving]]
+  - [[http://www.youtube.com/watch?v=h54Nfm-8Md8][F1 2012 on the Oculus Rift Pt. 2 / 3D testing - Rain Effects - Spa Francorchamps]]
+    - レースゲーム。シートとハンドルとペダルとペダルを揃えている人にとってはOculusがあれば最高のゲーム体験ができる？
+    
+  - [[http://www.youtube.com/watch?v=fdU-f456N-E&feature=youtu.be][EVE-VR: Oculus Rift View Demo]]
+    - ゲームのデモ。これが先駆けとなるか？
+      
+  - [[http://www.youtube.com/watch?v=mImcRHsdAvk][War Thunder on the Oculus Rift Pt. 1]]
+  - [[http://www.youtube.com/watch?v=6_AFBKOIZPE][War Thunder on the Oculus Rift Pt. 3 - Arcade Online]]
+  - [[http://www.youtube.com/watch?v=dLOJwVb4bq8][Flying Inside the Rift]]
+  - [[http://www.youtube.com/watch?v=2LPPdV2Md1c][Outerra + Oculus Rift Test 2 - MiG 29 flight]]
+    - おそらびゅんびゅん
+      
+  - [[http://www.youtube.com/watch?v=PKoSALEaV28][Oculus Rift - My First Trip into Tuscany]]
+    - OculusのUnityデモに付属のもの
+
+* その４ UnityでParaisoを作る
   - 導入
     - 注意
       - Unityの正しい知識が欠如しています。間違いは +Pull Request+ Twitterからご指摘ください。
@@ -194,14 +292,30 @@ categories: oculus unity mikumikudance
              - =▶= 押して試してみる。
              - 操作はFPS風のWASD（詳しくはOculusUnityIntegrationGuide.pdfのp5, 2.2）
 
-               
+* Oculusに関連するもの
 
-* 続く（予定）
-  - ミクさんと追いかけっこ
-  - 現実世界でしゃがんで画面の中のカメラの位置を下に下げる
-  - 3D connexionを使ってミクさんと空を飛ぶ
-  - 進撃のミク（仮称）
-  - 読みづらい・キモい文章を清書
-  - 操作画像を追加
+** ガジェット
+   
+*** DELTA SIX
+    - [[http://www.kickstarter.com/projects/356540105/delta-six-a-new-kind-of-game-controller][DELTA SIX: A new kind of game controller. by David Kotkin — Kickstarter]]
+      - 2013/12 発売予定
+      - VRモーションコントローラー対応の銃コントローラ
+    
+*** Omni by Virtuix
+    - [[http://www.kickstarter.com/projects/1944625487/omni-move-naturally-in-your-favorite-game][Omni: Move Naturally in Your Favorite Game by Virtuix — Kickstarter]]
+      - 2014/1 発売予定
+      - ウォーキングマシンから着想を得た移動コントローラ
+        
+*** Leap Motion
+    - [[https://www.leapmotion.com/][Leap Motion]]
+      - [[http://www.youtube.com/watch?v=zGdkLOXKS04][Oculus Rift + Leap Motion (WIP 4) - YouTube]]
+      - 2013/7/22 発売予定
+      - 現在あるガジェットの中で、指先のモーションキャプチャの精度が一番いい
 
-
+*** Razer Hydra
+    - [[http://www.youtube.com/watch?v=07IwxUD8N8E][GDC 2013 Oculus Rift Tuscany Razer Hydra Demo Hands-on]]
+      - 今購入できるガジェットの中で腕の動きのモーションキャプチャの精度が一番いい
+        
+** ゲーム
+*** The Gallery: Six Elements
+    - [[http://www.kickstarter.com/projects/494598080/the-gallery-six-elements][The Gallery: Six Elements by CloudHead Games — Kickstarter]]
