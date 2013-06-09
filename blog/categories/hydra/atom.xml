@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: unity | develog.me]]></title>
-  <link href="http://yunojy.github.com/blog/categories/unity/atom.xml" rel="self"/>
+  <title><![CDATA[Category: hydra | develog.me]]></title>
+  <link href="http://yunojy.github.com/blog/categories/hydra/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
   <updated>2013-06-09T12:45:30+09:00</updated>
   <id>http://yunojy.github.com/</id>
@@ -12,123 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Oculus Riftを注文したら届くまでに急いでやるべきこと]]></title>
-    <link href="http://yunojy.github.com/blog/2013/05/13/get-ready-oculus/"/>
-    <updated>2013-05-13T20:17:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/05/13/get-ready-oculus</id>
-    <content type="html"><![CDATA[<p>
-<img src="https://lh6.googleusercontent.com/--YE_MR1WsqU/UY3XHQQuorI/AAAAAAAAANc/3T3NnYuotUI/s600/IMG_2792.JPG"  alt="https://lh6.googleusercontent.com/--YE_MR1WsqU/UY3XHQQuorI/AAAAAAAAANc/3T3NnYuotUI/s600/IMG_2792.JPG" />
-</p>
-
-
-
-
-<div id="outline-container-1" class="outline-2">
-<h2 id="sec-1">届いてからでは遅い</h2>
-<div class="outline-text-2" id="text-1">
-
-<ul>
-<li>ゲーム目的で買った人もこれを読んだらすぐにやって欲しい。俺みたいに悲しい思いをしないように。
-</li>
-<li>今世紀最高のゲーム体験ができるデバイスを手元で腐らせるのはもったいない。
-</li>
-<li>もちろんUnityで画面の中の嫁に会いに行く兄弟も準備を怠るな。
-</li>
-</ul>
-
-
-</div>
-
-</div>
-
-
-
-
-<div id="outline-container-2" class="outline-2">
-<h2 id="sec-2">FPS酔いに慣れる</h2>
-<div class="outline-text-2" id="text-2">
-
-<ul>
-<li>FPS酔いとは、現実の運動と見えている風景の遅延から起こる違いで脳が混乱しておこる車酔いみないな症状。
-<ul>
-<li>視野角が広がったことにより、普通にFPSやるより酔いやすい。
-</li>
-<li>よくFPSで酔うのなら画面から離れてやるという策がある。視界にしめる割合を減らして脳の混乱を抑えるものだが、Oculusだと離れようがない。
-</li>
-<li>さらにFPSでは視点移動はマウスなので、脳が現実の運動と直接リンクしない（けど酔う）
-<ul>
-<li>Oculusでは頭の動きなど現実の運動と同じことで視界の移動ができてしまうため酔い易い。
-</li>
-</ul>
-
-</li>
-</ul>
-
-</li>
-<li>どうすればいいのか
-<ul>
-<li>訓練あるのみ
-<ul>
-<li>FPSを前のめりで視界いっぱいで遊ぶ。
-</li>
-<li>気持ち悪く <b>なりそうになったら</b> 休むを繰り返す。一週間くらいで慣れる。
-</li>
-</ul>
-
-</li>
-</ul>
-
-</li>
-</ul>
-
-
-</div>
-
-</div>
-
-
-
-
-<div id="outline-container-3" class="outline-2">
-<h2 id="sec-3">訓練もといOculusが来たら接続するだけでゲームが出来るように準備をしておく</h2>
-<div class="outline-text-2" id="text-3">
-
-<ul>
-<li>Oculus VRで配布された <b>Team Fortress 2</b> で遊ぶ。
-<ul>
-<li>元から持っていたので分からないが、多分Oculusなくても普通に遊べる。
-<ul>
-<li>インストール方法云々はこっちの記事で <a href="http://yunojy.github.io/blog/2013/05/11/oculus-getting-started/">Oculus Riftが到着してからやったこと</a>
-</li>
-</ul>
-
-</li>
-</ul>
-
-</li>
-</ul>
-
-
-</div>
-
-</div>
-
-
-
-
-<div id="outline-container-4" class="outline-2">
-<h2 id="sec-4">Unityで画面の中の嫁に会いに行く準備</h2>
-<div class="outline-text-2" id="text-4">
-
-<p>  それもこちらの記事参照 <a href="http://yunojy.github.io/blog/2013/05/11/oculus-getting-started/">Oculus Riftが到着してからやったこと</a>
-</p>
-</div>
-</div>
-
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Oculus Riftが到着してからやったこと（随時更新）]]></title>

@@ -4,7 +4,7 @@ layout: post
 title: "Oculus Riftが到着してからやったこと（随時更新）"
 date: 2013-05-11 15:22
 comments: true
-categories: oculus unity mikumikudance
+categories: oculus unity mikumikudance hydra
 ---
 #+END_HTML
 
@@ -18,6 +18,7 @@ categories: oculus unity mikumikudance
 早速！。。って何からやったものか
 
 * changelog
+  - up  2013-06-09 Oculus + Unity + Razer Hydraで VRDemo Tuscany を動かす 追加
   - up  2013-06-08 いろいろ追加
   - up  2013-05-19 VMD Loaderまで
   - up  2013-05-12 PMD Loaderまで
@@ -292,6 +293,7 @@ categories: oculus unity mikumikudance
              - =▶= 押して試してみる。
              - 操作はFPS風のWASD（詳しくはOculusUnityIntegrationGuide.pdfのp5, 2.2）
 
+
 * Oculusに関連するもの
 
 ** ガジェット
@@ -319,3 +321,207 @@ categories: oculus unity mikumikudance
 ** ゲーム
 *** The Gallery: Six Elements
     - [[http://www.kickstarter.com/projects/494598080/the-gallery-six-elements][The Gallery: Six Elements by CloudHead Games — Kickstarter]]
+
+
+
+    
+* Oculus + Unity + Razer Hydraで VRDemo Tuscany を動かす
+  - [[http://sixense.com/forum/vbulletin/showthread.php?4368-Sixense-Razer-Hydra-Oculus-Rift-Tuscany-Demo-RELEASED][Sixense Razer Hydra Oculus Rift Tuscany Demo RELEASED]]
+    + SourceCodeの公開渋ってるから自分でやってみた
+  - ポイントは３つ
+    + RazerHydraをUnityで使えるようにするAssetを入れる
+      - [[http://u3d.as/content/sixense-studios/sixense-unity-plug-in/4pA][Sixense Unity Plug-in by Sixense Studios -- Unity Asset Store]]
+    + 手のオブジェクトを移動に追従するようにする
+      - =Hierarchy= でオブジェクトの入れ子を変更
+        - =OVRPlayerController/OVRCameraController/CameraLeft/Left Hand=
+        - =OVRPlayerController/OVRCameraController/CameraRight/Right Hand=
+    + RazerHydraのJoystickで移動する
+      - =OVRPlayerController.cs= 書き換え( =// Razer Hydra= の3箇所)
+        
+        #+begin_src cshrp
+	public virtual void UpdateMovement()
+	{
+		// Do not apply input if we are showing a level selection display
+		if(OVRMainMenu.sShowLevels == false)
+		{
+			bool moveForward = false;
+			bool moveLeft  	 = false;
+			bool moveRight   = false;
+			bool moveBack    = false;
+				
+			MoveScale = 1.0f;
+			
+			// * * * * * * * * * * *
+			// Keyboard input
+			
+			// Move
+			
+			// WASD
+			if (Input.GetKey(KeyCode.W)) moveForward = true;
+			if (Input.GetKey(KeyCode.A)) moveLeft	 = true;
+			if (Input.GetKey(KeyCode.S)) moveBack 	 = true; 
+			if (Input.GetKey(KeyCode.D)) moveRight 	 = true; 
+			// Arrow keys
+			if (Input.GetKey(KeyCode.UpArrow))    moveForward = true;
+			if (Input.GetKey(KeyCode.LeftArrow))  moveLeft 	  = true;
+			if (Input.GetKey(KeyCode.DownArrow))  moveBack 	  = true; 
+			if (Input.GetKey(KeyCode.RightArrow)) moveRight   = true; 
+			
+			if ( (moveForward && moveLeft) || (moveForward && moveRight) ||
+				 (moveBack && moveLeft)    || (moveBack && moveRight) )
+				MoveScale = 0.70710678f;
+			
+			// No positional movement if we are in the air
+			if (!Controller.isGrounded)	
+				MoveScale = 0.0f;
+			
+			MoveScale *= DeltaTime;
+			
+			// Compute this for key movement
+			float moveInfluence = Acceleration * 0.1f * MoveScale * MoveScaleMultiplier;
+			
+			// Run!
+			if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+				moveInfluence *= 2.0f;
+			
+			if(DirXform != null)
+			{
+				if (moveForward)
+					MoveThrottle += DirXform.TransformDirection(Vector3.forward * moveInfluence);
+				if (moveBack)
+					MoveThrottle += DirXform.TransformDirection(Vector3.back * moveInfluence) * BackAndSideDampen;
+				if (moveLeft)
+					MoveThrottle += DirXform.TransformDirection(Vector3.left * moveInfluence) * BackAndSideDampen;
+				if (moveRight)
+					MoveThrottle += DirXform.TransformDirection(Vector3.right * moveInfluence) * BackAndSideDampen;
+			}
+			
+			// Rotate
+			
+			// compute for key rotation
+			float rotateInfluence = DeltaTime * RotationAmount * RotationScaleMultiplier;
+			
+			//reduce by half to avoid getting ill
+			if (Input.GetKey(KeyCode.Q)) 
+				YRotation -= rotateInfluence * 0.5f;  
+			if (Input.GetKey(KeyCode.E)) 
+				YRotation += rotateInfluence * 0.5f; 
+		
+			// * * * * * * * * * * *
+			// Mouse input
+			
+			// Move
+			
+			// Rotate
+			float deltaRotation = 0.0f;
+			if(AllowMouseRotation == false)
+				deltaRotation = Input.GetAxis("Mouse X") * rotateInfluence * 3.25f;
+			
+			float filteredDeltaRotation = (sDeltaRotationOld * 0.0f) + (deltaRotation * 1.0f);
+			YRotation += filteredDeltaRotation;
+			sDeltaRotationOld = filteredDeltaRotation;
+			
+			// * * * * * * * * * * *
+			// XBox controller input	
+			
+			// Compute this for xinput movement
+			moveInfluence = Acceleration * 0.1f * MoveScale * MoveScaleMultiplier;
+			
+			// Run!
+			moveInfluence *= 1.0f + 
+						     OVRGamepadController.GPC_GetAxis((int)OVRGamepadController.Axis.LeftTrigger);
+			
+			// Razer Hydra
+			uint buttonsCount = 0;
+			string buttonsText = "";
+			string buttonsText2 = "";
+			if (SixenseInput.Controllers[0].Enabled) {
+				foreach (SixenseButtons button in System.Enum.GetValues(typeof(SixenseButtons))) {
+					if (SixenseInput.Controllers[0].GetButton(button) && (buttonsCount < 4)) {
+						if ( buttonsText != "" ) {
+							buttonsText += " | ";
+						}
+						buttonsText += button;
+						buttonsCount++;
+					} else if (SixenseInput.Controllers[0].GetButton(button) && (buttonsCount >= 4)) {
+						if (buttonsText2 != "") {
+							buttonsText2 += " | ";
+						}
+						buttonsText2 += button;
+						buttonsCount++;
+					}
+					
+					if (SixenseInput.Controllers[0].GetButtonDown(button)) {
+						Debug.Log("Pressed = " + button + ":" + buttonsText2);
+					}
+					
+					if (SixenseInput.Controllers[0].GetButtonUp(button)) {
+						Debug.Log("Released = " + button + ":" + buttonsText2);
+					}
+				}
+			}
+			//guiText.guiText.text = "Buttons = " + buttonsText;
+			//guiText2.guiText.text = "" + buttonsText2;
+			
+			
+			// Move
+			if(DirXform != null)
+			{
+				float leftAxisY = 
+				OVRGamepadController.GPC_GetAxis((int)OVRGamepadController.Axis.LeftYAxis);
+				
+				float leftAxisX = 
+				OVRGamepadController.GPC_GetAxis((int)OVRGamepadController.Axis.LeftXAxis);
+				
+				// RazerHydra
+				if (SixenseInput.Controllers[0] != null) {
+					leftAxisY = SixenseInput.Controllers[0].JoystickY;
+					leftAxisX = SixenseInput.Controllers[0].JoystickX;
+					if (buttonsText == "JOYSTICK") {
+						leftAxisY *= 2.0f;
+						leftAxisX *= 2.0f;
+					}
+				}
+		
+				
+				if(leftAxisY > 0.0f)
+		    		MoveThrottle += leftAxisY *
+					DirXform.TransformDirection(Vector3.forward * moveInfluence);
+				
+				if(leftAxisY < 0.0f)
+		    		MoveThrottle += Mathf.Abs(leftAxisY) *		
+					DirXform.TransformDirection(Vector3.back * moveInfluence) * BackAndSideDampen;
+				
+				if(leftAxisX < 0.0f)
+		    		MoveThrottle += Mathf.Abs(leftAxisX) *
+					DirXform.TransformDirection(Vector3.left * moveInfluence) * BackAndSideDampen;
+				
+				if(leftAxisX > 0.0f)
+					MoveThrottle += leftAxisX *
+					DirXform.TransformDirection(Vector3.right * moveInfluence) * BackAndSideDampen;
+
+			}
+			
+			float rightAxisX = 
+			OVRGamepadController.GPC_GetAxis((int)OVRGamepadController.Axis.RightXAxis);
+			
+			// RazerHydra
+			if (SixenseInput.Controllers[1] != null) {
+				rightAxisX = SixenseInput.Controllers[1].JoystickX;
+			}
+
+			
+			// Rotate
+			YRotation += rightAxisX * rotateInfluence;    
+		}
+		
+		// Update cameras direction and rotation
+		SetCameras();
+
+	}
+        
+        #+end_src
+        
+      
+    
+  
