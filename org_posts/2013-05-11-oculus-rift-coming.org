@@ -43,8 +43,8 @@ categories: oculus
   + [[http://www.tumblr.com/tagged/oculus%20vr?language=ja_JP][oculus vr | Tumblr]]
   + [[http://www.4gamer.net/games/195/G019528/20130330009/][4Gamer.net ― ［GDC 2013］期待のゲーム用HMD「Oculus Rift」を体験＆直撮り。「眼前に広がるゲーム世界が，首の動きに追従する」のは革命か]]
   + 購入はこちら
-    - [[http://www.redstar.co.jp/oculus.htm][GEKKO&CO. ゲッコー・アンド・カンパニー　ゲーム最適化ヘッドマウントディスプレイ Oculus RIFT 製品情報]]
-      出荷開始：2013年6月27日（５月末までの予約であれば37,800円←54,800円）
+    - [[https://www.oculusvr.com/pre-order/][Pre-Order Oculus Rift Development Kit | Oculus Rift - Virtual Reality Headset for 3D Games]]
+
 
 * 画像はこちら
   [[https://plus.google.com/photos/109142205996412906055/albums/5876589273398602081][Google+]]
