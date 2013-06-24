@@ -11,6 +11,7 @@ categories: lukalus oculus unity mmd
 
 * 準備中
   - [[http://youtu.be/GSFnOWU3S-Q][リアルSAO体験！Oculusで画面の中に入って、Hydraでルカさんとコミュニケーション（意味深） - YouTube]]
+    
   - [[http://www.nicovideo.jp/watch/sm21199045][リアルSAO体験！Oculusで画面の中に入ってHydraでルカさんと - ニコニコ動画:Q]]
 
 * 最新の情報はTwitterにて
