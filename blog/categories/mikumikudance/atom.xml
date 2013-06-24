@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mikumikudance | develog.me]]></title>
   <link href="http://yunojy.github.com/blog/categories/mikumikudance/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-06-12T19:16:52+09:00</updated>
+  <updated>2013-06-25T02:49:43+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -896,7 +896,7 @@
 </li>
 <li>よく知らないけど <code>Create Asset</code> にチェック
 </li>
-<li>よく知らないけど <code>Interpolation Quality</code> はそのまま <code>1</code> 問題があったら調べればいいしね。
+<li>よく知らないけど <code>Interpolation Quality</code> はそのまま <code>1</code>
 </li>
 <li><code>Convert</code>
 </li>

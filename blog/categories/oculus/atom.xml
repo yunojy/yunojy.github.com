@@ -4,7 +4,7 @@
   <title><![CDATA[Category: oculus | develog.me]]></title>
   <link href="http://yunojy.github.com/blog/categories/oculus/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-06-12T19:16:52+09:00</updated>
+  <updated>2013-06-25T02:49:43+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Lukalusでルカと暮らす]]></title>
+    <link href="http://yunojy.github.com/blog/2013/06/25/get-lukalus/"/>
+    <updated>2013-06-25T01:37:00+09:00</updated>
+    <id>http://yunojy.github.com/blog/2013/06/25/get-lukalus</id>
+    <content type="html"><![CDATA[<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">準備中</h2>
+<div class="outline-text-2" id="text-1">
+
+<p>  <a href="http://youtu.be/GSFnOWU3S-Q">リアルSAO体験！Oculusで画面の中に入って、Hydraでルカさんとコミュニケーション（意味深） - YouTube</a>
+</p>
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">最新の情報はTwitterにて</h2>
+<div class="outline-text-2" id="text-2">
+
+</div>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Oculus Riftを注文したら届くまでに急いでやるべきこと]]></title>
@@ -1013,7 +1041,7 @@
 </li>
 <li>よく知らないけど <code>Create Asset</code> にチェック
 </li>
-<li>よく知らないけど <code>Interpolation Quality</code> はそのまま <code>1</code> 問題があったら調べればいいしね。
+<li>よく知らないけど <code>Interpolation Quality</code> はそのまま <code>1</code>
 </li>
 <li><code>Convert</code>
 </li>

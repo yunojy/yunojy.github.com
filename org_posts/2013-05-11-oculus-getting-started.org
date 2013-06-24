@@ -281,7 +281,7 @@ categories: oculus unity mikumikudance hydra
 
           4. =VMD file= に =歩く10.vmd=
           5. よく知らないけど =Create Asset= にチェック
-          6. よく知らないけど =Interpolation Quality= はそのまま =1= 問題があったら調べればいいしね。
+          6. よく知らないけど =Interpolation Quality= はそのまま =1=
           7. =Convert=
           8. =Prefab= と同じ階層に =Animation= フォルダが生成され、その中に 再生ボタンっぽいアイコンのファイルができる。
 

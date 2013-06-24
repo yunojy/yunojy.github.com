@@ -1,0 +1,15 @@
+#+BEGIN_HTML
+---
+layout: post
+title: "Lukalusでルカと暮らす"
+date: 2013-06-25 01:37
+comments: true
+categories: lukalus oculus unity mmd
+---
+#+END_HTML
+
+
+* 準備中
+  [[http://youtu.be/GSFnOWU3S-Q][リアルSAO体験！Oculusで画面の中に入って、Hydraでルカさんとコミュニケーション（意味深） - YouTube]]
+
+* 最新の情報はTwitterにて
