@@ -16,4 +16,5 @@ categories: lukalus oculus unity mmd
 * 配布URL
   - 準備中
 
-* 最新の情報はTwitterにて
+* 最新の情報はTwitterにて配信して参ります。
+
