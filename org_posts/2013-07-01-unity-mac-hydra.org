@@ -1,0 +1,21 @@
+#+BEGIN_HTML
+---
+layout: post
+title: "Mac環境でもUnityでHydraしたい"
+date: 2013-07-01 20:57
+comments: true
+categories: Unity Hydra Oculus
+---
+#+END_HTML
+
+* UnityでHydraを使ってキャラクターを動かす方法は、
+  - [[http://yunojy.github.io/blog/2013/05/11/oculus-getting-started/][Oculus Riftが到着してからやったこと（随時更新）]] の最後
+  - 近日中にScriptをAddするだけでできるようなあるべき方法を公開。
+  - ただSixenseInputなどチラ見した感じではいくつかの対応は不適切で、SDKでやる問題
+  
+* MacではHydraは動かないは過去の話
+  - [[http://solidm.blog89.fc2.com/blog-entry-34.html][SolidM　Razer Hydra + Unity3D]]
+    ここの通り。
+  - プラグインの最新版はこちら  @hikyakuさんTHX!
+    - [[http://sixense.com/forum/vbulletin/showthread.php?4343-Offical-Sixense-Untiy-Plugin&p=13290&viewfull=1][Offical Sixense Untiy Plugin]]
+ 

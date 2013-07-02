@@ -9,7 +9,7 @@
   <meta name="author" content="yunojy">
 
   
-  <meta name="description" content="最新情報 0.2 まばたき実装。リアリティUP 0.1~ HydraだけでなくPS3などの一部Joystickに対応しました。 動画 リアルSAO体験！Oculusで画面の中に入って、Hydraでルカさんとコミュニケーション（意味深） - YouTube リアルSAO体験！ &hellip;">
+  <meta name="description" content="UnityでHydraを使ってキャラクターを動かす方法は、 Oculus Riftが到着してからやったこと（随時更新） の最後 近日中にScriptをAddするだけでできるようなあるべき方法を公開。 ただSixenseInputなどチラ見した感じではいくつかの対応は不適切で &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,83 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/01/unity-mac-hydra/">Mac環境でもUnityでHydraしたい</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-01T20:57:00+09:00" pubdate data-updated="true">Jul 1<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">UnityでHydraを使ってキャラクターを動かす方法は、</h2>
+<div class="outline-text-2" id="text-1">
+
+<ul>
+<li><a href="http://yunojy.github.io/blog/2013/05/11/oculus-getting-started/">Oculus Riftが到着してからやったこと（随時更新）</a> の最後
+</li>
+<li>近日中にScriptをAddするだけでできるようなあるべき方法を公開。
+</li>
+<li>ただSixenseInputなどチラ見した感じではいくつかの対応は不適切で、SDKでやる問題
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">MacではHydraは動かないは過去の話</h2>
+<div class="outline-text-2" id="text-2">
+
+<ul>
+<li><a href="http://solidm.blog89.fc2.com/blog-entry-34.html">SolidM　Razer Hydra + Unity3D</a>
+    ここの通り。
+</li>
+<li>プラグインの最新版はこちら  @hikyakuさんTHX!
+<ul>
+<li><a href="http://sixense.com/forum/vbulletin/showthread.php?4343-Offical-Sixense-Untiy-Plugin&amp;p=13290&amp;viewfull=1">Offical Sixense Untiy Plugin</a>
+</li>
+</ul>
+
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -2788,200 +2865,6 @@ end
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/02/13/cheatsheet-emacs-basic/">だいぶ偏ったチートシート Emacs - 基本操作</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-13T22:06:00+09:00" pubdate data-updated="true">Feb 13<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div id="outline-container-1" class="outline-2">
-<h2 id="sec-1">emacsだいぶ偏った基本操作</h2>
-<div class="outline-text-2" id="text-1">
-
-
-
-</div>
-
-<div id="outline-container-1-1" class="outline-3">
-<h3 id="sec-1-1">カーソル移動</h3>
-<div class="outline-text-3" id="text-1-1">
-
-
-<p>
-   熟練者は <code>C-f</code> <code>C-b</code> <code>C-p</code> <code>C-n</code> を使いません。
-   <code>C-s</code> <code>C-r</code> で移動したい所の文字を入力します。
-</p>
-<p>
-   そのためmigemoは必須。
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-1-2" class="outline-3">
-<h3 id="sec-1-2">繰り返し操作</h3>
-<div class="outline-text-3" id="text-1-2">
-
-
-<p>
-   ログとかテスト用データなどなど、整形するのには、マクロ機能が便利。
-</p>
-<ol>
-<li><code>F3</code> で記録開始
-</li>
-<li>その間繰り返したい操作を行う。
-</li>
-<li><code>F4</code> で記録終了
-</li>
-<li><code>C-x e</code> で再生。もちろん前に <code>C-u</code> を押せばその分繰り返される
-</li>
-</ol>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-1-3" class="outline-3">
-<h3 id="sec-1-3">矩形編集</h3>
-<div class="outline-text-3" id="text-1-3">
-
-
-<p>
-   対象の文を選択して
-</p><ul>
-<li><code>C-c r d</code> 削除
-</li>
-<li><code>C-c r t</code> 続けて入力した文字を挿入
-     各列の頭にスペースを入れたりするのに便利
-</li>
-</ul>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-1-4" class="outline-3">
-<h3 id="sec-1-4">読み取りモードの解除</h3>
-<div class="outline-text-3" id="text-1-4">
-
-
-<p>
-   <code>C-x C-q</code>
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-1-5" class="outline-3">
-<h3 id="sec-1-5">文字化け解消のためとかでエンコード変更</h3>
-<div class="outline-text-3" id="text-1-5">
-
-
-<p>
-   カレントバッファのファイルのエンコード変更する。
-</p>
-<ul>
-<li><code>M-x set-buffer-file-coding-system</code> 続けて指定
-</li>
-</ul>
-
-
-<p>
-   ほかに文字化けの原因としては、tarminal、例えばteratermなんかで
-   受信送信のエンコード変えてみるとか。
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-1-6" class="outline-3">
-<h3 id="sec-1-6">インデントを整形</h3>
-<div class="outline-text-3" id="text-1-6">
-
-<ul>
-<li><code>M-x indent-region</code> リュージョン選択を整形
-</li>
-<li><code>M-x align-regex</code> 各列のインデントを指定文字で縦にそろえる
-
-
-
-<pre class="example">(keyboard-translate ?\C-h ?\C-?) ; C-h -&gt; BS
-(delete-selection-mode t) ; C-dでリージョン削除
-</pre>
-
-<p>
-     <code>C-SPC</code> でリュージョン選択
-     <code>M-x align-regex</code> <code>Align Regex:</code> <code>;</code> を入力
-</p>
-
-
-<pre class="example">(keyboard-translate ?\C-h ?\C-?) ; C-h -&gt; BS
-(delete-selection-mode t)        ; C-dでリージョン削除
-</pre>
-
-<p>
-     各列の終端コメントのインデントが <code>;</code> でそろえられる。
-</p></li>
-</ul>
-
-
-
-</div>
-
-</div>
-
-<div id="outline-container-1-7" class="outline-3">
-<h3 id="sec-1-7">設定済みのキーバインドを調べる</h3>
-<div class="outline-text-3" id="text-1-7">
-
-<ul>
-<li><code>M-x describe-key</code> 続けて確認したいキーバインドを入力
-</li>
-<li><code>M-x describe-bindings‎</code> すべての設定を確認
-</li>
-</ul>
-
-
-
-
-
-
-
-</div>
-</div>
-</div>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -2997,6 +2880,10 @@ end
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/07/01/unity-mac-hydra/">Mac環境でもUnityでHydraしたい</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/06/25/get-lukalus/">Lukalusでルカと暮らす Oculus, Razer Hydra, Gamepad/Joystick</a>
       </li>
     
@@ -3010,10 +2897,6 @@ end
     
       <li class="post">
         <a href="/blog/2013/05/11/oculus-rift-coming/">Oculus Rift届きました！（フォトレビュー）</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/04/28/bookmarklet-orgmode-link/">[Bookmarklet] 表示中のページタイトルとURLからOrgModeリンクを生成</a>
       </li>
     
   </ul>
