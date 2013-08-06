@@ -1,0 +1,235 @@
+#+BEGIN_HTML
+---
+layout: post
+title: "プログラミング不要。Unityを使えば誰でも2時間でOculusRift対応ゲームのLukalive!!が作れる"
+date: 2013-08-05 17:33
+comments: true
+categories: oculusrift unity
+---
+#+END_HTML
+
+[[file:https://lh6.googleusercontent.com/-JAPPs61u8qM/Uf-cb0XInoI/AAAAAAAAAT8/RovbDaKzMVU/s900/Lukalive_logo.png]]
+
+完成品DL: [[http://bowlroll.net/up/dl21149][ルカライブ！(Lukalive!) Bowl Roll ]]
+
+
+* はじめに
+  - 2時間くらいでLukalive!のようなOculusRift対応ゲームをプログラミングレスで作ってみます。
+  - 対象は *OculusRift購入予定、または所有者* の *プログラミング・開発未経験者* になります。
+  - *2013/8/5* 現在の情報です。日々革命的な進化が行われるため、この記事をアップロードした時点でも情報が古くなっている可能性があります。
+  - 日本におけるOculusRiftの最新情報は Twitter[[https://twitter.com/VRNewsJP][@VRNewsJP]] をご確認ください。
+  
+* 環境
+  - Windows 7 x64
+  - Unity 4.1.5
+    - 最新は4.2ですが、HDDの空き容量がないという個人的な理由で4.1.5（13/8/5現在）
+    - *無難なところで4.1.5* をおすすめ
+
+---------
+
+* 作業のおおまかな流れ
+  1. 下準備(10分)
+     1. UnityのOculusサンプルプロジェクトを手に入れるために[[https://developer.oculusvr.com/register][Oculus Developer Center]] で事前にユーザー登録
+     2. Unityのダウンロードを開始
+  2. データ探し(1時間)
+     1. MMDのモデルデータ( =*.pmd= ファイル)
+     2. MMDのモーションデータ( =*.vmd= ファイル)
+     3. 曲データ( =.wav= ファイル)
+  3. 環境構築(20分)
+     1. Untiy（開発環境）
+     2. Oculusサンプルプロジェクト入手
+     3. =PMD2FBX_MMD4Mecanim= (MMDデータをUnityで使うためのソフト)
+        1. =PMD2FBX= (MMDモデルデータとモーションデータから、Unityで取り込める =*.fbx= ファイルに変換するツール)
+        2. =MMD4Mecanim= (Unityで変換したMMDのデータを補正するツール)
+  4. つくってみる(30分)
+     1. Unityでプロジェクト新規作成
+     2. モデルデータをUnityに取り込む
+     3. モデルデータにモーションデータを設定する
+     4. 曲を流す
+
+---------
+
+* 作業の内容
+
+  1. 下準備(10分)
+     1. UnityのOculusサンプルプロジェクトを手に入れるために[[https://developer.oculusvr.com/register][Oculus Developer Center]] で事前にユーザー登録
+        - ユーザー登録を行う。最長2時間かかるので事前に登録だけ済ませておく。実際には数分。
+          - *時間が掛かるようであれば先に次の手順を進めておく。*
+          [[file:https://lh6.googleusercontent.com/-2Xg_iTsKUrE/Uf-6hPORIaI/AAAAAAAAAWE/BXjjcL4n5DY/s800/OculusDeveloperCenterRegistrationForm.png]]
+          - ユーザー登録処理が完了後にメールアドレス確認メール =Thank You for Registering for The Oculus Developer Center= が届く
+            [[file:https://lh6.googleusercontent.com/-UvGiE2Jry5g/Uf-6giDcqiI/AAAAAAAAAV8/i0KIxUzXW2E/s800/OculusDeveloperCenterRegistrationDoneMail.png]]
+          - 届いたら本文中のURLを押して、続けてアカウント情報の追加登録を行う
+            [[file:https://lh3.googleusercontent.com/-FB2NAes_AqE/Uf-6gEc8PTI/AAAAAAAAAVo/u6HjOI1GRN4/s800/OculusDeveloperCenterRegistration2nd1.png]]
+            - 次の画面で、適当な =プロジェクト名= を設定。 =Japan= を設定して完了。
+            - 登録完了メール =The Oculus Developer Center Account Activation= が届き、登録完了。
+              [[file:https://lh3.googleusercontent.com/-iG9Snv2mmck/Uf-_HQIQGFI/AAAAAAAAAZQ/ImvFfUk1Hho/s800/OculusDeveloperConterRegistrationDone.png]]
+            
+     2. Unityのダウンロードを開始
+        - [[http://japan.unity3d.com/unity/download/archive][UNITY - 以前の Unity のダウンロード]]
+          [[file:https://lh5.googleusercontent.com/-nj5XN5tGhNU/Uf-6hP_-KTI/AAAAAAAAAWI/VoSyPdycNSY/s800/UnityDL.png]]
+          - サイズが大きいのでダウンロード開始したら放置
+          - *Proライセンス* を *30日間トライアル* で *無料利用*
+          - *※FreeライセンスではOculusRiftは使えません。*
+          - OculusRiftを購入すれば、定価15万円の *Proライセンスが125日の4ヶ月無料* で使える。
+
+  2. データ探し(1時間)
+     1. MMDのモデルデータ( =*.pmd= ファイル)
+        - ※ =pmd= ファイルの機能拡張モデルフォーマットの =pmx= ファイルの場合は、Unityの頂点数の上限やら変換ツールなどのいろいろな要因からそのままでは使えません。
+        - [[http://www.nicovideo.jp/tag/MMD%E3%83%A2%E3%83%87%E3%83%AB%E9%85%8D%E5%B8%83%E3%81%82%E3%82%8A][MMDモデル配布あり ‐ ニコニコ動画:Q]]
+        - [[Http://www6.atwiki.jp/vpvpwiki/pages/143.html][VPVP wiki - モデルデータ/VOCALOID]]
+        - ★キオさんの[[http://kiomodel3.sblo.jp/category/673973-1.html][巡音ルカ: キオ式アニキャラ3D act.3]] より、 巡音ルカpmd  をお借りします。
+          - =Luka121002.zip= DLするファイル
+            - =Luka121002P.pmd= モデル本体
+            - =*.bmp= =*.JPG= =*.spa= =*.sph= モデルのテクスチャ画像
+              - 後工程で、モデル本体ファイルの変換を行った後、Texturesフォルダを作ってUnityにそのまますべてコピーする。
+              - その際、=*.spa= =*.sph= ファイルは  =*.spa.bmp= =*.sph.bmp= に名前を変える。
+
+     2. MMDのモーションデータ( =*.vmd= ファイル)
+        - [[http://www.nicovideo.jp/tag/MMD%E3%83%A2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E9%85%8D%E5%B8%83%E3%81%82%E3%82%8A][MMDモーション配布あり ‐ ニコニコ動画:Q]]
+        - [[http://www6.atwiki.jp/vpvpwiki/pages/367.html][VPVP wiki - モーションデータ/VOCALOID楽曲関連]]
+        - ★[[http://www.nicovideo.jp/watch/sm12026964][MMD格闘記~やっとクチパク出来た♪の巻(モーション配布します) - ニコ動]] より、ルカルカ★ナイトフィーバー(口パク付き)をお借りします。
+          - =ルカルカ★ナイトフィーバー(口パク付き).zip=
+            - =ルカルカ★ナイトフィーバー(口パク付き).vmd= モーションデータ
+          
+     3. 曲データ( =.wav= ファイル)
+        - [[http://www.nicovideo.jp/watch/sm6119955][巡音ルカ「ルカルカ★ナイトフィーバー」【オリジナル曲】 - ニコニコ動画:Q]]をお借りします。
+        - [[https://www.google.co.jp/search?q=mp3+wav+%E5%A4%89%E6%8F%9B][mp3 wav 変換 - Google 検索]]
+          
+  3. 環境構築 (20分)
+     1. Untiy (開発環境)
+        1. =UnitySetup-4.1.5.exe= のダウンロードが終わっていたら、ダブルクリックしてインストーラーの指示に従ってインストール。
+
+     2. Oculusサンプルプロジェクト入手
+        - Unity 4 Pro Integration (サンプルを元に作成していく)
+          - [[https://developer.oculusvr.com/][Log-in | Oculus Developer Center]]
+            [[file:https://lh5.googleusercontent.com/-cH6QsMUQAic/Uf_Cp63z8jI/AAAAAAAAAZo/gdAkiUF5LV4/s800/OculusDeveloperCenterLogin.png]]
+            [[file:https://lh4.googleusercontent.com/-Li_bW7YrKUw/Uf_WLaVJy3I/AAAAAAAAAbs/U4TDUio-J-M/s800/UnityOculusSampleProjectDL1.png]]
+            [[file:https://lh5.googleusercontent.com/-lXELErOGdu0/Uf_V6CZcgmI/AAAAAAAAAbI/x66J4OcYHC0/s800/UnityOculusSampleProjectDL2.png]]
+          - =Unity 4 Pro Integration= → =ovr_unity_0.2.3_lib.zip=
+          - UnityのOculusサンプルプロジェクトファイル
+             =ovr_unity_0.2.3_lib/OculusUnityIntegration/OculusUnityIntegrationTuscanyDemo.unitypackage=
+
+     3. =PMD2FBX_MMD4Mecanim=  (MMDデータをUnityで使うためのソフト)
+        1. =PMD2FBX= (MMDモデルデータとモーションデータから、Unityで取り込める =*.fbx= ファイルに変換するツール)
+        2. =MMD4Mecanim= (Unityで変換したMMDのデータを補正するスクリプト)
+           - =PMD2FBX_MMD4Mecanim_Prototype_20130805_2.zip= 入手
+             - DL [[http://stereoarts.jp/][Stereoarts Homepage]] by [[https://twitter.com/Stereoarts][@Stereoarts(Noraさん)]]
+             - 解凍して名前を変えて移動
+               =C:\dev\unity\tools\PMD2FBX_MMD4Mecanim130805_2\=
+
+  4. つくってみる(30分)
+     1. Unityでプロジェクト新規作成
+        1. Unity起動
+           [[file:https://lh4.googleusercontent.com/-7ktfEyJb9mI/UgBNSbjCuuI/AAAAAAAAAgg/36aL6UVfcHs/w836-h507-no/Unity%25E3%2583%2595%25E3%2582%259A%25E3%2583%25AD%25E3%2582%25B7%25E3%2582%2599%25E3%2582%25A7%25E3%2582%25AF%25E3%2583%2588%25E6%2596%25B0%25E8%25A6%258F%25E4%25BD%259C%25E6%2588%2590.png]]
+        2. Unity設定
+           [[file:https://lh3.googleusercontent.com/-lXdUXn3AIAU/UgBNSkkNmwI/AAAAAAAAAgo/Lo1rOyNrch8/w700-h593-no/Unity%25E3%2583%2595%25E3%2582%259A%25E3%2583%25AD%25E3%2582%25B7%25E3%2582%2599%25E3%2582%25A7%25E3%2582%25AF%25E3%2583%2588%25E6%2596%25B0%25E8%25A6%258F%25E4%25BD%259C%25E6%2588%2590%25E7%259B%25B4%25E5%25BE%258C.png]]
+        3. Oculusサンプルプロジェクトをインポート
+           [[file:https://lh6.googleusercontent.com/-_rNkTS_lzJs/UgBNPoG7YfI/AAAAAAAAAfg/yAB63AHT7LA/w697-h593-no/OculusSampleImport1.png]]
+           [[file:https://lh6.googleusercontent.com/-5ig5v8IqYVg/UgBNP3vILjI/AAAAAAAAAgM/HtKt7nWbc9I/w878-h572-no/OculusSampleImport2.png]]
+           [[file:https://lh6.googleusercontent.com/-iuRDTdhKxOg/UgBNQQB4l1I/AAAAAAAAAfw/jTd3VtKs7EU/w699-h593-no/OculusSampleImport3.png]]
+           [[file:https://lh4.googleusercontent.com/-e602EIeCZcs/UgBNQqFdyLI/AAAAAAAAAf4/N4tx4bddPL4/w699-h593-no/OculusSampleImport4.png]]
+           [[file:https://lh5.googleusercontent.com/-EPsSmHTjK5M/UgBNRFw82OI/AAAAAAAAAgA/oSGX4-DK7-M/w699-h593-no/OculusSampleImport5.png]]
+           [[file:https://lh6.googleusercontent.com/-rQ4XiIw9LPw/UgBNRRES4EI/AAAAAAAAAgQ/hqLe6Rt-Zc8/w699-h593-no/OculusSampleImport6.png]]
+        4. ここまでで動作確認。動かしてみる
+           [[file:https://lh6.googleusercontent.com/-IjxPn0Zpq9s/UgBNSPS5ESI/AAAAAAAAAhI/n2BV0gn2sz0/w699-h593-no/OculusSampleImport8.png]]
+
+     2. モデルデータをUnityに取り込む
+        1. =PMD2FBX= (MMDモデルデータとモーションデータから、Unityで取り込める =*.fbx= ファイルに変換するツール)
+           [[file:https://lh5.googleusercontent.com/-1Qp_1fZUmrU/UgBNLyA0IEI/AAAAAAAAAeM/xdvAA0sgQ2k/w867-h593-no/MMD_convert1.png]]
+           [[file:https://lh3.googleusercontent.com/-rJksWcuqbcU/UgBNMkSg2SI/AAAAAAAAAeY/llnhaVE4CPo/w630-h349-no/MMD_convert2.png]]
+           [[file:https://lh5.googleusercontent.com/-yGcUCMBmb-E/UgBNNeUfG0I/AAAAAAAAAe8/yOFU33KJdCw/w776-h593-no/MMD_convert3.png]]
+           [[file:https://lh4.googleusercontent.com/-ke6RmUxr1no/UgBNNpdRERI/AAAAAAAAAes/JEhrPZNFl-I/w776-h593-no/MMD_convert4.png]]
+           #+begin_src shell
+           $ cd C:\dev\unity\tools\PMD2FBX_MMD4Mecanim130805_2\
+           $ pmd2fbx.exe Luka121002P.pmd ルカルカ★ナイトフィーバー(口パク付き).vmd
+           #+end_src
+           - 生成されるファイル
+             - =C:\dev\unity\tools\PMD2FBX_MMD4Mecanim130805_2\pmd2fbx\=
+               - Luka121002P.col.fbx
+               - Luka121002P.exp.bytes
+               - Luka121002P.fbx
+               - Luka121002P.phy.bytes
+               - Luka121002P.pmd.xml
+               - Luka121002P.pmd2fbx.xml
+               - ルカルカ★ナイトフィーバー(口パク付き).anim.bytes
+             [[file:https://lh6.googleusercontent.com/-SAJJSQr9VHc/UgBNN6jVWNI/AAAAAAAAAfE/rJ4hCPeMJow/w867-h593-no/MMD_convert5.png]]
+             
+        2. 生成されたファイルをUnityへ取り込む
+           1. 生成されたすべてのファイルを、Unityの =Project= ビューで =Yome= フォルダを作ってドラッグアンドドロップ
+              [[file:https://lh6.googleusercontent.com/-PEIl8AeFD7E/UgBNOUvj2PI/AAAAAAAAAfI/9DZiGYfUpsk/w698-h593-no/MMD_convert6.png]]
+              [[file:https://lh4.googleusercontent.com/-gDqZZDMNdCk/UgBNOh-R5hI/AAAAAAAAAfQ/aB_oo1O8yNs/w699-h593-no/MMD_convert7.png]]
+              [[file:https://lh3.googleusercontent.com/-4jkkeHpvzOA/UgBNPIeZ-YI/AAAAAAAAAfo/AYYqmsGYWQk/w665-h593-no/MMD_convert8.png]]
+              [[file:https://lh4.googleusercontent.com/-kvdW7H6oC40/UgBNPWUq6PI/AAAAAAAAAfc/WkghSiQqOG8/w699-h593-no/MMD_convert9.png]]
+           
+           2. MMDモデルのテクスチャ画像データを =Yome\Textures= フォルダを作成してコピーする。
+              - =*.spa= =*.sph= ファイルは  =*.spa.bmp= =*.sph.bmp= に名前を変える。
+              [[file:https://lh6.googleusercontent.com/-cAieIPWmMeg/UgBNMIyYTsI/AAAAAAAAAew/0QunLPHyi1Q/w878-h456-no/MMD_convert10.png]]
+              [[file:https://lh4.googleusercontent.com/-u1ggmKtPlX8/UgBNMZJIwYI/AAAAAAAAAek/C59EHjRtWuA/w769-h593-no/MMD_convert11.png]]
+
+        3. =MMD4Mecanim= (Unityで変換したMMDのデータを補正するツール)
+           1. MMD4Mecanimフォルダを、Unityの =Project= ビューの =Plugins= フォルダへドラッグアンドドロップ
+              - =C:\dev\unity\tools\PMD2FBX_MMD4Mecanim130805_2\MMD4Mecanim= → =Unity= =Project= ビューの =Plugins/=
+                [[file:https://lh3.googleusercontent.com/-h32XeiBboZU/UgBNHa6PNDI/AAAAAAAAAco/XurKyyNP9Ik/w875-h593-no/M4M.png]]
+                [[file:https://lh6.googleusercontent.com/-yi_OaNAD9Nc/UgBNIHsobPI/AAAAAAAAAc0/pVP57jVXhe8/w698-h593-no/M4M2.png]]
+              - 変換
+                [[file:https://lh4.googleusercontent.com/-cGyBVZvFNoU/UgBNIOggxjI/AAAAAAAAAdE/twQNTfW47U8/w700-h593-no/M4M3.png]]
+                [[file:https://lh3.googleusercontent.com/-DpVAawViLFo/UgBNIUa1wZI/AAAAAAAAAc8/dGyBqdVHsH4/w699-h593-no/M4M4.png]]
+
+           2. 邪魔なものを消す
+              [[file:https://lh5.googleusercontent.com/-zEmNQSPWqlM/UgBNI97JF1I/AAAAAAAAAdI/MfN0nwJ1gD0/w699-h593-no/M4M5.png]]
+           
+           3. モデルを画面に配備
+              - Sceneビューの表示位置を見やすい位置へ移動
+                [[file:https://lh6.googleusercontent.com/-DJlZsJ4XIVA/UgBNJauUsjI/AAAAAAAAAdQ/D1MbNdp0HV8/w699-h593-no/M4M6.png]]
+
+              - Projectビューで =Luka121002P= を選択して、Sceneビューにドラッグアンドドロップ。Gameビューで表示される位置に置く
+                [[file:https://lh6.googleusercontent.com/-E-MRagpkC28/UgBNJuSrOqI/AAAAAAAAAdo/9y0z9ccuRZE/w699-h593-no/M4M7.png]]
+                
+           4. Unityに取り込んだモデルデータに補正用のスクリプトを設定
+              [[file:https://lh5.googleusercontent.com/-1CBLVIQgCZc/UgBNJynRvuI/AAAAAAAAAdc/PXcS9tAhj_E/w699-h593-no/M4M8.png]]
+
+           5. モデルが真っ黒なので、光をあてる
+              [[file:https://lh4.googleusercontent.com/-WnnDkic_vxo/UgBNKMO_wrI/AAAAAAAAAdk/_yVqGQLmoT0/w699-h593-no/M4M9.png]]
+
+           6. ここまでで動作確認。動かしてみる
+              [[file:https://lh6.googleusercontent.com/-IpT1OaX6vMs/UgBNHdt4jFI/AAAAAAAAAcg/04_a1XxbfR0/w699-h593-no/M4M10.png]]
+
+     3. モデルデータにモーションデータを設定する
+        - AnimetorControllerを新規作成 =Luka121002P=
+          [[file:https://lh5.googleusercontent.com/-Uj2P7fDyfIw/UgBNKtFW8RI/AAAAAAAAAdw/CP2PBaSwcdc/w699-h593-no/M4M%25E3%2583%25A2%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E8%25A8%25AD%25E5%25AE%259A1.png]]
+        - モーションデータを再生するように設定
+          [[file:https://lh6.googleusercontent.com/-vCI_Q1AxR5s/UgBNKysEOQI/AAAAAAAAAeE/iZCxWXgAk5c/w699-h593-no/M4M%25E3%2583%25A2%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E8%25A8%25AD%25E5%25AE%259A2.png]]
+          [[file:https://lh4.googleusercontent.com/-89PFAGrx98g/UgBNLEmHVkI/AAAAAAAAAd8/e2lzZzYTxv8/w699-h593-no/M4M%25E3%2583%25A2%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E8%25A8%25AD%25E5%25AE%259A3.png]]
+          
+        - ここまでで動作確認。動かしてみる
+           [[file:https://lh4.googleusercontent.com/-mmdzi6d5xYE/UgBNLrEpHXI/AAAAAAAAAeI/GvU0j5IiQ9M/w699-h593-no/M4M%25E3%2583%25A2%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E8%25A8%25AD%25E5%25AE%259A4.png]]
+          
+     4. 曲を流す
+        - 用意したwavファイルを、Unityの =Project= ビューから =Songs= フォルダを作ってドラッグアンドドロップ
+          [[file:https://lh6.googleusercontent.com/-6L0sczdP2M0/UgBNTWwzZRI/AAAAAAAAAg8/iKKMmysiNnk/w852-h593-no/%25E6%259B%25B2%25E8%25A8%25AD%25E5%25AE%259A2.png]]
+          
+          [[file:https://lh6.googleusercontent.com/-v6gakFmxKtM/UgBNTzBmHrI/AAAAAAAAAhA/KlxwWbFnSqI/w699-h593-no/%25E6%259B%25B2%25E8%25A8%25AD%25E5%25AE%259A3.png]]
+
+        - 口から曲が流れるようにする
+          - Hierarchyビュー内の =LukaLukaNightFevorMusic= を =Luka121002P= の中に移動
+          
+        - 完成。動かしてみる
+           [[file:https://lh6.googleusercontent.com/-iKVAuoW-x4A/UgBNU3TCXgI/AAAAAAAAAhU/LwSvLTMIbGc/w691-h593-no/%25E6%259B%25B2%25E8%25A8%25AD%25E5%25AE%259A5.png]]
+
+        
+
+---------
+
+続きは後編へ
+
+* 更にクオリティを上げる
+  - 場合によってはプログラミングも辞さない、もっといろいろやりたい！方のために
+
+** 曲とモーションのズレを直す
+
+** 口から歌詞が聞こえて、スピーカーから音が流れるようにする
+
+** Kinectでサイリウム振りたい
+   - [[http://d.hatena.ne.jp/hecomi/20130709/1373472118][Kinect でお手軽に頭の位置とカメラ位置を連動させて Oculus Rift をもっと楽しむ - 凹みTips]] by [[https://twitter.com/hecomi][@hecomi 凹さん]]
+
+
