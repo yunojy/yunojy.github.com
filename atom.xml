@@ -4,7 +4,7 @@
   <title><![CDATA[develog.me]]></title>
   <link href="http://yunojy.github.com/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-08-06T11:01:05+09:00</updated>
+  <updated>2013-08-06T11:04:15+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -557,7 +557,7 @@ $ pmd2fbx.exe Luka121002P.pmd ルカルカ★ナイトフィーバー(口ハ�
 </div>
 
 <div id="outline-container-5-1" class="outline-3">
-<h3 id="sec-5-1">曲とモーションのズレを直す</h3>
+<h3 id="sec-5-1">キャラの見た目の色をもうちょっとリアルにしたい</h3>
 <div class="outline-text-3" id="text-5-1">
 
 
@@ -566,7 +566,7 @@ $ pmd2fbx.exe Luka121002P.pmd ルカルカ★ナイトフィーバー(口ハ�
 </div>
 
 <div id="outline-container-5-2" class="outline-3">
-<h3 id="sec-5-2">口から歌詞が聞こえて、スピーカーから音が流れるようにする</h3>
+<h3 id="sec-5-2">曲とモーションのズレを直したい</h3>
 <div class="outline-text-3" id="text-5-2">
 
 
@@ -575,15 +575,35 @@ $ pmd2fbx.exe Luka121002P.pmd ルカルカ★ナイトフィーバー(口ハ�
 </div>
 
 <div id="outline-container-5-3" class="outline-3">
-<h3 id="sec-5-3">Kinectでサイリウム振りたい</h3>
+<h3 id="sec-5-3">口から歌詞が聞こえて、スピーカーから音が流れるようにしたい</h3>
 <div class="outline-text-3" id="text-5-3">
 
-<ul>
-<li><a href="http://d.hatena.ne.jp/hecomi/20130709/1373472118">Kinect でお手軽に頭の位置とカメラ位置を連動させて Oculus Rift をもっと楽しむ - 凹みTips</a> by <a href="https://twitter.com/hecomi">@hecomi 凹さん</a>
-</li>
-</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-5-4" class="outline-3">
+<h3 id="sec-5-4">HydraやKinectでサイリウム振りたい</h3>
+<div class="outline-text-3" id="text-5-4">
 
 
+</div>
+
+</div>
+
+<div id="outline-container-5-5" class="outline-3">
+<h3 id="sec-5-5">ステージに派手な演出を加えたい</h3>
+<div class="outline-text-3" id="text-5-5">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5-6" class="outline-3">
+<h3 id="sec-5-6">ステージちゃんとライブ会場のようなものにしたい</h3>
+<div class="outline-text-3" id="text-5-6">
 
 </div>
 </div>
