@@ -4,7 +4,7 @@
   <title><![CDATA[Category: oculusrift | develog.me]]></title>
   <link href="http://yunojy.github.com/blog/categories/oculusrift/atom.xml" rel="self"/>
   <link href="http://yunojy.github.com/"/>
-  <updated>2013-08-06T11:06:21+09:00</updated>
+  <updated>2013-08-07T16:35:34+09:00</updated>
   <id>http://yunojy.github.com/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -233,7 +233,7 @@
 <ul>
 <li>後工程で、モデル本体ファイルの変換を行った後、Texturesフォルダを作ってUnityにそのまますべてコピーする。
 </li>
-<li>その際、=*.spa= <code>*.sph</code> ファイルは  <code>*.spa.bmp</code> <code>*.sph.bmp</code> に名前を変える。
+<li>その際、 <code>*.spa</code> <code>*.sph</code> ファイルは  <code>*.spa.bmp</code> <code>*.sph.bmp</code> に名前を変える。
 
 </li>
 </ul>

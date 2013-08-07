@@ -82,7 +82,7 @@ categories: oculusrift unity
             - =Luka121002P.pmd= モデル本体
             - =*.bmp= =*.JPG= =*.spa= =*.sph= モデルのテクスチャ画像
               - 後工程で、モデル本体ファイルの変換を行った後、Texturesフォルダを作ってUnityにそのまますべてコピーする。
-              - その際、=*.spa= =*.sph= ファイルは  =*.spa.bmp= =*.sph.bmp= に名前を変える。
+              - その際、 =*.spa= =*.sph= ファイルは  =*.spa.bmp= =*.sph.bmp= に名前を変える。
 
      2. MMDのモーションデータ( =*.vmd= ファイル)
         - [[http://www.nicovideo.jp/tag/MMD%E3%83%A2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E9%85%8D%E5%B8%83%E3%81%82%E3%82%8A][MMDモーション配布あり ‐ ニコニコ動画:Q]]
