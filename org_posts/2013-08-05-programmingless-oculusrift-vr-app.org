@@ -67,7 +67,7 @@ categories: oculusrift unity
      2. Unityのダウンロードを開始
         - [[http://japan.unity3d.com/unity/download/archive][UNITY - 以前の Unity のダウンロード]]
           [[file:https://lh5.googleusercontent.com/-nj5XN5tGhNU/Uf-6hP_-KTI/AAAAAAAAAWI/VoSyPdycNSY/s800/UnityDL.png]]
-          - サイズが大きいのでダウンロード開始したら放置
+          - サイズが大きいのでダウンロード開始したら放置。
           - *Proライセンス* を *30日間トライアル* で *無料利用*
           - *※FreeライセンスではOculusRiftは使えません。*
           - OculusRiftを購入すれば、定価15万円の *Proライセンスが125日の4ヶ月無料* で使える。
