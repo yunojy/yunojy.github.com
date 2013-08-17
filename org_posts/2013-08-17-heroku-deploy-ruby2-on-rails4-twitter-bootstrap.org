@@ -1,0 +1,37 @@
+#+BEGIN_HTML
+---
+layout: post
+title: "heroku_deploy_ruby2_on_rails4_twitter_bootstrap"
+date: 2013-08-17 17:38
+comments: true
+categories: ruby rails twitterbootstrap
+published: false
+---
+#+END_HTML
+
+* はじめに
+  - [2013-08-17 Sat]
+  - 日本勢のOculusRift関連アプリ紹介するサービスを、次のプロダクトで[[http://ja.wikipedia.org/wiki/CRUD][CRUD(くらっど)]]な感じのWebアプリで作ってみます。
+    1. heroku
+    2. ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-darwin12.4.0]
+    3. Rails 4.0.0
+    4. Twitter Bootstrap v3.0.0.rc2
+  - 要件定義
+    1. Twitterでログイン
+    2. ページ構造
+       1. Top 検索＋一覧
+       2. 登録・編集・削除
+
+* 今回やること
+  - rails
+  - herokuセットアップ
+  - 独自ドメイン設定
+* Rails New App
+  - Appプロジェクト作成
+    #+begin_example
+    $ rails new rift --skip-bundle --skip-test-unit
+    $ cd rift
+    $ bundle install --
+    #+end_example
+
+  
