@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Oculus | develog.me]]></title>
-  <link href="http://yunojy.github.com/blog/categories/oculus/atom.xml" rel="self"/>
-  <link href="http://yunojy.github.com/"/>
-  <updated>2013-11-03T04:29:12+09:00</updated>
-  <id>http://yunojy.github.com/</id>
+  <link href="http://yunojy.github.io/blog/categories/oculus/atom.xml" rel="self"/>
+  <link href="http://yunojy.github.io/"/>
+  <updated>2013-11-03T04:31:10+09:00</updated>
+  <id>http://yunojy.github.io/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Mac環境でもUnityでHydraしたい]]></title>
-    <link href="http://yunojy.github.com/blog/2013/07/01/unity-mac-hydra/"/>
+    <link href="http://yunojy.github.io/blog/2013/07/01/unity-mac-hydra/"/>
     <updated>2013-07-01T20:57:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/07/01/unity-mac-hydra</id>
+    <id>http://yunojy.github.io/blog/2013/07/01/unity-mac-hydra</id>
     <content type="html"><![CDATA[<div id="outline-container-1" class="outline-2">
 <h2 id="sec-1">UnityでHydraを使ってキャラクターを動かす方法は、</h2>
 <div class="outline-text-2" id="text-1">

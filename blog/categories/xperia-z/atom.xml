@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: xperia-z | develog.me]]></title>
-  <link href="http://yunojy.github.com/blog/categories/xperia-z/atom.xml" rel="self"/>
-  <link href="http://yunojy.github.com/"/>
-  <updated>2013-11-03T04:29:12+09:00</updated>
-  <id>http://yunojy.github.com/</id>
+  <link href="http://yunojy.github.io/blog/categories/xperia-z/atom.xml" rel="self"/>
+  <link href="http://yunojy.github.io/"/>
+  <updated>2013-11-03T04:31:10+09:00</updated>
+  <id>http://yunojy.github.io/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Mac Android開発環境構築。実機転送設定（Xperia Z）]]></title>
-    <link href="http://yunojy.github.com/blog/2013/04/20/xperia-z-android-app-deploy/"/>
+    <link href="http://yunojy.github.io/blog/2013/04/20/xperia-z-android-app-deploy/"/>
     <updated>2013-04-20T10:52:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/04/20/xperia-z-android-app-deploy</id>
+    <id>http://yunojy.github.io/blog/2013/04/20/xperia-z-android-app-deploy</id>
     <content type="html"><![CDATA[<p>
 今回はアプリの実機転送を行い、実行してみる。
 </p>

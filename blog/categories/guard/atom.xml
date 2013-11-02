@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: guard | develog.me]]></title>
-  <link href="http://yunojy.github.com/blog/categories/guard/atom.xml" rel="self"/>
-  <link href="http://yunojy.github.com/"/>
-  <updated>2013-11-03T04:29:12+09:00</updated>
-  <id>http://yunojy.github.com/</id>
+  <link href="http://yunojy.github.io/blog/categories/guard/atom.xml" rel="self"/>
+  <link href="http://yunojy.github.io/"/>
+  <updated>2013-11-03T04:31:10+09:00</updated>
+  <id>http://yunojy.github.io/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[octopressでプレビュー作業の決定版。ブラウザでプレビューを自動リロード表示！(octopress+guard-livereload)]]></title>
-    <link href="http://yunojy.github.com/blog/2013/02/17/octopress-plus-guard-livereload-de-edit-preview-auto-reload-browser/"/>
+    <link href="http://yunojy.github.io/blog/2013/02/17/octopress-plus-guard-livereload-de-edit-preview-auto-reload-browser/"/>
     <updated>2013-02-17T10:15:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/02/17/octopress-plus-guard-livereload-de-edit-preview-auto-reload-browser</id>
+    <id>http://yunojy.github.io/blog/2013/02/17/octopress-plus-guard-livereload-de-edit-preview-auto-reload-browser</id>
     <content type="html"><![CDATA[<div id="outline-container-1" class="outline-2">
 <h2 id="sec-1">Blogへ記事を投稿。ローカルの確認作業をがんばらない</h2>
 <div class="outline-text-2" id="text-1">

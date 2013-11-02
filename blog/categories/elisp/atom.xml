@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: elisp | develog.me]]></title>
-  <link href="http://yunojy.github.com/blog/categories/elisp/atom.xml" rel="self"/>
-  <link href="http://yunojy.github.com/"/>
-  <updated>2013-11-03T04:29:12+09:00</updated>
-  <id>http://yunojy.github.com/</id>
+  <link href="http://yunojy.github.io/blog/categories/elisp/atom.xml" rel="self"/>
+  <link href="http://yunojy.github.io/"/>
+  <updated>2013-11-03T04:31:10+09:00</updated>
+  <id>http://yunojy.github.io/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[超便利。すぐに実行結果を表示できる「quickrun.el」をさらに便利にしてみる]]></title>
-    <link href="http://yunojy.github.com/blog/2013/03/17/emacs-de-quickrun-or-quickrun-region/"/>
+    <link href="http://yunojy.github.io/blog/2013/03/17/emacs-de-quickrun-or-quickrun-region/"/>
     <updated>2013-03-17T16:38:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/03/17/emacs-de-quickrun-or-quickrun-region</id>
+    <id>http://yunojy.github.io/blog/2013/03/17/emacs-de-quickrun-or-quickrun-region</id>
     <content type="html"><![CDATA[<div id="outline-container-1" class="outline-2">
 <h2 id="sec-1">これがなければemacs使ってない。</h2>
 <div class="outline-text-2" id="text-1">

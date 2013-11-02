@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: oculusrift | develog.me]]></title>
-  <link href="http://yunojy.github.com/blog/categories/oculusrift/atom.xml" rel="self"/>
-  <link href="http://yunojy.github.com/"/>
-  <updated>2013-11-03T04:29:12+09:00</updated>
-  <id>http://yunojy.github.com/</id>
+  <link href="http://yunojy.github.io/blog/categories/oculusrift/atom.xml" rel="self"/>
+  <link href="http://yunojy.github.io/"/>
+  <updated>2013-11-03T04:31:10+09:00</updated>
+  <id>http://yunojy.github.io/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[プログラミング不要。Unityを使えば誰でも2時間で作れちゃう。OculusRiftでLiveを体感するLukalive!!]]></title>
-    <link href="http://yunojy.github.com/blog/2013/08/05/programmingless-oculusrift-vr-app/"/>
+    <link href="http://yunojy.github.io/blog/2013/08/05/programmingless-oculusrift-vr-app/"/>
     <updated>2013-08-05T17:33:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/08/05/programmingless-oculusrift-vr-app</id>
+    <id>http://yunojy.github.io/blog/2013/08/05/programmingless-oculusrift-vr-app</id>
     <content type="html"><![CDATA[<p>
 <img src="https://lh6.googleusercontent.com/-JAPPs61u8qM/Uf-cb0XInoI/AAAAAAAAAT8/RovbDaKzMVU/s900/Lukalive_logo.png"  alt="https://lh6.googleusercontent.com/-JAPPs61u8qM/Uf-cb0XInoI/AAAAAAAAAT8/RovbDaKzMVU/s900/Lukalive_logo.png" />
 </p>

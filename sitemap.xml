@@ -1,79 +1,79 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://yunojy.github.com/blog/2013/02/11/emacs-de-github-blog-sono1-markdown/</loc>
+        <loc>http://yunojy.github.io/blog/2013/02/11/emacs-de-github-blog-sono1-markdown/</loc>
         <lastmod>2013-02-11T17:57:01+09:00</lastmod>
     </url>
     <url>
-        <loc>http://yunojy.github.com/blog/2013/02/11/emacs-de-github-blog-sono2-org-mode/</loc>
+        <loc>http://yunojy.github.io/blog/2013/02/11/emacs-de-github-blog-sono2-org-mode/</loc>
         <lastmod>2013-02-11T17:42:32+09:00</lastmod>
     </url>
     <url>
-        <loc>http://yunojy.github.com/blog/2013/02/12/mac-app-he-jiyuuni-keybind-set/</loc>
+        <loc>http://yunojy.github.io/blog/2013/02/12/mac-app-he-jiyuuni-keybind-set/</loc>
         <lastmod>2013-02-12T20:00:33+09:00</lastmod>
     </url>
     <url>
-        <loc>http://yunojy.github.com/blog/2013/02/13/cheatsheet-emacs-basic/</loc>
+        <loc>http://yunojy.github.io/blog/2013/02/13/cheatsheet-emacs-basic/</loc>
         <lastmod>2013-02-17T09:59:13+09:00</lastmod>
     </url>
     <url>
         <loc>
-            http://yunojy.github.com/blog/2013/02/17/octopress-plus-guard-livereload-de-edit-preview-auto-reload-browser/
+            http://yunojy.github.io/blog/2013/02/17/octopress-plus-guard-livereload-de-edit-preview-auto-reload-browser/
         </loc>
         <lastmod>2013-02-17T13:00:20+09:00</lastmod>
     </url>
     <url>
-        <loc>http://yunojy.github.com/blog/2013/03/17/emacs-de-quickrun-or-quickrun-region/</loc>
+        <loc>http://yunojy.github.io/blog/2013/03/17/emacs-de-quickrun-or-quickrun-region/</loc>
         <lastmod>2013-03-17T17:14:59+09:00</lastmod>
     </url>
     <url>
         <loc>
-            http://yunojy.github.com/blog/2013/04/14/getting-started-cordova-phonegap-de-android-app/
+            http://yunojy.github.io/blog/2013/04/14/getting-started-cordova-phonegap-de-android-app/
         </loc>
         <lastmod>2013-04-14T15:24:02+09:00</lastmod>
     </url>
     <url>
-        <loc>http://yunojy.github.com/blog/2013/04/20/xperia-z-android-app-deploy/</loc>
+        <loc>http://yunojy.github.io/blog/2013/04/20/xperia-z-android-app-deploy/</loc>
         <lastmod>2013-04-20T11:30:44+09:00</lastmod>
     </url>
     <url>
-        <loc>http://yunojy.github.com/blog/2013/04/28/bookmarklet-orgmode-link/</loc>
+        <loc>http://yunojy.github.io/blog/2013/04/28/bookmarklet-orgmode-link/</loc>
         <lastmod>2013-04-28T10:05:42+09:00</lastmod>
     </url>
     <url>
-        <loc>http://yunojy.github.com/blog/2013/05/11/oculus-rift-coming/</loc>
+        <loc>http://yunojy.github.io/blog/2013/05/11/oculus-rift-coming/</loc>
         <lastmod>2013-06-12T19:16:32+09:00</lastmod>
     </url>
     <url>
-        <loc>http://yunojy.github.com/blog/2013/05/11/oculus-getting-started/</loc>
+        <loc>http://yunojy.github.io/blog/2013/05/11/oculus-getting-started/</loc>
         <lastmod>2013-06-25T01:39:55+09:00</lastmod>
     </url>
     <url>
-        <loc>http://yunojy.github.com/blog/2013/05/13/get-ready-oculus/</loc>
+        <loc>http://yunojy.github.io/blog/2013/05/13/get-ready-oculus/</loc>
         <lastmod>2013-05-13T20:43:21+09:00</lastmod>
     </url>
     <url>
-        <loc>http://yunojy.github.com/blog/2013/06/25/get-lukalus/</loc>
+        <loc>http://yunojy.github.io/blog/2013/06/25/get-lukalus/</loc>
         <lastmod>2013-06-30T08:32:33+09:00</lastmod>
     </url>
     <url>
-        <loc>http://yunojy.github.com/blog/2013/07/01/unity-mac-hydra/</loc>
+        <loc>http://yunojy.github.io/blog/2013/07/01/unity-mac-hydra/</loc>
         <lastmod>2013-07-03T01:10:24+09:00</lastmod>
     </url>
     <url>
-        <loc>http://yunojy.github.com/blog/2013/08/05/programmingless-oculusrift-vr-app/</loc>
+        <loc>http://yunojy.github.io/blog/2013/08/05/programmingless-oculusrift-vr-app/</loc>
         <lastmod>2013-08-07T16:41:05+09:00</lastmod>
     </url>
     <url>
-        <loc>http://yunojy.github.com/blog/archives/</loc>
+        <loc>http://yunojy.github.io/blog/archives/</loc>
         <lastmod>2013-08-07T16:41:05+09:00</lastmod>
     </url>
     <url>
-        <loc>http://yunojy.github.com/</loc>
+        <loc>http://yunojy.github.io/</loc>
         <lastmod>2013-08-07T16:41:05+09:00</lastmod>
     </url>
     <url>
-        <loc>http://yunojy.github.com/robots.txt</loc>
+        <loc>http://yunojy.github.io/robots.txt</loc>
         <lastmod>2013-02-11T09:34:06+09:00</lastmod>
     </url>
 </urlset>

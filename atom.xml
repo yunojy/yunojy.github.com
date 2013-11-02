@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[develog.me]]></title>
-  <link href="http://yunojy.github.com/atom.xml" rel="self"/>
-  <link href="http://yunojy.github.com/"/>
-  <updated>2013-11-03T04:29:12+09:00</updated>
-  <id>http://yunojy.github.com/</id>
+  <link href="http://yunojy.github.io/atom.xml" rel="self"/>
+  <link href="http://yunojy.github.io/"/>
+  <updated>2013-11-03T04:31:10+09:00</updated>
+  <id>http://yunojy.github.io/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[プログラミング不要。Unityを使えば誰でも2時間で作れちゃう。OculusRiftでLiveを体感するLukalive!!]]></title>
-    <link href="http://yunojy.github.com/blog/2013/08/05/programmingless-oculusrift-vr-app/"/>
+    <link href="http://yunojy.github.io/blog/2013/08/05/programmingless-oculusrift-vr-app/"/>
     <updated>2013-08-05T17:33:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/08/05/programmingless-oculusrift-vr-app</id>
+    <id>http://yunojy.github.io/blog/2013/08/05/programmingless-oculusrift-vr-app</id>
     <content type="html"><![CDATA[<p>
 <img src="https://lh6.googleusercontent.com/-JAPPs61u8qM/Uf-cb0XInoI/AAAAAAAAAT8/RovbDaKzMVU/s900/Lukalive_logo.png"  alt="https://lh6.googleusercontent.com/-JAPPs61u8qM/Uf-cb0XInoI/AAAAAAAAAT8/RovbDaKzMVU/s900/Lukalive_logo.png" />
 </p>
@@ -614,9 +614,9 @@ $ pmd2fbx.exe Luka121002P.pmd ルカルカ★ナイトフィーバー(口ハ�
   
   <entry>
     <title type="html"><![CDATA[Mac環境でもUnityでHydraしたい]]></title>
-    <link href="http://yunojy.github.com/blog/2013/07/01/unity-mac-hydra/"/>
+    <link href="http://yunojy.github.io/blog/2013/07/01/unity-mac-hydra/"/>
     <updated>2013-07-01T20:57:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/07/01/unity-mac-hydra</id>
+    <id>http://yunojy.github.io/blog/2013/07/01/unity-mac-hydra</id>
     <content type="html"><![CDATA[<div id="outline-container-1" class="outline-2">
 <h2 id="sec-1">UnityでHydraを使ってキャラクターを動かす方法は、</h2>
 <div class="outline-text-2" id="text-1">
@@ -664,9 +664,9 @@ $ pmd2fbx.exe Luka121002P.pmd ルカルカ★ナイトフィーバー(口ハ�
   
   <entry>
     <title type="html"><![CDATA[Lukalusでルカと暮らす Oculus, Razer Hydra, Gamepad/Joystick]]></title>
-    <link href="http://yunojy.github.com/blog/2013/06/25/get-lukalus/"/>
+    <link href="http://yunojy.github.io/blog/2013/06/25/get-lukalus/"/>
     <updated>2013-06-25T01:37:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/06/25/get-lukalus</id>
+    <id>http://yunojy.github.io/blog/2013/06/25/get-lukalus</id>
     <content type="html"><![CDATA[<div id="outline-container-1" class="outline-2">
 <h2 id="sec-1">最新情報</h2>
 <div class="outline-text-2" id="text-1">
@@ -740,9 +740,9 @@ $ pmd2fbx.exe Luka121002P.pmd ルカルカ★ナイトフィーバー(口ハ�
   
   <entry>
     <title type="html"><![CDATA[Oculus Riftを注文したら届くまでに急いでやるべきこと]]></title>
-    <link href="http://yunojy.github.com/blog/2013/05/13/get-ready-oculus/"/>
+    <link href="http://yunojy.github.io/blog/2013/05/13/get-ready-oculus/"/>
     <updated>2013-05-13T20:17:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/05/13/get-ready-oculus</id>
+    <id>http://yunojy.github.io/blog/2013/05/13/get-ready-oculus</id>
     <content type="html"><![CDATA[<p>
 <img src="https://lh6.googleusercontent.com/--YE_MR1WsqU/UY3XHQQuorI/AAAAAAAAANc/3T3NnYuotUI/s600/IMG_2792.JPG"  alt="https://lh6.googleusercontent.com/--YE_MR1WsqU/UY3XHQQuorI/AAAAAAAAANc/3T3NnYuotUI/s600/IMG_2792.JPG" />
 </p>
@@ -857,9 +857,9 @@ $ pmd2fbx.exe Luka121002P.pmd ルカルカ★ナイトフィーバー(口ハ�
   
   <entry>
     <title type="html"><![CDATA[Oculus Riftが到着してからやったこと（随時更新）]]></title>
-    <link href="http://yunojy.github.com/blog/2013/05/11/oculus-getting-started/"/>
+    <link href="http://yunojy.github.io/blog/2013/05/11/oculus-getting-started/"/>
     <updated>2013-05-11T15:22:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/05/11/oculus-getting-started</id>
+    <id>http://yunojy.github.io/blog/2013/05/11/oculus-getting-started</id>
     <content type="html"><![CDATA[<p>
 <img src="https://lh4.googleusercontent.com/-WJUZhTSAE4A/UY3W6UEc8PI/AAAAAAAAALg/a6BiVZjMqwk/s600/IMG_2795.jpg"  alt="https://lh4.googleusercontent.com/-WJUZhTSAE4A/UY3W6UEc8PI/AAAAAAAAALg/a6BiVZjMqwk/s600/IMG_2795.jpg" />
 </p>
@@ -2164,9 +2164,9 @@ $ pmd2fbx.exe Luka121002P.pmd ルカルカ★ナイトフィーバー(口ハ�
   
   <entry>
     <title type="html"><![CDATA[Oculus Rift届きました！（フォトレビュー）]]></title>
-    <link href="http://yunojy.github.com/blog/2013/05/11/oculus-rift-coming/"/>
+    <link href="http://yunojy.github.io/blog/2013/05/11/oculus-rift-coming/"/>
     <updated>2013-05-11T10:10:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/05/11/oculus-rift-coming</id>
+    <id>http://yunojy.github.io/blog/2013/05/11/oculus-rift-coming</id>
     <content type="html"><![CDATA[<p>
 <img src="https://lh6.googleusercontent.com/-7DwzXke8pco/UY3XQ_Mwx7I/AAAAAAAAAPI/xoQQoF41BeM/s900/IMG_2748.JPG"  alt="https://lh6.googleusercontent.com/-7DwzXke8pco/UY3XQ_Mwx7I/AAAAAAAAAPI/xoQQoF41BeM/s900/IMG_2748.JPG" />
 </p>
@@ -2303,9 +2303,9 @@ $ pmd2fbx.exe Luka121002P.pmd ルカルカ★ナイトフィーバー(口ハ�
   
   <entry>
     <title type="html"><![CDATA[[Bookmarklet] 表示中のページタイトルとURLからOrgModeリンクを生成]]></title>
-    <link href="http://yunojy.github.com/blog/2013/04/28/bookmarklet-orgmode-link/"/>
+    <link href="http://yunojy.github.io/blog/2013/04/28/bookmarklet-orgmode-link/"/>
     <updated>2013-04-28T09:53:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/04/28/bookmarklet-orgmode-link</id>
+    <id>http://yunojy.github.io/blog/2013/04/28/bookmarklet-orgmode-link</id>
     <content type="html"><![CDATA[<div id="outline-container-1" class="outline-2">
 <h2 id="sec-1">今みているページへのLink Textを生成するブックマーク</h2>
 <div class="outline-text-2" id="text-1">
@@ -2330,9 +2330,9 @@ $ pmd2fbx.exe Luka121002P.pmd ルカルカ★ナイトフィーバー(口ハ�
   
   <entry>
     <title type="html"><![CDATA[Mac Android開発環境構築。実機転送設定（Xperia Z）]]></title>
-    <link href="http://yunojy.github.com/blog/2013/04/20/xperia-z-android-app-deploy/"/>
+    <link href="http://yunojy.github.io/blog/2013/04/20/xperia-z-android-app-deploy/"/>
     <updated>2013-04-20T10:52:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/04/20/xperia-z-android-app-deploy</id>
+    <id>http://yunojy.github.io/blog/2013/04/20/xperia-z-android-app-deploy</id>
     <content type="html"><![CDATA[<p>
 今回はアプリの実機転送を行い、実行してみる。
 </p>
@@ -2502,9 +2502,9 @@ xxxxxxxxxx device  &lt;- kore
   
   <entry>
     <title type="html"><![CDATA[Cordova(PhoneGap)でAndroidApp作る その1 環境構築編]]></title>
-    <link href="http://yunojy.github.com/blog/2013/04/14/getting-started-cordova-phonegap-de-android-app/"/>
+    <link href="http://yunojy.github.io/blog/2013/04/14/getting-started-cordova-phonegap-de-android-app/"/>
     <updated>2013-04-14T09:29:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/04/14/getting-started-cordova-phonegap-de-android-app</id>
+    <id>http://yunojy.github.io/blog/2013/04/14/getting-started-cordova-phonegap-de-android-app</id>
     <content type="html"><![CDATA[<div id="outline-container-1" class="outline-2">
 <h2 id="sec-1"><code>注意！2013/04/14現在の情報です。</code></h2>
 <div class="outline-text-2" id="text-1">
@@ -2739,9 +2739,9 @@ export PATH=${PATH}:/Development/Android/Toolkit/adt-bundle-mac-x86_64-20130219/
   
   <entry>
     <title type="html"><![CDATA[超便利。すぐに実行結果を表示できる「quickrun.el」をさらに便利にしてみる]]></title>
-    <link href="http://yunojy.github.com/blog/2013/03/17/emacs-de-quickrun-or-quickrun-region/"/>
+    <link href="http://yunojy.github.io/blog/2013/03/17/emacs-de-quickrun-or-quickrun-region/"/>
     <updated>2013-03-17T16:38:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/03/17/emacs-de-quickrun-or-quickrun-region</id>
+    <id>http://yunojy.github.io/blog/2013/03/17/emacs-de-quickrun-or-quickrun-region</id>
     <content type="html"><![CDATA[<div id="outline-container-1" class="outline-2">
 <h2 id="sec-1">これがなければemacs使ってない。</h2>
 <div class="outline-text-2" id="text-1">
@@ -2834,9 +2834,9 @@ export PATH=${PATH}:/Development/Android/Toolkit/adt-bundle-mac-x86_64-20130219/
   
   <entry>
     <title type="html"><![CDATA[octopressでプレビュー作業の決定版。ブラウザでプレビューを自動リロード表示！(octopress+guard-livereload)]]></title>
-    <link href="http://yunojy.github.com/blog/2013/02/17/octopress-plus-guard-livereload-de-edit-preview-auto-reload-browser/"/>
+    <link href="http://yunojy.github.io/blog/2013/02/17/octopress-plus-guard-livereload-de-edit-preview-auto-reload-browser/"/>
     <updated>2013-02-17T10:15:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/02/17/octopress-plus-guard-livereload-de-edit-preview-auto-reload-browser</id>
+    <id>http://yunojy.github.io/blog/2013/02/17/octopress-plus-guard-livereload-de-edit-preview-auto-reload-browser</id>
     <content type="html"><![CDATA[<div id="outline-container-1" class="outline-2">
 <h2 id="sec-1">Blogへ記事を投稿。ローカルの確認作業をがんばらない</h2>
 <div class="outline-text-2" id="text-1">
@@ -3132,9 +3132,9 @@ end
   
   <entry>
     <title type="html"><![CDATA[だいぶ偏ったチートシート emacs - 基本操作]]></title>
-    <link href="http://yunojy.github.com/blog/2013/02/13/cheatsheet-emacs-basic/"/>
+    <link href="http://yunojy.github.io/blog/2013/02/13/cheatsheet-emacs-basic/"/>
     <updated>2013-02-13T22:06:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/02/13/cheatsheet-emacs-basic</id>
+    <id>http://yunojy.github.io/blog/2013/02/13/cheatsheet-emacs-basic</id>
     <content type="html"><![CDATA[<div id="outline-container-1" class="outline-2">
 <h2 id="sec-1">emacsだいぶ偏った基本操作</h2>
 <div class="outline-text-2" id="text-1">
@@ -3299,9 +3299,9 @@ end
   
   <entry>
     <title type="html"><![CDATA[毎回メニューバーから＠がんばらない。よく使うのにキーボードショートカットが割り当てられていないアプリに自由に割り当てる方法（Treeでラベルカラー設定を割り当てる）]]></title>
-    <link href="http://yunojy.github.com/blog/2013/02/12/mac-app-he-jiyuuni-keybind-set/"/>
+    <link href="http://yunojy.github.io/blog/2013/02/12/mac-app-he-jiyuuni-keybind-set/"/>
     <updated>2013-02-12T19:28:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/02/12/mac-app-he-jiyuuni-keybind-set</id>
+    <id>http://yunojy.github.io/blog/2013/02/12/mac-app-he-jiyuuni-keybind-set</id>
     <content type="html"><![CDATA[<div id="outline-container-1" class="outline-2">
 <h2 id="sec-1">よく使うコマンドなのにキーボードショートカットが割り当てられていない。。</h2>
 <div class="outline-text-2" id="text-1">
@@ -3370,9 +3370,9 @@ end
   
   <entry>
     <title type="html"><![CDATA[emacs@がんばらない。なまけもの必見！今度こそ継続できるBlogを10分でGithubに開設する。もちろん無料 - org-mode編]]></title>
-    <link href="http://yunojy.github.com/blog/2013/02/11/emacs-de-github-blog-sono2-org-mode/"/>
+    <link href="http://yunojy.github.io/blog/2013/02/11/emacs-de-github-blog-sono2-org-mode/"/>
     <updated>2013-02-11T15:53:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/02/11/emacs-de-github-blog-sono2-org-mode</id>
+    <id>http://yunojy.github.io/blog/2013/02/11/emacs-de-github-blog-sono2-org-mode</id>
     <content type="html"><![CDATA[<div id="outline-container-1" class="outline-2">
 <h2 id="sec-1">概要</h2>
 <div class="outline-text-2" id="text-1">
@@ -3703,9 +3703,9 @@ categories: emacs github octopress org-mode
   
   <entry>
     <title type="html"><![CDATA[emacs@がんばらない。なまけもの必見！今度こそ継続できるBlogを10分でGithubに開設する。もちろん無料 - markdown編]]></title>
-    <link href="http://yunojy.github.com/blog/2013/02/11/emacs-de-github-blog-sono1-markdown/"/>
+    <link href="http://yunojy.github.io/blog/2013/02/11/emacs-de-github-blog-sono1-markdown/"/>
     <updated>2013-02-11T11:50:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/02/11/emacs-de-github-blog-sono1-markdown</id>
+    <id>http://yunojy.github.io/blog/2013/02/11/emacs-de-github-blog-sono1-markdown</id>
     <content type="html"><![CDATA[<div id="outline-container-1" class="outline-2">
 <h2 id="sec-1">Blog投稿めんどくさ</h2>
 <div class="outline-text-2" id="text-1">

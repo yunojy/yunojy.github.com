@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: mmd | develog.me]]></title>
-  <link href="http://yunojy.github.com/blog/categories/mmd/atom.xml" rel="self"/>
-  <link href="http://yunojy.github.com/"/>
-  <updated>2013-11-03T04:29:12+09:00</updated>
-  <id>http://yunojy.github.com/</id>
+  <link href="http://yunojy.github.io/blog/categories/mmd/atom.xml" rel="self"/>
+  <link href="http://yunojy.github.io/"/>
+  <updated>2013-11-03T04:31:10+09:00</updated>
+  <id>http://yunojy.github.io/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Lukalusでルカと暮らす Oculus, Razer Hydra, Gamepad/Joystick]]></title>
-    <link href="http://yunojy.github.com/blog/2013/06/25/get-lukalus/"/>
+    <link href="http://yunojy.github.io/blog/2013/06/25/get-lukalus/"/>
     <updated>2013-06-25T01:37:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/06/25/get-lukalus</id>
+    <id>http://yunojy.github.io/blog/2013/06/25/get-lukalus</id>
     <content type="html"><![CDATA[<div id="outline-container-1" class="outline-2">
 <h2 id="sec-1">最新情報</h2>
 <div class="outline-text-2" id="text-1">
@@ -91,9 +91,9 @@
   
   <entry>
     <title type="html"><![CDATA[Oculus Riftを注文したら届くまでに急いでやるべきこと]]></title>
-    <link href="http://yunojy.github.com/blog/2013/05/13/get-ready-oculus/"/>
+    <link href="http://yunojy.github.io/blog/2013/05/13/get-ready-oculus/"/>
     <updated>2013-05-13T20:17:00+09:00</updated>
-    <id>http://yunojy.github.com/blog/2013/05/13/get-ready-oculus</id>
+    <id>http://yunojy.github.io/blog/2013/05/13/get-ready-oculus</id>
     <content type="html"><![CDATA[<p>
 <img src="https://lh6.googleusercontent.com/--YE_MR1WsqU/UY3XHQQuorI/AAAAAAAAANc/3T3NnYuotUI/s600/IMG_2792.JPG"  alt="https://lh6.googleusercontent.com/--YE_MR1WsqU/UY3XHQQuorI/AAAAAAAAANc/3T3NnYuotUI/s600/IMG_2792.JPG" />
 </p>
