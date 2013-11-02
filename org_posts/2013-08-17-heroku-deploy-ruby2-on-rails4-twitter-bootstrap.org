@@ -31,7 +31,9 @@ published: false
     #+begin_example
     $ rails new rift --skip-bundle --skip-test-unit
     $ cd rift
-    $ bundle install --
+    $ bundle install --path=vendor/bundle
     #+end_example
 
   
+* gem
+  - [[https://github.com/anjlab/bootstrap-rails][Twitter Bootstrap v3.0.0.rc2 for Rails 3/4 anjlab/bootstrap-rails]]
