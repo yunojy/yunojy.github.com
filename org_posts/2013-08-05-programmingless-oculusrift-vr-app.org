@@ -13,17 +13,6 @@ categories: oculusrift unity
 完成品DL: [[http://bowlroll.net/up/dl21149][ルカライブ！(Lukalive!) Bowl Roll ]]
 
 
-* はじめに
-  - 2時間くらいでLukalive!のようなOculusRift対応ゲームをプログラミングレスで作ってみます。
-  - 対象は *OculusRift購入予定、または所有者* の *プログラミング・開発未経験者* になります。
-  - *2013/8/5* 現在の情報です。日々革命的な進化が行われるため、この記事をアップロードした時点でも情報が古くなっている可能性があります。
-  - 日本におけるOculusRiftの最新情報は Twitter[[https://twitter.com/VRNewsJP][@VRNewsJP]] をご確認ください。
-  
-* 環境
-  - Windows 7 x64
-  - Unity 4.1.5
-    - 最新は4.2ですが、HDDの空き容量がないという個人的な理由で4.1.5（13/8/5現在）
-    - *無難なところで4.1.5* をおすすめ
 
 ---------
 

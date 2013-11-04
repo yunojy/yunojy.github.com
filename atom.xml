@@ -4,7 +4,7 @@
   <title><![CDATA[develog.me]]></title>
   <link href="http://yunojy.github.io/atom.xml" rel="self"/>
   <link href="http://yunojy.github.io/"/>
-  <updated>2013-11-03T04:31:10+09:00</updated>
+  <updated>2013-11-04T23:29:44+09:00</updated>
   <id>http://yunojy.github.io/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -12,6 +12,292 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[プログラミング不要。Unityを使えば誰でも2時間で作れちゃう。OculusRiftでハーレムを体感する REAL WORLD ＋PhotonCloud]]></title>
+    <link href="http://yunojy.github.io/blog/2013/11/03/how-to-make-a-vr-world-plus-photoncloud/"/>
+    <updated>2013-11-03T04:33:00+09:00</updated>
+    <id>http://yunojy.github.io/blog/2013/11/03/how-to-make-a-vr-world-plus-photoncloud</id>
+    <content type="html"><![CDATA[<p>
+※「モデルデータをUnityに取り込む」以降は後日追記
+</p>
+
+
+<p>
+[file:]
+</p>
+
+
+<p>
+完成品DL: REAL WORLD
+</p>
+
+
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">はじめに</h2>
+<div class="outline-text-2" id="text-1">
+
+<ul>
+<li><b>2時間くらい</b> で <b>お金をかけず</b> にOculusRift対応の <b>オンラインハーレム</b> ゲームを作ってみます。
+</li>
+<li>手持ちの唐揚げをあげると付いてくる、そんな <b>健全</b> なオンラインゲームです。
+</li>
+<li>対象は <b>OculusRift購入予定、または所有者</b> の <b>プログラミング・開発未経験者</b> になります。
+</li>
+<li>前提として <a href="https://developer.oculusvr.com/register">OculusVR Developer Center</a> でユーザー登録済み、<a href="http://japan.unity3d.com/unity/download/">Unity</a> インストール済み(<a href="http://yunojy.github.io/blog/2013/08/05/programmingless-oculusrift-vr-app/">プログラミング不要。Unityを使えば誰でも2時間で作れちゃう。OculusRiftでLiveを体感するLukalive!!の作業内容、1.下準備参照</a>)
+</li>
+<li><b>2013/11/3</b> 現在の情報です。日々革命的な進化が行われるため、この記事をアップロードした時点でも情報が古くなっている可能性があります。
+</li>
+<li>日本におけるOculusRiftの最新情報は <a href="https://www.facebook.com/groups/182991845214377/">FacebookのVR Japanグループ</a>または、Twitter<a href="https://twitter.com/VRNewsJP">@VRNewsJP</a> をご確認ください。
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">環境</h2>
+<div class="outline-text-2" id="text-2">
+
+<ul>
+<li>Windows 7 x64
+</li>
+<li>Unity 4.2.2
+</li>
+<li>Oculus SDK 0.2.5
+</li>
+</ul>
+
+
+
+<hr/>
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">作業のおおまかな流れ</h2>
+<div class="outline-text-2" id="text-3">
+
+<ol>
+<li>ダウンロード(30分)
+<ol>
+<li>UnityのOculusサンプルプロジェクトを手に入れる
+</li>
+<li>プレイヤーとNPCのMMDのモデルデータ( <code>*.pmd</code>  <code>*.pmx</code> ファイル)
+</li>
+<li><code>PMD2FBX_MMD4Mecanim</code> (MMDデータをUnityで使うためのツール)
+</li>
+</ol>
+
+</li>
+<li>プロジェクト作成(90分)
+<ol>
+<li>Unityでプロジェクト新規作成・基本設定
+</li>
+<li>AssetStoreからプロジェクトのテンプレートを手に入れる
+</li>
+<li>プレイヤーOculus対応
+</li>
+<li>モデルデータをUnityに取り込む
+</li>
+<li>プレイヤーにモデルデータを設定する
+</li>
+<li>NPCを配置する
+</li>
+<li>NPCにAIを設定する
+</li>
+</ol>
+
+</li>
+</ol>
+
+
+
+<hr/>
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">作業の内容</h2>
+<div class="outline-text-2" id="text-4">
+
+
+<ol>
+<li>ダウンロード(30分)
+<ol>
+<li>UnityのOculusサンプルプロジェクトを手に入れる
+        <a href="https://developer.oculusvr.com/?action=dl&amp;p=sdk&amp;v=8">Unity 4 Pro Integration</a>
+        <a href="https://developer.oculusvr.com/?action=dl&amp;p=sdk&amp;v=8"><img src="https://lh5.googleusercontent.com/-V0FxWhkSWf0/Una26JFve4I/AAAAAAAAAr0/x6tLU1NItIY/s800/Oculus_Rift_SDK__Docs__Integrations__Wiki___Forums___Oculus_Developer_Center.png" alt="Oculus_Rift_SDK__Docs__Integrations__Wiki___Forums___Oculus_Developer_Center.png"/></a>
+<ul>
+<li><code>Unity 4 Pro Integration</code> → <code>ovr_unity_0.2.5_lib.zip</code>
+</li>
+<li>UnityのOculusサンプルプロジェクトファイル
+           <code>C:/dev/unity/assets/ovr_unity_0.2.5_lib/OculusUnityIntegration/OculusUnityIntegrationTuscanyDemo.unitypackage</code>
+
+</li>
+</ul>
+
+</li>
+<li>プレイヤーとNPCのMMDのモデルデータ( <code>*.pmd</code>  <code>*.pmx</code> ファイル)
+<ul>
+<li><code>C:\dev\assets\models\</code>
+</li>
+<li><a href="http://www.nicovideo.jp/tag/MMDモデル配布あり">MMDモデル配布あり ‐ ニコニコ動画:Q</a>
+</li>
+<li><a href="#Http-www6.atwiki.jp-vpvpwiki-pages-143.html">VPVP wiki - モデルデータ/VOCALOID</a>
+
+</li>
+</ul>
+
+</li>
+<li><code>PMD2FBX_MMD4Mecanim</code> (MMDデータをUnityで使うためのツール)
+        <a href="http://stereoarts.jp"><img src="https://lh4.googleusercontent.com/-rUFE4k2txqE/Una26PQTP0I/AAAAAAAAArw/f4zo5qaNf_Q/s800/Stereoarts_Homepage_%25E3%2581%25A8_%25E3%2582%25BF%25E3%2582%2599%25E3%2582%25A6%25E3%2583%25B3%25E3%2583%25AD%25E3%2583%25BC%25E3%2583%2588%25E3%2582%2599-4.png" alt="Stereoarts_Homepage_%25E3%2581%25A8_%25E3%2582%25BF%25E3%2582%2599%25E3%2582%25A6%25E3%2583%25B3%25E3%2583%25AD%25E3%2583%25BC%25E3%2583%2588%25E3%2582%2599-4.png"/></a>
+<ul>
+<li>DL: <code>MMD4Mecanim_Alpha_20131103_2.zip</code> <a href="http://stereoarts.jp/">Stereoarts Homepage </a>(<a href="https://twitter.com/Stereoarts">@Stereoarts(Noraさん)</a>)
+<ul>
+<li>解凍して名前を変えて移動
+            <code>C:\dev\unity\tools\MMD4Mecanim_Alpha_20131103_2\</code>
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+</ol>
+
+</li>
+<li>プロジェクト作成(90分)
+<ol>
+<li>Unityでプロジェクト新規作成・基本設定
+<ol>
+<li>プロジェクト新規作成
+           <img src="https://lh3.googleusercontent.com/-o8AZJamBqaY/UncsS5bZIlI/AAAAAAAAAuQ/MYFv5r_TYPE/w765-h581-no/CreateProject1.png"  alt="https://lh3.googleusercontent.com/-o8AZJamBqaY/UncsS5bZIlI/AAAAAAAAAuQ/MYFv5r_TYPE/w765-h581-no/CreateProject1.png" />
+           <img src="https://lh3.googleusercontent.com/-5cqVg4BZvX8/UncsSxCvJWI/AAAAAAAAAuQ/1hgnrGCisG4/w654-h432-no/CreateProject2.png"  alt="https://lh3.googleusercontent.com/-5cqVg4BZvX8/UncsSxCvJWI/AAAAAAAAAuQ/1hgnrGCisG4/w654-h432-no/CreateProject2.png" />
+</li>
+<li>Unity設定
+           <img src="https://lh6.googleusercontent.com/-RN2WObWN44o/UncsSzsMQlI/AAAAAAAAAuQ/Xocq-377RwY/w765-h651-no/CreateProject3.png"  alt="https://lh6.googleusercontent.com/-RN2WObWN44o/UncsSzsMQlI/AAAAAAAAAuQ/Xocq-377RwY/w765-h651-no/CreateProject3.png" />
+</li>
+<li>Oculusサンプルプロジェクトをインポート
+           <img src="https://lh6.googleusercontent.com/-FYTG1gkj9Dc/UncsT-nAliI/AAAAAAAAAuQ/RpymsPOwbso/w765-h651-no/OculusAssetImport1.png"  alt="https://lh6.googleusercontent.com/-FYTG1gkj9Dc/UncsT-nAliI/AAAAAAAAAuQ/RpymsPOwbso/w765-h651-no/OculusAssetImport1.png" />
+           <img src="https://lh5.googleusercontent.com/-gSfBjxs3uQs/UncsTy1jyDI/AAAAAAAAAuQ/09ZR2ThOK-M/w765-h651-no/OculusAssetImport2.png"  alt="https://lh5.googleusercontent.com/-gSfBjxs3uQs/UncsTy1jyDI/AAAAAAAAAuQ/09ZR2ThOK-M/w765-h651-no/OculusAssetImport2.png" />
+           <img src="https://lh5.googleusercontent.com/-O_P4aTtQ_WU/UncsVNiWITI/AAAAAAAAAuQ/M_Eyvm3malU/w765-h651-no/OculusAssetImport3.png"  alt="https://lh5.googleusercontent.com/-O_P4aTtQ_WU/UncsVNiWITI/AAAAAAAAAuQ/M_Eyvm3malU/w765-h651-no/OculusAssetImport3.png" />
+           <img src="https://lh5.googleusercontent.com/-7CxNSE3QZAI/UncsVHEOSMI/AAAAAAAAAuQ/H2X-n-oOsk4/w765-h651-no/OculusAssetImport4.png"  alt="https://lh5.googleusercontent.com/-7CxNSE3QZAI/UncsVHEOSMI/AAAAAAAAAuQ/H2X-n-oOsk4/w765-h651-no/OculusAssetImport4.png" />
+</li>
+<li>ここまでで動作確認。動かしてみる
+           <img src="https://lh3.googleusercontent.com/-oikvjXvaUT8/UncsVGisc0I/AAAAAAAAAuQ/ZAO-Kkxcp68/w765-h651-no/OculusAssetImport5.png"  alt="https://lh3.googleusercontent.com/-oikvjXvaUT8/UncsVGisc0I/AAAAAAAAAuQ/ZAO-Kkxcp68/w765-h651-no/OculusAssetImport5.png" />
+           <img src="https://lh5.googleusercontent.com/-FMBaTDsjXsY/UncsVy__YkI/AAAAAAAAAuQ/hMCPahdJeZ0/w765-h651-no/OculusAssetImport6.png"  alt="https://lh5.googleusercontent.com/-FMBaTDsjXsY/UncsVy__YkI/AAAAAAAAAuQ/hMCPahdJeZ0/w765-h651-no/OculusAssetImport6.png" />
+           <img src="https://lh5.googleusercontent.com/-u3elSLmQAx8/UncsV-hYQGI/AAAAAAAAAuQ/6Ks_Ui74404/w765-h650-no/OculusAssetImport7.png"  alt="https://lh5.googleusercontent.com/-u3elSLmQAx8/UncsV-hYQGI/AAAAAAAAAuQ/6Ks_Ui74404/w765-h650-no/OculusAssetImport7.png" />
+           <img src="https://lh5.googleusercontent.com/-OzMT2Ttk8Gs/UncsWl-H7XI/AAAAAAAAAuQ/3L7KCf-i1Jk/w765-h649-no/OculusAssetImport8.png"  alt="https://lh5.googleusercontent.com/-OzMT2Ttk8Gs/UncsWl-H7XI/AAAAAAAAAuQ/3L7KCf-i1Jk/w765-h649-no/OculusAssetImport8.png" />
+           <img src="https://lh6.googleusercontent.com/-PHKydJv8b-E/UncsXYXeqPI/AAAAAAAAAuQ/7rqsfzQ7L6Y/w765-h651-no/OculusAssetImport9.png"  alt="https://lh6.googleusercontent.com/-PHKydJv8b-E/UncsXYXeqPI/AAAAAAAAAuQ/7rqsfzQ7L6Y/w765-h651-no/OculusAssetImport9.png" />
+           <img src="https://lh5.googleusercontent.com/-OtMFXtssg64/UncsTxcvQLI/AAAAAAAAAuQ/GLVka1WeTuo/w765-h651-no/OculusAssetImport10.png"  alt="https://lh5.googleusercontent.com/-OtMFXtssg64/UncsTxcvQLI/AAAAAAAAAuQ/GLVka1WeTuo/w765-h651-no/OculusAssetImport10.png" />
+
+</li>
+</ol>
+
+</li>
+<li>AssetStoreからプロジェクトのテンプレートを手に入れる
+<ol>
+<li>Photonを使用したサンプルプロジェクトの入手
+<ul>
+<li><a href="https://www.assetstore.unity3d.com/#/content/1846">Photon Viking Demo - Unity AssetStore</a> 
+             Open Asset Storeをクリックすると、UnityのAssetStoreが開く。Downloadをクリック
+</li>
+<li><code>NOTE</code> UnityからAssetStoreを起動する方法
+             メニューバーのWindow -&gt; AssetStore
+</li>
+<li><code>NOTE</code> AssetStoreとは
+             有料・無料含め、ゲームづくりに欠かせないモデルデータや音楽など、様々なデータを手に入れることができるオンラインストア。
+</li>
+</ul>
+
+</li>
+<li>Photon Viking Demoサンプルプロジェクトをインポート
+           <img src="https://lh6.googleusercontent.com/-LxCzXd_SeCw/Unem8yNR5kI/AAAAAAAAAvw/N75rIVLpaeo/w765-h650-no/ImportProjectAsset1.png"  alt="https://lh6.googleusercontent.com/-LxCzXd_SeCw/Unem8yNR5kI/AAAAAAAAAvw/N75rIVLpaeo/w765-h650-no/ImportProjectAsset1.png" />
+           <img src="https://lh5.googleusercontent.com/-BAc8wHX-wAs/Unem_5dViII/AAAAAAAAAw4/2Ci8a3WDmVw/w765-h655-no/ImportProjectAsset2.png"  alt="https://lh5.googleusercontent.com/-BAc8wHX-wAs/Unem_5dViII/AAAAAAAAAw4/2Ci8a3WDmVw/w765-h655-no/ImportProjectAsset2.png" />
+           <img src="https://lh6.googleusercontent.com/-BketK6S6OWA/Unem_5J2nPI/AAAAAAAAAww/xa1PXcP2HYg/w765-h651-no/ImportProjectAsset3.png"  alt="https://lh6.googleusercontent.com/-BketK6S6OWA/Unem_5J2nPI/AAAAAAAAAww/xa1PXcP2HYg/w765-h651-no/ImportProjectAsset3.png" />
+           <img src="https://lh6.googleusercontent.com/-9rt6_JaUWaA/UnenAsTFa3I/AAAAAAAAAxE/4bF_ltQI1bA/w765-h651-no/ImportProjectAsset4.png"  alt="https://lh6.googleusercontent.com/-9rt6_JaUWaA/UnenAsTFa3I/AAAAAAAAAxE/4bF_ltQI1bA/w765-h651-no/ImportProjectAsset4.png" />
+           <img src="https://lh6.googleusercontent.com/-Dn2Wgzt8NsA/UnenBLU139I/AAAAAAAAAxs/IvEwD0_OZpY/w765-h651-no/ImportProjectAsset5.png"  alt="https://lh6.googleusercontent.com/-Dn2Wgzt8NsA/UnenBLU139I/AAAAAAAAAxs/IvEwD0_OZpY/w765-h651-no/ImportProjectAsset5.png" />
+           <img src="https://lh5.googleusercontent.com/-w068v--iZ_o/UnenBUE3_bI/AAAAAAAAAxM/__GWxDHmpas/w765-h651-no/ImportProjectAsset6.png"  alt="https://lh5.googleusercontent.com/-w068v--iZ_o/UnenBUE3_bI/AAAAAAAAAxM/__GWxDHmpas/w765-h651-no/ImportProjectAsset6.png" />
+           <img src="https://lh4.googleusercontent.com/-Z8LDkGByGdE/UnenB-hAH2I/AAAAAAAAAxo/MOrHKe9YLnQ/w765-h651-no/ImportProjectAsset7.png"  alt="https://lh4.googleusercontent.com/-Z8LDkGByGdE/UnenB-hAH2I/AAAAAAAAAxo/MOrHKe9YLnQ/w765-h651-no/ImportProjectAsset7.png" />
+           <img src="https://lh4.googleusercontent.com/-Q4fSHaMcg7c/UnenBvfdtKI/AAAAAAAAAxQ/eiu7jvM-bbc/w765-h532-no/ImportProjectAsset7.5.png"  alt="https://lh4.googleusercontent.com/-Q4fSHaMcg7c/UnenBvfdtKI/AAAAAAAAAxQ/eiu7jvM-bbc/w765-h532-no/ImportProjectAsset7.5.png" />
+           <img src="https://lh4.googleusercontent.com/--zRDXodGZEc/UnenCSDwhDI/AAAAAAAAAxg/Qb23Eu-karY/w765-h651-no/ImportProjectAsset8.png"  alt="https://lh4.googleusercontent.com/--zRDXodGZEc/UnenCSDwhDI/AAAAAAAAAxg/Qb23Eu-karY/w765-h651-no/ImportProjectAsset8.png" />
+           <img src="https://lh4.googleusercontent.com/-0hGExokW-FY/UnenDBDz6QI/AAAAAAAAAx0/QMZWd_ITzJ8/w765-h651-no/ImportProjectAsset9.png"  alt="https://lh4.googleusercontent.com/-0hGExokW-FY/UnenDBDz6QI/AAAAAAAAAx0/QMZWd_ITzJ8/w765-h651-no/ImportProjectAsset9.png" />
+           <img src="https://lh6.googleusercontent.com/-6Hn8P5U1PWc/Unem89TEbwI/AAAAAAAAAv4/jWoL8uicJh8/w765-h651-no/ImportProjectAsset10.png"  alt="https://lh6.googleusercontent.com/-6Hn8P5U1PWc/Unem89TEbwI/AAAAAAAAAv4/jWoL8uicJh8/w765-h651-no/ImportProjectAsset10.png" />
+
+</li>
+<li>ここまでで動作確認。動かしてみる
+           <img src="https://lh3.googleusercontent.com/-CegpCoxMo8c/Unem8-Xl_QI/AAAAAAAAAv8/_aBBia3tBYk/w765-h651-no/ImportProjectAsset11.png"  alt="https://lh3.googleusercontent.com/-CegpCoxMo8c/Unem8-Xl_QI/AAAAAAAAAv8/_aBBia3tBYk/w765-h651-no/ImportProjectAsset11.png" />
+           <img src="https://lh5.googleusercontent.com/-L-FpM00i1k4/Unem9t-zcVI/AAAAAAAAAwk/fEJk-YBkUWs/w765-h649-no/ImportProjectAsset12.png"  alt="https://lh5.googleusercontent.com/-L-FpM00i1k4/Unem9t-zcVI/AAAAAAAAAwk/fEJk-YBkUWs/w765-h649-no/ImportProjectAsset12.png" />
+           <img src="https://lh4.googleusercontent.com/-lV4erkxcFsA/Unem-cK4ahI/AAAAAAAAAwY/QyMXTNs1wrQ/w765-h651-no/ImportProjectAsset13.png"  alt="https://lh4.googleusercontent.com/-lV4erkxcFsA/Unem-cK4ahI/AAAAAAAAAwY/QyMXTNs1wrQ/w765-h651-no/ImportProjectAsset13.png" />
+<ul>
+<li>AppIdに誤りがある場合
+             <img src="https://lh5.googleusercontent.com/-UFwWRJU2SFk/Unem90YjSpI/AAAAAAAAAwE/ngoBON0EWVI/w765-h651-no/ImportProjectAsset13.5.png"  alt="https://lh5.googleusercontent.com/-UFwWRJU2SFk/Unem90YjSpI/AAAAAAAAAwE/ngoBON0EWVI/w765-h651-no/ImportProjectAsset13.5.png" />
+</li>
+</ul>
+
+<p>           <img src="https://lh6.googleusercontent.com/-1HdGMdMnSTI/Unem_N-z2qI/AAAAAAAAAwc/mOyFzLMhDS4/w765-h651-no/ImportProjectAsset15.png"  alt="https://lh6.googleusercontent.com/-1HdGMdMnSTI/Unem_N-z2qI/AAAAAAAAAwc/mOyFzLMhDS4/w765-h651-no/ImportProjectAsset15.png" />
+           <img src="https://lh6.googleusercontent.com/-aTY7CMkYNQQ/Unem_tsZOqI/AAAAAAAAAxI/7h5oRMAtlLc/w765-h651-no/ImportProjectAsset16.png"  alt="https://lh6.googleusercontent.com/-aTY7CMkYNQQ/Unem_tsZOqI/AAAAAAAAAxI/7h5oRMAtlLc/w765-h651-no/ImportProjectAsset16.png" />
+</p>
+</li>
+</ol>
+
+</li>
+<li>プレイヤーOculus対応
+        <img src="https://lh3.googleusercontent.com/-o16Wa7wT4xY/Uneng33YfMI/AAAAAAAAAys/sae92SKQd1A/w765-h652-no/OculusSupport1.png"  alt="https://lh3.googleusercontent.com/-o16Wa7wT4xY/Uneng33YfMI/AAAAAAAAAys/sae92SKQd1A/w765-h652-no/OculusSupport1.png" />
+        <img src="https://lh6.googleusercontent.com/-bSOcf5RYeC8/Uneng3EIvYI/AAAAAAAAAyc/W982C5cGV2I/w765-h651-no/OculusSupport2.png"  alt="https://lh6.googleusercontent.com/-bSOcf5RYeC8/Uneng3EIvYI/AAAAAAAAAyc/W982C5cGV2I/w765-h651-no/OculusSupport2.png" />
+        <img src="https://lh5.googleusercontent.com/-M-OlPpkqbwM/Uneng4bPNnI/AAAAAAAAAyk/gox1mWwgePs/w765-h651-no/OculusSupport3.png"  alt="https://lh5.googleusercontent.com/-M-OlPpkqbwM/Uneng4bPNnI/AAAAAAAAAyk/gox1mWwgePs/w765-h651-no/OculusSupport3.png" />
+        <img src="https://lh4.googleusercontent.com/-f2kEGPYe1UA/UnenhmTXtxI/AAAAAAAAAyw/eop46ne8e6g/w765-h651-no/OculusSupport4.png"  alt="https://lh4.googleusercontent.com/-f2kEGPYe1UA/UnenhmTXtxI/AAAAAAAAAyw/eop46ne8e6g/w765-h651-no/OculusSupport4.png" />
+        <img src="https://lh5.googleusercontent.com/-D_tM1hoocM4/Unenhx943EI/AAAAAAAAAzE/Nb8dk6cL6J8/w765-h650-no/OculusSupport5.png"  alt="https://lh5.googleusercontent.com/-D_tM1hoocM4/Unenhx943EI/AAAAAAAAAzE/Nb8dk6cL6J8/w765-h650-no/OculusSupport5.png" />
+        <img src="https://lh3.googleusercontent.com/-Ldmtl2qC2Cs/UneniIBmdQI/AAAAAAAAAy4/f_Be-fABoTw/w764-h649-no/OculusSupport6.png"  alt="https://lh3.googleusercontent.com/-Ldmtl2qC2Cs/UneniIBmdQI/AAAAAAAAAy4/f_Be-fABoTw/w764-h649-no/OculusSupport6.png" />
+        <img src="https://lh3.googleusercontent.com/-Fg4EtZodBDw/UnenihTVLHI/AAAAAAAAAzA/p06z_lhM5Y0/w765-h652-no/OculusSupport7.png"  alt="https://lh3.googleusercontent.com/-Fg4EtZodBDw/UnenihTVLHI/AAAAAAAAAzA/p06z_lhM5Y0/w765-h652-no/OculusSupport7.png" />
+
+</li>
+<li>モデルデータをUnityに取り込む
+</li>
+<li>プレイヤーにモデルデータを設定する
+</li>
+<li>NPCを配置する
+</li>
+<li>NPCにAIを設定する
+<ol>
+<li>AssetStore起動
+           Window -&gt; AssetStore
+</li>
+</ol>
+
+</li>
+</ol>
+
+</li>
+</ol>
+
+
+
+
+</div>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[プログラミング不要。Unityを使えば誰でも2時間で作れちゃう。OculusRiftでLiveを体感するLukalive!!]]></title>

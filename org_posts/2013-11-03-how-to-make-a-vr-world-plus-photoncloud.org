@@ -1,0 +1,137 @@
+#+BEGIN_HTML
+---
+layout: post
+title: "プログラミング不要。Unityを使えば誰でも2時間で作れちゃう。OculusRiftでハーレムを体感する REAL WORLD ＋PhotonCloud"
+date: 2013-11-03 04:33
+comments: true
+categories: oculusrift unity photoncloud
+published: true
+---
+#+END_HTML
+
+※「モデルデータをUnityに取り込む」以降は後日追記
+
+[file:]
+
+完成品DL: REAL WORLD
+
+* はじめに
+  - *2時間くらい* で *お金をかけず* にOculusRift対応の *オンラインハーレム* ゲームを作ってみます。
+  - 手持ちの唐揚げをあげると付いてくる、そんな *健全* なオンラインゲームです。
+  - 対象は *OculusRift購入予定、または所有者* の *プログラミング・開発未経験者* になります。
+  - 前提として [[https://developer.oculusvr.com/register][OculusVR Developer Center]] でユーザー登録済み、[[http://japan.unity3d.com/unity/download/][Unity]] インストール済み([[http://yunojy.github.io/blog/2013/08/05/programmingless-oculusrift-vr-app/][プログラミング不要。Unityを使えば誰でも2時間で作れちゃう。OculusRiftでLiveを体感するLukalive!!の作業内容、1.下準備参照]])
+  - *2013/11/3* 現在の情報です。日々革命的な進化が行われるため、この記事をアップロードした時点でも情報が古くなっている可能性があります。
+  - 日本におけるOculusRiftの最新情報は [[https://www.facebook.com/groups/182991845214377/][FacebookのVR Japanグループ]]または、Twitter[[https://twitter.com/VRNewsJP][@VRNewsJP]] をご確認ください。
+  
+* 環境
+  - Windows 7 x64
+  - Unity 4.2.2
+  - Oculus SDK 0.2.5
+
+---------
+
+* 作業のおおまかな流れ
+  1. ダウンロード(30分)
+     1. UnityのOculusサンプルプロジェクトを手に入れる
+     2. プレイヤーとNPCのMMDのモデルデータ( =*.pmd=  =*.pmx= ファイル)
+     3. =PMD2FBX_MMD4Mecanim= (MMDデータをUnityで使うためのツール)
+  2. プロジェクト作成(90分)
+     1. Unityでプロジェクト新規作成・基本設定
+     2. AssetStoreからプロジェクトのテンプレートを手に入れる
+     3. プレイヤーOculus対応
+     4. モデルデータをUnityに取り込む
+     5. プレイヤーにモデルデータを設定する
+     6. NPCを配置する
+     7. NPCにAIを設定する
+        
+---------
+
+* 作業の内容
+
+  1. ダウンロード(30分)
+     1. UnityのOculusサンプルプロジェクトを手に入れる
+        [[https://developer.oculusvr.com/?action=dl&p=sdk&v=8][Unity 4 Pro Integration]]
+        [[https://developer.oculusvr.com/?action=dl&p=sdk&v=8][file:https://lh5.googleusercontent.com/-V0FxWhkSWf0/Una26JFve4I/AAAAAAAAAr0/x6tLU1NItIY/s800/Oculus_Rift_SDK__Docs__Integrations__Wiki___Forums___Oculus_Developer_Center.png]]
+        - =Unity 4 Pro Integration= → =ovr_unity_0.2.5_lib.zip=
+        - UnityのOculusサンプルプロジェクトファイル
+           =C:/dev/unity/assets/ovr_unity_0.2.5_lib/OculusUnityIntegration/OculusUnityIntegrationTuscanyDemo.unitypackage=
+
+     2. プレイヤーとNPCのMMDのモデルデータ( =*.pmd=  =*.pmx= ファイル)
+        - =C:\dev\assets\models\=
+        - [[http://www.nicovideo.jp/tag/MMD%E3%83%A2%E3%83%87%E3%83%AB%E9%85%8D%E5%B8%83%E3%81%82%E3%82%8A][MMDモデル配布あり ‐ ニコニコ動画:Q]]
+        - [[Http://www6.atwiki.jp/vpvpwiki/pages/143.html][VPVP wiki - モデルデータ/VOCALOID]]
+
+     3. =PMD2FBX_MMD4Mecanim= (MMDデータをUnityで使うためのツール)
+        [[http://stereoarts.jp][file:https://lh4.googleusercontent.com/-rUFE4k2txqE/Una26PQTP0I/AAAAAAAAArw/f4zo5qaNf_Q/s800/Stereoarts_Homepage_%25E3%2581%25A8_%25E3%2582%25BF%25E3%2582%2599%25E3%2582%25A6%25E3%2583%25B3%25E3%2583%25AD%25E3%2583%25BC%25E3%2583%2588%25E3%2582%2599-4.png]]
+        - DL: =MMD4Mecanim_Alpha_20131103_2.zip= [[http://stereoarts.jp/][Stereoarts Homepage ]]([[https://twitter.com/Stereoarts][@Stereoarts(Noraさん)]])
+          - 解凍して名前を変えて移動
+            =C:\dev\unity\tools\MMD4Mecanim_Alpha_20131103_2\=
+        
+  2. プロジェクト作成(90分)
+     1. Unityでプロジェクト新規作成・基本設定
+        1. プロジェクト新規作成
+           [[file:https://lh3.googleusercontent.com/-o8AZJamBqaY/UncsS5bZIlI/AAAAAAAAAuQ/MYFv5r_TYPE/w765-h581-no/CreateProject1.png]]
+           [[file:https://lh3.googleusercontent.com/-5cqVg4BZvX8/UncsSxCvJWI/AAAAAAAAAuQ/1hgnrGCisG4/w654-h432-no/CreateProject2.png]]
+        2. Unity設定
+           [[file:https://lh6.googleusercontent.com/-RN2WObWN44o/UncsSzsMQlI/AAAAAAAAAuQ/Xocq-377RwY/w765-h651-no/CreateProject3.png]]
+        3. Oculusサンプルプロジェクトをインポート
+           [[file:https://lh6.googleusercontent.com/-FYTG1gkj9Dc/UncsT-nAliI/AAAAAAAAAuQ/RpymsPOwbso/w765-h651-no/OculusAssetImport1.png]]
+           [[file:https://lh5.googleusercontent.com/-gSfBjxs3uQs/UncsTy1jyDI/AAAAAAAAAuQ/09ZR2ThOK-M/w765-h651-no/OculusAssetImport2.png]]
+           [[file:https://lh5.googleusercontent.com/-O_P4aTtQ_WU/UncsVNiWITI/AAAAAAAAAuQ/M_Eyvm3malU/w765-h651-no/OculusAssetImport3.png]]
+           [[file:https://lh5.googleusercontent.com/-7CxNSE3QZAI/UncsVHEOSMI/AAAAAAAAAuQ/H2X-n-oOsk4/w765-h651-no/OculusAssetImport4.png]]
+        4. ここまでで動作確認。動かしてみる
+           [[file:https://lh3.googleusercontent.com/-oikvjXvaUT8/UncsVGisc0I/AAAAAAAAAuQ/ZAO-Kkxcp68/w765-h651-no/OculusAssetImport5.png]]
+           [[file:https://lh5.googleusercontent.com/-FMBaTDsjXsY/UncsVy__YkI/AAAAAAAAAuQ/hMCPahdJeZ0/w765-h651-no/OculusAssetImport6.png]]
+           [[file:https://lh5.googleusercontent.com/-u3elSLmQAx8/UncsV-hYQGI/AAAAAAAAAuQ/6Ks_Ui74404/w765-h650-no/OculusAssetImport7.png]]
+           [[file:https://lh5.googleusercontent.com/-OzMT2Ttk8Gs/UncsWl-H7XI/AAAAAAAAAuQ/3L7KCf-i1Jk/w765-h649-no/OculusAssetImport8.png]]
+           [[file:https://lh6.googleusercontent.com/-PHKydJv8b-E/UncsXYXeqPI/AAAAAAAAAuQ/7rqsfzQ7L6Y/w765-h651-no/OculusAssetImport9.png]]
+           [[file:https://lh5.googleusercontent.com/-OtMFXtssg64/UncsTxcvQLI/AAAAAAAAAuQ/GLVka1WeTuo/w765-h651-no/OculusAssetImport10.png]]
+
+     2. AssetStoreからプロジェクトのテンプレートを手に入れる
+        1. Photonを使用したサンプルプロジェクトの入手
+           - [[https://www.assetstore.unity3d.com/#/content/1846][Photon Viking Demo - Unity AssetStore]] 
+             Open Asset Storeをクリックすると、UnityのAssetStoreが開く。Downloadをクリック
+           - =NOTE= UnityからAssetStoreを起動する方法
+             メニューバーのWindow -> AssetStore
+           - =NOTE= AssetStoreとは
+             有料・無料含め、ゲームづくりに欠かせないモデルデータや音楽など、様々なデータを手に入れることができるオンラインストア。
+        2. Photon Viking Demoサンプルプロジェクトをインポート
+           [[file:https://lh6.googleusercontent.com/-LxCzXd_SeCw/Unem8yNR5kI/AAAAAAAAAvw/N75rIVLpaeo/w765-h650-no/ImportProjectAsset1.png]]
+           [[file:https://lh5.googleusercontent.com/-BAc8wHX-wAs/Unem_5dViII/AAAAAAAAAw4/2Ci8a3WDmVw/w765-h655-no/ImportProjectAsset2.png]]
+           [[file:https://lh6.googleusercontent.com/-BketK6S6OWA/Unem_5J2nPI/AAAAAAAAAww/xa1PXcP2HYg/w765-h651-no/ImportProjectAsset3.png]]
+           [[file:https://lh6.googleusercontent.com/-9rt6_JaUWaA/UnenAsTFa3I/AAAAAAAAAxE/4bF_ltQI1bA/w765-h651-no/ImportProjectAsset4.png]]
+           [[file:https://lh6.googleusercontent.com/-Dn2Wgzt8NsA/UnenBLU139I/AAAAAAAAAxs/IvEwD0_OZpY/w765-h651-no/ImportProjectAsset5.png]]
+           [[file:https://lh5.googleusercontent.com/-w068v--iZ_o/UnenBUE3_bI/AAAAAAAAAxM/__GWxDHmpas/w765-h651-no/ImportProjectAsset6.png]]
+           [[file:https://lh4.googleusercontent.com/-Z8LDkGByGdE/UnenB-hAH2I/AAAAAAAAAxo/MOrHKe9YLnQ/w765-h651-no/ImportProjectAsset7.png]]
+           [[file:https://lh4.googleusercontent.com/-Q4fSHaMcg7c/UnenBvfdtKI/AAAAAAAAAxQ/eiu7jvM-bbc/w765-h532-no/ImportProjectAsset7.5.png]]
+           [[file:https://lh4.googleusercontent.com/--zRDXodGZEc/UnenCSDwhDI/AAAAAAAAAxg/Qb23Eu-karY/w765-h651-no/ImportProjectAsset8.png]]
+           [[file:https://lh4.googleusercontent.com/-0hGExokW-FY/UnenDBDz6QI/AAAAAAAAAx0/QMZWd_ITzJ8/w765-h651-no/ImportProjectAsset9.png]]
+           [[file:https://lh6.googleusercontent.com/-6Hn8P5U1PWc/Unem89TEbwI/AAAAAAAAAv4/jWoL8uicJh8/w765-h651-no/ImportProjectAsset10.png]]
+           
+        3. ここまでで動作確認。動かしてみる
+           [[file:https://lh3.googleusercontent.com/-CegpCoxMo8c/Unem8-Xl_QI/AAAAAAAAAv8/_aBBia3tBYk/w765-h651-no/ImportProjectAsset11.png]]
+           [[file:https://lh5.googleusercontent.com/-L-FpM00i1k4/Unem9t-zcVI/AAAAAAAAAwk/fEJk-YBkUWs/w765-h649-no/ImportProjectAsset12.png]]
+           [[file:https://lh4.googleusercontent.com/-lV4erkxcFsA/Unem-cK4ahI/AAAAAAAAAwY/QyMXTNs1wrQ/w765-h651-no/ImportProjectAsset13.png]]
+           - AppIdに誤りがある場合
+             [[file:https://lh5.googleusercontent.com/-UFwWRJU2SFk/Unem90YjSpI/AAAAAAAAAwE/ngoBON0EWVI/w765-h651-no/ImportProjectAsset13.5.png]]
+           [[file:https://lh6.googleusercontent.com/-1HdGMdMnSTI/Unem_N-z2qI/AAAAAAAAAwc/mOyFzLMhDS4/w765-h651-no/ImportProjectAsset15.png]]
+           [[file:https://lh6.googleusercontent.com/-aTY7CMkYNQQ/Unem_tsZOqI/AAAAAAAAAxI/7h5oRMAtlLc/w765-h651-no/ImportProjectAsset16.png]]
+             
+     3. プレイヤーOculus対応
+        [[file:https://lh3.googleusercontent.com/-o16Wa7wT4xY/Uneng33YfMI/AAAAAAAAAys/sae92SKQd1A/w765-h652-no/OculusSupport1.png]]
+        [[file:https://lh6.googleusercontent.com/-bSOcf5RYeC8/Uneng3EIvYI/AAAAAAAAAyc/W982C5cGV2I/w765-h651-no/OculusSupport2.png]]
+        [[file:https://lh5.googleusercontent.com/-M-OlPpkqbwM/Uneng4bPNnI/AAAAAAAAAyk/gox1mWwgePs/w765-h651-no/OculusSupport3.png]]
+        [[file:https://lh4.googleusercontent.com/-f2kEGPYe1UA/UnenhmTXtxI/AAAAAAAAAyw/eop46ne8e6g/w765-h651-no/OculusSupport4.png]]
+        [[file:https://lh5.googleusercontent.com/-D_tM1hoocM4/Unenhx943EI/AAAAAAAAAzE/Nb8dk6cL6J8/w765-h650-no/OculusSupport5.png]]
+        [[file:https://lh3.googleusercontent.com/-Ldmtl2qC2Cs/UneniIBmdQI/AAAAAAAAAy4/f_Be-fABoTw/w764-h649-no/OculusSupport6.png]]
+        [[file:https://lh3.googleusercontent.com/-Fg4EtZodBDw/UnenihTVLHI/AAAAAAAAAzA/p06z_lhM5Y0/w765-h652-no/OculusSupport7.png]]
+        
+     4. モデルデータをUnityに取り込む
+     5. プレイヤーにモデルデータを設定する
+     6. NPCを配置する
+     7. NPCにAIを設定する
+        1. AssetStore起動
+           Window -> AssetStore
+
+
+     
