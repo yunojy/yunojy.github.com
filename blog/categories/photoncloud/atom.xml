@@ -4,7 +4,7 @@
   <title><![CDATA[Category: photoncloud | develog.me]]></title>
   <link href="http://yunojy.github.io/blog/categories/photoncloud/atom.xml" rel="self"/>
   <link href="http://yunojy.github.io/"/>
-  <updated>2013-11-04T23:29:44+09:00</updated>
+  <updated>2013-11-05T22:37:39+09:00</updated>
   <id>http://yunojy.github.io/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -270,12 +270,29 @@
         <img src="https://lh3.googleusercontent.com/-Ldmtl2qC2Cs/UneniIBmdQI/AAAAAAAAAy4/f_Be-fABoTw/w764-h649-no/OculusSupport6.png"  alt="https://lh3.googleusercontent.com/-Ldmtl2qC2Cs/UneniIBmdQI/AAAAAAAAAy4/f_Be-fABoTw/w764-h649-no/OculusSupport6.png" />
         <img src="https://lh3.googleusercontent.com/-Fg4EtZodBDw/UnenihTVLHI/AAAAAAAAAzA/p06z_lhM5Y0/w765-h652-no/OculusSupport7.png"  alt="https://lh3.googleusercontent.com/-Fg4EtZodBDw/UnenihTVLHI/AAAAAAAAAzA/p06z_lhM5Y0/w765-h652-no/OculusSupport7.png" />
 
+<ul>
+<li><code>NOTE</code> <code>Inspector</code> からある値を変えると、最初から一人称視点にすることができる。ゲームスタート時に三人称から自動的に一人称視点へスッとアニメーション。まるで憑依！
+
+</li>
+</ul>
+
 </li>
 <li>モデルデータをUnityに取り込む
+<ul>
+<li>からあげモデルデータ
+          <a href="https://twitter.com/GOROman">@GOROman</a>氏作 GOROman式からあげ・アペンド
+          <blockquote class="twitter-tweet"><p>3DスキャンしたUnityで使える唐揚げモデルデータ アップしました。&#10;通称「からあぺ」 です。&#10;/ GOROman式からあげ・アペンド　Ver1.00 <a href="https://twitter.com/search?q=%23bowlroll_net&amp;src=hash">#bowlroll_net</a> <a href="http://t.co/EUw3ZU0Jq0">http://t.co/EUw3ZU0Jq0</a> <a href="https://twitter.com/search?q=%23karaage&amp;src=hash">#karaage</a></p>&mdash; GOROman - SKB01 (@GOROman) <a href="https://twitter.com/GOROman/statuses/394389641362554880">October 27, 2013</a></blockquote>
+<script async src="http://yunojy.github.io//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</li>
+</ul>
+
 </li>
 <li>プレイヤーにモデルデータを設定する
+
 </li>
 <li>NPCを配置する
+
 </li>
 <li>NPCにAIを設定する
 <ol>
