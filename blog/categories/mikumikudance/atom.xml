@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mikumikudance | develog.me]]></title>
   <link href="http://yunojy.github.io/blog/categories/mikumikudance/atom.xml" rel="self"/>
   <link href="http://yunojy.github.io/"/>
-  <updated>2013-12-21T08:32:56+09:00</updated>
+  <updated>2013-12-21T08:33:26+09:00</updated>
   <id>http://yunojy.github.io/</id>
   <author>
     <name><![CDATA[yunojy]]></name>
@@ -12,6 +12,270 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[クリスマスを再定義してみた。「彼女ができました。クリスマスは一緒にすごすので実家には戻りません。」OculusRift Advent Calendar 2013 vol.21 - Lukalus X'mas]]></title>
+    <link href="http://yunojy.github.io/blog/2013/12/21/oculusrift-advent-calendar-2013-lukalus-xmas/"/>
+    <updated>2013-12-21T02:19:00+09:00</updated>
+    <id>http://yunojy.github.io/blog/2013/12/21/oculusrift-advent-calendar-2013-lukalus-xmas</id>
+    <content type="html"><![CDATA[<p>
+この記事は<a href="http://atnd.org/events/45316">Oculus Rift Advent Calender</a>の21日目です
+</p>
+
+
+<p>
+&lt;- 20日目  <a href="https://twitter.com/n_yositaka">@n_yositakaさん</a> <a href="http://qiita.com/n_yositaka/items/51f5347806e622ea915c"> UnityでバランスWiiボードを使う方法について</a>
+</p>
+
+
+<p>
+<a href="https://twitter.com/koukiwf">@koukiwfさん</a> oculus用ステレオカメラ 22日 -&gt;
+</p>
+
+
+
+
+<p>
+<a href="http://bowlroll.net/up/dl29113">今までのすべての過去は捨てて、新しい世界に飛び込んでいこう - BowlRoll</a>
+</p>
+
+
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">2012年までの一般的なクリスマス風景</h2>
+<div class="outline-text-2" id="text-1">
+
+
+<p>  
+<img src="https://lh3.googleusercontent.com/-7RBxbHSHWsk/UrR8_C_wWvI/AAAAAAAAA1s/7LTj8hGOL4I/w730-h931-no/eyecatch.png"  alt="https://lh3.googleusercontent.com/-7RBxbHSHWsk/UrR8_C_wWvI/AAAAAAAAA1s/7LTj8hGOL4I/w730-h931-no/eyecatch.png" />
+</p>
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">2013年からの一般的なクリスマス風景</h2>
+<div class="outline-text-2" id="text-2">
+
+
+<p>  
+<img src="https://lh5.googleusercontent.com/-aSg0LvR1cRY/UrR8_V7QYRI/AAAAAAAAA14/6ZhR_TO0aZI/w1100-h613-no/eyecatch2.png"  alt="https://lh5.googleusercontent.com/-aSg0LvR1cRY/UrR8_V7QYRI/AAAAAAAAA14/6ZhR_TO0aZI/w1100-h613-no/eyecatch2.png" />
+</p>
+<p>
+<a href="http://www.youtube.com/watch?v=WsCuhecobUw">【2013】クリスマス嫁との晩餐うp - YouTube</a>
+<iframe width="640" height="360" src="http://yunojy.github.io//www.youtube.com/embed/WsCuhecobUw?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
+<a href="http://www.youtube.com/watch?v=KBrOZVo0KDo">【2013】クリスマス嫁との晩餐うp その2 - YouTube</a>
+<iframe width="640" height="360" src="http://yunojy.github.io//www.youtube.com/embed/KBrOZVo0KDo?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
+</p></div>
+
+</div>
+
+
+
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">すべてはここから始まった</h2>
+<div class="outline-text-2" id="text-3">
+
+<p>  <a href="http://togetter.com/li/592637">【画面嫁】ルカさんと画面の中で一緒にクリスマスを過ごせる。そう、OculusRiftがあればね！ - togetter</a>
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">使い方</h2>
+<div class="outline-text-2" id="text-4">
+
+<ol>
+<li>人工知能のSimSimAPIにアカウントを作成して使用するためのキーを取得（無料）
+<ul>
+<li><a href="http://developer.simsimi.com/signUp">SimSimAPI Sign Up</a> 必要事項を入力
+       <img src="https://lh5.googleusercontent.com/-o9f5lFIJwVM/UrR86rMVOwI/AAAAAAAAA0U/U2GugzclTaE/w742-h979-no/04.simsim1.png"  alt="https://lh5.googleusercontent.com/-o9f5lFIJwVM/UrR86rMVOwI/AAAAAAAAA0U/U2GugzclTaE/w742-h979-no/04.simsim1.png" />
+</li>
+<li>完了画面
+       <img src="https://lh6.googleusercontent.com/-jl7_IG2J1iU/UrR87bbj8vI/AAAAAAAAA0k/mmVdT0F4gYs/w742-h979-no/05.simsim2.png"  alt="https://lh6.googleusercontent.com/-jl7_IG2J1iU/UrR87bbj8vI/AAAAAAAAA0k/mmVdT0F4gYs/w742-h979-no/05.simsim2.png" />
+</li>
+<li>認証用URLのメールが届くのでURLを踏む
+       <img src="https://lh6.googleusercontent.com/-S99I7RjYJgQ/UrR87Xj7nwI/AAAAAAAAA0o/ysvdmGloqxo/w606-h361-no/06.simsim3.png"  alt="https://lh6.googleusercontent.com/-S99I7RjYJgQ/UrR87Xj7nwI/AAAAAAAAA0o/ysvdmGloqxo/w606-h361-no/06.simsim3.png" />
+</li>
+<li>Complete!
+       <img src="https://lh6.googleusercontent.com/-kvaUO_vvDgY/UrR87RXhvpI/AAAAAAAAA0s/AXgvZ0dlERA/w828-h978-no/07.simsim4.png"  alt="https://lh6.googleusercontent.com/-kvaUO_vvDgY/UrR87RXhvpI/AAAAAAAAA0s/AXgvZ0dlERA/w828-h978-no/07.simsim4.png" />
+</li>
+<li>早速ログインしてみましょう。
+       <img src="https://lh6.googleusercontent.com/-C4uYZhICoJU/UrR88hCgj1I/AAAAAAAAA1E/GeQqaOC8suY/w828-h978-no/08.simsim5.png"  alt="https://lh6.googleusercontent.com/-C4uYZhICoJU/UrR88hCgj1I/AAAAAAAAA1E/GeQqaOC8suY/w828-h978-no/08.simsim5.png" />
+</li>
+<li>最初はこの画面です。「Get a 7 days Trial Key.」を押す
+       <img src="https://lh6.googleusercontent.com/-c_-7YjtZk7M/UrR88vtNQkI/AAAAAAAAA1A/pndl8Z0i4vk/w897-h757-no/09.simsim6.png"  alt="https://lh6.googleusercontent.com/-c_-7YjtZk7M/UrR88vtNQkI/AAAAAAAAA1A/pndl8Z0i4vk/w897-h757-no/09.simsim6.png" />
+</li>
+<li>中身は適当でsave
+       <img src="https://lh3.googleusercontent.com/-Ek210xTe5O8/UrR88h-uD0I/AAAAAAAAA08/02OIgrokZzI/w897-h757-no/10.simsim7.png"  alt="https://lh3.googleusercontent.com/-Ek210xTe5O8/UrR88h-uD0I/AAAAAAAAA08/02OIgrokZzI/w897-h757-no/10.simsim7.png" />
+</li>
+<li>save押すと、一覧に追加されてる。View Details押す
+       <img src="https://lh5.googleusercontent.com/-r4O9okNQ4oU/UrR898PT2jI/AAAAAAAAA1U/STj23rymnsY/w897-h757-no/11.simsim8.png"  alt="https://lh5.googleusercontent.com/-r4O9okNQ4oU/UrR898PT2jI/AAAAAAAAA1U/STj23rymnsY/w897-h757-no/11.simsim8.png" />
+
+</li>
+</ul>
+
+</li>
+<li>取得したキーを入力する。場所は配布内のserver/server.jsの先頭
+<ul>
+<li>View Details押すとKeyがあるので、配布している圧縮ファイルの中、 <code>server/server.js</code> の先頭を書き換える
+       <img src="https://lh6.googleusercontent.com/-Z5Mit4yT2Ro/UrR896ENW7I/AAAAAAAAA1c/_1H80X0wAYI/w897-h888-no/12.simsim9.png"  alt="https://lh6.googleusercontent.com/-Z5Mit4yT2Ro/UrR896ENW7I/AAAAAAAAA1c/_1H80X0wAYI/w897-h888-no/12.simsim9.png" />
+
+</li>
+</ul>
+
+</li>
+<li>配布内のserver,clientと同じ階層に <code>LukalusXmas起動.bat</code> があるのでダブルクリックで実行
+<ul>
+<li>こんな感じ
+       <img src="https://lh6.googleusercontent.com/-Pk3_ppMYPWw/UrR893sTUSI/AAAAAAAAA1Y/egf5VWnZGY4/w1101-h771-no/13.talkLuka.png"  alt="https://lh6.googleusercontent.com/-Pk3_ppMYPWw/UrR893sTUSI/AAAAAAAAA1Y/egf5VWnZGY4/w1101-h771-no/13.talkLuka.png" />
+</li>
+<li>ルカさん博識！
+       <img src="https://lh3.googleusercontent.com/-B8V7SbBeEbU/UrR8_BdSjfI/AAAAAAAAA1w/02fn4m8pozo/w1101-h628-no/14.talkLuka.png"  alt="https://lh3.googleusercontent.com/-B8V7SbBeEbU/UrR8_BdSjfI/AAAAAAAAA1w/02fn4m8pozo/w1101-h628-no/14.talkLuka.png" />
+</li>
+<li>どきがむねむね
+       <img src="https://lh5.googleusercontent.com/-aSg0LvR1cRY/UrR8_V7QYRI/AAAAAAAAA14/6ZhR_TO0aZI/w1100-h613-no/eyecatch2.png"  alt="https://lh5.googleusercontent.com/-aSg0LvR1cRY/UrR8_V7QYRI/AAAAAAAAA14/6ZhR_TO0aZI/w1100-h613-no/eyecatch2.png" />
+</li>
+<li>きれいなオーロラも
+       <img src="https://lh6.googleusercontent.com/-6_c_wAQ2yvs/UrR9AdSxAeI/AAAAAAAAA18/UTg1jTTqfEs/w1101-h614-no/eyecatch3.png"  alt="https://lh6.googleusercontent.com/-6_c_wAQ2yvs/UrR9AdSxAeI/AAAAAAAAA18/UTg1jTTqfEs/w1101-h614-no/eyecatch3.png" />
+</li>
+</ul>
+
+</li>
+</ol>
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5">謝辞</h2>
+<div class="outline-text-2" id="text-5">
+
+
+</div>
+
+<div id="outline-container-5-1" class="outline-3">
+<h3 id="sec-5-1">モデルデータ ula式ルカ</h3>
+<div class="outline-text-3" id="text-5-1">
+
+<ul>
+<li><a href="https://twitter.com/__ula">ulaさん</a> <a href="http://kotankor.blog46.fc2.com/blog-entry-63.html">○や（仮）</a>
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-5-2" class="outline-3">
+<h3 id="sec-5-2">モデルデータ ula式ルカ サンタコスモデル</h3>
+<div class="outline-text-3" id="text-5-2">
+
+<ul>
+<li><a href="https://twitter.com/Rscrap_Factory">Rscr@Pさん</a> <a href="http://rscrap.blog.fc2.com/">Rs-Factory</a>
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-5-3" class="outline-3">
+<h3 id="sec-5-3">唐揚げモデルデータ</h3>
+<div class="outline-text-3" id="text-5-3">
+
+<ul>
+<li><a href="https://twitter.com/GOROman">GOROmanさん</a> <a href="http://nicovideo.jp/mylist/6972789">作ったものリスト</a> <a href="http://ch.nicovideo.jp/GOROman/blomaga/">GOROmanのデジタル温故知新（ブロマガ）</a>
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-5-4" class="outline-3">
+<h3 id="sec-5-4">会話、音声関係</h3>
+<div class="outline-text-3" id="text-5-4">
+
+<ul>
+<li><a href="https://twitter.com/hecomi">凹みさん</a> <a href="http://d.hatena.ne.jp/hecomi/">凹みTips</a>
+</li>
+<li><a href="https://twitter.com/nawota1105">なヲタさん</a> <a href="http://vocalonchi.com/">ボカロん家 - vocalonchi.com Presented by Project SYNCHLOiD</a>
+</li>
+<li><a href="https://twitter.com/haiattoC">はいあっとさん</a>
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-5-5" class="outline-3">
+<h3 id="sec-5-5">アイディア</h3>
+<div class="outline-text-3" id="text-5-5">
+
+<ul>
+<li><a href="https://twitter.com/niku9Tenhou">にくきゅうさん</a> <a href="http://niku9.hatenadiary.jp/">niku9's blog</a>
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-5-6" class="outline-3">
+<h3 id="sec-5-6">MMD4Mecanim Oppai</h3>
+<div class="outline-text-3" id="text-5-6">
+
+<ul>
+<li><a href="https://twitter.com/Stereoarts">のらさん</a>(通称神) <a href="http://stereoarts.jp/">Stereoarts Homepage</a>
+</li>
+<li><a href="https://twitter.com/mkt_">瀬川さん</a>
+</li>
+<li><a href="https://twitter.com/GOROman">GOROmanさん</a>
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-5-7" class="outline-3">
+<h3 id="sec-5-7">アドバイザー</h3>
+<div class="outline-text-3" id="text-5-7">
+
+<ul>
+<li><a href="https://twitter.com/GOROman">GOROmanさん</a>
+</li>
+<li><a href="https://twitter.com/shigekzishihara">石原先生</a>
+</li>
+<li><a href="https://twitter.com/warapuri">わらぷりさん</a>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Oculus Riftが到着してからやったこと（随時更新）]]></title>

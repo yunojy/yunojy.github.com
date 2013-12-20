@@ -9,7 +9,7 @@
   <meta name="author" content="yunojy">
 
   
-  <meta name="description" content="※「モデルデータをUnityに取り込む」以降は後日追記 [file:] 完成品DL: REAL WORLD はじめに 2時間くらい で お金をかけず にOculusRift対応の オンラインハーレム ゲームを作ってみます。 手持ちの唐揚げをあげると付いてくる、そんな 健全 &hellip;">
+  <meta name="description" content="この記事はOculus Rift Advent Calenderの21日目です &lt;- 20日目 @n_yositakaさん UnityでバランスWiiボードを使う方法について @koukiwfさん oculus用ステレオカメラ 22日 -&gt; 今までのすべての過去は捨てて &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,297 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/12/21/oculusrift-advent-calendar-2013-lukalus-xmas/">クリスマスを再定義してみた。「彼女ができました。クリスマスは一緒にすごすので実家には戻りません。」OculusRift Advent Calendar 2013 vol.21 - Lukalus X&#8217;mas</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-21T02:19:00+09:00" pubdate data-updated="true">Dec 21<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>
+この記事は<a href="http://atnd.org/events/45316">Oculus Rift Advent Calender</a>の21日目です
+</p>
+
+
+<p>
+&lt;- 20日目  <a href="https://twitter.com/n_yositaka">@n_yositakaさん</a> <a href="http://qiita.com/n_yositaka/items/51f5347806e622ea915c"> UnityでバランスWiiボードを使う方法について</a>
+</p>
+
+
+<p>
+<a href="https://twitter.com/koukiwf">@koukiwfさん</a> oculus用ステレオカメラ 22日 -&gt;
+</p>
+
+
+
+
+<p>
+<a href="http://bowlroll.net/up/dl29113">今までのすべての過去は捨てて、新しい世界に飛び込んでいこう - BowlRoll</a>
+</p>
+
+
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">2012年までの一般的なクリスマス風景</h2>
+<div class="outline-text-2" id="text-1">
+
+
+<p>  
+<img src="https://lh3.googleusercontent.com/-7RBxbHSHWsk/UrR8_C_wWvI/AAAAAAAAA1s/7LTj8hGOL4I/w730-h931-no/eyecatch.png"  alt="https://lh3.googleusercontent.com/-7RBxbHSHWsk/UrR8_C_wWvI/AAAAAAAAA1s/7LTj8hGOL4I/w730-h931-no/eyecatch.png" />
+</p>
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">2013年からの一般的なクリスマス風景</h2>
+<div class="outline-text-2" id="text-2">
+
+
+<p>  
+<img src="https://lh5.googleusercontent.com/-aSg0LvR1cRY/UrR8_V7QYRI/AAAAAAAAA14/6ZhR_TO0aZI/w1100-h613-no/eyecatch2.png"  alt="https://lh5.googleusercontent.com/-aSg0LvR1cRY/UrR8_V7QYRI/AAAAAAAAA14/6ZhR_TO0aZI/w1100-h613-no/eyecatch2.png" />
+</p>
+<p>
+<a href="http://www.youtube.com/watch?v=WsCuhecobUw">【2013】クリスマス嫁との晩餐うp - YouTube</a>
+<iframe width="640" height="360" src="//www.youtube.com/embed/WsCuhecobUw?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
+<a href="http://www.youtube.com/watch?v=KBrOZVo0KDo">【2013】クリスマス嫁との晩餐うp その2 - YouTube</a>
+<iframe width="640" height="360" src="//www.youtube.com/embed/KBrOZVo0KDo?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
+</p></div>
+
+</div>
+
+
+
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">すべてはここから始まった</h2>
+<div class="outline-text-2" id="text-3">
+
+<p>  <a href="http://togetter.com/li/592637">【画面嫁】ルカさんと画面の中で一緒にクリスマスを過ごせる。そう、OculusRiftがあればね！ - togetter</a>
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">使い方</h2>
+<div class="outline-text-2" id="text-4">
+
+<ol>
+<li>人工知能のSimSimAPIにアカウントを作成して使用するためのキーを取得（無料）
+<ul>
+<li><a href="http://developer.simsimi.com/signUp">SimSimAPI Sign Up</a> 必要事項を入力
+       <img src="https://lh5.googleusercontent.com/-o9f5lFIJwVM/UrR86rMVOwI/AAAAAAAAA0U/U2GugzclTaE/w742-h979-no/04.simsim1.png"  alt="https://lh5.googleusercontent.com/-o9f5lFIJwVM/UrR86rMVOwI/AAAAAAAAA0U/U2GugzclTaE/w742-h979-no/04.simsim1.png" />
+</li>
+<li>完了画面
+       <img src="https://lh6.googleusercontent.com/-jl7_IG2J1iU/UrR87bbj8vI/AAAAAAAAA0k/mmVdT0F4gYs/w742-h979-no/05.simsim2.png"  alt="https://lh6.googleusercontent.com/-jl7_IG2J1iU/UrR87bbj8vI/AAAAAAAAA0k/mmVdT0F4gYs/w742-h979-no/05.simsim2.png" />
+</li>
+<li>認証用URLのメールが届くのでURLを踏む
+       <img src="https://lh6.googleusercontent.com/-S99I7RjYJgQ/UrR87Xj7nwI/AAAAAAAAA0o/ysvdmGloqxo/w606-h361-no/06.simsim3.png"  alt="https://lh6.googleusercontent.com/-S99I7RjYJgQ/UrR87Xj7nwI/AAAAAAAAA0o/ysvdmGloqxo/w606-h361-no/06.simsim3.png" />
+</li>
+<li>Complete!
+       <img src="https://lh6.googleusercontent.com/-kvaUO_vvDgY/UrR87RXhvpI/AAAAAAAAA0s/AXgvZ0dlERA/w828-h978-no/07.simsim4.png"  alt="https://lh6.googleusercontent.com/-kvaUO_vvDgY/UrR87RXhvpI/AAAAAAAAA0s/AXgvZ0dlERA/w828-h978-no/07.simsim4.png" />
+</li>
+<li>早速ログインしてみましょう。
+       <img src="https://lh6.googleusercontent.com/-C4uYZhICoJU/UrR88hCgj1I/AAAAAAAAA1E/GeQqaOC8suY/w828-h978-no/08.simsim5.png"  alt="https://lh6.googleusercontent.com/-C4uYZhICoJU/UrR88hCgj1I/AAAAAAAAA1E/GeQqaOC8suY/w828-h978-no/08.simsim5.png" />
+</li>
+<li>最初はこの画面です。「Get a 7 days Trial Key.」を押す
+       <img src="https://lh6.googleusercontent.com/-c_-7YjtZk7M/UrR88vtNQkI/AAAAAAAAA1A/pndl8Z0i4vk/w897-h757-no/09.simsim6.png"  alt="https://lh6.googleusercontent.com/-c_-7YjtZk7M/UrR88vtNQkI/AAAAAAAAA1A/pndl8Z0i4vk/w897-h757-no/09.simsim6.png" />
+</li>
+<li>中身は適当でsave
+       <img src="https://lh3.googleusercontent.com/-Ek210xTe5O8/UrR88h-uD0I/AAAAAAAAA08/02OIgrokZzI/w897-h757-no/10.simsim7.png"  alt="https://lh3.googleusercontent.com/-Ek210xTe5O8/UrR88h-uD0I/AAAAAAAAA08/02OIgrokZzI/w897-h757-no/10.simsim7.png" />
+</li>
+<li>save押すと、一覧に追加されてる。View Details押す
+       <img src="https://lh5.googleusercontent.com/-r4O9okNQ4oU/UrR898PT2jI/AAAAAAAAA1U/STj23rymnsY/w897-h757-no/11.simsim8.png"  alt="https://lh5.googleusercontent.com/-r4O9okNQ4oU/UrR898PT2jI/AAAAAAAAA1U/STj23rymnsY/w897-h757-no/11.simsim8.png" />
+
+</li>
+</ul>
+
+</li>
+<li>取得したキーを入力する。場所は配布内のserver/server.jsの先頭
+<ul>
+<li>View Details押すとKeyがあるので、配布している圧縮ファイルの中、 <code>server/server.js</code> の先頭を書き換える
+       <img src="https://lh6.googleusercontent.com/-Z5Mit4yT2Ro/UrR896ENW7I/AAAAAAAAA1c/_1H80X0wAYI/w897-h888-no/12.simsim9.png"  alt="https://lh6.googleusercontent.com/-Z5Mit4yT2Ro/UrR896ENW7I/AAAAAAAAA1c/_1H80X0wAYI/w897-h888-no/12.simsim9.png" />
+
+</li>
+</ul>
+
+</li>
+<li>配布内のserver,clientと同じ階層に <code>LukalusXmas起動.bat</code> があるのでダブルクリックで実行
+<ul>
+<li>こんな感じ
+       <img src="https://lh6.googleusercontent.com/-Pk3_ppMYPWw/UrR893sTUSI/AAAAAAAAA1Y/egf5VWnZGY4/w1101-h771-no/13.talkLuka.png"  alt="https://lh6.googleusercontent.com/-Pk3_ppMYPWw/UrR893sTUSI/AAAAAAAAA1Y/egf5VWnZGY4/w1101-h771-no/13.talkLuka.png" />
+</li>
+<li>ルカさん博識！
+       <img src="https://lh3.googleusercontent.com/-B8V7SbBeEbU/UrR8_BdSjfI/AAAAAAAAA1w/02fn4m8pozo/w1101-h628-no/14.talkLuka.png"  alt="https://lh3.googleusercontent.com/-B8V7SbBeEbU/UrR8_BdSjfI/AAAAAAAAA1w/02fn4m8pozo/w1101-h628-no/14.talkLuka.png" />
+</li>
+<li>どきがむねむね
+       <img src="https://lh5.googleusercontent.com/-aSg0LvR1cRY/UrR8_V7QYRI/AAAAAAAAA14/6ZhR_TO0aZI/w1100-h613-no/eyecatch2.png"  alt="https://lh5.googleusercontent.com/-aSg0LvR1cRY/UrR8_V7QYRI/AAAAAAAAA14/6ZhR_TO0aZI/w1100-h613-no/eyecatch2.png" />
+</li>
+<li>きれいなオーロラも
+       <img src="https://lh6.googleusercontent.com/-6_c_wAQ2yvs/UrR9AdSxAeI/AAAAAAAAA18/UTg1jTTqfEs/w1101-h614-no/eyecatch3.png"  alt="https://lh6.googleusercontent.com/-6_c_wAQ2yvs/UrR9AdSxAeI/AAAAAAAAA18/UTg1jTTqfEs/w1101-h614-no/eyecatch3.png" />
+</li>
+</ul>
+
+</li>
+</ol>
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5">謝辞</h2>
+<div class="outline-text-2" id="text-5">
+
+
+</div>
+
+<div id="outline-container-5-1" class="outline-3">
+<h3 id="sec-5-1">モデルデータ ula式ルカ</h3>
+<div class="outline-text-3" id="text-5-1">
+
+<ul>
+<li><a href="https://twitter.com/__ula">ulaさん</a> <a href="http://kotankor.blog46.fc2.com/blog-entry-63.html">○や（仮）</a>
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-5-2" class="outline-3">
+<h3 id="sec-5-2">モデルデータ ula式ルカ サンタコスモデル</h3>
+<div class="outline-text-3" id="text-5-2">
+
+<ul>
+<li><a href="https://twitter.com/Rscrap_Factory">Rscr@Pさん</a> <a href="http://rscrap.blog.fc2.com/">Rs-Factory</a>
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-5-3" class="outline-3">
+<h3 id="sec-5-3">唐揚げモデルデータ</h3>
+<div class="outline-text-3" id="text-5-3">
+
+<ul>
+<li><a href="https://twitter.com/GOROman">GOROmanさん</a> <a href="http://nicovideo.jp/mylist/6972789">作ったものリスト</a> <a href="http://ch.nicovideo.jp/GOROman/blomaga/">GOROmanのデジタル温故知新（ブロマガ）</a>
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-5-4" class="outline-3">
+<h3 id="sec-5-4">会話、音声関係</h3>
+<div class="outline-text-3" id="text-5-4">
+
+<ul>
+<li><a href="https://twitter.com/hecomi">凹みさん</a> <a href="http://d.hatena.ne.jp/hecomi/">凹みTips</a>
+</li>
+<li><a href="https://twitter.com/nawota1105">なヲタさん</a> <a href="http://vocalonchi.com/">ボカロん家 - vocalonchi.com Presented by Project SYNCHLOiD</a>
+</li>
+<li><a href="https://twitter.com/haiattoC">はいあっとさん</a>
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-5-5" class="outline-3">
+<h3 id="sec-5-5">アイディア</h3>
+<div class="outline-text-3" id="text-5-5">
+
+<ul>
+<li><a href="https://twitter.com/niku9Tenhou">にくきゅうさん</a> <a href="http://niku9.hatenadiary.jp/">niku9&#8217;s blog</a>
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-5-6" class="outline-3">
+<h3 id="sec-5-6">MMD4Mecanim Oppai</h3>
+<div class="outline-text-3" id="text-5-6">
+
+<ul>
+<li><a href="https://twitter.com/Stereoarts">のらさん</a>(通称神) <a href="http://stereoarts.jp/">Stereoarts Homepage</a>
+</li>
+<li><a href="https://twitter.com/mkt_">瀬川さん</a>
+</li>
+<li><a href="https://twitter.com/GOROman">GOROmanさん</a>
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-5-7" class="outline-3">
+<h3 id="sec-5-7">アドバイザー</h3>
+<div class="outline-text-3" id="text-5-7">
+
+<ul>
+<li><a href="https://twitter.com/GOROman">GOROmanさん</a>
+</li>
+<li><a href="https://twitter.com/shigekzishihara">石原先生</a>
+</li>
+<li><a href="https://twitter.com/warapuri">わらぷりさん</a>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -3110,270 +3401,6 @@ xxxxxxxxxx device  &lt;- kore
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/04/14/getting-started-cordova-phonegap-de-android-app/">Cordova(PhoneGap)でAndroidApp作る その1 環境構築編</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-04-14T09:29:00+09:00" pubdate data-updated="true">Apr 14<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div id="outline-container-1" class="outline-2">
-<h2 id="sec-1"><code>注意！2013/04/14現在の情報です。</code></h2>
-<div class="outline-text-2" id="text-1">
-
-
-</div>
-
-</div>
-
-
-
-
-<div id="outline-container-2" class="outline-2">
-<h2 id="sec-2">Cordova(PhoneGap)を使ってAndroidアプリ開発環境をMac上に構築</h2>
-<div class="outline-text-2" id="text-2">
-
-
-<ul>
-<li>JDKは入っているけどEclipseもSDKも無い状態から、Cordovaの空のプロジェクトを作成するまでを書く。
-
-</li>
-<li>設定が済んでいて、空のCordovaプロジェクトだけ作りたいのであれば
-    Getting Started with Androidの、3.プロジェクトを作る を参照
-</li>
-</ul>
-
-
-
-</div>
-
-</div>
-
-
-
-
-<div id="outline-container-3" class="outline-2">
-<h2 id="sec-3">前書きと概要</h2>
-<div class="outline-text-2" id="text-3">
-
-
-<p>  
-  初Android端末購入に浮かれて、早速SIMアダプタぶっ壊して鬱状態です。こんにちは！<sup>0</sup>^
-  みなさんはSIMのゲタだけ入れて、引っこ抜くときにピンが引っかかって欠けさせることが無いようご注意くださいまし。
-  (修理はDOCOMO契約あれば5,000円くらい。なければ20,000円くらい。死にたい)
-</p>
-<p>
-  それでははりきってまいりましょうρ(・ω・、)
-</p>
-<ul>
-<li><a href="https://www.google.co.jp/search?q=Cordovaとは">Cordovaとは</a>
-    iPhoneでもAndroidでも動くアプリをHTML+Javascriptで作れるFrameworkです。
-    CordovaとPhoneGapと呼び名が2つあるのは、（以下私見）Adobeが買収してアホな判断を下したから。
-    この記事では、呼び名を統一せず、contextで適当に呼び名を変えます。
-
-<ul>
-<li><a href="http://phonegap.com/about/license/">ライセンス</a> は商用OKのApache License v2
-</li>
-</ul>
-
-</li>
-</ul>
-
-
-
-<p>  
-  ちなみに日本語のコミュニティの情報でさえも古いので、
-  <a href="http://phonegap.com/developer/">英語の公式</a> の <b>Getting Started Guides</b> をチェックするのが良いです。
-</p>
-<p>
-  完
-</p>
-<p>
-  じゃつまらないので、以下の構成としてとりあえず書く(゜△゜;)
-</p>
-<ul>
-<li>Mac Mountain Lion 10.8.3
-</li>
-<li>PhoneGap 2.6.0 [ <a href="http://phonegap.com/download/">DL page</a> ]
-    適当なディレクトリに展開
-</li>
-<li>Android SDK [ <a href="http://developer.android.com/sdk/index.html">DL page</a> ]
-<ul>
-<li>eclipse入りの adt-bundle-mac-x86<sub>64</sub>-20130219
-      適当なディレクトリに展開
-</li>
-</ul>
-
-</li>
-</ul>
-
-
-
-</div>
-
-</div>
-
-
-
-
-<div id="outline-container-4" class="outline-2">
-<h2 id="sec-4"><a href="http://docs.phonegap.com/en/2.6.0/guide_getting-started_android_index.md.html#Getting Started with Android">Getting Started with Android</a></h2>
-<div class="outline-text-2" id="text-4">
-
-<p>  大まかにはこれの手順に則って行う。
-</p>
-<ol>
-<li>SDKとかPhoneGapをローカルの適当なディレクトリに配置
-
-</li>
-<li>PATH通す
-     <a href="http://docs.phonegap.com/en/2.6.0/guide_getting-started_android_index.md.html#Getting Started with Android">Document</a>ではこうなってるけど、SDKを解凍するとadt-bundle-mac-x86<sub>64</sub>-20130219なので適当に読替える。
-
-
-
-<pre class="example">export PATH=${PATH}:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools
-↓
-export PATH=${PATH}:/Development/Android/Toolkit/adt-bundle-mac-x86_64-20130219/sdk/platform-tools:/Development/Android/Toolkit/adt-bundle-mac-x86_64-20130219/sdk/tools
-</pre>
-
-<p>
-     Path通さないと、プロジェクト作る際に
-</p>
-
-
-<pre class="example">An unexpected error occurred: ANDROID_BIN="${ANDROID_BIN:=$( which android )}" exited with 1
-</pre>
-
-<p>
-     とおこられる
-</p>
-</li>
-<li>プロジェクト作る
-
-
-
-<pre class="example">./create &lt;projectルートPATH&gt; &lt;package_name&gt; &lt;project_name&gt;
-</pre>
-
-
-<pre class="example">&lt;project_folder_path&gt; is the path to your new Cordova Android project
-&lt;package_name&gt; is the package name, e.g. com.YourCompany.YourAppName
-&lt;project_name&gt; is the project name, e.g. YourApp (Must not contain spaces)
-</pre>
-
-
-<ul>
-<li><code>Nya</code> プロジェクトを作成
-       フルパスは説明のためなんだからね(//)
-
-
-
-<pre class="example">% /Development/Android/Toolkit/phonegap-2.6.0/lib/android/bin/create /Development/Android/Cordova/Nya me.develog.Nya Nya 
-</pre>
-
-
-</li>
-</ul>
-
-</li>
-<li>eclipse起動
-     <a href="http://docs.phonegap.com/en/2.6.0/guide_getting-started_android_index.md.html#Getting Started with Android">Document</a>ではeclipse classicを入れてプラグイン入れてと、七面倒な手順なので、
-     最初からeclipse入りのSDKを使いましょう。
-
-<ul>
-<li>作ったプロジェクトを開く
-       New Projectから、 <code>Android</code> の中にある <code>Android Project from Existing Code</code> 選択
-
-</li>
-</ul>
-
-</li>
-<li>Emulatorで動かす
-     <a href="http://docs.phonegap.com/en/2.6.0/guide_getting-started_android_index.md.html#Getting Started with Android">Document</a>では <code>5A. Deploy to Emulator</code> あたり。
-     なにやらエミュレータ用のなんかを入れないといけない。
-     ドロイド↓矢印のアイコンから適当に入れる。
-
-</li>
-<li>実行設定
-<ol>
-<li><code>Run Configurations</code> から、 <code>Android Application</code> 選んで追加。
-</li>
-<li><code>Android</code> タブ の <code>Project:</code> に プロジェクト名 Nyaを選択
-</li>
-<li><code>Target</code> タブの ところで追加したEmulatorを指定してあぷらい
-        右下の <code>Run</code> で実行。初回は ANDROID とイカしたロゴが出てエラい時間待たされる。
-        その後 APACHE CORDOVAとかわいらしいアイコンの画面が出たらOK
-</li>
-</ol>
-
-</li>
-</ol>
-
-
-
-
-</div>
-
-</div>
-
-
-
-
-<div id="outline-container-5" class="outline-2">
-<h2 id="sec-5">Further Reading</h2>
-<div class="outline-text-2" id="text-5">
-
-<ul>
-<li><a href="http://developer.android.com/develop/index.html">Android Developers</a>(英)
-<ul>
-<li>最新のAPI Guidesや、Reference、Trainingが受けられる。
-</li>
-</ul>
-
-</li>
-<li>PhoneGap API Documentation (<a href="http://docs.phonegap.com/jp/2.2.0/index.html">日 2.2.0</a>) (<a href="http://docs.phonegap.com/en/2.6.0/index.html">英 2.6.0</a>)
-</li>
-<li><a href="http://phonegap-fan.com/">PhoneGap Fan</a>(日)
-<ul>
-<li>日本のコミュ。情報は古い。
-</li>
-</ul>
-
-</li>
-</ul>
-
-
-</div>
-</div>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -3427,6 +3454,10 @@ export PATH=${PATH}:/Development/Android/Toolkit/adt-bundle-mac-x86_64-20130219/
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/12/21/oculusrift-advent-calendar-2013-lukalus-xmas/">クリスマスを再定義してみた。「彼女ができました。クリスマスは一緒にすごすので実家には戻りません。」OculusRift Advent Calendar 2013 vol.21 - Lukalus X&#8217;mas</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/11/03/how-to-make-a-vr-world-plus-photoncloud/">プログラミング不要。Unityを使えば誰でも2時間で作れちゃう。OculusRiftでハーレムを体感する REAL WORLD ＋PhotonCloud</a>
       </li>
     
@@ -3440,10 +3471,6 @@ export PATH=${PATH}:/Development/Android/Toolkit/adt-bundle-mac-x86_64-20130219/
     
       <li class="post">
         <a href="/blog/2013/06/25/get-lukalus/">Lukalusでルカと暮らす Oculus, Razer Hydra, Gamepad/Joystick</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/05/13/get-ready-oculus/">Oculus Riftを注文したら届くまでに急いでやるべきこと</a>
       </li>
     
   </ul>
