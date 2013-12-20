@@ -1,0 +1,100 @@
+#+BEGIN_HTML
+---
+layout: post
+title: "「彼女ができました。クリスマスは一緒にすごすので実家には戻りません。」OculusRift Advent Calendar 2013 vol.21 - Lukalus X'mas"
+date: 2013-12-21 02:19
+comments: true
+categories: oculus unity mikumikudance
+published: false
+description: 【2013】 クリスマス嫁との晩餐うp
+
+---
+#+END_HTML
+
+この記事は[[http://atnd.org/events/45316][Oculus Rift Advent Calender]]の21日目です
+
+<- 20日目  [[https://twitter.com/n_yositaka][@n\_yositakaさん]] [[http://qiita.com/n_yositaka/items/51f5347806e622ea915c][ UnityでバランスWiiボードを使う方法について]]
+
+[[https://twitter.com/koukiwf][@koukiwfさん]] oculus用ステレオカメラ 22日 ->
+
+
+[[http://bowlroll.net/up/dl29113][今までのすべての過去は捨てて、新しい世界に飛び込んでいこう - BowlRoll]]
+
+* 2012年までの一般的なクリスマス風景
+  
+[[file:https://lh3.googleusercontent.com/-7RBxbHSHWsk/UrR8_C_wWvI/AAAAAAAAA1s/7LTj8hGOL4I/w730-h931-no/eyecatch.png]]
+
+
+* 2013年からの一般的なクリスマス風景
+  
+[[file:https://lh5.googleusercontent.com/-aSg0LvR1cRY/UrR8_V7QYRI/AAAAAAAAA14/6ZhR_TO0aZI/w1100-h613-no/eyecatch2.png]]
+
+
+[[http://www.youtube.com/watch?v=WsCuhecobUw][【2013】クリスマス嫁との晩餐うp - YouTube]]
+#+BEGIN_HTML
+<iframe width="640" height="360" src="//www.youtube.com/embed/WsCuhecobUw?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+#+END_HTML
+
+[[http://www.youtube.com/watch?v=KBrOZVo0KDo][【2013】クリスマス嫁との晩餐うp その2 - YouTube]]
+#+BEGIN_HTML
+<iframe width="640" height="360" src="//www.youtube.com/embed/KBrOZVo0KDo?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+#+END_HTML
+
+* すべてはここから始まった
+  [[http://togetter.com/li/592637][【画面嫁】ルカさんと画面の中で一緒にクリスマスを過ごせる。そう、OculusRiftがあればね！ - togetter]]
+
+
+* 使い方
+  1. 人工知能のSimSimAPIにアカウントを作成して使用するためのキーを取得（無料）
+     - [[http://developer.simsimi.com/signUp][SimSimAPI Sign Up]] 必要事項を入力
+       [[file:https://lh5.googleusercontent.com/-o9f5lFIJwVM/UrR86rMVOwI/AAAAAAAAA0U/U2GugzclTaE/w742-h979-no/04.simsim1.png]]
+     - 完了画面
+       [[file:https://lh6.googleusercontent.com/-jl7_IG2J1iU/UrR87bbj8vI/AAAAAAAAA0k/mmVdT0F4gYs/w742-h979-no/05.simsim2.png]]
+     - 認証用URLのメールが届くのでURLを踏む
+       [[file:https://lh6.googleusercontent.com/-S99I7RjYJgQ/UrR87Xj7nwI/AAAAAAAAA0o/ysvdmGloqxo/w606-h361-no/06.simsim3.png]]
+     - Complete!
+       [[file:https://lh6.googleusercontent.com/-kvaUO_vvDgY/UrR87RXhvpI/AAAAAAAAA0s/AXgvZ0dlERA/w828-h978-no/07.simsim4.png]]
+     - 早速ログインしてみましょう。
+       [[file:https://lh6.googleusercontent.com/-C4uYZhICoJU/UrR88hCgj1I/AAAAAAAAA1E/GeQqaOC8suY/w828-h978-no/08.simsim5.png]]
+     - 最初はこの画面です。「Get a 7 days Trial Key.」を押す
+       [[file:https://lh6.googleusercontent.com/-c_-7YjtZk7M/UrR88vtNQkI/AAAAAAAAA1A/pndl8Z0i4vk/w897-h757-no/09.simsim6.png]]
+     - 中身は適当でsave
+       [[file:https://lh3.googleusercontent.com/-Ek210xTe5O8/UrR88h-uD0I/AAAAAAAAA08/02OIgrokZzI/w897-h757-no/10.simsim7.png]]
+     - save押すと、一覧に追加されてる。View Details押す
+       [[file:https://lh5.googleusercontent.com/-r4O9okNQ4oU/UrR898PT2jI/AAAAAAAAA1U/STj23rymnsY/w897-h757-no/11.simsim8.png]]
+
+  2. 取得したキーを入力する。場所は配布内のserver/server.jsの先頭
+     - View Details押すとKeyがあるので、配布している圧縮ファイルの中、 =server/server.js= の先頭を書き換える
+       [[file:https://lh6.googleusercontent.com/-Z5Mit4yT2Ro/UrR896ENW7I/AAAAAAAAA1c/_1H80X0wAYI/w897-h888-no/12.simsim9.png]]
+       
+  3. 配布内のserver,clientと同じ階層に =LukalusXmas起動.bat= があるのでダブルクリックで実行
+     - こんな感じ
+       [[file:https://lh6.googleusercontent.com/-Pk3_ppMYPWw/UrR893sTUSI/AAAAAAAAA1Y/egf5VWnZGY4/w1101-h771-no/13.talkLuka.png]]
+     - ルカさん博識！
+       [[file:https://lh3.googleusercontent.com/-B8V7SbBeEbU/UrR8_BdSjfI/AAAAAAAAA1w/02fn4m8pozo/w1101-h628-no/14.talkLuka.png]]
+     - どきがむねむね
+       [[file:https://lh5.googleusercontent.com/-aSg0LvR1cRY/UrR8_V7QYRI/AAAAAAAAA14/6ZhR_TO0aZI/w1100-h613-no/eyecatch2.png]]
+     - きれいなオーロラも
+       [[file:https://lh6.googleusercontent.com/-6_c_wAQ2yvs/UrR9AdSxAeI/AAAAAAAAA18/UTg1jTTqfEs/w1101-h614-no/eyecatch3.png]]
+
+* 謝辞
+** モデルデータ ula式ルカ
+   - [[https://twitter.com/__ula][ulaさん]] [[http://kotankor.blog46.fc2.com/blog-entry-63.html][○や（仮）]]
+** モデルデータ ula式ルカ サンタコスモデル
+   - [[https://twitter.com/Rscrap_Factory][Rscr@Pさん]] [[http://rscrap.blog.fc2.com/][Rs-Factory]]
+** 唐揚げモデルデータ
+   - [[https://twitter.com/GOROman][GOROmanさん]] [[http://nicovideo.jp/mylist/6972789][作ったものリスト]] [[http://ch.nicovideo.jp/GOROman/blomaga/][GOROmanのデジタル温故知新（ブロマガ）]]
+** 会話、音声関係
+   - [[https://twitter.com/hecomi][凹みさん]] [[http://d.hatena.ne.jp/hecomi/][凹みTips]]
+   - [[https://twitter.com/nawota1105][なヲタさん]] [[http://vocalonchi.com/][ボカロん家 - vocalonchi.com Presented by Project SYNCHLOiD]]
+   - [[https://twitter.com/haiattoC][はいあっとさん]]
+** アイディア
+   - [[https://twitter.com/niku9Tenhou][にくきゅうさん]] [[http://niku9.hatenadiary.jp/][niku9's blog]]
+** MMD4Mecanim Oppai
+   - [[https://twitter.com/Stereoarts][のらさん]](通称神) [[http://stereoarts.jp/][Stereoarts Homepage]]
+   - [[https://twitter.com/mkt_][瀬川さん]]
+   - [[https://twitter.com/GOROman][GOROmanさん]]
+** アドバイザー
+   - [[https://twitter.com/GOROman][GOROmanさん]]
+   - [[https://twitter.com/shigekzishihara][石原先生]]
+   - [[https://twitter.com/warapuri][わらぷりさん]]
