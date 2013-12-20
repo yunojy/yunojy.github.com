@@ -5,9 +5,7 @@ title: "クリスマスを再定義してみた。「彼女ができまし
 date: 2013-12-21 02:19
 comments: true
 categories: oculus unity mikumikudance
-published: true
 description: 【2013】 クリスマス嫁との晩餐うp
-
 ---
 #+END_HTML
 
