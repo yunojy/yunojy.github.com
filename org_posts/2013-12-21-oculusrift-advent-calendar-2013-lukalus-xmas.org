@@ -40,6 +40,7 @@ categories: oculus unity mikumikudance
 
 
 * 使い方
+  0. 「node.js windows インストール」検索
   1. 人工知能のSimSimAPIにアカウントを作成して使用するためのキーを取得（無料）
      - [[http://developer.simsimi.com/signUp][SimSimAPI Sign Up]] 必要事項を入力
        [[file:https://lh5.googleusercontent.com/-o9f5lFIJwVM/UrR86rMVOwI/AAAAAAAAA0U/U2GugzclTaE/w742-h979-no/04.simsim1.png]]
