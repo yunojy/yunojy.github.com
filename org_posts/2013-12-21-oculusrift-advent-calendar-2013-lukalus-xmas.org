@@ -12,7 +12,7 @@ categories: oculus unity mikumikudance
 
 <- 20日目  [[https://twitter.com/n_yositaka][@n\_yositakaさん]] [[http://qiita.com/n_yositaka/items/51f5347806e622ea915c][ UnityでバランスWiiボードを使う方法について]]
 
-[[https://twitter.com/koukiwf][@koukiwfさん]] oculus用ステレオカメラ 22日 ->
+[[https://twitter.com/koukiwf][@koukiwfさん]] [[http://ch.nicovideo.jp/whitetail/blomaga/ar419486][ステレオ映像の未来]] 22日 ->
 
 
 [[http://bowlroll.net/up/dl29113][今までのすべての過去は捨てて、新しい世界に飛び込んでいこう - BowlRoll]]
