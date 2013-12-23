@@ -103,5 +103,5 @@ keywords: Unity Novint falcon Oculus Rift Haptic
 
   独りぼっちは……さびしいもんな……いいよ。一緒にいてやるよ
 
-* 奇跡も魔法もOculusRiftとNovintFalconならあるんだよ
+* 奇跡も魔法も、OculusRiftとNovintFalconならあるんだよ
   
