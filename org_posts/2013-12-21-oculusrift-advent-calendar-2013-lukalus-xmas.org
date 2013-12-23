@@ -21,6 +21,10 @@ categories: oculus unity mikumikudance
   
 [[file:https://lh3.googleusercontent.com/-7RBxbHSHWsk/UrR8_C_wWvI/AAAAAAAAA1s/7LTj8hGOL4I/w730-h931-no/eyecatch.png]]
 
+#+BEGIN_HTML
+<!-- more -->
+#+END_HTML
+
 * 2013年からの一般的なクリスマス風景
   
 [[file:https://lh5.googleusercontent.com/-aSg0LvR1cRY/UrR8_V7QYRI/AAAAAAAAA14/6ZhR_TO0aZI/w1100-h613-no/eyecatch2.png]]

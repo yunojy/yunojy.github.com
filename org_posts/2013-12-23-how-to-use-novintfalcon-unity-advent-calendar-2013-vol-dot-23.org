@@ -4,9 +4,30 @@ layout: post
 title: "How to use NovintFalcon - Unity Advent Calendar 2013 vol.23"
 date: 2013-12-23 08:29
 comments: true
-categories: 
+categories: unity NovintFalcon
 published: false
-description: 
-keywords: 
+description: NovintFalconの正しい使い方
+keywords: Unity Novint falcon Oculus Rift Haptic
 ---
 #+END_HTML
+
+* NovintFalconの正しい使い方
+
+[[file:https://lh4.googleusercontent.com/-Li3E4jImyls/Urd_Ush2TdI/AAAAAAAAA40/Bx5YMWkCKzU/w800-h533-no/IMG_5479.JPG]]
+
+#+BEGIN_HTML
+<!-- more -->
+#+END_HTML
+
+
+* この世界に間違いなんてないんだよほのかちゃん
+
+[[http://nlab.itmedia.co.jp/nl/articles/1311/11/news117.html][「二次元が来い」がとうとう現実に　バーチャルリアリティ内で女の子がTENGAをシコシコしてくれる夢のシステムがいろいろはかどりそうで困る - ねとらぼ]]
+
+[[file:https://lh4.googleusercontent.com/-aFGLAq28uDk/Urd5yJEA1VI/AAAAAAAAA2g/f-NaUl7HNnw/s200/unitymask.gif]]
+
+#+BEGIN_HTML
+<blockquote class="twitter-tweet" lang="ja"><p>日本始まりすぎて終わった&#10;&#10;「二次元が来い」がとうとう現実に　バーチャルリアリティ内で女の子がTENGAをシコシコしてくれる夢のシステムがいろいろ捗りそうで困る <a href="http://t.co/WqRqntsOKb">http://t.co/WqRqntsOKb</a> <a href="https://twitter.com/itm_nlab">@itm_nlab</a> <a href="http://t.co/yqqDOZInrt">pic.twitter.com/yqqDOZInrt</a></p>&mdash; てっけん / Hayato Ikeya (@tekken8810) <a href="https://twitter.com/tekken8810/statuses/399855972862017536">2013, 11月 11</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+#+END_HTML
+
