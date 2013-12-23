@@ -35,7 +35,22 @@ keywords: Unity Novint falcon Oculus Rift Haptic
 #+BEGIN_HTML
 <!-- more -->
 #+END_HTML
-  
+#+BEGIN_HTML
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+#+END_HTML
+
 * やぁ、僕の名前はゆーじ！僕と契約してOculusゲーム開発者になってよ！
 
 **  君ならどんな途方も無い夢だって叶えられるよ！
