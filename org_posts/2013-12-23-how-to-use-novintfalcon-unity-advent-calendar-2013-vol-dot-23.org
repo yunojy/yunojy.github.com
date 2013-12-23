@@ -34,9 +34,7 @@ keywords: Unity Novint falcon Oculus Rift Haptic
 
 #+BEGIN_HTML
 <!-- more -->
-#+END_HTML
 
-#+BEGIN_HTML
 <br>
 <br>
 <br>
