@@ -9,7 +9,7 @@
   <meta name="author" content="yunojy">
 
   
-  <meta name="description" content="この記事はOculus Rift Advent Calenderの21日目です &lt;- 20日目 @n_yositakaさん UnityでバランスWiiボードを使う方法について @koukiwfさん ステレオ映像の未来 22日 -&gt; 今までのすべての過去は捨てて、 &hellip;">
+  <meta name="description" content="この投稿はUnity Advent Calendar 2013の23日目の記事です。 &lt;- 22日目 @sugimotoakさん Unity+OculusRift+LeapMotionで3Dキャラクターに触れる 24日目 @GOROmanさん Unity × 超音波集束装置 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,112 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/12/23/how-to-use-novintfalcon-unity-advent-calendar-2013-vol-dot-23/">NovintFalconの正しい使い方 - Unity Advent Calendar 2013 vol.23</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-23T08:29:00+09:00" pubdate data-updated="true">Dec 23<span>rd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>
+この投稿は<a href="http://qiita.com/advent-calendar/2013/unity">Unity Advent Calendar 2013</a>の23日目の記事です。
+</p>
+
+
+<p>
+&lt;- 22日目 <a href="https://twitter.com/sugimotoak">@sugimotoakさん</a> <a href="http://qiita.com/sugimotoak/items/1d3574a5a084d0c349cd">Unity+OculusRift+LeapMotionで3Dキャラクターに触れる</a>
+</p>
+
+
+<p>
+24日目 <a href="https://twitter.com/GOROman">@GOROmanさん</a> <a href="http://ch.nicovideo.jp/GOROman">Unity × 超音波集束装置 を使ってクリスマスケーキのろうそくの火を消すという誰とも絶対被らない内容について語ります。 </a> -&gt;
+</p>
+
+
+<p>
+<img src="https://lh4.googleusercontent.com/-Li3E4jImyls/Urd_Ush2TdI/AAAAAAAAA40/Bx5YMWkCKzU/w800-h533-no/IMG_5479.JPG"  alt="https://lh4.googleusercontent.com/-Li3E4jImyls/Urd_Ush2TdI/AAAAAAAAA40/Bx5YMWkCKzU/w800-h533-no/IMG_5479.JPG" />
+</p>
+
+
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">UnityでNovintFalconを制御する手順</h2>
+<div class="outline-text-2" id="text-1">
+
+
+<ol>
+<li>NovintFalcon Wrapper DLLの入手。開発時はAssetsと同階層、配布時はexeと同階層に置く
+<ul>
+<li><a href="http://forum.unity3d.com/threads/6494-Novint-falcon">Novint falcon - Unity Support http://forum.unity3d.com/threads/6494-Novint-falcon</a>
+<ul>
+<li>Posted: 10:57 AM 05-10-2012 <a href="http://forum.unity3d.com/attachment.php?attachmentid=34436&amp;d=1336668846">Falcon Wrapper Source - Update V1.zip</a>をDL
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+<li>GameObjectにはっつけるだけで使えるスクリプト
+<ul>
+<li><a href="https://gist.github.com/yunojy/8091027">https://gist.github.com/yunojy/8091027</a>
+</li>
+</ul>
+
+</li>
+</ol>
+
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">クラスのみんなには、内緒だよ(NSFW)</h2>
+<div class="outline-text-2" id="text-2">
+
+
+
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/12/23/how-to-use-novintfalcon-unity-advent-calendar-2013-vol-dot-23/">続きを読む</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -2292,205 +2398,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/04/20/xperia-z-android-app-deploy/">Mac Android開発環境構築。実機転送設定（Xperia Z）</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-04-20T10:52:00+09:00" pubdate data-updated="true">Apr 20<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>
-今回はアプリの実機転送を行い、実行してみる。
-</p>
-
-
-
-
-<div id="outline-container-1" class="outline-2">
-<h2 id="sec-1">前置き</h2>
-<div class="outline-text-2" id="text-1">
-
-
-</div>
-
-<div id="outline-container-1-1" class="outline-3">
-<h3 id="sec-1-1">SDK導入済みであること</h3>
-<div class="outline-text-3" id="text-1-1">
-
-</div>
-
-</div>
-
-<div id="outline-container-1-2" class="outline-3">
-<h3 id="sec-1-2">Android 4.1</h3>
-<div class="outline-text-3" id="text-1-2">
-
-</div>
-
-</div>
-
-<div id="outline-container-1-3" class="outline-3">
-<h3 id="sec-1-3">実機 Xperia Z(SO-02E)</h3>
-<div class="outline-text-3" id="text-1-3">
-
-</div>
-
-</div>
-
-<div id="outline-container-1-4" class="outline-3">
-<h3 id="sec-1-4">Mac 10.8.3 Mountain Lion</h3>
-<div class="outline-text-3" id="text-1-4">
-
-
-
-</div>
-</div>
-
-</div>
-
-
-
-
-<div id="outline-container-2" class="outline-2">
-<h2 id="sec-2">手順</h2>
-<div class="outline-text-2" id="text-2">
-
-<ol>
-<li>USBドライバ設定のmanifest.ini作る
-<ul>
-<li>adt-bundle-mac-x86<sub>64</sub>-xx/sdk/add-ons/xperia-z/manifest.ini
-
-
-
-<pre class="example"># SDK Add-on Manifest
-name=Sony Xperia z
-vendor=Sony
-description=Adds USB support for Xperia Z(Vendor id:0x054c)
-api=16
-revision=1
-usb-vendor=0x054c
-</pre>
-
-
-</li>
-</ul>
-
-</li>
-<li>USBドライバ設定の反映
-<ul>
-<li>事前にSDKのplatform-toolsへPATH通す。
-
-
-
-<pre class="example">% android update adb
-% adb kill-server
-% adb start-server
-</pre>
-
-
-</li>
-</ul>
-
-</li>
-<li>確認
-<ul>
-<li>usb-vendorの値が追記される。
-
-
-
-<pre class="example">% cat ~/.android/adb_usb.ini
-# ANDROID 3RD PARTY USB VENDOR ID LIST -- DO NOT EDIT.
-# USE 'android update adb' TO GENERATE.
-# 1 USB VENDOR ID PER LINE.
-0x054c
-</pre>
-
-
-</li>
-</ul>
-
-</li>
-<li>Xperia Zの設定
-<ul>
-<li>「提供元不明のアプリ」OFF-&gt;ON
-       [設定]-&gt;[セキュリティ]-&gt;[提供元不明のアプリ]
-</li>
-<li>「USBデバッグ」OFF-&gt;ON
-       [設定]-&gt;[開発者向けオプション]-&gt;[USBデバッグ]
-
-</li>
-<li>備考。設定不要だったもの
-<ul>
-<li>不要。MTPのままでOK。「USB接続モード」MSCに（Mac/Linuxで広く互換性のあるものらしい。ROOT化必須なのかも）
-</li>
-<li>不要。PC CompanionはWindows専用「PC Companionのインストール」
-
-</li>
-</ul>
-
-</li>
-</ul>
-
-</li>
-<li>MacとXperia Z接続
-<ul>
-<li>consoleから確認
-
-
-
-<pre class="example">% adb devices
-List of devices attached
-emulator-5554  device
-xxxxxxxxxx device  &lt;- kore
-</pre>
-
-
-</li>
-</ul>
-
-</li>
-<li>実機にeclipseからアプリ転送して実行
-<ul>
-<li>対象プロジェクト上で[Run As]-&gt;[Android Application]選択
-</li>
-<li>5の手順でちゃんと実機が認識されていれば、エミュレータか実機かでdeploy先選択がでる。
-</li>
-</ul>
-
-</li>
-</ol>
-
-</div>
-</div>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -2544,6 +2451,10 @@ xxxxxxxxxx device  &lt;- kore
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/12/23/how-to-use-novintfalcon-unity-advent-calendar-2013-vol-dot-23/">NovintFalconの正しい使い方 - Unity Advent Calendar 2013 vol.23</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/12/21/oculusrift-advent-calendar-2013-lukalus-xmas/">クリスマスを再定義してみた。「彼女ができました。クリスマスは一緒にすごすので実家には戻りません。」OculusRift Advent Calendar 2013 vol.21 - Lukalus X&#8217;mas</a>
       </li>
     
@@ -2557,10 +2468,6 @@ xxxxxxxxxx device  &lt;- kore
     
       <li class="post">
         <a href="/blog/2013/07/01/unity-mac-hydra/">Mac環境でもUnityでHydraしたい</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/06/25/get-lukalus/">Lukalusでルカと暮らす Oculus, Razer Hydra, Gamepad/Joystick</a>
       </li>
     
   </ul>

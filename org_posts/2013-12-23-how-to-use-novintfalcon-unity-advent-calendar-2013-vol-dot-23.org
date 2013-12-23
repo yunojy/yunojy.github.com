@@ -1,33 +1,93 @@
 #+BEGIN_HTML
 ---
 layout: post
-title: "How to use NovintFalcon - Unity Advent Calendar 2013 vol.23"
+title: "NovintFalconの正しい使い方 - Unity Advent Calendar 2013 vol.23"
 date: 2013-12-23 08:29
 comments: true
 categories: unity NovintFalcon
-published: false
-description: NovintFalconの正しい使い方
+published: true
+description: NovintFalconの正しい使い方 How to Use Novint Falcon Unity
 keywords: Unity Novint falcon Oculus Rift Haptic
 ---
 #+END_HTML
 
-* NovintFalconの正しい使い方
+この投稿は[[http://qiita.com/advent-calendar/2013/unity][Unity Advent Calendar 2013]]の23日目の記事です。
+
+<- 22日目 [[https://twitter.com/sugimotoak][@sugimotoakさん]] [[http://qiita.com/sugimotoak/items/1d3574a5a084d0c349cd][Unity+OculusRift+LeapMotionで3Dキャラクターに触れる]]
+
+24日目 [[https://twitter.com/GOROman][@GOROmanさん]] [[http://ch.nicovideo.jp/GOROman][Unity × 超音波集束装置 を使ってクリスマスケーキのろうそくの火を消すという誰とも絶対被らない内容について語ります。 ]] ->
 
 [[file:https://lh4.googleusercontent.com/-Li3E4jImyls/Urd_Ush2TdI/AAAAAAAAA40/Bx5YMWkCKzU/w800-h533-no/IMG_5479.JPG]]
+
+* UnityでNovintFalconを制御する手順
+
+  1. NovintFalcon Wrapper DLLの入手。開発時はAssetsと同階層、配布時はexeと同階層に置く
+     - [[http://forum.unity3d.com/threads/6494-Novint-falcon][Novint falcon - Unity Support http://forum.unity3d.com/threads/6494-Novint-falcon]]
+       - Posted: 10:57 AM 05-10-2012 [[http://forum.unity3d.com/attachment.php?attachmentid=34436&d=1336668846][Falcon Wrapper Source - Update V1.zip]]をDL
+
+  2. GameObjectにはっつけるだけで使えるスクリプト
+     - https://gist.github.com/yunojy/8091027
+
+
+* クラスのみんなには、内緒だよ(NSFW)
+
 
 #+BEGIN_HTML
 <!-- more -->
 #+END_HTML
+  
+* やぁ、僕の名前はゆーじ！僕と契約してOculusゲーム開発者になってよ！
 
+**  君ならどんな途方も無い夢だって叶えられるよ！
 
-* この世界に間違いなんてないんだよほのかちゃん
+    諦めたらそれまでだ。でも、君なら運命を変えられる。避けようのない、滅びも、嘆きも、 =すべて君が覆せばいい。そのための力が君には備わっているのだから。=
+  
+    =戦う理由、見つけたんだろ？= 逃げないって自分で決めたんだろ？なら仕方ないじゃん！！後はもうとことん突っ走るしかねぇんだからさー
+  
+    戦いの運命を受け入れてまで =君には叶えたい望みがあったんだろ。= それは間違いなく実現したじゃないか。
 
-[[http://nlab.itmedia.co.jp/nl/articles/1311/11/news117.html][「二次元が来い」がとうとう現実に　バーチャルリアリティ内で女の子がTENGAをシコシコしてくれる夢のシステムがいろいろはかどりそうで困る - ねとらぼ]]
-
-[[file:https://lh4.googleusercontent.com/-aFGLAq28uDk/Urd5yJEA1VI/AAAAAAAAA2g/f-NaUl7HNnw/s200/unitymask.gif]]
-
+**  大丈夫。だってOculusゲーム開発者はさ、夢と希望を叶えるんだから
+    
 #+BEGIN_HTML
-<blockquote class="twitter-tweet" lang="ja"><p>日本始まりすぎて終わった&#10;&#10;「二次元が来い」がとうとう現実に　バーチャルリアリティ内で女の子がTENGAをシコシコしてくれる夢のシステムがいろいろ捗りそうで困る <a href="http://t.co/WqRqntsOKb">http://t.co/WqRqntsOKb</a> <a href="https://twitter.com/itm_nlab">@itm_nlab</a> <a href="http://t.co/yqqDOZInrt">pic.twitter.com/yqqDOZInrt</a></p>&mdash; てっけん / Hayato Ikeya (@tekken8810) <a href="https://twitter.com/tekken8810/statuses/399855972862017536">2013, 11月 11</a></blockquote>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<blockquote class="twitter-tweet" data-cards="hidden" lang="ja"><p>日本始まりすぎて終わった&#10;&#10;「二次元が来い」がとうとう現実に　バーチャルリアリティ内で女の子がTENGAをシコシコしてくれる夢のシステムがいろいろ捗りそうで困る  <a href="http://t.co/WqRqntsOKb">http://t.co/WqRqntsOKb</a> <a href="https://twitter.com/itm_nlab">@itm_nlab</a> <a href="http://t.co/yqqDOZInrt">pic.twitter.com/yqqDOZInrt</a></p>&mdash; てっけん / Hayato Ikeya (@tekken8810) <a href="https://twitter.com/tekken8810/statuses/399855972862017536">2013, 11月 11</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 #+END_HTML
 
+* [[https://twitter.com/unitymask][@unitymask]]信頼済みコンテンツ
+  
+  [[file:https://lh4.googleusercontent.com/-aFGLAq28uDk/Urd5yJEA1VI/AAAAAAAAA2g/f-NaUl7HNnw/s130/unitymask.gif]]
+
+
+* OculusRiftってのはねぇ、徹頭徹尾自分だけの望みを叶えるためのモンなんだよ
+
+  あなた達の祈りを、絶望で終わらせたりしない。あなた達は、誰も呪わない。祟らない。因果は全て、私が受け止める。だからお願い。最後まで自分を信じて。
+
+  独りぼっちは……さびしいもんな……いいよ。一緒にいてやるよ
+
+* 奇跡も魔法もOculusRiftとNovintFalconならあるんだよ
+  

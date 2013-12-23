@@ -9,7 +9,7 @@
   <meta name="author" content="yunojy">
 
   
-  <meta name="description" content="注意！2013/04/14現在の情報です。 Cordova(PhoneGap)を使ってAndroidアプリ開発環境をMac上に構築 JDKは入っているけどEclipseもSDKも無い状態から、Cordovaの空のプロジェクトを作成するまでを書く。 設定が済んでいて、 &hellip;">
+  <meta name="description" content="今回はアプリの実機転送を行い、実行してみる。 前置き SDK導入済みであること Android 4.1 実機 Xperia Z(SO-02E) Mac 10.8.3 Mountain Lion 手順 USBドライバ設定のmanifest.ini作る adt-bundle-mac- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,205 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/04/20/xperia-z-android-app-deploy/">Mac Android開発環境構築。実機転送設定（Xperia Z）</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-20T10:52:00+09:00" pubdate data-updated="true">Apr 20<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>
+今回はアプリの実機転送を行い、実行してみる。
+</p>
+
+
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">前置き</h2>
+<div class="outline-text-2" id="text-1">
+
+
+</div>
+
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1">SDK導入済みであること</h3>
+<div class="outline-text-3" id="text-1-1">
+
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2">Android 4.1</h3>
+<div class="outline-text-3" id="text-1-2">
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3" class="outline-3">
+<h3 id="sec-1-3">実機 Xperia Z(SO-02E)</h3>
+<div class="outline-text-3" id="text-1-3">
+
+</div>
+
+</div>
+
+<div id="outline-container-1-4" class="outline-3">
+<h3 id="sec-1-4">Mac 10.8.3 Mountain Lion</h3>
+<div class="outline-text-3" id="text-1-4">
+
+
+
+</div>
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">手順</h2>
+<div class="outline-text-2" id="text-2">
+
+<ol>
+<li>USBドライバ設定のmanifest.ini作る
+<ul>
+<li>adt-bundle-mac-x86<sub>64</sub>-xx/sdk/add-ons/xperia-z/manifest.ini
+
+
+
+<pre class="example"># SDK Add-on Manifest
+name=Sony Xperia z
+vendor=Sony
+description=Adds USB support for Xperia Z(Vendor id:0x054c)
+api=16
+revision=1
+usb-vendor=0x054c
+</pre>
+
+
+</li>
+</ul>
+
+</li>
+<li>USBドライバ設定の反映
+<ul>
+<li>事前にSDKのplatform-toolsへPATH通す。
+
+
+
+<pre class="example">% android update adb
+% adb kill-server
+% adb start-server
+</pre>
+
+
+</li>
+</ul>
+
+</li>
+<li>確認
+<ul>
+<li>usb-vendorの値が追記される。
+
+
+
+<pre class="example">% cat ~/.android/adb_usb.ini
+# ANDROID 3RD PARTY USB VENDOR ID LIST -- DO NOT EDIT.
+# USE 'android update adb' TO GENERATE.
+# 1 USB VENDOR ID PER LINE.
+0x054c
+</pre>
+
+
+</li>
+</ul>
+
+</li>
+<li>Xperia Zの設定
+<ul>
+<li>「提供元不明のアプリ」OFF-&gt;ON
+       [設定]-&gt;[セキュリティ]-&gt;[提供元不明のアプリ]
+</li>
+<li>「USBデバッグ」OFF-&gt;ON
+       [設定]-&gt;[開発者向けオプション]-&gt;[USBデバッグ]
+
+</li>
+<li>備考。設定不要だったもの
+<ul>
+<li>不要。MTPのままでOK。「USB接続モード」MSCに（Mac/Linuxで広く互換性のあるものらしい。ROOT化必須なのかも）
+</li>
+<li>不要。PC CompanionはWindows専用「PC Companionのインストール」
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+<li>MacとXperia Z接続
+<ul>
+<li>consoleから確認
+
+
+
+<pre class="example">% adb devices
+List of devices attached
+emulator-5554  device
+xxxxxxxxxx device  &lt;- kore
+</pre>
+
+
+</li>
+</ul>
+
+</li>
+<li>実機にeclipseからアプリ転送して実行
+<ul>
+<li>対象プロジェクト上で[Run As]-&gt;[Android Application]選択
+</li>
+<li>5の手順でちゃんと実機が認識されていれば、エミュレータか実機かでdeploy先選択がでる。
+</li>
+</ul>
+
+</li>
+</ol>
+
+</div>
+</div>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1893,6 +2092,10 @@ Hi username! You've successfully authenticated, but GitHub does not provide shel
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/12/23/how-to-use-novintfalcon-unity-advent-calendar-2013-vol-dot-23/">NovintFalconの正しい使い方 - Unity Advent Calendar 2013 vol.23</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/12/21/oculusrift-advent-calendar-2013-lukalus-xmas/">クリスマスを再定義してみた。「彼女ができました。クリスマスは一緒にすごすので実家には戻りません。」OculusRift Advent Calendar 2013 vol.21 - Lukalus X&#8217;mas</a>
       </li>
     
@@ -1906,10 +2109,6 @@ Hi username! You've successfully authenticated, but GitHub does not provide shel
     
       <li class="post">
         <a href="/blog/2013/07/01/unity-mac-hydra/">Mac環境でもUnityでHydraしたい</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/06/25/get-lukalus/">Lukalusでルカと暮らす Oculus, Razer Hydra, Gamepad/Joystick</a>
       </li>
     
   </ul>

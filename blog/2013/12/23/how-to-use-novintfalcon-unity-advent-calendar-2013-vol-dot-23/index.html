@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>超便利。すぐに実行結果を表示できる「quickrun.el」をさらに便利にしてみる - develog.me</title>
+  <title>NovintFalconの正しい使い方 - Unity Advent Calendar 2013 vol.23 - develog.me</title>
   <meta name="author" content="yunojy">
 
   
-  <meta name="description" content="これがなければemacs使ってない。 syohex / emacs-quickrun - github quickrun.elを書きました - Life is very short quickrun.elで開発効率アップ - Life is very short quickrun.el &hellip;">
-  
+  <meta name="description" content="NovintFalconの正しい使い方 How to Use Novint Falcon Unity">
+  <meta name="keywords" content="Unity Novint falcon Oculus Rift Haptic">
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://yunojy.github.io/blog/2013/03/17/emacs-de-quickrun-or-quickrun-region/">
+  <link rel="canonical" href="http://yunojy.github.io/blog/2013/12/23/how-to-use-novintfalcon-unity-advent-calendar-2013-vol-dot-23/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -79,7 +79,7 @@
   
   <header>
     
-      <h1 class="entry-title">超便利。すぐに実行結果を表示できる「quickrun.el」をさらに便利にしてみる</h1>
+      <h1 class="entry-title">NovintFalconの正しい使い方 - Unity Advent Calendar 2013 vol.23</h1>
     
     
       <p class="meta">
@@ -95,33 +95,63 @@
   
 
 
-<time datetime="2013-03-17T16:38:00+09:00" pubdate data-updated="true">Mar 17<span>th</span>, 2013</time>
+<time datetime="2013-12-23T08:29:00+09:00" pubdate data-updated="true">Dec 23<span>rd</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><div id="outline-container-1" class="outline-2">
-<h2 id="sec-1">これがなければemacs使ってない。</h2>
-<div class="outline-text-2" id="text-1">
-
-<ul>
-<li><a href="https://github.com/syohex/emacs-quickrun">syohex / emacs-quickrun - github</a>
-</li>
-<li><a href="http://d.hatena.ne.jp/syohex/20111126/1322291515">quickrun.elを書きました - Life is very short</a>
-</li>
-<li><a href="http://d.hatena.ne.jp/syohex/20111201/1322665378">quickrun.elで開発効率アップ - Life is very short</a>
-</li>
-</ul>
-
+<div class="entry-content"><p>
+この投稿は<a href="http://qiita.com/advent-calendar/2013/unity">Unity Advent Calendar 2013</a>の23日目の記事です。
+</p>
 
 
 <p>
-  <code>quickrun.el</code> とは、ソースコード上でプログラムの実行を行うことができるelispです。<br/>
-  <code>M-x</code> <code>quickrun</code> で実行。 <code>M-x</code> <code>quickrun-region</code> で選択範囲のみの実行ができるのですが、
-  わざわざ選ぶのはめんどくさいので、region選択の有無で自動化します。
+&lt;- 22日目 <a href="https://twitter.com/sugimotoak">@sugimotoakさん</a> <a href="http://qiita.com/sugimotoak/items/1d3574a5a084d0c349cd">Unity+OculusRift+LeapMotionで3Dキャラクターに触れる</a>
 </p>
+
+
+<p>
+24日目 <a href="https://twitter.com/GOROman">@GOROmanさん</a> <a href="http://ch.nicovideo.jp/GOROman">Unity × 超音波集束装置 を使ってクリスマスケーキのろうそくの火を消すという誰とも絶対被らない内容について語ります。 </a> -&gt;
+</p>
+
+
+<p>
+<img src="https://lh4.googleusercontent.com/-Li3E4jImyls/Urd_Ush2TdI/AAAAAAAAA40/Bx5YMWkCKzU/w800-h533-no/IMG_5479.JPG"  alt="https://lh4.googleusercontent.com/-Li3E4jImyls/Urd_Ush2TdI/AAAAAAAAA40/Bx5YMWkCKzU/w800-h533-no/IMG_5479.JPG" />
+</p>
+
+
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">UnityでNovintFalconを制御する手順</h2>
+<div class="outline-text-2" id="text-1">
+
+
+<ol>
+<li>NovintFalcon Wrapper DLLの入手。開発時はAssetsと同階層、配布時はexeと同階層に置く
+<ul>
+<li><a href="http://forum.unity3d.com/threads/6494-Novint-falcon">Novint falcon - Unity Support http://forum.unity3d.com/threads/6494-Novint-falcon</a>
+<ul>
+<li>Posted: 10:57 AM 05-10-2012 <a href="http://forum.unity3d.com/attachment.php?attachmentid=34436&amp;d=1336668846">Falcon Wrapper Source - Update V1.zip</a>をDL
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+<li>GameObjectにはっつけるだけで使えるスクリプト
+<ul>
+<li><a href="https://gist.github.com/yunojy/8091027">https://gist.github.com/yunojy/8091027</a>
+</li>
+</ul>
+
+</li>
+</ol>
+
 
 
 </div>
@@ -132,18 +162,14 @@
 
 
 <div id="outline-container-2" class="outline-2">
-<h2 id="sec-2">対象</h2>
+<h2 id="sec-2">クラスのみんなには、内緒だよ(NSFW)</h2>
 <div class="outline-text-2" id="text-2">
 
 
-<ul>
-<li>emacs 24
-</li>
-<li>quickrun 1.8.2
-</li>
-</ul>
 
 
+
+<!-- more -->
 
 </div>
 
@@ -153,22 +179,67 @@
 
 
 <div id="outline-container-3" class="outline-2">
-<h2 id="sec-3">region選択されていたら <code>quickrun-region</code> されていなかったら <code>quickrun</code> を実行する。</h2>
+<h2 id="sec-3">やぁ、僕の名前はゆーじ！僕と契約してOculusゲーム開発者になってよ！</h2>
 <div class="outline-text-2" id="text-3">
 
 
 
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1">君ならどんな途方も無い夢だって叶えられるよ！</h3>
+<div class="outline-text-3" id="text-3-1">
 
 
-<pre class="example">(defun quickrun-sc (start end)
-(interactive "r")
-(if mark-active
-    (quickrun :start start :end end)
-  (quickrun)))
-</pre>
+<p>
+    諦めたらそれまでだ。でも、君なら運命を変えられる。避けようのない、滅びも、嘆きも、 <code>すべて君が覆せばいい。そのための力が君には備わっているのだから。</code>
+</p>
+<p>  
+    <code>戦う理由、見つけたんだろ？</code> 逃げないって自分で決めたんだろ？なら仕方ないじゃん！！後はもうとことん突っ走るしかねぇんだからさー
+</p>
+<p>  
+    戦いの運命を受け入れてまで <code>君には叶えたい望みがあったんだろ。</code> それは間違いなく実現したじゃないか。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2">大丈夫。だってOculusゲーム開発者はさ、夢と希望を叶えるんだから</h3>
+<div class="outline-text-3" id="text-3-2">
 
 
+    
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<blockquote class="twitter-tweet" data-cards="hidden" lang="ja"><p>日本始まりすぎて終わった&#10;&#10;「二次元が来い」がとうとう現実に　バーチャルリアリティ内で女の子がTENGAをシコシコしてくれる夢のシステムがいろいろ捗りそうで困る  <a href="http://t.co/WqRqntsOKb">http://t.co/WqRqntsOKb</a> <a href="https://twitter.com/itm_nlab">@itm_nlab</a> <a href="http://t.co/yqqDOZInrt">pic.twitter.com/yqqDOZInrt</a></p>&mdash; てっけん / Hayato Ikeya (@tekken8810) <a href="https://twitter.com/tekken8810/statuses/399855972862017536">2013, 11月 11</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
 </div>
 
 </div>
@@ -177,14 +248,43 @@
 
 
 <div id="outline-container-4" class="outline-2">
-<h2 id="sec-4">使い方</h2>
+<h2 id="sec-4"><a href="https://twitter.com/unitymask">@unitymask</a>信頼済みコンテンツ</h2>
 <div class="outline-text-2" id="text-4">
 
 
+<p>  
+  <img src="https://lh4.googleusercontent.com/-aFGLAq28uDk/Urd5yJEA1VI/AAAAAAAAA2g/f-NaUl7HNnw/s130/unitymask.gif"  alt="https://lh4.googleusercontent.com/-aFGLAq28uDk/Urd5yJEA1VI/AAAAAAAAA2g/f-NaUl7HNnw/s130/unitymask.gif" />
+</p>
+
+</div>
+
+</div>
 
 
-<pre class="example">(global-set-key (kbd "&lt;f5&gt;") 'quickrun-sc)
-</pre>
+
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5">OculusRiftってのはねぇ、徹頭徹尾自分だけの望みを叶えるためのモンなんだよ</h2>
+<div class="outline-text-2" id="text-5">
+
+
+<p>
+  あなた達の祈りを、絶望で終わらせたりしない。あなた達は、誰も呪わない。祟らない。因果は全て、私が受け止める。だからお願い。最後まで自分を信じて。
+</p>
+<p>
+  独りぼっちは……さびしいもんな……いいよ。一緒にいてやるよ
+</p>
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6">奇跡も魔法もOculusRiftとNovintFalconならあるんだよ</h2>
+<div class="outline-text-2" id="text-6">
+
 
 </div>
 </div>
@@ -211,12 +311,12 @@
   
 
 
-<time datetime="2013-03-17T16:38:00+09:00" pubdate data-updated="true">Mar 17<span>th</span>, 2013</time>
+<time datetime="2013-12-23T08:29:00+09:00" pubdate data-updated="true">Dec 23<span>rd</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/elisp/'>elisp</a>, <a class='category' href='/blog/categories/emacs/'>emacs</a>, <a class='category' href='/blog/categories/quickrun/'>quickrun</a>
+    <a class='category' href='/blog/categories/novintfalcon/'>NovintFalcon</a>, <a class='category' href='/blog/categories/unity/'>unity</a>
   
 </span>
 
@@ -224,9 +324,9 @@
     </p>
     
       <div class="sharing">
-  <a href="http://b.hatena.ne.jp/entry/http://yunojy.github.io/blog/2013/03/17/emacs-de-quickrun-or-quickrun-region/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+  <a href="http://b.hatena.ne.jp/entry/http://yunojy.github.io/blog/2013/12/23/how-to-use-novintfalcon-unity-advent-calendar-2013-vol-dot-23/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yunojy.github.io/blog/2013/03/17/emacs-de-quickrun-or-quickrun-region/" data-via="yuujii" data-counturl="http://yunojy.github.io/blog/2013/03/17/emacs-de-quickrun-or-quickrun-region/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yunojy.github.io/blog/2013/12/23/how-to-use-novintfalcon-unity-advent-calendar-2013-vol-dot-23/" data-via="yuujii" data-counturl="http://yunojy.github.io/blog/2013/12/23/how-to-use-novintfalcon-unity-advent-calendar-2013-vol-dot-23/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -243,10 +343,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/02/17/octopress-plus-guard-livereload-de-edit-preview-auto-reload-browser/" title="Previous Post: octopressでプレビュー作業の決定版。ブラウザでプレビューを自動リロード表示！(octopress+guard-livereload)">&laquo; octopressでプレビュー作業の決定版。ブラウザでプレビューを自動リロード表示！(octopress+guard-livereload)</a>
+        <a class="basic-alignment left" href="/blog/2013/12/21/oculusrift-advent-calendar-2013-lukalus-xmas/" title="Previous Post: クリスマスを再定義してみた。「彼女ができました。クリスマスは一緒にすごすので実家には戻りません。」OculusRift Advent Calendar 2013 vol.21 - Lukalus X'mas">&laquo; クリスマスを再定義してみた。「彼女ができました。クリスマスは一緒にすごすので実家には戻りません。」OculusRift Advent Calendar 2013 vol.21 - Lukalus X'mas</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/04/14/getting-started-cordova-phonegap-de-android-app/" title="Next Post: Cordova(PhoneGap)でAndroidApp作る その1 環境構築編">Cordova(PhoneGap)でAndroidApp作る その1 環境構築編 &raquo;</a>
       
     </p>
   </footer>

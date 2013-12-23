@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: NovintFalcon | develog.me]]></title>
+  <link href="http://yunojy.github.io/blog/categories/novintfalcon/atom.xml" rel="self"/>
+  <link href="http://yunojy.github.io/"/>
+  <updated>2013-12-23T12:23:11+09:00</updated>
+  <id>http://yunojy.github.io/</id>
+  <author>
+    <name><![CDATA[yunojy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[NovintFalconの正しい使い方 - Unity Advent Calendar 2013 vol.23]]></title>
+    <link href="http://yunojy.github.io/blog/2013/12/23/how-to-use-novintfalcon-unity-advent-calendar-2013-vol-dot-23/"/>
+    <updated>2013-12-23T08:29:00+09:00</updated>
+    <id>http://yunojy.github.io/blog/2013/12/23/how-to-use-novintfalcon-unity-advent-calendar-2013-vol-dot-23</id>
+    <content type="html"><![CDATA[<p>
+この投稿は<a href="http://qiita.com/advent-calendar/2013/unity">Unity Advent Calendar 2013</a>の23日目の記事です。
+</p>
+
+
+<p>
+&lt;- 22日目 <a href="https://twitter.com/sugimotoak">@sugimotoakさん</a> <a href="http://qiita.com/sugimotoak/items/1d3574a5a084d0c349cd">Unity+OculusRift+LeapMotionで3Dキャラクターに触れる</a>
+</p>
+
+
+<p>
+24日目 <a href="https://twitter.com/GOROman">@GOROmanさん</a> <a href="http://ch.nicovideo.jp/GOROman">Unity × 超音波集束装置 を使ってクリスマスケーキのろうそくの火を消すという誰とも絶対被らない内容について語ります。 </a> -&gt;
+</p>
+
+
+<p>
+<img src="https://lh4.googleusercontent.com/-Li3E4jImyls/Urd_Ush2TdI/AAAAAAAAA40/Bx5YMWkCKzU/w800-h533-no/IMG_5479.JPG"  alt="https://lh4.googleusercontent.com/-Li3E4jImyls/Urd_Ush2TdI/AAAAAAAAA40/Bx5YMWkCKzU/w800-h533-no/IMG_5479.JPG" />
+</p>
+
+
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">UnityでNovintFalconを制御する手順</h2>
+<div class="outline-text-2" id="text-1">
+
+
+<ol>
+<li>NovintFalcon Wrapper DLLの入手。開発時はAssetsと同階層、配布時はexeと同階層に置く
+<ul>
+<li><a href="http://forum.unity3d.com/threads/6494-Novint-falcon">Novint falcon - Unity Support http://forum.unity3d.com/threads/6494-Novint-falcon</a>
+<ul>
+<li>Posted: 10:57 AM 05-10-2012 <a href="http://forum.unity3d.com/attachment.php?attachmentid=34436&amp;d=1336668846">Falcon Wrapper Source - Update V1.zip</a>をDL
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+<li>GameObjectにはっつけるだけで使えるスクリプト
+<ul>
+<li><a href="https://gist.github.com/yunojy/8091027">https://gist.github.com/yunojy/8091027</a>
+</li>
+</ul>
+
+</li>
+</ol>
+
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">クラスのみんなには、内緒だよ(NSFW)</h2>
+<div class="outline-text-2" id="text-2">
+
+
+
+
+
+<!-- more -->
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">やぁ、僕の名前はゆーじ！僕と契約してOculusゲーム開発者になってよ！</h2>
+<div class="outline-text-2" id="text-3">
+
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1">君ならどんな途方も無い夢だって叶えられるよ！</h3>
+<div class="outline-text-3" id="text-3-1">
+
+
+<p>
+    諦めたらそれまでだ。でも、君なら運命を変えられる。避けようのない、滅びも、嘆きも、 <code>すべて君が覆せばいい。そのための力が君には備わっているのだから。</code>
+</p>
+<p>  
+    <code>戦う理由、見つけたんだろ？</code> 逃げないって自分で決めたんだろ？なら仕方ないじゃん！！後はもうとことん突っ走るしかねぇんだからさー
+</p>
+<p>  
+    戦いの運命を受け入れてまで <code>君には叶えたい望みがあったんだろ。</code> それは間違いなく実現したじゃないか。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2">大丈夫。だってOculusゲーム開発者はさ、夢と希望を叶えるんだから</h3>
+<div class="outline-text-3" id="text-3-2">
+
+
+    
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<blockquote class="twitter-tweet" data-cards="hidden" lang="ja"><p>日本始まりすぎて終わった&#10;&#10;「二次元が来い」がとうとう現実に　バーチャルリアリティ内で女の子がTENGAをシコシコしてくれる夢のシステムがいろいろ捗りそうで困る  <a href="http://t.co/WqRqntsOKb">http://t.co/WqRqntsOKb</a> <a href="https://twitter.com/itm_nlab">@itm_nlab</a> <a href="http://t.co/yqqDOZInrt">pic.twitter.com/yqqDOZInrt</a></p>&mdash; てっけん / Hayato Ikeya (@tekken8810) <a href="https://twitter.com/tekken8810/statuses/399855972862017536">2013, 11月 11</a></blockquote>
+<script async src="http://yunojy.github.io//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><a href="https://twitter.com/unitymask">@unitymask</a>信頼済みコンテンツ</h2>
+<div class="outline-text-2" id="text-4">
+
+
+<p>  
+  <img src="https://lh4.googleusercontent.com/-aFGLAq28uDk/Urd5yJEA1VI/AAAAAAAAA2g/f-NaUl7HNnw/s130/unitymask.gif"  alt="https://lh4.googleusercontent.com/-aFGLAq28uDk/Urd5yJEA1VI/AAAAAAAAA2g/f-NaUl7HNnw/s130/unitymask.gif" />
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5">OculusRiftってのはねぇ、徹頭徹尾自分だけの望みを叶えるためのモンなんだよ</h2>
+<div class="outline-text-2" id="text-5">
+
+
+<p>
+  あなた達の祈りを、絶望で終わらせたりしない。あなた達は、誰も呪わない。祟らない。因果は全て、私が受け止める。だからお願い。最後まで自分を信じて。
+</p>
+<p>
+  独りぼっちは……さびしいもんな……いいよ。一緒にいてやるよ
+</p>
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6">奇跡も魔法もOculusRiftとNovintFalconならあるんだよ</h2>
+<div class="outline-text-2" id="text-6">
+
+
+</div>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>
