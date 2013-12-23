@@ -36,6 +36,10 @@ categories: oculusrift unity
      3. モデルデータにモーションデータを設定する
      4. 曲を流す
 
+#+BEGIN_HTML
+<!-- more -->
+#+END_HTML
+
 ---------
 
 * 作業の内容
