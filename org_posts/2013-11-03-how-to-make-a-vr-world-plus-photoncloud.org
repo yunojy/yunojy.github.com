@@ -43,6 +43,10 @@ published: true
      5. プレイヤーにモデルデータを設定する
      6. NPCを配置する
      7. NPCにAIを設定する
+
+#+BEGIN_HTML
+<!-- more -->
+#+END_HTML
         
 ---------
 
