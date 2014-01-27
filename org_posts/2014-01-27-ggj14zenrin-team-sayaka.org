@@ -5,6 +5,7 @@ title: "グローバルゲームジャム2014 参加してきまし�
 date: 2014-01-27 22:14
 comments: true
 categories: GGJ Unity3D Unity2D OculusRift EyeTribe
+published: true
 ---
 #+END_HTML
 
