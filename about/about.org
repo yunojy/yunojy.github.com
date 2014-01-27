@@ -1,0 +1,118 @@
+#+BEGIN_HTML
+---
+layout: post
+title: "about"
+date: 2013-12-31 20:30
+comments: true
+footer: true
+published: false
+---
+#+END_HTML
+
+* log
+
+  1. OculusRift到着 [2013-05-11 Sat 09:25]
+     #+BEGIN_HTML
+     <blockquote class="twitter-tweet" lang="ja"><p>Oculus VR到着！配送しましたメールはなく不意打ち。order idは70xx。今日中にファストインプレッション書く <a href="https://twitter.com/search?q=%23oculus&amp;src=hash">#oculus</a> <a href="http://t.co/p891MUJqA6">pic.twitter.com/p891MUJqA6</a></p>&mdash; yuujii - SKB02 (@yuujii) <a href="https://twitter.com/yuujii/statuses/333015059024461825">2013, 5月 11</a></blockquote>
+     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+     #+END_HTML
+  2. Lukalus Soine [2013-06-23 Sun 15:12]
+     #+begin_html
+     <blockquote class="twitter-tweet" lang="ja"><p>Lukalus使用例、添い寝モード。今昼寝したいから作った。 <a href="https://twitter.com/search?q=%23Lukalus&amp;src=hash">#Lukalus</a> <a href="https://twitter.com/search?q=%23OculusJP&amp;src=hash">#OculusJP</a> <a href="https://twitter.com/search?q=%23Oculus&amp;src=hash">#Oculus</a> <a href="http://t.co/nbF6Le8dqB">pic.twitter.com/nbF6Le8dqB</a></p>&mdash; yuujii - SKB02 (@yuujii) <a href="https://twitter.com/yuujii/statuses/348685052151996416">2013, 6月 23</a></blockquote>
+     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+     #+end_html
+  3. Lukalus 0.0.1 [2013-06-24 Mon 03:41]
+     #+BEGIN_HTML
+     <blockquote class="twitter-tweet" lang="ja"><p>大変長らくお待たせいたしました。&#10;Lukalus（全年齢版）&#10;<a href="http://t.co/0kpb1TKkMb">http://t.co/0kpb1TKkMb</a>&#10;<a href="https://twitter.com/search?q=%23Lukalus&amp;src=hash">#Lukalus</a> <a href="https://twitter.com/search?q=%23OculusJP&amp;src=hash">#OculusJP</a></p>&mdash; yuujii - SKB02 (@yuujii) <a href="https://twitter.com/yuujii/statuses/348873577698840577">2013, 6月 23</a></blockquote>
+     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+     #+END_HTML
+  4. Hydra購入 [2013-05-25 Sat 09:55]
+     #+begin_html
+     <blockquote class="twitter-tweet" lang="ja"><p><a href="http://t.co/hrB4ARZqz5">http://t.co/hrB4ARZqz5</a>で注文したRazerHydraの見積確定。5/28-29配送、到着は6/11-20。本体$137.05-&gt;JPY 14,411 送料JPY 1,470 計 JPY 15,881 で、多分これに税が掛かるはず。</p>&mdash; yuujii - SKB02 (@yuujii) <a href="https://twitter.com/yuujii/statuses/338095937828290560">2013, 5月 25</a></blockquote>
+     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+     #+end_html
+  5. Lukalus 0.0.3 [2013-06-27 Thu 00:58]
+     #+begin_html
+     <blockquote class="twitter-tweet" lang="ja"><p>Lukalusリリースです。 <a href="http://t.co/kIOnzF2mxG">http://t.co/kIOnzF2mxG</a>&#10;<a href="https://twitter.com/search?q=%23Lukalus&amp;src=hash">#Lukalus</a> <a href="https://twitter.com/search?q=%23OculusJP&amp;src=hash">#OculusJP</a></p>&mdash; yuujii - SKB02 (@yuujii) <a href="https://twitter.com/yuujii/statuses/349919561174355968">2013, 6月 26</a></blockquote>
+     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+     #+end_html
+  6. Lukalus 0.1 [2013-06-29 Sat 01:36]
+     #+begin_html
+     <blockquote class="twitter-tweet" data-conversation="none" lang="ja"><p><a href="https://twitter.com/waseda_fablab">@waseda_fablab</a> おまったさんでした！&#10;PS、Gamepad対応Lukalus0.1リリースです&#10;<a href="http://t.co/eY88vTxDq1">http://t.co/eY88vTxDq1</a>&#10;起動時のInputからREADME通りにキーバインドでどうぞ <a href="https://twitter.com/search?q=%23lukalus&amp;src=hash">#lukalus</a> <a href="https://twitter.com/search?q=%23OculusJP&amp;src=hash">#OculusJP</a></p>&mdash; yuujii - SKB02 (@yuujii) <a href="https://twitter.com/yuujii/statuses/350653887474176001">2013, 6月 28</a></blockquote>
+     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+     #+end_html
+  7. Lukalus 0.1.1 [2013-06-29 Sat 11:42]
+     #+begin_html
+     <blockquote class="twitter-tweet" data-conversation="none" lang="ja"><p><a href="https://twitter.com/waseda_fablab">@waseda_fablab</a> こんどこそじょいすてぃっくに仮対応しました。Lukalus 0.1.1 <a href="http://t.co/q753RWJ8ge">http://t.co/q753RWJ8ge</a>&#10;ただ興奮して密着しすぎると落ちます。フェザータッチでお願いします。&#10;<a href="https://twitter.com/search?q=%23Lukalus&amp;src=hash">#Lukalus</a> <a href="https://twitter.com/search?q=%23OculusJP&amp;src=hash">#OculusJP</a></p>&mdash; yuujii - SKB02 (@yuujii) <a href="https://twitter.com/yuujii/statuses/350806426995789824">2013, 6月 29</a></blockquote>
+     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+     #+end_html
+  8. Lukalus 0.2 [2013-06-29 Sat 15:49]
+     #+begin_html
+     <blockquote class="twitter-tweet" data-conversation="none" lang="ja"><p><a href="https://twitter.com/waseda_fablab">@waseda_fablab</a> ぬーあかんですか、ほかの操作に同じキーが割り当ててないか見てみてください。&#10;あと0.2をお試しくださいませ。&#10;<a href="http://t.co/gPojNvlPOb">http://t.co/gPojNvlPOb</a></p>&mdash; yuujii - SKB02 (@yuujii) <a href="https://twitter.com/yuujii/statuses/350868661403254784">2013, 6月 29</a></blockquote>
+     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+     #+end_html
+  9. Lukalus 0.2beta [2013-06-29 Sat 23:44]
+     #+begin_html
+     <blockquote class="twitter-tweet" lang="ja"><p>再：Lukalus_0.2β「まばたき」実装。JoyStick対応で発生したHydraのbugfixも含まれます <a href="http://t.co/gPojNvlPOb">http://t.co/gPojNvlPOb</a> <a href="https://twitter.com/search?q=%23Lukalus&amp;src=hash">#Lukalus</a> <a href="https://twitter.com/search?q=%23OculusJP&amp;src=hash">#OculusJP</a></p>&mdash; yuujii - SKB02 (@yuujii) <a href="https://twitter.com/yuujii/statuses/350988064698531840">2013, 6月 29</a></blockquote>
+     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+     #+end_html
+  10. Lukalus 0.2.1dev [2013-06-30 Sun 18:58]
+      #+begin_html
+      <blockquote class="twitter-tweet" lang="ja"><p><a href="https://twitter.com/waseda_fablab">@waseda_fablab</a> Lukalus 0.2.1dev &#10;<a href="http://t.co/Pm9lrzG0G4">http://t.co/Pm9lrzG0G4</a>&#10;・Right X,Yの値をRawもあわせて、Spaceキーで出るあれに表示&#10;※PS3コン同値&#10;<a href="https://twitter.com/search?q=%23Lukalus&amp;src=hash">#Lukalus</a> <a href="https://twitter.com/search?q=%23OculusJP&amp;src=hash">#OculusJP</a></p>&mdash; yuujii - SKB02 (@yuujii) <a href="https://twitter.com/yuujii/statuses/351278639482028032">2013, 6月 30</a></blockquote>
+      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      #+end_html
+  11. Lukalus 0.2.2 [2013-06-30 Sun 22:55]
+      #+begin_html
+      <blockquote class="twitter-tweet" data-conversation="none" lang="ja"><p><a href="https://twitter.com/waseda_fablab">@waseda_fablab</a> <a href="https://twitter.com/faifx">@faifx</a> Lukalus 0.2.2 <a href="http://t.co/amcJMozo1h">http://t.co/amcJMozo1h</a>&#10;手上下移動に十字○×△□設定可へ&#10;<a href="https://twitter.com/japboy">@japboy</a> 遅くなりましたがOSXバイナリ同封です。動作確認していないので人柱たのんます&#10;<a href="https://twitter.com/search?q=%23Lukalus&amp;src=hash">#Lukalus</a></p>&mdash; yuujii - SKB02 (@yuujii) <a href="https://twitter.com/yuujii/statuses/351338281138520067">2013, 6月 30</a></blockquote>
+      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      #+end_html
+  12. Lukalus 0.2.3 [2013-07-01 Mon 00:58]
+      #+begin_html
+      <blockquote class="twitter-tweet" data-conversation="none" lang="ja"><p><a href="https://twitter.com/waseda_fablab">@waseda_fablab</a> <a href="https://twitter.com/faifx">@faifx</a> Lukalus 0.2.3 <a href="http://t.co/xdRvA1imy6">http://t.co/xdRvA1imy6</a>&#10;今度こそゲームパッド対応です。&#10;後Mac実機確認してみたら真っ暗のままでだめっぽいような。&#10;一応バイナリくっつけてます&#10;<a href="https://twitter.com/search?q=%23Lukalus&amp;src=hash">#Lukalus</a> <a href="https://twitter.com/search?q=%23OculusJP&amp;src=hash">#OculusJP</a></p>&mdash; yuujii - SKB02 (@yuujii) <a href="https://twitter.com/yuujii/statuses/351369038871527425">2013, 6月 30</a></blockquote>
+      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      #+end_html
+  13. Lukalus 0.3 [2013-07-06 Sat 14:12]
+      #+begin_html
+      <blockquote class="twitter-tweet" lang="ja"><p>Lukalus 0.3&#10;・Win/Mac同封(<a href="https://twitter.com/warapuri">@warapuri</a>さんTHX!!&#10;・しゃがむ実装&#10;・GamePad対応(<a href="https://twitter.com/waseda_fablab">@waseda_fablab</a> さんTHX!!&#10;<a href="http://t.co/LHlZPMx2Cm">http://t.co/LHlZPMx2Cm</a>&#10;キーバインドの難易度高めです。&#10;<a href="https://twitter.com/search?q=%23Lukalus&amp;src=hash">#Lukalus</a> <a href="https://twitter.com/search?q=%23OculusJP&amp;src=hash">#OculusJP</a></p>&mdash; yuujii - SKB02 (@yuujii) <a href="https://twitter.com/yuujii/statuses/353381029563731968">2013, 7月 6</a></blockquote>
+      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      #+end_html
+  14. Lukalus Live! 0.1 [2013-07-07 Sun 18:53]
+      #+begin_html
+      <blockquote class="twitter-tweet" lang="ja"><p>LukalusLive! 0.1&#10;ルカの方角から歌が聞こえて、一緒にKINECTで踊れるver&#10;ちょっと感動したので一旦公開&#10;<a href="https://twitter.com/GRGSIBERIA">@GRGSIBERIA</a>さん <a href="https://twitter.com/mikumiku_aloha">@mikumiku_aloha</a>さんTHX！ &#10;<a href="http://t.co/FKne0VDhA4">http://t.co/FKne0VDhA4</a></p>&mdash; yuujii - SKB02 (@yuujii) <a href="https://twitter.com/yuujii/statuses/353806239823699968">2013, 7月 7</a></blockquote>
+      <blockquote class="twitter-tweet" lang="ja"><p>Lukalus Live! 0.1 を Bowl Rollにあげました。&#10;<a href="http://t.co/x6XIRhqLiU">http://t.co/x6XIRhqLiU</a>&#10;<a href="https://twitter.com/search?q=%23Oculus&amp;src=hash">#Oculus</a> <a href="https://twitter.com/search?q=%23OculusJP&amp;src=hash">#OculusJP</a> <a href="https://twitter.com/search?q=%23Lukalus&amp;src=hash">#Lukalus</a></p>&mdash; yuujii - SKB02 (@yuujii) <a href="https://twitter.com/yuujii/statuses/353814123693346816">2013, 7月 7</a></blockquote>
+      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      #+end_html
+  15. OculuSky 0.1 [2013-07-21 Sun 09:41]
+      #+begin_html
+      <blockquote class="twitter-tweet" lang="ja"><p>空を自由に飛びたいな♪はい！OculuSky！ということでお待たせしました。&#10;OculuSky 0.1 <a href="http://t.co/9ehxWAUc70">http://t.co/9ehxWAUc70</a> リリースです&#10;3Dマウス所有者の方動作検証たのんます。</p>&mdash; yuujii - SKB02 (@yuujii) <a href="https://twitter.com/yuujii/statuses/358749895739453441">2013, 7月 21</a></blockquote>
+      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      #+end_html
+  16. Lukalus LeapMotion対応版 [2013-07-22 Mon 22:33]
+      #+begin_html
+      <blockquote class="twitter-tweet" lang="ja"><p>LukalusLeapMotion対応？版未確認Alpha <a href="https://twitter.com/search?q=%23bowlroll_net&amp;src=hash">#bowlroll_net</a> <a href="http://t.co/hcgnrWuecF">http://t.co/hcgnrWuecF</a></p>&mdash; yuujii - SKB02 (@yuujii) <a href="https://twitter.com/yuujii/statuses/359305180447129600">2013, 7月 22</a></blockquote>
+      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      #+end_html
+  17. Lukalus Hizamakura [2013-07-23 Tue 01:42]
+      #+begin_html
+      <blockquote class="twitter-tweet" lang="ja"><p>Lukalus Hizamakura&#10;膝枕は日本のすばらしい文化です。&#10;&#10;※譲れないラインを割る完成度なのでリリースは明日。 <a href="http://t.co/PN5Cv5Q3xX">pic.twitter.com/PN5Cv5Q3xX</a></p>&mdash; yuujii - SKB02 (@yuujii) <a href="https://twitter.com/yuujii/statuses/359352826071224320">2013, 7月 22</a></blockquote>
+      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      #+end_html
+  18. Lukalus Live! 1.0 [2013-08-04 Sun 00:12]
+      #+begin_html
+      <blockquote class="twitter-tweet" lang="ja"><p>まるっと作り変えました。Ocufes出展予定&#10;初お目見え！とか余裕無い音楽とダンスの同期や細部のテストたのんます&#10;ルカライブ！(Lukalus Live! 1) 8/4更新 <a href="https://twitter.com/search?q=%23bowlroll_net&amp;src=hash">#bowlroll_net</a> <a href="http://t.co/x6XIRhqLiU">http://t.co/x6XIRhqLiU</a></p>&mdash; yuujii - SKB02 (@yuujii) <a href="https://twitter.com/yuujii/statuses/363678779748524033">2013, 8月 3</a></blockquote>
+      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      #+end_html
+  19. PrioVR [2013-09-03 Tue 22:25]
+      #+begin_html
+      <blockquote class="twitter-tweet" lang="ja"><p>I just backed PrioVR : Get your ideas moving on <a href="https://twitter.com/kickstarter">@Kickstarter</a> <a href="http://t.co/KP94OgrR13">http://t.co/KP94OgrR13</a> <a href="http://t.co/baAurrhqp3">pic.twitter.com/baAurrhqp3</a></p>&mdash; yuujii - SKB02 (@yuujii) <a href="https://twitter.com/yuujii/statuses/374885762686148608">2013, 9月 3</a></blockquote>
+      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      #+end_html
+  20. STEM
+      #+begin_html
+      <blockquote class="twitter-tweet" lang="ja"><p>I just backed STEM System: The Best Way to Interact with Virtual Worlds on <a href="https://twitter.com/kickstarter">@Kickstarter</a> <a href="http://t.co/ogUdwe8wuG">http://t.co/ogUdwe8wuG</a></p>&mdash; yuujii - SKB02 (@yuujii) <a href="https://twitter.com/yuujii/statuses/378155218870882304">2013, 9月 12</a></blockquote>
+      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      #+end_html
+  21. 
+      
+      
+      
