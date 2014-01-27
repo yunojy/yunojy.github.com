@@ -4,9 +4,7 @@ layout: post
 title: "グローバルゲームジャム2014 参加してきました。GlobalGameJam2014 - TEAM Sayaka #ggj14zenrin"
 date: 2014-01-27 22:14
 comments: true
-categories: 
-description: 
-keywords: GGJ Unity3D Unity2D OculusRift EyeTribe
+categories: GGJ Unity3D Unity2D OculusRift EyeTribe
 ---
 #+END_HTML
 
