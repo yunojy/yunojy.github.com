@@ -4,7 +4,7 @@
   <title><![CDATA[develog.me]]></title>
   <link href="http://yunojy.github.io/atom.xml" rel="self"/>
   <link href="http://yunojy.github.io/"/>
-  <updated>2014-02-02T14:46:39+09:00</updated>
+  <updated>2014-02-02T14:49:46+09:00</updated>
   <id>http://yunojy.github.io/</id>
   <author>
     <name><![CDATA[yuujii]]></name>
@@ -898,21 +898,33 @@
 </p>
 
 
-<p>
-完成品DL: <a href="http://bowlroll.net/up/dl21149">ルカライブ！(Lukalive!) Bowl Roll </a>
-</p>
 
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">完成品DL</h2>
+<div class="outline-text-2" id="text-1">
+
+<ul>
+<li><a href="http://bowlroll.net/up/dl21149">ルカライブ！(Lukalive!) Bowl Roll </a>
+</li>
+<li><a href="https://share.oculusvr.com/app/lbenchlukalus-live-benchmark">Lbench(Lukalus Live! Benchmark) - OculusVR Share</a>
+</li>
+</ul>
 
 
 
 <hr/>
 
+</div>
+
+</div>
 
 
 
-<div id="outline-container-1" class="outline-2">
-<h2 id="sec-1"><span class="timestamp-wrapper"> <span class="timestamp">2014-02-02 Sun</span></span></h2>
-<div class="outline-text-2" id="text-1">
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="timestamp-wrapper"> <span class="timestamp">2014-02-02 Sun</span></span></h2>
+<div class="outline-text-2" id="text-2">
 
 <ul>
 <li>スクリーンショットは古いままですが、とりあえず大きく手順が変わっている箇所を修正
@@ -935,9 +947,9 @@
 
 
 
-<div id="outline-container-2" class="outline-2">
-<h2 id="sec-2">作業のおおまかな流れ</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">作業のおおまかな流れ</h2>
+<div class="outline-text-2" id="text-3">
 
 <ol>
 <li>下準備(10分)
@@ -1001,9 +1013,9 @@
 
 
 
-<div id="outline-container-3" class="outline-2">
-<h2 id="sec-3">作業の内容</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">作業の内容</h2>
+<div class="outline-text-2" id="text-4">
 
 
 <ol>
@@ -1307,9 +1319,9 @@
 
 
 
-<div id="outline-container-4" class="outline-2">
-<h2 id="sec-4">更にクオリティを上げる</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5">更にクオリティを上げる</h2>
+<div class="outline-text-2" id="text-5">
 
 <ul>
 <li>場合によってはプログラミングも辞さない、もっといろいろやりたい！方のために
@@ -1320,45 +1332,45 @@
 
 </div>
 
-<div id="outline-container-4-1" class="outline-3">
-<h3 id="sec-4-1">キャラの見た目の色をもうちょっとリアルにしたい</h3>
-<div class="outline-text-3" id="text-4-1">
+<div id="outline-container-5-1" class="outline-3">
+<h3 id="sec-5-1">キャラの見た目の色をもうちょっとリアルにしたい</h3>
+<div class="outline-text-3" id="text-5-1">
 
 
 </div>
 
 </div>
 
-<div id="outline-container-4-2" class="outline-3">
-<h3 id="sec-4-2">口から歌詞が聞こえて、スピーカーから音が流れるようにしたい</h3>
-<div class="outline-text-3" id="text-4-2">
+<div id="outline-container-5-2" class="outline-3">
+<h3 id="sec-5-2">口から歌詞が聞こえて、スピーカーから音が流れるようにしたい</h3>
+<div class="outline-text-3" id="text-5-2">
 
 
 </div>
 
 </div>
 
-<div id="outline-container-4-3" class="outline-3">
-<h3 id="sec-4-3">HydraやKinectでサイリウム振りたい</h3>
-<div class="outline-text-3" id="text-4-3">
+<div id="outline-container-5-3" class="outline-3">
+<h3 id="sec-5-3">HydraやKinectでサイリウム振りたい</h3>
+<div class="outline-text-3" id="text-5-3">
 
 
 </div>
 
 </div>
 
-<div id="outline-container-4-4" class="outline-3">
-<h3 id="sec-4-4">ステージに派手な演出を加えたい</h3>
-<div class="outline-text-3" id="text-4-4">
+<div id="outline-container-5-4" class="outline-3">
+<h3 id="sec-5-4">ステージに派手な演出を加えたい</h3>
+<div class="outline-text-3" id="text-5-4">
 
 
 </div>
 
 </div>
 
-<div id="outline-container-4-5" class="outline-3">
-<h3 id="sec-4-5">ステージをちゃんとライブ会場のようなものにしたい</h3>
-<div class="outline-text-3" id="text-4-5">
+<div id="outline-container-5-5" class="outline-3">
+<h3 id="sec-5-5">ステージをちゃんとライブ会場のようなものにしたい</h3>
+<div class="outline-text-3" id="text-5-5">
 
 </div>
 </div>

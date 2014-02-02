@@ -10,7 +10,10 @@ categories: oculusrift unity
 
 [[file:https://lh6.googleusercontent.com/-JAPPs61u8qM/Uf-cb0XInoI/AAAAAAAAAT8/RovbDaKzMVU/s900/Lukalive_logo.png]]
 
-完成品DL: [[http://bowlroll.net/up/dl21149][ルカライブ！(Lukalive!) Bowl Roll ]]
+
+* 完成品DL
+  - [[http://bowlroll.net/up/dl21149][ルカライブ！(Lukalive!) Bowl Roll ]]
+  - [[https://share.oculusvr.com/app/lbenchlukalus-live-benchmark][Lbench(Lukalus Live! Benchmark) - OculusVR Share]]
 
 ---------
 
