@@ -4,7 +4,7 @@
   <title><![CDATA[develog.me]]></title>
   <link href="http://yunojy.github.io/atom.xml" rel="self"/>
   <link href="http://yunojy.github.io/"/>
-  <updated>2014-02-02T14:52:02+09:00</updated>
+  <updated>2014-02-02T14:54:17+09:00</updated>
   <id>http://yunojy.github.io/</id>
   <author>
     <name><![CDATA[yuujii]]></name>
@@ -1092,9 +1092,7 @@
 </li>
 <li><code>*.bmp</code> <code>*.JPG</code> <code>*.spa</code> <code>*.sph</code> モデルのテクスチャ画像
 <ul>
-<li>後工程で、モデル本体ファイルの変換を行った後、Texturesフォルダを作ってUnityにそのまますべてコピーする。
-</li>
-<li>その際 <code>*.spa</code> <code>*.sph</code> ファイルを  <code>*.spa.bmp</code> <code>*.sph.bmp</code> に名前を変える。（※不要かも。テクスチャ表示がおかしくなったら必要。）
+<li><code>*.spa</code> <code>*.sph</code> ファイルを  <code>*.spa.bmp</code> <code>*.sph.bmp</code> に名前を変える。（※不要かも。テクスチャ表示がおかしくなったら必要。）
 
 </li>
 </ul>
