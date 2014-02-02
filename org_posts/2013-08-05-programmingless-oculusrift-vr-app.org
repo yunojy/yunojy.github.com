@@ -133,23 +133,25 @@ categories: oculusrift unity
            [[file:https://lh6.googleusercontent.com/-IjxPn0Zpq9s/UgBNSPS5ESI/AAAAAAAAAhI/n2BV0gn2sz0/w699-h593-no/OculusSampleImport8.png]]
 
      2. モデルデータをUnityに取り込む
-        - ※最新の手順についてはMMD4Mecanimに付属する =MMD4Mecanim(PMX対応版)_チュートリアル(基本編).pdf= あたりをご参照ください。下記は作業の概要程度としてお読みください。
+        ※最新の手順についてはMMD4Mecanimに付属する =MMD4Mecanim(PMX対応版)_チュートリアル(基本編).pdf= あたりをご参照ください。下記は作業の概要程度としてお読みください。
         1. =MMD4Mecanimをインポート= (MMDモデルデータとモーションデータをUnity用の =*.fbx= ファイル、 =*.anim= ファイルに変換して取り込むツール)
            - =MMD4Mecanim_Alpha_20140124/MMD4Mecanim.unitypackage= をダブルクリックして、先ほどのOculusSDKと同様取り込む。
 
         2. 先ほどDLしたMMDモデルの圧縮ファイルを解凍して、できたフォルダを =Projectビュー= へドラッグアンドドロップ
+
+        3.  =MMD4Mecanim(PMX対応版)_チュートリアル(基本編).pdf= を参考に色々設定。
            
-        3. モデルを画面に配備
+        4. モデルを画面に配備
            - Sceneビューの表示位置を見やすい位置へ移動
              [[file:https://lh6.googleusercontent.com/-DJlZsJ4XIVA/UgBNJauUsjI/AAAAAAAAAdQ/D1MbNdp0HV8/w699-h593-no/M4M6.png]]
 
            - Projectビューで =Luka121002P= を選択して、Sceneビューにドラッグアンドドロップ。Gameビューで表示される位置に置く
              [[file:https://lh6.googleusercontent.com/-E-MRagpkC28/UgBNJuSrOqI/AAAAAAAAAdo/9y0z9ccuRZE/w699-h593-no/M4M7.png]]
 
-        4. モデルが真っ黒な場合、光をあてる
+        5. モデルが真っ黒な場合、光をあてる
            [[file:https://lh4.googleusercontent.com/-WnnDkic_vxo/UgBNKMO_wrI/AAAAAAAAAdk/_yVqGQLmoT0/w699-h593-no/M4M9.png]]
 
-        5. ここまでで動作確認。動かしてみる
+        6. ここまでで動作確認。動かしてみる
            [[file:https://lh6.googleusercontent.com/-IpT1OaX6vMs/UgBNHdt4jFI/AAAAAAAAAcg/04_a1XxbfR0/w699-h593-no/M4M10.png]]
 
   5. モデルデータにモーションデータを設定する
