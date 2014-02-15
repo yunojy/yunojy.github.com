@@ -1,0 +1,127 @@
+#+BEGIN_HTML
+---
+layout: post
+title: "2台のOculusRiftを1台のPCに接続してみた"
+date: 2014-02-16 00:18
+comments: true
+categories: OculusRift Unity
+published: true
+description: 
+keywords: 
+---
+#+END_HTML
+
+[[file:https://lh4.googleusercontent.com/-Sf2J2XpU_P0/Uv-M_xHotUI/AAAAAAAAA8o/7eeVZhWO4CA/w638-h346-no/OculusRift%25E3%2582%25922%25E5%258F%25B0%25E6%258E%25A5%25E7%25B6%259A%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2580%2582connecting_multiple_OculusRift_-_YouTube.png]]
+
+* 対象
+  ovr\_unity\_0.2.5\_lib
+  
+* 標準機能
+  OculusRiftを2台接続すると、もう1台は体の向きとして動くようになっていた。
+#+BEGIN_HTML
+<blockquote class="twitter-tweet" data-conversation="none" lang="ja"><p>.<a href="https://twitter.com/yuujii">@yuujii</a> ほうほうほう。二台目が欲しくなる。<a href="https://twitter.com/search?q=%23DK2%E3%81%8C%E5%87%BA%E3%81%9F%E3%81%A8%E3%81%8D%E3%81%AEDK1%E3%81%AE%E6%B4%BB%E7%94%A8%E6%96%B9%E6%B3%95%E3%81%8C%E5%88%9D%E3%82%81%E3%81%8B%E3%82%89%E7%94%A8%E6%84%8F%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%81%A8%E3%81%84%E3%81%86%E3%81%AE%E3%81%8B&amp;src=hash">#DK2が出たときのDK1の活用方法が初めから用意されているというのか</a></p>&mdash; あぷろ (@elfmimi) <a href="https://twitter.com/elfmimi/statuses/434602966973034496">2014, 2月 15</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+#+END_HTML
+  OVRPlayerControllerを使っていれば何もせずとも動く。 \\
+  これでDK2が来ても安心！
+  
+#+BEGIN_HTML
+<iframe width="640" height="360" src="//www.youtube.com/embed/5RVo8mRwLWs" frameborder="0" allowfullscreen></iframe>
+#+END_HTML
+  
+* Let's Hacking!
+** もう1台のOculusRiftもプレイヤーとして使ってみる
+   マルチプレイはとーってもおもしろい。表現の可能性が一気に広がる。 \\
+   Photon使って実現することもできるが、[[http://ocufes.jp][Ocufes]]の会場にインターネット回線がないかもしれない。 \\
+   ということで、ローカルで2Pプレイをやってみる。
+    
+** 課題としては次の2点
+   1. _ディスプレイにどうやって映すか？_
+   2. _ヘッドトラッキングのセンサーの値をどうやって分離するか？_
+
+* 1. ディスプレイにどうやって映すか？
+  OculusRiftは映像をサイド・バイ・サイドに映して3Dを実現。 \\
+  また、110°の視野角を確保するために樽型ひずみ( =Barrel distortion= )で映像を収束してモニターに映し、レンズを通して糸巻型ひずみ( =Pincushion distortion= )で絵を広げることをやってのけたアイディア大賞の製品。 \\
+  \\
+  ここでポイントとなるのは絵をサイド・バイ・サイドで映しているところ。 \\
+  
+** 対応方式としては、[[http://octopress.dev/blog/2014/01/27/ggj14zenrin-team-sayaka/][グローバルゲームジャムでやった]] [[https://twitter.com/koukiwf][@koukiwf]]さん発案のアプローチ
+   1. Unity側で =Game= ビューに映し出すカメラの領域を変更する。
+   2. ビルド後にゲームをWindowモードで起動し、拡張ディスプレイで縦に並べた2つのOculusのモニターをまたぐよう、ウインドウをリサイズしてあげる。
+      [[file:https://lh3.googleusercontent.com/-n_zue7O_5SA/Uv-R8SQT8hI/AAAAAAAAA9I/AmCiAxlvXQA/w686-h576-no/GGJ%25E3%2581%258A%25E5%258F%25B0%25E5%25A0%25B4%25E4%25BC%259A%25E5%25A0%25B4.png]]
+   
+** Unityでの具体的な設定方法
+   1. OVRPlayerControllerを2つ =Scene= ビューに配置
+   2. =Hierarchy= ビューでOVRCameraをアタッチしたGameObjectを選択し、 =Inspector= ビューで OVRPlayerControllerにそれぞれ2つあるOVRCamera、計4つの =Viewport Rect= を次のように修正。上に映すものは =0.5= 下は =-0.5=
+      [[file:https://lh3.googleusercontent.com/-4WvnZssQD1o/Uv-sJtRk8DI/AAAAAAAAA-o/Q0Bf8gdEOPM/w753-h700-no/sidebysideplus.png]]
+   
+
+* 2. ヘッドトラッキングのセンサーの値をどうやって分離するか？
+  1. 次のような感じでソース改変
+     - =OVRCameraController=
+       + 追加
+         #+begin_src C#
+         public int PlayerNo = 0;
+         #+end_src
+     - =OVRCameraControllerEditor.OnInspectorGUI=
+       + 追加
+         #+begin_src C#
+         m_Component.PlayerNo = EditorGUILayout.IntField("Player NO", m_Component.PlayerNo);
+         #+end_src
+     - =OVRCamera.SetCameraOrientation=
+       + 変更前
+         #+begin_src C#
+         // Read sensor here (prediction on or off)
+         if (CameraController.PredictionOn == false)
+             OVRDevice.GetOrientation(0, ref CameraOrientation);
+         else
+             OVRDevice.GetPredictedOrientation(0, ref CameraOrientation);
+         #+end_src
+       + 変更後
+         #+begin_src C#
+         // Read sensor here (prediction on or off)
+         if (CameraController.PredictionOn == false)
+             OVRDevice .GetOrientation(CameraController.PlayerNo, ref CameraOrientation);
+         else
+             OVRDevice .GetPredictedOrientation(CameraController.PlayerNo, ref CameraOrientation);
+         #+end_src
+     - =OVRDevice.InitOrientationSensorList=
+       + 変更前
+         #+begin_src C#
+         // InitOrientationSensorList
+         public static void InitOrientationSensorList()
+         {
+             SensorOrientationList.Clear();
+             SensorOrientationList.Add (0, SensorOrientation.Head);
+             SensorOrientationList.Add (1, SensorOrientation.Other);
+         }
+         #+end_src
+       + 変更後
+         #+begin_src C#
+         // InitOrientationSensorList
+         public static void InitOrientationSensorList()
+         {
+             SensorOrientationList.Clear();
+             SensorOrientationList.Add (0, SensorOrientation .Head);
+             SensorOrientationList.Add (1, SensorOrientation .Head);
+         }    
+         #+end_src
+  2. 4つあるカメラのDepthを1から0へ（先ほどの画像にあるNOTE）
+     
+  3. 各OVRCameraControllerの =PlayerNO= を設定する。
+     1Pは =0= を、2Pは =1= を設定
+  4. 実行
+     #+BEGIN_HTML
+     <iframe width="640" height="360" src="//www.youtube.com/embed/oHw5Zp3GZrk" frameborder="0" allowfullscreen></iframe>
+     #+END_HTML
+  5. 注意 \\
+     USBの認識が不安定でOculusRiftが2台ともちゃんと認識しない場合がある。 \\
+     確認方法としては、OculusRiftを2台接続して =OVRPlayerController.Update= へ =Debug.Log (OVRDevice.SensorCount);= を追加して実行。 \\
+     コンソールに =2= と表示されることを確認する。 =1= であれば1台しか認識していないのでUSBを挿しなおすか、別のポートへ差し替えて実行し直す。 \\
+     どうしてもダメならUSB3.0のハブ（ACアダプタつき）を買う。
+     - 今回試したのはMacbook Proの左のポートへ次のUSB3.0のハブをバスパワー駆動で接続。2台のOculusを両方共USB給電で接続して試した。（実は結構不安定で3回位接続しなおして動く
+       #+BEGIN_HTML
+       <iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=yuuji01-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=B0040P9D4K" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+       <iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=yuuji01-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=B00G519FSG" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+       #+END_HTML
+  

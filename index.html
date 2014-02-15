@@ -9,7 +9,8 @@
   <meta name="author" content="yuujii">
 
   
-  <meta name="description" content="Global Game Jamとは 全世界同時開催の世界最大のGameJam（GameJamとは決められた短い時間でゲーム作るイベント） 2014年の1/24から1/26の3日間。48時間で決められたテーマにそったゲームを作るイベント。 海外公式によると、全世界で73カ国、 &hellip;">
+  <meta name="description" content="対象 ovr_unity_0.2.5_lib 標準機能 OculusRiftを2台接続すると、もう1台は体の向きとして動くようになっていた。
+.@yuujii ほうほうほう。二台目が欲しくなる。#DK2が出たときのDK1の活用方法が初めから用意されているというのか&mdash; あぷろ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +77,298 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/02/16/connecting-multiple-oculusrift/">2台のOculusRiftを1台のPCに接続してみた</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-16T00:18:00+09:00" pubdate data-updated="true">Feb 16<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>
+<a href="https://lh4.googleusercontent.com/-Sf2J2XpU_P0/Uv-M_xHotUI/AAAAAAAAA8o/7eeVZhWO4CA/w638-h346-no/OculusRift%E3%82%922%E5%8F%B0%E6%8E%A5%E7%B6%9A%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F%E3%80%82connecting_multiple_OculusRift_-_YouTube.png"><img src="https://lh4.googleusercontent.com/-Sf2J2XpU_P0/Uv-M_xHotUI/AAAAAAAAA8o/7eeVZhWO4CA/w638-h346-no/OculusRift%25E3%2582%25922%25E5%258F%25B0%25E6%258E%25A5%25E7%25B6%259A%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2580%2582connecting_multiple_OculusRift_-_YouTube.png" alt="OculusRift%25E3%2582%25922%25E5%258F%25B0%25E6%258E%25A5%25E7%25B6%259A%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2580%2582connecting_multiple_OculusRift_-_YouTube.png"/></a>
+</p>
+
+
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">対象</h2>
+<div class="outline-text-2" id="text-1">
+
+<p>  ovr_unity_0.2.5_lib
+</p>
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">標準機能</h2>
+<div class="outline-text-2" id="text-2">
+
+<p>  OculusRiftを2台接続すると、もう1台は体の向きとして動くようになっていた。
+<blockquote class="twitter-tweet" data-conversation="none" lang="ja"><p>.<a href="https://twitter.com/yuujii">@yuujii</a> ほうほうほう。二台目が欲しくなる。<a href="https://twitter.com/search?q=%23DK2%E3%81%8C%E5%87%BA%E3%81%9F%E3%81%A8%E3%81%8D%E3%81%AEDK1%E3%81%AE%E6%B4%BB%E7%94%A8%E6%96%B9%E6%B3%95%E3%81%8C%E5%88%9D%E3%82%81%E3%81%8B%E3%82%89%E7%94%A8%E6%84%8F%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%81%A8%E3%81%84%E3%81%86%E3%81%AE%E3%81%8B&amp;src=hash">#DK2が出たときのDK1の活用方法が初めから用意されているというのか</a></p>&mdash; あぷろ (@elfmimi) <a href="https://twitter.com/elfmimi/statuses/434602966973034496">2014, 2月 15</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  OVRPlayerControllerを使っていれば何もせずとも動く。 <br/>
+  これでDK2が来ても安心！
+</p>
+  
+
+<iframe width="640" height="360" src="//www.youtube.com/embed/5RVo8mRwLWs" frameborder="0" allowfullscreen></iframe>
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">Let&#8217;s Hacking!</h2>
+<div class="outline-text-2" id="text-3">
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1">もう1台のOculusRiftもプレイヤーとして使ってみる</h3>
+<div class="outline-text-3" id="text-3-1">
+
+<p>   マルチプレイはとーってもおもしろい。表現の可能性が一気に広がる。 <br/>
+   Photon使って実現することもできるが、<a href="http://ocufes.jp">Ocufes</a>の会場にインターネット回線がないかもしれない。 <br/>
+   ということで、ローカルで2Pプレイをやってみる。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2">課題としては次の2点</h3>
+<div class="outline-text-3" id="text-3-2">
+
+<ol>
+<li><span style="text-decoration:underline;">ディスプレイにどうやって映すか？</span>
+</li>
+<li><span style="text-decoration:underline;">ヘッドトラッキングのセンサーの値をどうやって分離するか？</span>
+</li>
+</ol>
+
+
+</div>
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">1. ディスプレイにどうやって映すか？</h2>
+<div class="outline-text-2" id="text-4">
+
+<p>  OculusRiftは映像をサイド・バイ・サイドに映して3Dを実現。 <br/>
+  また、110°の視野角を確保するために樽型ひずみ( <code>Barrel distortion</code> )で映像を収束してモニターに映し、レンズを通して糸巻型ひずみ( <code>Pincushion distortion</code> )で絵を広げることをやってのけたアイディア大賞の製品。 <br/>
+  <br/>
+  ここでポイントとなるのは絵をサイド・バイ・サイドで映しているところ。 <br/>
+</p>
+
+</div>
+
+<div id="outline-container-4-1" class="outline-3">
+<h3 id="sec-4-1">対応方式としては、<a href="http://octopress.dev/blog/2014/01/27/ggj14zenrin-team-sayaka/">グローバルゲームジャムでやった</a> <a href="https://twitter.com/koukiwf">@koukiwf</a>さん発案のアプローチ</h3>
+<div class="outline-text-3" id="text-4-1">
+
+<ol>
+<li>Unity側で <code>Game</code> ビューに映し出すカメラの領域を変更する。
+</li>
+<li>ビルド後にゲームをWindowモードで起動し、拡張ディスプレイで縦に並べた2つのOculusのモニターをまたぐよう、ウインドウをリサイズしてあげる。
+      <a href="https://lh3.googleusercontent.com/-n_zue7O_5SA/Uv-R8SQT8hI/AAAAAAAAA9I/AmCiAxlvXQA/w686-h576-no/GGJ%E3%81%8A%E5%8F%B0%E5%A0%B4%E4%BC%9A%E5%A0%B4.png"><img src="https://lh3.googleusercontent.com/-n_zue7O_5SA/Uv-R8SQT8hI/AAAAAAAAA9I/AmCiAxlvXQA/w686-h576-no/GGJ%25E3%2581%258A%25E5%258F%25B0%25E5%25A0%25B4%25E4%25BC%259A%25E5%25A0%25B4.png" alt="GGJ%25E3%2581%258A%25E5%258F%25B0%25E5%25A0%25B4%25E4%25BC%259A%25E5%25A0%25B4.png"/></a>
+</li>
+</ol>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-2" class="outline-3">
+<h3 id="sec-4-2">Unityでの具体的な設定方法</h3>
+<div class="outline-text-3" id="text-4-2">
+
+<ol>
+<li>OVRPlayerControllerを2つ <code>Scene</code> ビューに配置
+</li>
+<li><code>Hierarchy</code> ビューでOVRCameraをアタッチしたGameObjectを選択し、 <code>Inspector</code> ビューで OVRPlayerControllerにそれぞれ2つあるOVRCamera、計4つの <code>Viewport Rect</code> を次のように修正。上に映すものは <code>0.5</code> 下は <code>-0.5</code>
+      <img src="https://lh3.googleusercontent.com/-4WvnZssQD1o/Uv-sJtRk8DI/AAAAAAAAA-o/Q0Bf8gdEOPM/w753-h700-no/sidebysideplus.png"  alt="https://lh3.googleusercontent.com/-4WvnZssQD1o/Uv-sJtRk8DI/AAAAAAAAA-o/Q0Bf8gdEOPM/w753-h700-no/sidebysideplus.png" />
+</li>
+</ol>
+
+
+
+</div>
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5">2. ヘッドトラッキングのセンサーの値をどうやって分離するか？</h2>
+<div class="outline-text-2" id="text-5">
+
+<ol>
+<li>次のような感じでソース改変
+<ul>
+<li><code>OVRCameraController</code>
+<ul>
+<li>追加
+
+
+
+<pre class="example">public int PlayerNo = 0;
+</pre>
+
+</li>
+</ul>
+
+</li>
+<li><code>OVRCameraControllerEditor.OnInspectorGUI</code>
+<ul>
+<li>追加
+
+
+
+<pre class="example">m_Component.PlayerNo = EditorGUILayout.IntField("Player NO", m_Component.PlayerNo);
+</pre>
+
+</li>
+</ul>
+
+</li>
+<li><code>OVRCamera.SetCameraOrientation</code>
+<ul>
+<li>変更前
+
+
+
+<pre class="example">// Read sensor here (prediction on or off)
+if (CameraController.PredictionOn == false)
+    OVRDevice.GetOrientation(0, ref CameraOrientation);
+else
+    OVRDevice.GetPredictedOrientation(0, ref CameraOrientation);
+</pre>
+
+</li>
+<li>変更後
+
+
+
+<pre class="example">// Read sensor here (prediction on or off)
+if (CameraController.PredictionOn == false)
+    OVRDevice .GetOrientation(CameraController.PlayerNo, ref CameraOrientation);
+else
+    OVRDevice .GetPredictedOrientation(CameraController.PlayerNo, ref CameraOrientation);
+</pre>
+
+</li>
+</ul>
+
+</li>
+<li><code>OVRDevice.InitOrientationSensorList</code>
+<ul>
+<li>変更前
+
+
+
+<pre class="example">// InitOrientationSensorList
+public static void InitOrientationSensorList()
+{
+    SensorOrientationList.Clear();
+    SensorOrientationList.Add (0, SensorOrientation.Head);
+    SensorOrientationList.Add (1, SensorOrientation.Other);
+}
+</pre>
+
+</li>
+<li>変更後
+
+
+
+<pre class="example">// InitOrientationSensorList
+public static void InitOrientationSensorList()
+{
+    SensorOrientationList.Clear();
+    SensorOrientationList.Add (0, SensorOrientation .Head);
+    SensorOrientationList.Add (1, SensorOrientation .Head);
+}    
+</pre>
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+<li>4つあるカメラのDepthを1から0へ（先ほどの画像にあるNOTE）
+
+</li>
+<li>各OVRCameraControllerの <code>PlayerNO</code> を設定する。
+     1Pは <code>0</code> を、2Pは <code>1</code> を設定
+</li>
+<li>実行
+     <iframe width="640" height="360" src="//www.youtube.com/embed/oHw5Zp3GZrk" frameborder="0" allowfullscreen></iframe>
+</li>
+<li>注意 <br/>
+     USBの認識が不安定でOculusRiftが2台ともちゃんと認識しない場合がある。 <br/>
+     確認方法としては、OculusRiftを2台接続して <code>OVRPlayerController.Update</code> へ <code>Debug.Log (OVRDevice.SensorCount);</code> を追加して実行。 <br/>
+     コンソールに <code>2</code> と表示されることを確認する。 <code>1</code> であれば1台しか認識していないのでUSBを挿しなおすか、別のポートへ差し替えて実行し直す。 <br/>
+     どうしてもダメならUSB3.0のハブ（ACアダプタつき）を買う。
+<ul>
+<li>今回試したのはMacbook Proの左のポートへ次のUSB3.0のハブをバスパワー駆動で接続。2台のOculusを両方共USB給電で接続して試した。（実は結構不安定で3回位接続しなおして動く
+       <iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=yuuji01-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=B0040P9D4K" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+       <iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=yuuji01-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=B00G519FSG" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+</li>
+</ul>
+
+</li>
+</ol>
+
+
+</div>
+</div>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -2324,172 +2617,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/05/11/oculus-rift-coming/">Oculus Rift届きました！（フォトレビュー）</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-05-11T10:10:00+09:00" pubdate data-updated="true">May 11<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>
-<img src="https://lh6.googleusercontent.com/-7DwzXke8pco/UY3XQ_Mwx7I/AAAAAAAAAPI/xoQQoF41BeM/s900/IMG_2748.JPG"  alt="https://lh6.googleusercontent.com/-7DwzXke8pco/UY3XQ_Mwx7I/AAAAAAAAAPI/xoQQoF41BeM/s900/IMG_2748.JPG" />
-</p>
-
-
-
-
-<div id="outline-container-1" class="outline-2">
-<h2 id="sec-1">KickStarterで出資していたOculus Riftが届きました！</h2>
-<div class="outline-text-2" id="text-1">
-
-<ul>
-<li>2012/08/15に出資をして、2013/05/11に到着。その間270日、8ヶ月と26日
-<ul>
-<li>半年以上。SonyのHMZ-T1より待たされた。
-</li>
-</ul>
-
-</li>
-<li>出資額は$300+送料$30
-</li>
-<li>当初は12年末、13年の2,3月と言われハラハラしたのはいい思い出。
-</li>
-<li>Order IDは0070xx ちょっと出遅れた感じ。
-</li>
-<li>Order Statusの変化
-<ul>
-<li>13/05/11 オーダーステータスに変更はなく到着。不意打ち
-</li>
-<li>13/05/05 PROCESSING:Your order has been checked out for shipping and will be shipped in the next batch. We&#8217;ll send you a notification once it&#8217;s shipped.
-</li>
-<li>13/05/04 Processing - Your order is being processed for shipping.
-</li>
-<li>13/05/03以前、失念。 Ready - Your order is ready! We&#8217;ll notify you as soon as it&#8217;s shipped.
-</li>
-</ul>
-
-</li>
-</ul>
-
-
-</div>
-
-</div>
-
-
-
-
-<div id="outline-container-2" class="outline-2">
-<h2 id="sec-2">付属品</h2>
-<div class="outline-text-2" id="text-2">
-
-<ul>
-<li>基本別途ケーブル類を揃える必要はない。
-<ul>
-<li>付属の電源アダプタも日本で使える。
-</li>
-<li>PCとの接続についても外部出力にDIVかHDMIの端子がある最近のPCならOK。（D-subはコネクタ別途必要）
-</li>
-<li>PCとは映像出力のためのDIVorHDMI接続と、データ連携でUSB接続が必要。
-</li>
-</ul>
-
-</li>
-<li>Headset
-</li>
-<li>Control Box
-</li>
-<li>3 Pairs of Lenses
-</li>
-<li>Over-the-head Strap
-</li>
-<li>3ft DIV Cable
-</li>
-<li>6ft HDMI Cable
-</li>
-<li>3ft HDMI Cable
-</li>
-<li>Power Card with Adapter
-</li>
-<li>DIV/HDMI Adapter
-</li>
-</ul>
-
-
-</div>
-
-</div>
-
-
-
-
-<div id="outline-container-3" class="outline-2">
-<h2 id="sec-3">Oculus界隈</h2>
-<div class="outline-text-2" id="text-3">
-
-<ul>
-<li><a href="http://www.nicovideo.jp/watch/sm20743587">話題のOculus Riftが届いたのでMMD再生してみた ‐ ニコニコ動画:Q</a>
-</li>
-<li><a href="http://www.tumblr.com/tagged/oculus vr?language=ja_JP">oculus vr | Tumblr</a>
-</li>
-<li><a href="http://www.4gamer.net/games/195/G019528/20130330009/">4Gamer.net ― ［GDC 2013］期待のゲーム用HMD「Oculus Rift」を体験＆直撮り。「眼前に広がるゲーム世界が，首の動きに追従する」のは革命か</a>
-</li>
-<li>購入はこちら
-<ul>
-<li><a href="https://www.oculusvr.com/pre-order/">Pre-Order Oculus Rift Development Kit | Oculus Rift - Virtual Reality Headset for 3D Games</a>
-</li>
-</ul>
-
-</li>
-</ul>
-
-
-
-</div>
-
-</div>
-
-
-
-
-<div id="outline-container-4" class="outline-2">
-<h2 id="sec-4">画像はこちら</h2>
-<div class="outline-text-2" id="text-4">
-
-<p>  <a href="https://plus.google.com/photos/109142205996412906055/albums/5876589273398602081">Google+</a>
-</p>
-
-</div>
-</div>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -2543,6 +2670,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/02/16/connecting-multiple-oculusrift/">2台のOculusRiftを1台のPCに接続してみた</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/01/27/ggj14zenrin-team-sayaka/">グローバルゲームジャム2014 参加してきました。GlobalGameJam2014 - TEAM Sayaka #ggj14zenrin</a>
       </li>
     
@@ -2556,10 +2687,6 @@
     
       <li class="post">
         <a href="/blog/2013/11/03/how-to-make-a-vr-world-plus-photoncloud/">プログラミング不要。Unityを使えば誰でも2時間で作れちゃう。OculusRiftでハーレムを体感する REAL WORLD ＋PhotonCloud</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/08/05/programmingless-oculusrift-vr-app/">プログラミング不要。Unityを使えば誰でも2時間で作れちゃう。OculusRiftでLiveを体感するLukalive!!</a>
       </li>
     
   </ul>
