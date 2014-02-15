@@ -13,6 +13,10 @@ keywords:
 
 [[file:https://lh4.googleusercontent.com/-Sf2J2XpU_P0/Uv-M_xHotUI/AAAAAAAAA8o/7eeVZhWO4CA/w638-h346-no/OculusRift%25E3%2582%25922%25E5%258F%25B0%25E6%258E%25A5%25E7%25B6%259A%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2580%2582connecting_multiple_OculusRift_-_YouTube.png]]
 
+#+BEGIN_HTML
+<!-- more -->
+#+END_HTML
+
 * 対象
   ovr\_unity\_0.2.5\_lib
   
