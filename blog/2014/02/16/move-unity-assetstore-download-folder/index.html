@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: lukalus - develog.me</title>
+  <title>Unity Asset Storeのダウンロードフォルダを変更する方法 - develog.me</title>
   <meta name="author" content="yuujii">
 
   
-  <meta name="description" content="Category: lukalus">
+  <meta name="description" content="!!!注意!!! この記事の対象は Windows 7 のみ。 バージョンが異なるとコマンドが微妙に変わったりする。かもしれない。 ※基本的な考え方はおんなじなのでコマンドを変えれば行ける。 空き容量カツカツの状況をぶち壊す。 原因 ポチりすぎ 概要 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://yunojy.github.ioblog/categories/lukalus/">
+  <link rel="canonical" href="http://yunojy.github.io/blog/2014/02/16/move-unity-assetstore-download-folder/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -75,35 +75,195 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Lukalus</h1>
+    
+      <h1 class="entry-title">Unity Asset Storeのダウンロードフォルダを変更する方法</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-16T22:27:00+09:00" pubdate data-updated="true">Feb 16<span>th</span>, 2014</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
+
+
+<div class="entry-content"><p>
+  <b>!!!注意!!!</b> この記事の対象は <code>Windows 7</code> のみ。<br/>
+  バージョンが異なるとコマンドが微妙に変わったりする。かもしれない。<br/>
+  ※基本的な考え方はおんなじなのでコマンドを変えれば行ける。
+</p>
+
+
+<p>
+  <img src="https://lh4.googleusercontent.com/-TdmtFSW12oY/UwC9qKIj0WI/AAAAAAAAA_Q/E3bntaLLdv0/w843-h617/140216_space_nai.png"  alt="https://lh4.googleusercontent.com/-TdmtFSW12oY/UwC9qKIj0WI/AAAAAAAAA_Q/E3bntaLLdv0/w843-h617/140216_space_nai.png" />
+  空き容量カツカツの状況をぶち壊す。
+</p>
 
 
 
-  
-  <h2>2013</h2>
 
-<article>
-  
-<h1><a href="/blog/2013/06/25/get-lukalus/">Lukalusでルカと暮らす Oculus, Razer Hydra, Gamepad/Joystick</a></h1>
-<time datetime="2013-06-25T01:37:00+09:00" pubdate><span class='month'>Jun</span> <span class='day'>25</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/lukalus/'>lukalus</a>, <a class='category' href='/blog/categories/mmd/'>mmd</a>, <a class='category' href='/blog/categories/oculus/'>oculus</a>, <a class='category' href='/blog/categories/unity/'>unity</a></span>
-</footer>
+<!-- more -->
 
 
-</article>
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">原因</h2>
+<div class="outline-text-2" id="text-1">
+
+<p>  <img src="https://lh5.googleusercontent.com/-Wpw8AhcHUoI/UwC9qGgqe8I/AAAAAAAAA_M/wNP1eDC3UfI/w901-h737-no/140216_space_nai2.png"  alt="https://lh5.googleusercontent.com/-Wpw8AhcHUoI/UwC9qGgqe8I/AAAAAAAAA_M/wNP1eDC3UfI/w901-h737-no/140216_space_nai2.png" />
+  <del>ポチりすぎ</del>
+</p>
+</div>
 
 </div>
 
+
+
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">概要</h2>
+<div class="outline-text-2" id="text-2">
+
+<p>  実体は空き容量が豊富にある外部ドライブを指定するようにして、<br/>
+  <code>C:\Users\{ユーザ名}\AppData\Roaming\Unity\Asset Store</code> のジャンクションを作る。<br/>
+  <a href="http://www.atmarkit.co.jp/ait/articles/1306/07/news111.html">Windows TIPS : シンボリック・リンクとジャンクションとハードリンクの違い - @IT</a> <br/>
+</p>
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">対応</h2>
+<div class="outline-text-2" id="text-3">
+
+<ul>
+<li>管理者権限でコマンドプロンプト実行 <br/>
+    <code>Yuji</code> を自分のユーザー名へ、 <code>E:\Unity\assets\store\</code> をダウンロード先へ自分の環境に合わせて修正
+
+
+
+<pre class="example"># コピー
+C:\Users\Yuji\AppData\Roaming\Unity&gt;xcopy /E /V /I /F /Y "C:\Users\Yuji\AppData\Roaming\Unity\Asset Store\*" "E:\Unity\assets\store\"
+# 元の削除
+C:\Users\Yuji\AppData\Roaming\Unity&gt;rd /S /Q "C:\Users\Yuji\AppData\Roaming\Unity\Asset Store"
+# ジャンクション作成
+C:\Users\Yuji\AppData\Roaming\Unity&gt;mklink /J "C:\Users\Yuji\AppData\Roaming\Unity\Asset Store" "E:\Unity\assets\store"
+</pre>
+
+<ul>
+<li>コマンドプロンプト xcopy - [ファイルをディレクトリ構造ごとコピーする] <br/>
+      <a href="http://www.k-tanaka.net/cmd/xcopy.php">http://www.k-tanaka.net/cmd/xcopy.php</a>
+</li>
+<li>コマンドプロンプト rd / rmdir - [ディレクトリを削除する] <br/>
+      <a href="http://www.k-tanaka.net/cmd/rd.php">http://www.k-tanaka.net/cmd/rd.php</a>
+</li>
+<li>Mklink - TechNet - Microsoft <br/>
+      <a href="http://technet.microsoft.com/ja-jp/library/cc753194(v=ws.10).aspx">http://technet.microsoft.com/ja-jp/library/cc753194(v=ws.10).aspx</a>
+</li>
+</ul>
+
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">参考</h2>
+<div class="outline-text-2" id="text-4">
+
+<p>  Asset store download folder? - Unity Forums <br/>
+  <a href="http://forum.unity3d.com/threads/83620-Asset-store-download-folder">http://forum.unity3d.com/threads/83620-Asset-store-download-folder</a>
+</p>
+
+
+
+</div>
+</div>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">yuujii</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-16T22:27:00+09:00" pubdate data-updated="true">Feb 16<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/unity/'>Unity</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  <a href="http://b.hatena.ne.jp/entry/http://yunojy.github.io/blog/2014/02/16/move-unity-assetstore-download-folder/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yunojy.github.io/blog/2014/02/16/move-unity-assetstore-download-folder/" data-via="yuujii" data-counturl="http://yunojy.github.io/blog/2014/02/16/move-unity-assetstore-download-folder/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+  <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
+  <script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/02/16/connecting-multiple-oculusrift/" title="Previous Post: 2台のOculusRiftを1台のPCに接続してみた">&laquo; 2台のOculusRiftを1台のPCに接続してみた</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>

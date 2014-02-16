@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Unity | develog.me]]></title>
   <link href="http://yunojy.github.io/blog/categories/unity/atom.xml" rel="self"/>
   <link href="http://yunojy.github.io/"/>
-  <updated>2014-02-16T23:18:17+09:00</updated>
+  <updated>2014-02-16T23:18:59+09:00</updated>
   <id>http://yunojy.github.io/</id>
   <author>
     <name><![CDATA[yuujii]]></name>
@@ -12,6 +12,117 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Unity Asset Storeのダウンロードフォルダを変更する方法]]></title>
+    <link href="http://yunojy.github.io/blog/2014/02/16/move-unity-assetstore-download-folder/"/>
+    <updated>2014-02-16T22:27:00+09:00</updated>
+    <id>http://yunojy.github.io/blog/2014/02/16/move-unity-assetstore-download-folder</id>
+    <content type="html"><![CDATA[<p>
+  <b>!!!注意!!!</b> この記事の対象は <code>Windows 7</code> のみ。<br/>
+  バージョンが異なるとコマンドが微妙に変わったりする。かもしれない。<br/>
+  ※基本的な考え方はおんなじなのでコマンドを変えれば行ける。
+</p>
+
+
+<p>
+  <img src="https://lh4.googleusercontent.com/-TdmtFSW12oY/UwC9qKIj0WI/AAAAAAAAA_Q/E3bntaLLdv0/w843-h617/140216_space_nai.png"  alt="https://lh4.googleusercontent.com/-TdmtFSW12oY/UwC9qKIj0WI/AAAAAAAAA_Q/E3bntaLLdv0/w843-h617/140216_space_nai.png" />
+  空き容量カツカツの状況をぶち壊す。
+</p>
+
+
+
+
+<!-- more -->
+
+
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">原因</h2>
+<div class="outline-text-2" id="text-1">
+
+<p>  <img src="https://lh5.googleusercontent.com/-Wpw8AhcHUoI/UwC9qGgqe8I/AAAAAAAAA_M/wNP1eDC3UfI/w901-h737-no/140216_space_nai2.png"  alt="https://lh5.googleusercontent.com/-Wpw8AhcHUoI/UwC9qGgqe8I/AAAAAAAAA_M/wNP1eDC3UfI/w901-h737-no/140216_space_nai2.png" />
+  <del>ポチりすぎ</del>
+</p>
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">概要</h2>
+<div class="outline-text-2" id="text-2">
+
+<p>  実体は空き容量が豊富にある外部ドライブを指定するようにして、<br/>
+  <code>C:\Users\{ユーザ名}\AppData\Roaming\Unity\Asset Store</code> のジャンクションを作る。<br/>
+  <a href="http://www.atmarkit.co.jp/ait/articles/1306/07/news111.html">Windows TIPS : シンボリック・リンクとジャンクションとハードリンクの違い - @IT</a> <br/>
+</p>
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">対応</h2>
+<div class="outline-text-2" id="text-3">
+
+<ul>
+<li>管理者権限でコマンドプロンプト実行 <br/>
+    <code>Yuji</code> を自分のユーザー名へ、 <code>E:\Unity\assets\store\</code> をダウンロード先へ自分の環境に合わせて修正
+
+
+
+<pre class="example"># コピー
+C:\Users\Yuji\AppData\Roaming\Unity&gt;xcopy /E /V /I /F /Y "C:\Users\Yuji\AppData\Roaming\Unity\Asset Store\*" "E:\Unity\assets\store\"
+# 元の削除
+C:\Users\Yuji\AppData\Roaming\Unity&gt;rd /S /Q "C:\Users\Yuji\AppData\Roaming\Unity\Asset Store"
+# ジャンクション作成
+C:\Users\Yuji\AppData\Roaming\Unity&gt;mklink /J "C:\Users\Yuji\AppData\Roaming\Unity\Asset Store" "E:\Unity\assets\store"
+</pre>
+
+<ul>
+<li>コマンドプロンプト xcopy - [ファイルをディレクトリ構造ごとコピーする] <br/>
+      <a href="http://www.k-tanaka.net/cmd/xcopy.php">http://www.k-tanaka.net/cmd/xcopy.php</a>
+</li>
+<li>コマンドプロンプト rd / rmdir - [ディレクトリを削除する] <br/>
+      <a href="http://www.k-tanaka.net/cmd/rd.php">http://www.k-tanaka.net/cmd/rd.php</a>
+</li>
+<li>Mklink - TechNet - Microsoft <br/>
+      <a href="http://technet.microsoft.com/ja-jp/library/cc753194(v=ws.10).aspx">http://technet.microsoft.com/ja-jp/library/cc753194(v=ws.10).aspx</a>
+</li>
+</ul>
+
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+
+
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">参考</h2>
+<div class="outline-text-2" id="text-4">
+
+<p>  Asset store download folder? - Unity Forums <br/>
+  <a href="http://forum.unity3d.com/threads/83620-Asset-store-download-folder">http://forum.unity3d.com/threads/83620-Asset-store-download-folder</a>
+</p>
+
+
+
+</div>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[2台のOculusRiftを1台のPCに接続してみた]]></title>
