@@ -1,0 +1,58 @@
+#+BEGIN_HTML
+---
+layout: post
+title: "Unity Asset Storeのダウンロードフォルダを変更する方法"
+date: 2014-02-16 22:27
+comments: true
+categories: Unity
+published: false
+description: 
+keywords: 
+---
+#+END_HTML
+
+  *!!!注意!!!* この記事の対象は =Windows 7= のみ。\\
+  バージョンが異なるとコマンドが微妙に変わったりする。かもしれない。\\
+  ※基本的な考え方はおんなじなのでコマンドを変えれば行ける。
+
+  [[file:https://lh4.googleusercontent.com/-TdmtFSW12oY/UwC9qKIj0WI/AAAAAAAAA_Q/E3bntaLLdv0/w843-h617/140216_space_nai.png]]
+  空き容量カツカツの状況をぶち壊す。
+
+#+BEGIN_HTML
+<!-- more -->
+#+END_HTML
+
+* 原因
+  [[file:https://lh5.googleusercontent.com/-Wpw8AhcHUoI/UwC9qGgqe8I/AAAAAAAAA_M/wNP1eDC3UfI/w901-h737-no/140216_space_nai2.png]]
+  +ポチりすぎ+
+
+* 概要
+  実体は空き容量が豊富にある外部ドライブを指定するようにして、\\
+  =C:\Users\{ユーザ名}\AppData\Roaming\Unity\Asset Store= のジャンクションを作る。\\
+  [[http://www.atmarkit.co.jp/ait/articles/1306/07/news111.html][Windows TIPS : シンボリック・リンクとジャンクションとハードリンクの違い - @IT]] \\
+  
+* 対応
+  - 管理者権限でコマンドプロンプト実行 \\
+    =Yuji= を自分のユーザー名へ、 =E:\Unity\assets\store\= をダウンロード先へ自分の環境に合わせて修正
+    #+begin_src bash
+    # コピー
+    C:\Users\Yuji\AppData\Roaming\Unity>xcopy /E /V /I /F /Y "C:\Users\Yuji\AppData\Roaming\Unity\Asset Store\*" "E:\Unity\assets\store\"
+    # 元の削除
+    C:\Users\Yuji\AppData\Roaming\Unity>rd /S /Q "C:\Users\Yuji\AppData\Roaming\Unity\Asset Store"
+    # ジャンクション作成
+    C:\Users\Yuji\AppData\Roaming\Unity>mklink /J "C:\Users\Yuji\AppData\Roaming\Unity\Asset Store" "E:\Unity\assets\store"
+    #+end_src
+    - コマンドプロンプト xcopy - [ファイルをディレクトリ構造ごとコピーする] \\
+      http://www.k-tanaka.net/cmd/xcopy.php
+    - コマンドプロンプト rd / rmdir - [ディレクトリを削除する] \\
+      http://www.k-tanaka.net/cmd/rd.php
+    - Mklink - TechNet - Microsoft \\
+      [[http://technet.microsoft.com/ja-jp/library/cc753194(v=ws.10).aspx]]
+    
+* 参考
+  Asset store download folder? - Unity Forums \\
+  http://forum.unity3d.com/threads/83620-Asset-store-download-folder
+
+
+
+  
